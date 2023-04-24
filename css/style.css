@@ -177,6 +177,12 @@
     }
 }
 
+
+element.style {
+    visibility: visible;
+    animation-delay: 0.1s;
+    animation-name: fadeIn;
+}
 .page-header {
     background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../img/0.jpg) center center no-repeat;
     background-size: cover;
