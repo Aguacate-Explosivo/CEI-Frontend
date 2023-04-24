@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #4761FF;
+    --primary: #0c610c;
     --secondary: #555555;
     --light: #F1F3FA;
     --dark: #1C2035;
@@ -205,7 +205,7 @@
 
 /*** About ***/
 .about {
-    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../img/about.jpg) left center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../img/2.jpg) left center no-repeat;
     background-size: cover;
 }
 
