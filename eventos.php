@@ -81,7 +81,7 @@
                         <div class="project-overlay">
                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>"
                                 data-lightbox="project"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="cursos.php"><i class="fa fa-link"></i></a>
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="eventos.php"><i class="fa fa-link"></i></a>
                         </div>
                     </div>
                      </div>
@@ -91,8 +91,8 @@
                             <p class="card-text"><small class="text-muted">Fecha: <?php echo $row["fecha"]; ?></small></p>
                             <p class="card-text"><small class="text-muted">Hora: <?php echo $row["hora"]; ?></small></p>
                         </div>
-                        <a href="inscrip_evento.php" class="btn btn-success "> Participar a un evento</a>
-                        <a href="galeriaeventos.php?id_evento=<?php echo $row["id_evento"]?>" class="btn btn-info" > Ver Mas</a>
+                        <a style="margin: 2px; border-radius: 5px;" href="inceventos.php?id_evento=<?php echo $row["id_evento"]?>" class="btn btn-success" > Asistir A Evento</a>
+                        <a style="margin: 2px; border-radius: 5px;" href="galeriaeventos.php?id_evento=<?php echo $row["id_evento"]?>" class="btn btn-info" > Ver Mas</a>
 
                          <br>
                         <a href="">ㅤㅤ</a>
