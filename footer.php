@@ -62,7 +62,7 @@
                         <a class="btn btn-square btn-light rounded-circle me-2" href=""><i
                                 class="fab fa-linkedin-in"></i></a>
                     </div>
-                </div> 
+                </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Enlaces Rapidos</h4>
                     <a class="btn btn-link" href="index.php">Inicio</a>
