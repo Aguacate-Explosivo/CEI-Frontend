@@ -85,7 +85,7 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Otros</a>
                             <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                                <a href="#" class="dropdown-item">Agendar Citas</a>
+                                <a href="citas.php" class="dropdown-item">Agendar Citas</a>
                                 <a href="#" class="dropdown-item">Descargar Formatos</a>
                                 <a href="eventos.php" class="dropdown-item">Galeria De Eventos</a>
                                 <!-- <a href="#" class="dropdown-item">Quotation</a> -->

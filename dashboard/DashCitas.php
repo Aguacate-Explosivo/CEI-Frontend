@@ -4,17 +4,17 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
     <meta
       name="keywords"
       content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 4 admin, bootstrap 4, css3 dashboard, bootstrap 4 dashboard, severny admin bootstrap 4 dashboard, frontend, responsive bootstrap 4 admin template, my admin design, my admin dashboard bootstrap 4 dashboard template"
     />
-
     <meta
       name="description"
       content="My Admin is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
     />
     <meta name="robots" content="noindex,nofollow" />
-    <title>Dashboard Eventos</title>
+    <title>Dashboard Citas</title>
     <link
       rel="canonical"
       href="https://www.wrappixel.com/templates/myadmin-lite/"
@@ -22,7 +22,6 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png" />
     <!-- Bootstrap Core CSS -->
-
     <link
       href="bower_components/bootstrap/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -33,7 +32,6 @@
       rel="stylesheet"
     />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
     <link href="css/style.css" rel="stylesheet" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,6 +39,13 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <!--datables CSS básico-->
+    <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
+    <!--datables estilo bootstrap 4 CSS-->  
+    <link rel="stylesheet"  type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
+    <!--font awesome con CDN-->  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">  
   </head>
 
   <body>
@@ -66,7 +71,7 @@
             <a class="logo" href="index.html"
               ><i class="glyphicon glyphicon-fire"></i>&nbsp;<span
                 class="hidden-xs"
-                >Eventos</span
+                >Citas</span
               ></a
             >
           </div>
@@ -189,81 +194,61 @@
             <!-- /.col-lg-12 -->
           </div>
           <!-- row -->
-           <main>
-      
-        <h2>Gestor de Eventos</h2>
-        
-            <!-- Navegacion -->
-            <nav aria-label="...">
-                <ul class="pagination pagination-lg justify-content-center">
-                    <li class="page-item active" aria-current="page"><a class="page-link" href="DashEventos.php">Añadir un nuevo Evento</a></li>
-                    <li class="page-item"><a class="page-link" href="administradores/admineventos.php">Administrar Eventos </a></li>
-                    <li class="page-item"><a class="page-link" href="administradores/inscritosevento.php">Registro de Eventos </a></li>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="white-box">
+                <h3>Modulo - Citas</h3>
+                <!-- Container de citas(Data Tables) -->
+                <div class="container-fluid">
+                    <div class="container">
+                                    <div class="table-responsive">        
+                                        <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Numero de Documento</th>
+                                                <th>Nombre Completo</th>                             
+                                                <th>Numero de Telefono</th>
+                                                <th>Barrio</th>
+                                                <th>Fecha y Hora de Cita</th>
+                                            </tr>
+                                        </thead>
+                                                <?php
+                                                  include("../conexion.php");
+                                                  $conexion=conectar(); 
+                                                  $consulta2 ="SELECT * FROM `citas` ";
+                                                  $busqueda=mysqli_query($conexion,$consulta2);
 
-                </ul>
-            </nav>
-            <!-- Fin de navegacion -->
-            <form action="administradores/regeventos.php" required=" " method="POST" enctype="multipart/form-data">
-                <div class="form__group">
-                    <input type="text" id="nom_even" name="nom_even" class="form__input" placeholder=" " 
-                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
-                    <label for="nom_even" class="form__label">Nombre del Evento:</label>
-                    </div>
-                    <br>
-                    <div class="form__group">
-                    <input type="text" id="lugar" name="lugar" class="form__input" placeholder=" "
-                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
-                    <label for="lugar" class="form__label">Lugar del Evento:</label>
-                    </div>
-                    <br>
-                    <div class="form__group">
-                    <input type="text" id="desc_even" name="desc_even" class="form__input" placeholder=" "
-                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
-                    <label for="desc_even" class="form__label">Descripcion Breve del Evento:</label>
-                    </div>
-                    <br>
-                    <div class="form__group">
-                    <label for="fecha" class="form-label">Fecha del Evento:</label>
-                    <input name ="fecha" type="date" class="form-control" id="fecha" 
-                    required=" "  min="2023-03-01 " max="2030-12-31">
-                    </div>
-                    <br>
-                    <div class="form__group">
-                    <label for="fecha" class="form-label">Hora del Evento:</label>
-                    <input name ="hora" type="time" class="form-control" id="hora" required=" ">
-                    </div>
-                    <br>
-                        <!-- Seccion para cargar la imagen -->
-                        <div class="mb-3">
-                            <label for="imagen" class="form-label">Cargar Imagen</label>
-                            <input class="form-control" type="file" id="imagen" name ="imagen" 
-                            required=" " accept="image/*">
-                        </div>
-                    <br> 
-                    <button type="submit" class="btn btn-success btn-large">Registrar un Nuevo Evento</button>
-                </div>
-            </form>
-           
-    </main>
+                                            foreach($busqueda as $row){ ?>
+                                            <!-- Contenido de la tabla -->
+                                            <tr>
+                                                <td><?php echo $row["documento"]; ?></td>
+                                                <td><?php echo $row["nombre"]; ?></td>
+                                                <td><?php echo $row["telefono"]; ?></td>
+                                                <td><?php echo $row["direccion"]; ?></td>
+                                                <td><?php echo $row["fecha_hora"]; ?></td>
+                                            </tr>
+                                                <?php } ?>            
+                                        </table>                  
+                                    </div>
+                              </div>
+                        </div>  
+                    </div>  
+                <!-- Fin data Table -->
+              </div>
+          </div>
           <!-- /.row -->
         </div>
         <!-- /.container-fluid -->
       </div>
-      <br><br>
-      <br>
-      <br>
       <!-- /#page-wrapper -->
       <footer class="footer text-center">
-              FACNET - 2023 &copy;
- 
+        FACNET - 2023 &copy; 
       </footer>
     </div>
     <!-- /#wrapper -->
-    
     <!-- jQuery -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
-
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Menu Plugin JavaScript -->
     <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
@@ -273,5 +258,19 @@
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/myadmin.js"></script>
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script src="popper/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- datatables JS -->
+    <script type="text/javascript" src="datatables/datatables.min.js"></script>    
+    <!-- para usar botones en datatables JS -->  
+    <script src="datatables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>  
+    <script src="datatables/JSZip-2.5.0/jszip.min.js"></script>    
+    <script src="datatables/pdfmake-0.1.36/pdfmake.min.js"></script>    
+    <script src="datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
+    <script src="datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
+    <!-- código JS propìo-->    
+    <script type="text/javascript" src="js/main.js"></script>  
   </body>
 </html>
