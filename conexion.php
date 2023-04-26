@@ -1,7 +1,7 @@
 <?php
 function conectar(){
 
-	$hostname="127.0.0.1:33065";
+	$hostname="localhost";
 	$username="root";
 	$password="";
 	$dbname="cei";
