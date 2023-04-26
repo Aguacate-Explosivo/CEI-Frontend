@@ -55,220 +55,49 @@
     </div>
     <!-- Page Header End -->
 
+<div style="margin-left:100px; margin-right:100px; ">
+      <div class="container-fluid">
+        <!-- Seccion de cursos -->
+        <div class="jumbotron">
+        <p class="fs-5 fw-medium text-success">Cursos</p>
+                        <h1 class="display-6 mb-4">Cursos Que Ofrece el Centro de Emprendimiento e Innovación</h1>
+        <br>
+        <br>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <!-- Codigo de la base de datos -->
+          <?php
+                include("conexion.php");
+                $conexion=conectar();
 
- 
-    <!-- Project Start -->
-    <div class="container-xxl pt-5">
-        <div class="container">
-            <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
-                style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-success">Cursos Ofrecidos </p>
-                <h1 class="display-5 mb-5">Curso Que Ofrece El CEI</h1>
-            </div>
-            <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="project-item mb-5">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="img/project-1.jpg" alt="">
-                        <div class="project-overlay">
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/project-1.jpg"
-                                data-lightbox="project"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <!-- modal jejeje -->
-                    <div class="ms-auto d-none d-lg-block">
-
-                        <a type="button" class="d-block h5" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Marketing Digital</a>
-                        
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                                <form>
-                                  <div class="mb-3">
-                                    <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                    <input type="text" class="form-control" id="recipient-name">
-                                  </div>
-                                  <div class="mb-3">
-                                    <label for="message-text" class="col-form-label">Message:</label>
-                                    <textarea class="form-control" id="message-text"></textarea>
-                                  </div>
-                                </form>
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-success">Send message</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-
-                    </div> 
-                <!-- modal jejeje -->  
-                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
-                    </div>
+                $consulta ="SELECT Id_Curso, NombreCurso, DescripcionCurso,EncargadoCurso,imagen FROM `cursos`;";
+                $resultado=mysqli_query($conexion,$consulta);
+                
+                
+                foreach($resultado as $row){ $id = $row["Id_Curso"]; ?>
+          <!-- Fin bd -->
+            <!-- Estructura de Curso -->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="card-img-top">
+                  <hr>
+                  <div class="card-body">
+                    <h5 class="card-title"><?php echo $row["NombreCurso"]; ?></h5>
+                    <p class="card-text">Encargado: <?php echo $row["EncargadoCurso"]; ?></p>
+                    <p class="card-text"> Descripcion:<?php echo $row["DescripcionCurso"]; ?></p>
+                    <a href="inscrip_cursos.php"  class="btn btn-success btn-large"> Inscribirse </a>
+                  </div>
                 </div>
-                <div class="project-item mb-5">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="img/project-2.jpg" alt="">
-                        <div class="project-overlay">
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/project-2.jpg"
-                                data-lightbox="project"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="p-4">
-<!-- modal jejeje -->
-<div class="ms-auto d-none d-lg-block">
-
-    <a type="button" class="d-block h5" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Marketing Digital</a>
-    
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Recipient:</label>
-                <input type="text" class="form-control" id="recipient-name">
               </div>
-              <div class="mb-3">
-                <label for="message-text" class="col-form-label">Message:</label>
-                <textarea class="form-control" id="message-text"></textarea>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-success">Send message</button>
-          </div>
+              <br>
+              <br>
+            <?php } ?>
+          <!--  Fin estructura de cursos --------------- -->
         </div>
       </div>
-    </div>
-
-
-</div> 
-<!-- modal jejeje -->                          <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
-                    </div>
-                </div>
-                <div class="project-item mb-5">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="img/project-3.jpg" alt="">
-                        <div class="project-overlay">
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/project-3.jpg"
-                                data-lightbox="project"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="p-4">
-<!-- modal jejeje -->
-<div class="ms-auto d-none d-lg-block">
-
-    <a type="button" class="d-block h5" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Marketing Digital</a>
-    
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Recipient:</label>
-                <input type="text" class="form-control" id="recipient-name">
-              </div>
-              <div class="mb-3">
-                <label for="message-text" class="col-form-label">Message:</label>
-                <textarea class="form-control" id="message-text"></textarea>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-success">Send message</button>
-          </div>
+      </div>
         </div>
       </div>
-    </div>
-
-
-</div> 
-<!-- modal jejeje -->                          <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
-                    </div>
-                </div>
-                <div class="project-item mb-5">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="img/project-4.jpg" alt="">
-                        <div class="project-overlay">
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/project-4.jpg"
-                                data-lightbox="project"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="p-4">
-<!-- modal jejeje -->
-<div class="ms-auto d-none d-lg-block">
-
-    <a type="button" class="d-block h5" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Marketing Digital</a>
-    
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Recipient:</label>
-                <input type="text" class="form-control" id="recipient-name">
-              </div>
-              <div class="mb-3">
-                <label for="message-text" class="col-form-label">Message:</label>
-                <textarea class="form-control" id="message-text"></textarea>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-success">Send message</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-</div> 
-<!-- modal jejeje -->                          <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Project End -->
-
-
-
-   
-
-
+</div>
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>

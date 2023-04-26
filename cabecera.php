@@ -78,7 +78,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
-                        <a href="index.php" class="nav-item nav-link active">Inicio</a>
+                        <a href="index.php" class="nav-item nav-link ">Inicio</a>
                         <a href="nosotros.php" class="nav-item nav-link">Nosotros</a>
                         <a href="servicios.php" class="nav-item nav-link">Servicios</a>
                         <a href="cursos.php" class="nav-item nav-link">Cursos</a>

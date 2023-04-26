@@ -368,7 +368,8 @@
     <!-- Service End -->
 
 
-    <!-- Project Start -->
+ 
+     <!-- Project Start -->
     <div class="container-xxl pt-5">
         <div class="container">
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
@@ -377,66 +378,43 @@
                 <h1 class="display-5 mb-5">Curso Que Ofrece El CEI</h1>
             </div>
             <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="project-item mb-5">
+               
+              <?php
+                include("conexion.php");
+                $conexion=conectar();
+
+                $consulta ="SELECT *FROM `cursos`;";
+                $resultado=mysqli_query($conexion,$consulta);
+                
+                
+                foreach($resultado as $row){ $id = $row["Id_Curso"]; ?>
+          <!-- Fin bd -->
+            <!-- Estructura de Curso -->
+               <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/project-1.jpg" alt="">
+                        <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">               
                         <div class="project-overlay">
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/project-1.jpg"
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>"
                                 data-lightbox="project"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href=""><i
-                                    class="fa fa-link"></i></a>
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="cursos.php"><i class="fa fa-link"></i></a>
                         </div>
                     </div>
                     <div class="p-4">
-                        <a class="d-block h5" href="">Data Analytics & Insights</a>
-                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
+                        <a class="d-block h5" href=""> <?php echo $row["NombreCurso"]; ?></a>
+                        <p>Encargado: <?php echo $row["EncargadoCurso"]; ?></p>
+                        <br>
+                        <span>Descripcion: <?php echo $row["DescripcionCurso"]; ?></span>
+                    </div>
+                    <div style="margin-left:20px;margin-bottom: :20px;">
+                        <a  href="inscrip_cursos.php"  class="btn btn-success "> Inscribirse </a>
+                        <br>
+                        <a href="">ㅤㅤ</a>
                     </div>
                 </div>
-                <div class="project-item mb-5">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="img/project-2.jpg" alt="">
-                        <div class="project-overlay">
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/project-2.jpg"
-                                data-lightbox="project"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <a class="d-block h5" href="">Marketing Content Strategy</a>
-                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
-                    </div>
-                </div>
-                <div class="project-item mb-5">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="img/project-3.jpg" alt="">
-                        <div class="project-overlay">
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/project-3.jpg"
-                                data-lightbox="project"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <a class="d-block h5" href="">Business Target Market</a>
-                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
-                    </div>
-                </div>
-                <div class="project-item mb-5">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="img/project-4.jpg" alt="">
-                        <div class="project-overlay">
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/project-4.jpg"
-                                data-lightbox="project"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <a class="d-block h5" href="">Social Marketing Strategy</a>
-                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
-                    </div>
-                </div>
+
+            <?php } ?>
+
+                
             </div>
         </div>
     </div>
