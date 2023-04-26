@@ -45,65 +45,8 @@
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-primary text-white d-none d-lg-flex">
-        <div class="container py-3">
-            <div class="d-flex align-items-center">
-                <a href="index.html">
-                    <img src="img/logo.webp" class="img-fluid" alt="#" width="120px" height="20px">
-                </a>
-                <div class="ms-auto d-flex align-items-center">
-                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>Cra. 22 No 18B-10 B/ Nicolás Medrano</small>
-                    <small class="ms-4"><i class="fa fa-envelope me-3"></i> cei@utch.edu.co</small>
-                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+57 314 509 3025</small>
-                    <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-success rounded-circle ms-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-sm-square btn-light text-success rounded-circle ms-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-sm-square btn-light text-success rounded-circle ms-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
-
-
-    <!-- Navbar Start -->
-    <div class="container-fluid bg-white sticky-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
-                <a href="index.html" class="navbar-brand d-lg-none">
-                    <h1 class="fw-bold m-0"></h1>
-                </a>
-                <button type="button"   class="navbar-toggler me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav">
-                        <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link">Nosotros</a>
-                        <a href="service.html" class="nav-item nav-link">Servicios</a>
-                        <a href="project.html" class="nav-item nav-link">Cursos</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Otros</a>
-                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                                <a href="feature.html" class="dropdown-item">Agendar Citas</a>
-                                <a href="team.html" class="dropdown-item">Descargar Formatos</a>
-                                <a href="testimonial.html" class="dropdown-item">Galeria De Eventos</a>
-                                <a href="quote.html" class="dropdown-item">Quotation</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contacto</a>
-                    </div>
-                    
-                </div>
-            </nav>
-        </div>
-    </div>
+   
+   <?php require("cabecera.php");  ?>
     <!-- Navbar End -->
 
 
@@ -634,6 +577,7 @@
         <div class="container">
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
                 style="max-width: 500px;">
+
                 <p class="fs-5 fw-medium text-success">Talento Humano</p>
                 <h1 class="display-5 mb-5">Conoce a algunos integrantes del CEI</h1>
             </div>
@@ -679,15 +623,18 @@
                 </div>
             </div>
         </div>
+
     </div>
     <!-- Testimonial End -->
-
+<div>
+    
+</div>
 
     <!-- Footer Start -->
 
     <!-- Footer End -->
            
-
+    
    
 
 
@@ -704,9 +651,10 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-
+     <?php require("footer.php");  ?>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
 
 </html>
+
