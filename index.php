@@ -65,7 +65,7 @@
                                     </p>
                                     <h1 class="display-1 text-white mb-4 animated slideInRight">Asiste a eventos recientes
                                         </h1>
-                                        <a type="button" href="cursos.php" class="btn btn-success">asiste a eventos</a>
+                                        <a type="button" href="eventos.php" class="btn btn-success">asiste a eventos</a>
                                             
                                 </div>
                             </div>
@@ -361,12 +361,13 @@
                         </div>
                     </div>
                     <div class="p-4">
-                        <a class="d-block h5" href=""> <?php echo $row["NombreCurso"]; ?></a>
+                        <h5 class="card-title" href=""> <?php echo $row["NombreCurso"]; ?></h5>
                         <p>Encargado: <?php echo $row["EncargadoCurso"]; ?></p>
                         <br>
                         <span>Descripcion: <?php echo $row["DescripcionCurso"]; ?></span>
                     </div>
                     <div style="margin-left:20px;margin-bottom: :20px;">
+
                         <a  href="inscrip_cursos.php"  class="btn btn-success "> Inscribirse </a>
                         <br>
                         <a href="">ㅤㅤ</a>

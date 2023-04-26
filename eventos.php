@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="img/logo.webp">
-    <title>CEI | Cursos</title>
+    <title>CEI | Eventos</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -65,7 +65,7 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <!-- Codigo de la base de datos -->
           <?php
-               require 'conexion.php';
+               require'conexion.php';
                $conexion=conectar();
                 $consulta = "SELECT*FROM `eventos`;";
                 $resultado=mysqli_query($conexion,$consulta);;
@@ -75,8 +75,16 @@
             <!-- Estructura de eventos -->
                         <div class="card">
                         <div class="card-body">
-                        <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="card-img-top">
-
+                  <div class="project-item mb-5">
+                    <div class="position-relative">
+                        <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">               
+                        <div class="project-overlay">
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>"
+                                data-lightbox="project"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="cursos.php"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                     </div>
                             <h5 class="card-title"><?php echo $row["nombreEven"]; ?></h5>
                             <p class="card-text"><?php echo $row["descripcionEven"]; ?></p>
                             <p class="card-text"><small class="text-muted">Lugar: <?php echo $row["lugar"]; ?></small></p>
@@ -89,6 +97,7 @@
                          <br>
                         <a href="">ㅤㅤ</a>
                         </div>
+
             <!-- ----------------------------- -->
             <?php } ?>
           <!--  Fin estructura de cursos --------------- -->
