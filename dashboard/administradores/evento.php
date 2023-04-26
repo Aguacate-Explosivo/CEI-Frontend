@@ -5,24 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script defer src="js/bootstrap.min.js"></script>
+    <script defer src="../js/bootstrap.min.js"></script>
     <meta name="description" content="Incentivar, desarrollar la participacion y contrubiur en procesos que fortalezcan la relacion universidad, empresa, sociedad y estado">
-    <link rel="icon" href="img/logo.webp">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>CEI | Eventos</title>
+    <link
+      rel="canonical"
+      href="https://www.wrappixel.com/templates/myadmin-lite/"
+    />
+    <!-- Favicon icon -->
+    <!-- Bootstrap Core CSS -->
+
+    <link
+      href="../bower_components/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Menu CSS -->
+    <link
+      href="../bower_components/metisMenu/dist/metisMenu.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="../css/style.css" rel="stylesheet" />
 </head>
 
-<body  class="container-fluidslider">
+<body  >
   
   <!-- Cabecera -->
     
     <!-- Cuerpo de la pagina -->
     <main>
       <div class="container-fluid">
-        <h2>Actualizar datos del evento</h2>
-        <div class="jumbotron">
+      <h4>ㅤㅤㅤㅤ</h4>
+
+        <div class="jumbotron white-box">
             <!-- Navegacion -->
+            <h4>Actualizar datos del evento</h4>
+
             <?php 
          include("conexion.php");
          $conexion=conectar(); 
@@ -37,20 +55,20 @@
             <!-- Fin de navegacion -->
             <form action="editarevento.php?id_evento=<?php echo $fila["id_evento"]?>" method="POST" enctype="multipart/form-data" >
                 <div class="form__group">
-                    <input type="text" id="nombre" name="nombre" class="form__input" 
+                    <input  style=" width: 500px;" type="text" id="nombre" name="nombre" class="form__input" 
                     value="<?php echo $fila['nombreEven']?>" placeholder=" " 
                     required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+">
                     <label for="nombre" class="form__label">Nombre del Evento:</label>
                     </div>
                     <br>
                     <div class="form__group">
-                    <input type="text" id="lugar" name="lugar" class="form__input" placeholder=" "
+                    <input style=" width: 500px;" type="text" id="lugar" name="lugar" class="form__input" placeholder=" "
                     value="<?php echo $fila['lugar']?>" required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
                     <label for="lugar" class="form__label">Lugar del Evento:</label>
                     </div>
                     <br>
                     <div class="form__group">
-                    <input type="text" id="evento" name="evento" class="form__input"
+                    <input style=" width: 500px;" type="text" id="evento" name="evento" class="form__input"
                     value="<?php echo $fila['descripcionEven']?>" placeholder=" " 
                     required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
                     <label for="evento" class="form__label">Descripcion Breve del Evento:</label>
@@ -58,13 +76,13 @@
                     <br>
                     <div class="form__group">
                     <label for="fecha" class="form-label">Fecha del Evento:</label>
-                    <input name ="fecha" type="date" class="form-control" id="fecha" 
+                    <input style=" width: 500px;" name ="fecha" type="date" class="form-control" id="fecha" 
                     value="<?php echo $fila['fecha']?>" required=" ">
                     </div>
                     <br>
                     <div class="form__group">
                     <label for="fecha" class="form-label">Hora del Evento:</label>
-                    <input name ="hora" type="time" class="form-control" id="hora" 
+                    <input style=" width: 500px;" name ="hora" type="time" class="form-control" id="hora" 
                     value="<?php echo $fila['hora']?>" required=" ">
                     </div>
                     <br>
@@ -73,7 +91,7 @@
 
                         <div class="mb-3">
                             <label for="imagen" class="form-label">Cargar Imagen Para Eventos</label>
-                            <input  class="form-control" type="file" id="imagen" name ="imagen"
+                            <input style=" width: 500px;" class="form-control" type="file" id="imagen" name ="imagen"
                             required=" "  accept="image/*">
                         </div>
                     <br> 
@@ -85,12 +103,12 @@
                   </select>
                   </div>
                   <br>
-                  <h1>Imagenes Para La Galeria De Eventos Terminados</h1>
+                  <h4>Imagenes Para La Galeria De Eventos Terminados</h4>
                   <br>
                   <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen1"]); ?>" class="card-img-top">
                   <div class="mb-3">
                      <label for="imagen1" class="form-label">Cargar Imagen</label>
-                     <input  class="form-control" type="file" id="imagen1" name ="imagen1"
+                     <input style=" width: 500px;"  class="form-control" type="file" id="imagen1" name ="imagen1"
                        accept="image/*" required=" ">
                     </div>
                    <br>
@@ -99,7 +117,7 @@
                   <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen2"]); ?>" class="card-img-top">
                   <div class="mb-3">
                      <label for="imagen2" class="form-label">Cargar Imagen</label>
-                     <input  class="form-control" type="file" id="imagen2" name ="imagen2"
+                     <input  style=" width: 500px;" class="form-control" type="file" id="imagen2" name ="imagen2"
                        accept="image/*" required=" ">
                     </div>
                    <br>
@@ -108,7 +126,7 @@
                   <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen3"]); ?>" class="card-img-top">
                   <div class="mb-3">
                      <label for="imagen3" class="form-label">Cargar Imagen</label>
-                     <input  class="form-control" type="file" id="imagen3" name ="imagen3"
+                     <input style=" width: 500px;"  class="form-control" type="file" id="imagen3" name ="imagen3"
                        accept="image/*" required=" ">
                     </div>
                    <br>
@@ -117,7 +135,7 @@
                   <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen4"]); ?>" class="card-img-top">
                   <div class="mb-3">
                      <label for="imagen4" class="form-label">Cargar Imagen</label>
-                     <input  class="form-control" type="file" id="imagen4" name ="imagen4"
+                     <input style=" width: 500px;"  class="form-control" type="file" id="imagen4" name ="imagen4"
                        accept="image/*" required=" ">
                     </div>
                    <br>
@@ -126,7 +144,7 @@
                   <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen5"]); ?>" class="card-img-top">
                   <div class="mb-3">
                      <label for="imagen5" class="form-label">Cargar Imagen</label>
-                     <input  class="form-control" type="file" id="imagen5" name ="imagen5"
+                     <input style=" width: 500px;"  class="form-control" type="file" id="imagen5" name ="imagen5"
                        accept="image/*" required=" ">
                     </div>
                    <br>
@@ -135,12 +153,12 @@
                   <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen6"]); ?>" class="card-img-top">
                   <div class="mb-3">
                      <label for="imagen6" class="form-label">Cargar Imagen</label>
-                     <input  class="form-control" type="file" id="imagen6" name ="imagen6"
+                     <input style=" width: 500px;" class="form-control" type="file" id="imagen6" name ="imagen6"
                        accept="image/*" required=" ">
                     </div>
                    <br>
-                    <button type="submit" class="btn btn-success btn-large">Registrar un Nuevo Evento</button>
-                    <a href="admineventos.php" class="btn btn-info" > Regresar</a>
+                    <button style="margin: 2px; border-radius: 5px;"  type="submit" class="btn btn-success btn-large">Registrar un Nuevo Evento</button>
+                    <a style="margin: 2px; border-radius: 5px;"  href="admineventos.php" class="btn btn-info" > Regresar</a>
 
                 </div>
             </form>

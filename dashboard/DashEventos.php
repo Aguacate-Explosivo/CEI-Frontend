@@ -199,9 +199,6 @@
                     <div class="container">
                         <div class="row">
                         <main>
-      
-      <h2>Gestor de Eventos</h2>
-      
           <!-- Navegacion -->
           <nav aria-label="...">
               <ul class="pagination pagination-lg justify-content-center">

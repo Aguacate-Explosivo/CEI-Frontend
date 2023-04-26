@@ -244,8 +244,8 @@
                                 <td><?php echo $row["direccion"]; ?></td>
                                 <td><?php echo $row["fecha_hora"]; ?></td>
                                 <td>
-                                   <a style="margin: 2px; border-radius: 5px;" href="cita.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-warning" > editar</a>
-                                   <a style="margin: 2px; border-radius: 5px;"  href="eliminarcitas.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-danger" > eliminar</a>
+                                   <a style="margin: 2px; border-radius: 5px;" href="cita.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-warning" > Reprogramar</a>
+                                   <a style="margin: 2px; border-radius: 5px;"  href="eliminarcitas.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-danger" > Eliminar</a>
                                 </td>
                             </tr>
                                                       
