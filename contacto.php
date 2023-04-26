@@ -82,14 +82,14 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" for="nombre_usuario" placeholder="Your Name">
-                                    <label for="name">Tu Nombre</label>
+                                    <input type="text" class="form-control" name="nombre_usuario" placeholder="Your Name">
+                                    <label for="nombre_usuario">Tu Nombre</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" name="email_usuario" placeholder="Your Email">
-                                    <label for="email">Tu Email</label>
+                                    <input type="email" class="form-control" name="email_usuario" placeholder="Your Email">
+                                    <label for="email_usuario">Tu Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -100,7 +100,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" name="Texto" style="height: 200px"></textarea>
+                                    <textarea class="form-control" placeholder="Leave a message here" name="Texto" style="height: 200px"></textarea>
                                     <label for="message">Mensaje</label>
                                 </div>
                             </div>
