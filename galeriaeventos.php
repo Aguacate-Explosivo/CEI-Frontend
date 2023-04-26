@@ -53,7 +53,8 @@
           <div class="container-fluid">
         <!-- Seccion de cursos -->
         <div class="jumbotron">
-        <h1 class="display-6 mb-4"><?php echo $row["nombreEven"]; ?></h1>
+        <h1 class="display-6 mb-4"><?php echo $row["nombreEven"]; ?> </h1>
+
         <br>
         <br>
         <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -71,7 +72,8 @@
                             <p class="card-text"><small class="text-muted">Hora: <?php echo $row["hora"]; ?></small></p>
                         </div>
                          
-                        <a href="">ㅤㅤ</a>
+                        <a style="margin: 2px; border-radius: 5px;" href="eventos.php" class="btn btn-info" > Regresar</a>
+                          <br>
                         </div>
 
                          

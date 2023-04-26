@@ -112,7 +112,11 @@
                     </div>
                         <br>
                         <br>
-                        <button type="submit" class="btn btn-success btn-large">Confirmar el Registro</button>
+                        
+                        <button style=" margin: 2px; border-radius: 5px;" type="submit" class="btn btn-success ">Confirmar el Registro</button>
+                        <a style="display: inline-block; margin: 2px; border-radius: 5px;" href="eventos.php" class="btn btn-info" > Regresar</a>
+                        
+                        
                     </div>
                     </div>
                     </div>
