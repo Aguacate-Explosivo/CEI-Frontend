@@ -20,9 +20,5 @@
                 alert('evento cargado correctamente');
                    location.assign('../DashEventos.php');
                    </script>"; 
-          
         }
-    
-   
-
 ?>

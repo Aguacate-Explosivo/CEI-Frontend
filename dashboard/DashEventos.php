@@ -63,7 +63,7 @@
             ><i class="ti-menu"></i
           ></a>
           <div class="top-left-part">
-            <a class="logo" href="index.html"
+            <a class="logo" href="index.php"
               ><i class="glyphicon glyphicon-fire"></i>&nbsp;<span
                 class="hidden-xs"
                 >Eventos</span
@@ -127,7 +127,7 @@
               </div>
             </li>
             <li>
-              <a href="index.html" class="waves-effect"
+              <a href="index.php" class="waves-effect"
                 ><i class="glyphicon glyphicon-fire fa-fw"></i> Dashboard</a
               >
             </li>
