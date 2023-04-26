@@ -8,7 +8,14 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-
+    <!-- Conexion con Email JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <!-- script con la key de emailjs -->
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('user_NbWHHoXNBSbJSJeC7s6uJ');
+        })();
+    </script>
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
@@ -71,34 +78,34 @@
                           form with Ajax & PHP in a few minutes. Just 
                           copy and paste the files, add a little code
                            and you're don</p>
-                    <form>
+                    <form id="ContactoID">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+                                    <input type="text" class="form-control" id="name" for="nombre_usuario" placeholder="Your Name">
+                                    <label for="name">Tu Nombre</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
+                                    <input type="email" class="form-control" id="email" name="email_usuario" placeholder="Your Email">
+                                    <label for="email">Tu Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
+                                    <label for="subject">Tema(Opcional)</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 200px"></textarea>
-                                    <label for="message">Message</label>
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" name="Texto" style="height: 200px"></textarea>
+                                    <label for="message">Mensaje</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Send Message</button>
+                                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Enviar Mensaje</button>
                             </div>
                         </div>
                     </form>
@@ -160,7 +167,21 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
      <?php require("footer.php");  ?>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-
+          <!-- Codigo para enviar el correo al servidor -->
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('ContactoID').addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('11932238243234854645', 'template_28hzft8', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                        alert(`Correo Enviado, Pronto le Responderemos a su peticion :D`)
+                  }, function(error) {
+                      console.log('FAILED...', error);
+                  });
+          });
+      }
+    </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
