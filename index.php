@@ -684,9 +684,7 @@
 
 
     <!-- Footer Start -->
-    <?php
-    include_once
-    ?>
+
     <!-- Footer End -->
            
 
