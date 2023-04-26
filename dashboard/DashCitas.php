@@ -200,7 +200,10 @@
                 <h3>Modulo - Citas</h3>
                 <!-- Container de citas(Data Tables) -->
                 <div class="container-fluid">
+                  <div class="jumbotron white-box">
                     <div class="container">
+                        <div class="row">
+                                <div class="col-lg-12">
                                     <div class="table-responsive">        
                                         <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
@@ -229,12 +232,15 @@
                                             </tr>
                                                 <?php } ?>            
                                         </table>                  
+                                      </div>
                                     </div>
+                                </div>
                               </div>
                         </div>  
                     </div>  
                 <!-- Fin data Table -->
               </div>
+            </div>
           </div>
           <!-- /.row -->
         </div>
