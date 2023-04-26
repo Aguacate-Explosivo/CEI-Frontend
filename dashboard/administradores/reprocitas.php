@@ -197,7 +197,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="white-box">
-                <h3>Modulo - Eventos</h3>
+                <h3>Modulo - Citas</h3>
                 <!-- Container de citas(Data Tables) -->
                 <div class="container-fluid">
                   <div class="jumbotron white-box">
@@ -206,51 +206,47 @@
                                 <div class="col-lg-12">
                                     <div class="table-responsive"> 
                                     <nav aria-label="...">
-                 <ul class="pagination pagination-lg justify-content-center">
-                    <li class="page-item "><a class="page-link" href="../DashEventos.php">Añadir un nuevo Evento</a></li>
-                    <li class="page-item active" aria-current="page"><a class="page-link" href="admineventos.php">Administrar Eventos </a></li>
-                    <li class="page-item"><a class="page-link" href="inscritosevento.php">Registro de Eventos </a></li>
+<ul class="pagination pagination-lg justify-content-center">
+                    <li class="page-item "><a class="page-link" href="../DashCitas.php">Citas Disponibles</a></li>
+                    <li class="page-item active" aria-current="page"><a class="page-link" href="reprocitas.php">Reprogramar Citas </a></li>
 
                 </ul>
             </nav>
             
-                                    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th>Nombre del evento </th>
-                                <th>descripcion del evento</th>    
-                                <th>Lugar</th> 
-                                <th>Fecha</th> 
-                                <th>Hora</th> 
-                                <th>Estado</th>
-                                <th>Imagen</th> 
-                                <th>Acciones</th>                           
                                
+                                <th>Numero de Documento</th>
+                                <th>Nombre Completo</th>                             <th>Numero de Telefono</th>
+                                <th>Barrio</th>
+                                <th>Fecha de Cita</th>
+                                <th>Acciones</th>
+                                
                             </tr>
                         </thead>
                                 <?php
-                                 require_once('conexion.php');
+                                 include("conexion.php");
                                  $conexion=conectar(); 
-                                 $consulta2 ="SELECT * FROM `eventos` ";
+                                 $consulta2 ="SELECT * FROM `citas` ";
                                  $busqueda=mysqli_query($conexion,$consulta2);
                                     
-                            foreach($busqueda as $elemento){ ?>
+                            foreach($busqueda as $row){ ?>
                             <!-- Contenido de la tabla -->
 
 
                        
                             <tr>
-                                <td><?php echo $elemento["nombreEven"]; ?></td>
-                                <td><?php echo $elemento["descripcionEven"]; ?></td>
-                                <td><?php echo $elemento["lugar"]; ?></td>
-                                <td><?php echo $elemento["fecha"]; ?></td>
-                                <td><?php echo $elemento["hora"]; ?></td>
-                                <td><?php echo $elemento["estado"]; ?></td>
-                                <td><img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($elemento["imagen"]); ?>" class="card-img-top"></td>
+                              
+                                <td><?php echo $row["documento"]; ?></td>
+                                <td><?php echo $row["nombre"]; ?></td>
+                                <td><?php echo $row["telefono"]; ?></td>
+                                <td><?php echo $row["direccion"]; ?></td>
+                                <td><?php echo $row["fecha_hora"]; ?></td>
                                 <td>
-                                <a style="margin: 2px; border-radius: 5px;" href="evento.php?id_evento=<?php echo $elemento["id_evento"]?>" class="btn btn-warning" > galleria</a>
-                                <a style="margin: 2px; border-radius: 5px;" href="eliminarevento.php?id_evento=<?php echo $elemento["id_evento"]?>" class="btn btn-danger" > eliminar</a>
-                                 </td>
+                                   <a style="margin: 2px; border-radius: 5px;" href="cita.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-warning" > editar</a>
+                                   <a style="margin: 2px; border-radius: 5px;"  href="eliminarcitas.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-danger" > eliminar</a>
+                                </td>
                             </tr>
                                                       
                         
@@ -260,7 +256,7 @@
                        
                          
                                        
-                       </table>
+                       </table>       
                 
                                       </div>
                                     </div>

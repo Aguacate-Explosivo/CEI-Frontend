@@ -129,7 +129,7 @@
               >
             </li>
             <li>
-              <a href="#" class="waves-effect"
+              <a href="DashCitas.php" class="waves-effect"
                 ><i class="ti-calendar fa-fw"></i>Citas</a
               >
             </li>

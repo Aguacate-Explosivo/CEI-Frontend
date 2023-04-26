@@ -72,13 +72,75 @@
                         <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen"]); ?>" class="card-img-top">
 
                         <div class="mb-3">
-                            <label for="imagen" class="form-label">Cargar Imagen</label>
+                            <label for="imagen" class="form-label">Cargar Imagen Para Eventos</label>
                             <input  class="form-control" type="file" id="imagen" name ="imagen"
                             required=" "  accept="image/*">
                         </div>
                     <br> 
+                    <div class="form__group">
+                  <label for="estado" class="form-label">Estado del Evento:</label>
+                  <select required=" " name ="estado"  id="estado" class="form-control"  style=" width: 500px;">
+                      <option value="Evento Activo" selected>Activo</option>
+                      <option value="Evento Terminado">Terminado</option>
+                  </select>
+                  </div>
+                  <br>
+                  <h1>Imagenes Para La Galeria De Eventos Terminados</h1>
+                  <br>
+                  <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen1"]); ?>" class="card-img-top">
+                  <div class="mb-3">
+                     <label for="imagen1" class="form-label">Cargar Imagen</label>
+                     <input  class="form-control" type="file" id="imagen1" name ="imagen1"
+                       accept="image/*" required=" ">
+                    </div>
+                   <br>
+
+                   <br>
+                  <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen2"]); ?>" class="card-img-top">
+                  <div class="mb-3">
+                     <label for="imagen2" class="form-label">Cargar Imagen</label>
+                     <input  class="form-control" type="file" id="imagen2" name ="imagen2"
+                       accept="image/*" required=" ">
+                    </div>
+                   <br>
+
+                   <br>
+                  <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen3"]); ?>" class="card-img-top">
+                  <div class="mb-3">
+                     <label for="imagen3" class="form-label">Cargar Imagen</label>
+                     <input  class="form-control" type="file" id="imagen3" name ="imagen3"
+                       accept="image/*" required=" ">
+                    </div>
+                   <br>
+
+                   <br>
+                  <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen4"]); ?>" class="card-img-top">
+                  <div class="mb-3">
+                     <label for="imagen4" class="form-label">Cargar Imagen</label>
+                     <input  class="form-control" type="file" id="imagen4" name ="imagen4"
+                       accept="image/*" required=" ">
+                    </div>
+                   <br>
+
+                   <br>
+                  <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen5"]); ?>" class="card-img-top">
+                  <div class="mb-3">
+                     <label for="imagen5" class="form-label">Cargar Imagen</label>
+                     <input  class="form-control" type="file" id="imagen5" name ="imagen5"
+                       accept="image/*" required=" ">
+                    </div>
+                   <br>
+
+                   <br>
+                  <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen6"]); ?>" class="card-img-top">
+                  <div class="mb-3">
+                     <label for="imagen6" class="form-label">Cargar Imagen</label>
+                     <input  class="form-control" type="file" id="imagen6" name ="imagen6"
+                       accept="image/*" required=" ">
+                    </div>
+                   <br>
                     <button type="submit" class="btn btn-success btn-large">Registrar un Nuevo Evento</button>
-                    <a href="administrar_eventos.php" class="btn btn-info" > Regresar</a>
+                    <a href="admineventos.php" class="btn btn-info" > Regresar</a>
 
                 </div>
             </form>

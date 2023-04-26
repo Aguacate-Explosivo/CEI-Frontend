@@ -4,17 +4,17 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
     <meta
       name="keywords"
       content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 4 admin, bootstrap 4, css3 dashboard, bootstrap 4 dashboard, severny admin bootstrap 4 dashboard, frontend, responsive bootstrap 4 admin template, my admin design, my admin dashboard bootstrap 4 dashboard template"
     />
-
     <meta
       name="description"
       content="My Admin is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
     />
     <meta name="robots" content="noindex,nofollow" />
-    <title>Dashboard Admin</title>
+    <title>Dashboard Citas</title>
     <link
       rel="canonical"
       href="https://www.wrappixel.com/templates/myadmin-lite/"
@@ -22,10 +22,6 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.png" />
     <!-- Bootstrap Core CSS -->
-<!--datables CSS básico-->
-    <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
-    <!--datables estilo bootstrap 4 CSS-->  
-    <link rel="stylesheet"  type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
     <link
       href="../bower_components/bootstrap/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -36,7 +32,6 @@
       rel="stylesheet"
     />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/styles.css">
     <link href="../css/style.css" rel="stylesheet" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,6 +39,13 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <!--datables CSS básico-->
+    <link rel="stylesheet" type="text/css" href="../datatables/datatables.min.css"/>
+    <!--datables estilo bootstrap 4 CSS-->  
+    <link rel="stylesheet"  type="text/css" href="../datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
+    <!--font awesome con CDN-->  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">  
   </head>
 
   <body>
@@ -66,10 +68,10 @@
             ><i class="ti-menu"></i
           ></a>
           <div class="top-left-part">
-            <a class="logo" href="index.html"
+            <a class="logo" href="../index.php"
               ><i class="glyphicon glyphicon-fire"></i>&nbsp;<span
                 class="hidden-xs"
-                >Eventos</span
+                >Citas</span
               ></a
             >
           </div>
@@ -130,12 +132,12 @@
               </div>
             </li>
             <li>
-              <a href="../index.html" class="waves-effect"
+              <a href="../index.php" class="waves-effect"
                 ><i class="glyphicon glyphicon-fire fa-fw"></i> Dashboard</a
               >
             </li>
             <li>
-              <a href="#" class="waves-effect"
+              <a href="../DashCitas.php" class="waves-effect"
                 ><i class="ti-calendar fa-fw"></i>Citas</a
               >
             </li>
@@ -186,14 +188,24 @@
           <div class="row bg-title">
             <div class="col-lg-12">
               <h4 class="page-title">Puedes gestionar tus eventos desde este modulo</h4>
-
-
-
-        <h2>Administrar Eventos</h2>
-        </div>
-
-
-<nav aria-label="...">
+              <ol class="breadcrumb">
+              </ol>
+            </div>
+            <!-- /.col-lg-12 -->
+          </div>
+          <!-- row -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="white-box">
+                <h3>Modulo - Eventos</h3>
+                <!-- Container de citas(Data Tables) -->
+                <div class="container-fluid">
+                  <div class="jumbotron white-box">
+                    <div class="container">
+                        <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="table-responsive"> 
+                                    <nav aria-label="...">
 <ul class="pagination pagination-lg justify-content-center">
                     <li class="page-item "><a class="page-link" href="../DashEventos.php">Añadir un nuevo Evento</a></li>
                     <li class="page-item " aria-current="page"><a class="page-link" href="admineventos.php">Administrar Eventos </a></li>
@@ -201,16 +213,8 @@
 
                 </ul>
             </nav>
-     
-    <!--Ejemplo tabla con DataTables-->
-    <div class="container-fluid">
-       
-        <div class="jumbotron">
-    <div class="container">
-       <div class="row">
-                <div class="col-lg-12">
-                    <div class="table-responsive">        
-                        <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            
+            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>
                                 <th>Documento </th>
@@ -242,7 +246,7 @@
                                 <td><?php echo $elemento["edad"]; ?></td>
                                 <td><?php echo $elemento["evento_inscrito"]; ?></td>
                                 <td>
-                                <a href="eliminareventos.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" > eliminar</a>
+                                <a style="margin: 2px; border-radius: 5px;"  href="eliminareventos.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" > eliminar</a>
                                 </td>
                             </tr>
                                                       
@@ -253,52 +257,31 @@
                        
                          
                                        
-                       </table>                  
-                    </div>
-                    </div>
-      </div>
-        </div>  
-                  
-    </div> 
-
-
-              <ol class="breadcrumb">
-              </ol>
+                       </table> 
+                
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                        </div>  
+                    </div>  
+                <!-- Fin data Table -->
+              </div>
             </div>
-            <!-- /.col-lg-12 -->
           </div>
-          <!-- row -->
-        
           <!-- /.row -->
         </div>
         <!-- /.container-fluid -->
       </div>
       <!-- /#page-wrapper -->
       <footer class="footer text-center">
-              FACNET - 2023 &copy;
- 
+        FACNET - 2023 &copy; 
       </footer>
     </div>
     <!-- /#wrapper -->
-
-   
-      
-    <!-- datatables JS -->
-    <script type="text/javascript" src="datatables/datatables.min.js"></script>    
-     
-    <!-- para usar botones en datatables JS -->  
-    <script src="datatables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>  
-    <script src="datatables/JSZip-2.5.0/jszip.min.js"></script>    
-    <script src="datatables/pdfmake-0.1.36/pdfmake.min.js"></script>    
-    <script src="datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
-    <script src="datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
-    <!-- código JS propìo-->    
-    <script type="text/javascript" src="main.js"></script>
-    
     <!-- jQuery -->
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
-
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Menu Plugin JavaScript -->
     <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
@@ -308,5 +291,19 @@
     <script src="../js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="../js/myadmin.js"></script>
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="../jquery/jquery-3.3.1.min.js"></script>
+    <script src="../popper/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <!-- datatables JS -->
+    <script type="text/javascript" src="../datatables/datatables.min.js"></script>    
+    <!-- para usar botones en datatables JS -->  
+    <script src="../datatables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>  
+    <script src="../datatables/JSZip-2.5.0/jszip.min.js"></script>    
+    <script src="../datatables/pdfmake-0.1.36/pdfmake.min.js"></script>    
+    <script src="../datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
+    <script src="../datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
+    <!-- código JS propìo-->    
+    <script type="text/javascript" src="../js/main.js"></script>  
   </body>
 </html>

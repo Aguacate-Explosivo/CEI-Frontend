@@ -177,8 +177,8 @@
         </div>
         <!-- /.sidebar-collapse -->
       </div>
-      <!-- Page Content -->
-      <div id="page-wrapper">
+           <!-- Page Content -->
+           <div id="page-wrapper">
         <div class="container-fluid">
           <div class="row bg-title">
             <div class="col-lg-12">
@@ -189,69 +189,91 @@
             <!-- /.col-lg-12 -->
           </div>
           <!-- row -->
-           <main>
+          <div class="row" >
+            <div class="col-md-12">
+              <div class="white-box">
+                <h3>Modulo - Eventos</h3>
+                <!-- Container de citas(Data Tables) -->
+                <div class="container-fluid">
+                  <div class="jumbotron white-box">
+                    <div class="container">
+                        <div class="row">
+                        <main>
       
-        <h2>Gestor de Eventos</h2>
-        
-            <!-- Navegacion -->
-            <nav aria-label="...">
-                <ul class="pagination pagination-lg justify-content-center">
-                    <li class="page-item active" aria-current="page"><a class="page-link" href="DashEventos.php">Añadir un nuevo Evento</a></li>
-                    <li class="page-item"><a class="page-link" href="administradores/admineventos.php">Administrar Eventos </a></li>
-                    <li class="page-item"><a class="page-link" href="administradores/inscritosevento.php">Registro de Eventos </a></li>
+      <h2>Gestor de Eventos</h2>
+      
+          <!-- Navegacion -->
+          <nav aria-label="...">
+              <ul class="pagination pagination-lg justify-content-center">
+                  <li class="page-item active" aria-current="page"><a class="page-link" href="DashEventos.php">Añadir un nuevo Evento</a></li>
+                  <li class="page-item"><a class="page-link" href="administradores/admineventos.php">Administrar Eventos </a></li>
+                  <li class="page-item"><a class="page-link" href="administradores/inscritosevento.php">Registro de Eventos </a></li>
 
-                </ul>
-            </nav>
-            <!-- Fin de navegacion -->
-            <form action="administradores/regeventos.php" required=" " method="POST" enctype="multipart/form-data">
-                <div class="form__group">
-                    <input type="text" id="nom_even" name="nom_even" class="form__input" placeholder=" " 
-                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
-                    <label for="nom_even" class="form__label">Nombre del Evento:</label>
-                    </div>
-                    <br>
-                    <div class="form__group">
-                    <input type="text" id="lugar" name="lugar" class="form__input" placeholder=" "
-                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
-                    <label for="lugar" class="form__label">Lugar del Evento:</label>
-                    </div>
-                    <br>
-                    <div class="form__group">
-                    <input type="text" id="desc_even" name="desc_even" class="form__input" placeholder=" "
-                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
-                    <label for="desc_even" class="form__label">Descripcion Breve del Evento:</label>
-                    </div>
-                    <br>
-                    <div class="form__group">
-                    <label for="fecha" class="form-label">Fecha del Evento:</label>
-                    <input name ="fecha" type="date" class="form-control" id="fecha" 
-                    required=" "  min="2023-03-01 " max="2030-12-31">
-                    </div>
-                    <br>
-                    <div class="form__group">
-                    <label for="fecha" class="form-label">Hora del Evento:</label>
-                    <input name ="hora" type="time" class="form-control" id="hora" required=" ">
-                    </div>
-                    <br>
-                        <!-- Seccion para cargar la imagen -->
-                        <div class="mb-3">
-                            <label for="imagen" class="form-label">Cargar Imagen</label>
-                            <input class="form-control" type="file" id="imagen" name ="imagen" 
-                            required=" " accept="image/*">
-                        </div>
-                    <br> 
-                    <button type="submit" class="btn btn-success btn-large">Registrar un Nuevo Evento</button>
-                </div>
-            </form>
-           
-    </main>
+              </ul>
+          </nav>
+          <!-- Fin de navegacion -->
+          <form action="administradores/regeventos.php" required=" " method="POST" enctype="multipart/form-data">
+              <div class="form__group">
+                  <input type="text" id="nom_even" name="nom_even" class="form__input" placeholder=" " 
+                  required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+" style=" width: 500px;">
+                  <label for="nom_even" class="form__label">Nombre del Evento:</label>
+                  </div>
+                  <br>
+                  <div class="form__group">
+                  <input type="text" id="lugar" name="lugar" class="form__input" placeholder=" "
+                  required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+" style=" width: 500px;">
+                  <label for="lugar" class="form__label">Lugar del Evento:</label>
+                  </div>
+                  <br>
+                  <div class="form__group">
+                  <input type="text" id="desc_even" name="desc_even" class="form__input" placeholder=" "
+                  required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+" style=" width: 500px;">
+                  <label for="desc_even" class="form__label">Descripcion Breve del Evento:</label>
+                  </div>
+                  <br>
+                  <div class="form__group">
+                  <label for="fecha" class="form-label">Fecha del Evento:</label>
+                  <input name ="fecha" type="date" class="form-control" id="fecha" 
+                  required=" "  min="2023-03-01 " max="2030-12-31" style=" width: 500px;">
+                  </div>
+                  <br>
+                  <div class="form__group">
+                  <label for="fecha" class="form-label">Hora del Evento:</label>
+                  <input name ="hora" type="time" class="form-control" id="hora" required=" " style=" width: 500px;">
+                  </div>
+                  <br>
+                      <!-- Seccion para cargar la imagen -->
+                      <div class="mb-3">
+                          <label for="imagen" class="form-label">Cargar Imagen</label>
+                          <input class="form-control" type="file" id="imagen" name ="imagen" 
+                          required=" " accept="image/*" style=" width: 500px;">
+                      </div>
+                      <br>
+                  <div class="form__group">
+                  <label for="estado" class="form-label">Estado del Evento:</label>
+                  <select required=" " name ="estado"  id="estado" class="form-control"  style=" width: 500px;">
+                      <option value="Evento Activo" selected>Activo</option>
+                      <option value="Evento Terminado">Terminado</option>
+                  </select>
+                  </div>
+                  <br> 
+                  <button style="margin: 2px; border-radius: 5px;"  type="submit" class="btn btn-success btn-large">Registrar un Nuevo Evento</button>
+              </div>
+          </form>
+         
+  </main>
+                                </div>
+                              </div>
+                        </div>  
+                    </div>  
+                <!-- Fin data Table -->
+              </div>
+            </div>
+          </div>
           <!-- /.row -->
         </div>
         <!-- /.container-fluid -->
       </div>
-      <br><br>
-      <br>
-      <br>
       <!-- /#page-wrapper -->
       <footer class="footer text-center">
               FACNET - 2023 &copy;

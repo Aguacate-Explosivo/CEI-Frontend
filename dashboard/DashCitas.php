@@ -204,7 +204,15 @@
                     <div class="container">
                         <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="table-responsive">        
+                                    <div class="table-responsive">  
+                                    <nav aria-label="...">
+<ul class="pagination pagination-lg justify-content-center">
+                    <li class="page-item active"><a class="page-link" href="DashCitas.php">Citas Disponibles</a></li>
+                    <li class="page-item " aria-current="page"><a class="page-link" href="administradores/reprocitas.php">Reprogramar Citas </a></li>
+
+                </ul>
+            </nav>
+                  
                                         <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>

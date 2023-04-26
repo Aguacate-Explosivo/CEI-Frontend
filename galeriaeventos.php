@@ -93,7 +93,7 @@
                             <p class="card-text"><small class="text-muted">Lugar: <?php echo $row["lugar"]; ?></small></p>
                             <p class="card-text"><small class="text-muted">Fecha: <?php echo $row["fecha"]; ?></small></p>
                             <p class="card-text"><small class="text-muted">Hora: <?php echo $row["hora"]; ?></small></p>
-                             <p class="card-text"><small class="text-muted">Estado Del Evento: <?php echo $row["hora"]; ?></small></p>
+                             <p class="card-text"><small class="text-muted">Estado Del Evento: <?php echo $row["estado"]; ?></small></p>
 
                         </div>
                          <br>
@@ -108,7 +108,7 @@
 <br>
 <br>
 
-            <!-- <!-- Gallery -->
+            <!-- Gallery -->
 <div style="margin-left:100px; margin-right:100px;  ">
  <h1 class="display-6 mb-4">Galeria de Imagenes</h1>
  <br>
@@ -117,9 +117,9 @@
   <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
        <div class="project-item mb-5">
     <div class="position-relative">
-    <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">               
+    <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen1"]); ?>" class="img-fluid">               
         <div class="project-overlay">
-            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>"
+            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen1"]); ?>"
             data-lightbox="project"><i class="fa fa-eye"></i></a>
             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="eventos.php"><i class="fa fa-link"></i></a>
         </div>
@@ -129,9 +129,9 @@
 
     <div class="project-item mb-5">
     <div class="position-relative">
-    <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">               
+    <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen2"]); ?>" class="img-fluid">               
         <div class="project-overlay">
-            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>"
+            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen2"]); ?>"
             data-lightbox="project"><i class="fa fa-eye"></i></a>
             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="eventos.php"><i class="fa fa-link"></i></a>
         </div>
@@ -143,9 +143,9 @@
   <div class="col-lg-4 mb-4 mb-lg-0">
    <div class="project-item mb-5">
     <div class="position-relative">
-    <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">               
+    <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen3"]); ?>" class="img-fluid">               
         <div class="project-overlay">
-            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>"
+            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen3"]); ?>"
             data-lightbox="project"><i class="fa fa-eye"></i></a>
             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="eventos.php"><i class="fa fa-link"></i></a>
         </div>
@@ -155,9 +155,9 @@
 
    <div class="project-item mb-5">
     <div class="position-relative">
-    <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">               
+    <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen4"]); ?>" class="img-fluid">               
         <div class="project-overlay">
-            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>"
+            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen4"]); ?>"
             data-lightbox="project"><i class="fa fa-eye"></i></a>
             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="eventos.php"><i class="fa fa-link"></i></a>
         </div>
@@ -170,9 +170,9 @@
 
    <div class="project-item mb-5">
     <div class="position-relative">
-    <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">               
+    <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen5"]); ?>" class="img-fluid">               
         <div class="project-overlay">
-            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>"
+            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen5"]); ?>"
             data-lightbox="project"><i class="fa fa-eye"></i></a>
             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="eventos.php"><i class="fa fa-link"></i></a>
         </div>
@@ -182,9 +182,9 @@
 
    <div class="project-item mb-5">
     <div class="position-relative">
-    <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">               
+    <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen6"]); ?>" class="img-fluid">               
         <div class="project-overlay">
-            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>"
+            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen6"]); ?>"
             data-lightbox="project"><i class="fa fa-eye"></i></a>
             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="eventos.php"><i class="fa fa-link"></i></a>
         </div>
