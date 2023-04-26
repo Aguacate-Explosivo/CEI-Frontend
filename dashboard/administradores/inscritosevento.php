@@ -20,21 +20,24 @@
       href="https://www.wrappixel.com/templates/myadmin-lite/"
     />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.png" />
     <!-- Bootstrap Core CSS -->
-
+<!--datables CSS básico-->
+    <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
+    <!--datables estilo bootstrap 4 CSS-->  
+    <link rel="stylesheet"  type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
     <link
-      href="bower_components/bootstrap/dist/css/bootstrap.min.css"
+      href="../bower_components/bootstrap/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <!-- Menu CSS -->
     <link
-      href="bower_components/metisMenu/dist/metisMenu.min.css"
+      href="../bower_components/metisMenu/dist/metisMenu.min.css"
       rel="stylesheet"
     />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="../css/style.css" rel="stylesheet" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -127,7 +130,7 @@
               </div>
             </li>
             <li>
-              <a href="index.html" class="waves-effect"
+              <a href="../index.html" class="waves-effect"
                 ><i class="glyphicon glyphicon-fire fa-fw"></i> Dashboard</a
               >
             </li>
@@ -137,7 +140,7 @@
               >
             </li>
             <li>
-              <a href="DashEventos.php" class="waves-effect"
+              <a href="../DashEventos.php" class="waves-effect"
                 ><i class="ti-video-camera fa-fw"></i>Eventos</a
               >
             </li>
@@ -165,7 +168,7 @@
           <div class="center p-20">
             <span class="hide-menu"
               ><a
-                href="../index.php"
+                href="../../index.php"
                 class="
                   btn btn-info btn-block btn-rounded
                   waves-effect waves-light
@@ -183,75 +186,93 @@
           <div class="row bg-title">
             <div class="col-lg-12">
               <h4 class="page-title">Puedes gestionar tus eventos desde este modulo</h4>
+
+
+
+        <h2>Administrar Eventos</h2>
+        </div>
+
+
+<nav aria-label="...">
+<ul class="pagination pagination-lg justify-content-center">
+                    <li class="page-item "><a class="page-link" href="../DashEventos.php">Añadir un nuevo Evento</a></li>
+                    <li class="page-item " aria-current="page"><a class="page-link" href="admineventos.php">Administrar Eventos </a></li>
+                    <li class="page-item active"><a class="page-link" href="inscritosevento.php">Registro de Eventos </a></li>
+
+                </ul>
+            </nav>
+     
+    <!--Ejemplo tabla con DataTables-->
+    <div class="container-fluid">
+       
+        <div class="jumbotron">
+    <div class="container">
+       <div class="row">
+                <div class="col-lg-12">
+                    <div class="table-responsive">        
+                        <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Documento </th>
+                                <th>Nombre  </th>
+                                <th>Telefono</th>    
+                                <th>Direccion</th> 
+                                <th>Edad</th> 
+                                <th>Evento Inscrito</th> 
+                                <th>Acciones</th>                           
+                               
+                            </tr>
+                        </thead>
+                                <?php
+                                 include("conexion.php");
+                                 $conexion=conectar(); 
+                                 $consulta2 ="SELECT * FROM `inscritos_eventos` ";
+                                 $busqueda=mysqli_query($conexion,$consulta2);
+                                    
+                            foreach($busqueda as $elemento){ ?>
+                            <!-- Contenido de la tabla -->
+
+
+                       
+                            <tr>
+                            <td><?php echo $elemento["documento"]; ?></td>
+                                <td><?php echo $elemento["nombre"]; ?></td>
+                                <td><?php echo $elemento["telefono"]; ?></td>
+                                <td><?php echo $elemento["direccion"]; ?></td>
+                                <td><?php echo $elemento["edad"]; ?></td>
+                                <td><?php echo $elemento["evento_inscrito"]; ?></td>
+                                <td>
+                                <a href="eliminareventos.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" > eliminar</a>
+                                </td>
+                            </tr>
+                                                      
+                        
+                                 <?php
+                                }
+                                ?>
+                       
+                         
+                                       
+                       </table>                  
+                    </div>
+                    </div>
+      </div>
+        </div>  
+                  
+    </div> 
+
+
               <ol class="breadcrumb">
               </ol>
             </div>
             <!-- /.col-lg-12 -->
           </div>
           <!-- row -->
-           <main>
-      
-        <h2>Gestor de Eventos</h2>
         
-            <!-- Navegacion -->
-            <nav aria-label="...">
-                <ul class="pagination pagination-lg justify-content-center">
-                    <li class="page-item active" aria-current="page"><a class="page-link" href="DashEventos.php">Añadir un nuevo Evento</a></li>
-                    <li class="page-item"><a class="page-link" href="administradores/admineventos.php">Administrar Eventos </a></li>
-                    <li class="page-item"><a class="page-link" href="administradores/inscritosevento.php">Registro de Eventos </a></li>
-
-                </ul>
-            </nav>
-            <!-- Fin de navegacion -->
-            <form action="administradores/regeventos.php" required=" " method="POST" enctype="multipart/form-data">
-                <div class="form__group">
-                    <input type="text" id="nom_even" name="nom_even" class="form__input" placeholder=" " 
-                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
-                    <label for="nom_even" class="form__label">Nombre del Evento:</label>
-                    </div>
-                    <br>
-                    <div class="form__group">
-                    <input type="text" id="lugar" name="lugar" class="form__input" placeholder=" "
-                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
-                    <label for="lugar" class="form__label">Lugar del Evento:</label>
-                    </div>
-                    <br>
-                    <div class="form__group">
-                    <input type="text" id="desc_even" name="desc_even" class="form__input" placeholder=" "
-                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
-                    <label for="desc_even" class="form__label">Descripcion Breve del Evento:</label>
-                    </div>
-                    <br>
-                    <div class="form__group">
-                    <label for="fecha" class="form-label">Fecha del Evento:</label>
-                    <input name ="fecha" type="date" class="form-control" id="fecha" 
-                    required=" "  min="2023-03-01 " max="2030-12-31">
-                    </div>
-                    <br>
-                    <div class="form__group">
-                    <label for="fecha" class="form-label">Hora del Evento:</label>
-                    <input name ="hora" type="time" class="form-control" id="hora" required=" ">
-                    </div>
-                    <br>
-                        <!-- Seccion para cargar la imagen -->
-                        <div class="mb-3">
-                            <label for="imagen" class="form-label">Cargar Imagen</label>
-                            <input class="form-control" type="file" id="imagen" name ="imagen" 
-                            required=" " accept="image/*">
-                        </div>
-                    <br> 
-                    <button type="submit" class="btn btn-success btn-large">Registrar un Nuevo Evento</button>
-                </div>
-            </form>
-           
-    </main>
           <!-- /.row -->
         </div>
         <!-- /.container-fluid -->
       </div>
-      <br><br>
-      <br>
-      <br>
       <!-- /#page-wrapper -->
       <footer class="footer text-center">
               FACNET - 2023 &copy;
@@ -259,19 +280,33 @@
       </footer>
     </div>
     <!-- /#wrapper -->
+
+   
+      
+    <!-- datatables JS -->
+    <script type="text/javascript" src="datatables/datatables.min.js"></script>    
+     
+    <!-- para usar botones en datatables JS -->  
+    <script src="datatables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>  
+    <script src="datatables/JSZip-2.5.0/jszip.min.js"></script>    
+    <script src="datatables/pdfmake-0.1.36/pdfmake.min.js"></script>    
+    <script src="datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
+    <script src="datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
+    <!-- código JS propìo-->    
+    <script type="text/javascript" src="main.js"></script>
     
     <!-- jQuery -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
 
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Menu Plugin JavaScript -->
-    <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
     <!--Nice scroll JavaScript -->
-    <script src="js/jquery.nicescroll.js"></script>
+    <script src="../js/jquery.nicescroll.js"></script>
     <!--Wave Effects -->
-    <script src="js/waves.js"></script>
+    <script src="../js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
-    <script src="js/myadmin.js"></script>
+    <script src="../js/myadmin.js"></script>
   </body>
 </html>

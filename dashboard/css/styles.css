@@ -1,0 +1,263 @@
+ /* ---------------- Datos Para el Proyecto General--------------------- */
+ @font-face {
+   font-family: 'Product Sans';
+   src: url('files/ProductSans-Regular.ttf');
+ }
+
+ :root {
+   --font: 'Product Sans', sans-serif;
+   font-family: var(--font);
+   
+ }
+
+ /* ESTILO DE FONDO */
+ .container-fluidslider {
+   height: 100vh;
+   background-size: cover;
+   background-position: center;
+ }
+
+ /*PERSONALIZACION DE LETRAS --------------------------------------------------------*/
+ * {
+   /* font-family: 'Baloo 2', cursive; */
+   font-size: 1.05rem;
+   text-align: justify;
+
+ }
+
+ h1 {
+   /* font-family: 'Russo One', sans-serif; */
+   font-size: 3rem;
+   background: linear-gradient(to right, #33a921, rgb(244, 244, 118));
+   background-clip: text;
+   text-align: center;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+ }
+
+ h2 {
+   /* font-family: 'Russo One', sans-serif; */
+   font-size: 2.4rem;
+   background: linear-gradient(to right, #2f9020, rgb(3, 3, 8));
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+ }
+
+ h3 {
+   /* font-family: 'Russo One', sans-serif; */
+   font-size: 2rem;
+   background: linear-gradient(to right, #2f9020, rgb(3, 3, 8));
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+ }
+
+ h1,
+ h2,
+ h3,
+ h4 {
+   padding-bottom: 1rem;
+ }
+
+ .container-fluid {
+   max-width: 1250px;
+   margin: 0 auto;
+ }
+
+ p {
+   font-weight: 400;
+   font-size: 1.3rem;
+ }
+
+ /* FORMULARIO DE REGISTRO E INICIO DE SECION ----------------------------------------------*/
+
+ /* ---------------------Redes Sociales de Login ------------------------- */
+
+ .social-networks {
+   padding-left: 3rem;
+   align-items: left;
+   text-align: left;
+   height: 3rem;
+   display: flex;
+   margin-top: auto;
+ }
+
+ .social-networks a {
+   padding-left: 1rem;
+ }
+
+ .social-networks svg {
+   width: 2.2rem;
+   color: #33a921
+ }
+
+ .social-networks svg:hover {
+   color: black;
+ }
+
+ /*PERSONALIZACION DE ALGUNAS IMAGENES ----------------------------------------------*/
+ .imagenes_centradas {
+   margin: 0 auto;
+   display: block;
+ }
+
+ /*PERSONALIZACION DE IMPUTS ----------------------------------------------*/
+ .form__group {
+   position: relative;
+   --color: #5757577e;
+ }
+
+ .form__input {
+   width: 100%;
+   font-family: inherit;
+   font-size: 1rem;
+   color: #706c6c;
+   padding: .6em .3em;
+   border: none;
+   outline: none;
+   border-bottom: 1px solid var(--color);
+ }
+
+ .form__label {
+   color: var(--color);
+   cursor: pointer;
+   position: absolute;
+   top: 0;
+   left: 5px;
+   transform: translateY(10px);
+   transition: transform .5s, color .3s;
+ }
+
+ .form__input:focus+.form__label,
+ .form__input:not(:placeholder-shown)+.form__label {
+   transform: translateY(-12px) scale(.7);
+   transform-origin: top left;
+   --color: #3866f2;
+ }
+
+
+
+ /* ESTILOS DE PIE DE PAGINA -------------------------------------------------------------------*/
+ footer {
+   bottom: 0;
+   left: 0;
+   height: fit-content;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   background-color: #343A40;
+   color: white;
+ }
+
+ .copyright-container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-top: 1px solid rgba(255, 255, 255, 0.3);
+ }
+
+ .copyyright {
+   font-family: helvatica;
+   font-size: 12px;
+   opacity: 0.7;
+   font-weight: 400;
+   padding: 10px 0;
+ }
+
+ .footer-menus {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   width: 40%;
+ }
+
+ .footer-container {
+   height: fit-content;
+   width: 100%;
+   padding: 1.5rem 3rem;
+   box-sizing: border-box;
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   gap: .9rem;
+ }
+ @media screen and (max-width:640px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+ }
+
+ .footer-content-container {
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-start;
+   flex-direction: column;
+ }
+
+ footer .website-logo {
+   margin-bottom: 1.2rem;
+   font-size: calc(1vw + 20px);
+ }
+
+ .footer-info,
+ .menu-item-footer {
+   margin: 0.2rem 0;
+   opacity: 0.7;
+   color: white;
+   text-decoration: none;
+   transition: 0.5;
+ }
+
+ .menu-item-footer:hover {
+   opacity: 1;
+ }
+
+ .menu-title {
+   font-size: 1rem;
+   font-weight: 400;
+   text-transform: uppercase;
+   margin-bottom: 1.2rem;
+ }
+
+ .footer-subtitle,.footer-title{
+  padding: 0 2rem;
+  text-align: center;
+ }
+
+ /* Listado de Cursos-------------------------------------------------- */
+ /* 
+.listado{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 2em
+}
+
+.cartas {
+  border: solid 1px var(--border-color);
+  box-shadow: 1px 1px 4px;
+  padding: .5em;
+  background-color: azure;
+}
+
+.listado img {
+  max-width: 100%;
+}
+
+.listado h2 {
+  text-align: center;
+} */
+
+ /* --------------------------Select-------------------------------------- */
+ /* .select_p {
+  background-color: #2f9020;
+  border: 5px solid red;
+} */
+
+ /* ---------------------------------------------------------------- */
