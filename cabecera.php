@@ -87,7 +87,7 @@
                             <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
                                 <a href="#" class="dropdown-item">Agendar Citas</a>
                                 <a href="#" class="dropdown-item">Descargar Formatos</a>
-                                <a href="#" class="dropdown-item">Galeria De Eventos</a>
+                                <a href="eventos.php" class="dropdown-item">Galeria De Eventos</a>
                                 <a href="#" class="dropdown-item">Quotation</a>
                                 <a href="#" class="dropdown-item">404 Page</a>
                             </div>
