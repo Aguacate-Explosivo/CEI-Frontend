@@ -88,11 +88,12 @@
                                 <a href="#" class="dropdown-item">Agendar Citas</a>
                                 <a href="#" class="dropdown-item">Descargar Formatos</a>
                                 <a href="eventos.php" class="dropdown-item">Galeria De Eventos</a>
-                                <a href="#" class="dropdown-item">Quotation</a>
-                                <a href="#" class="dropdown-item">404 Page</a>
+                                <!-- <a href="#" class="dropdown-item">Quotation</a> -->
+                                <!-- <a href="#" class="dropdown-item">404 Page</a> -->
                             </div>
                         </div>
                         <a href="contacto.php" class="nav-item nav-link">Contacto</a>
+                        <a href="dashboard/index.html" class="nav-item nav-link">Login</a>
                     </div>
                     
                 </div>
