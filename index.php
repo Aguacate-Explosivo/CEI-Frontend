@@ -32,7 +32,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css\style.css" rel="stylesheet">
 </head>
 
 <body  >  
@@ -77,7 +77,7 @@
                 <a href="index.html" class="navbar-brand d-lg-none">
                     <h1 class="fw-bold m-0"></h1>
                 </a>
-                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                <button type="button"   class="navbar-toggler me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -99,43 +99,7 @@
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contacto</a>
                     </div>
-                    <div class="ms-auto d-none d-lg-block">
-     <!-- modal jejeje -->
-                    <div class="ms-auto d-none d-lg-block">
-
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Iniciar Seccion</button>
-                        
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                                <form>
-                                  <div class="mb-3">
-                                    <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                    <input type="text" class="form-control" id="recipient-name">
-                                  </div>
-                                  <div class="mb-3">
-                                    <label for="message-text" class="col-form-label">Message:</label>
-                                    <textarea class="form-control" id="message-text"></textarea>
-                                  </div>
-                                </form>
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-success">Send message</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-
-                    </div> 
-                <!-- modal jejeje -->                 
-              </div>
+                    
                 </div>
             </nav>
         </div>
@@ -720,75 +684,13 @@
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Contacto</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Cra. 22 No 18B-10 B/ Nicolás Medrano - Ciudadela Universitaria.
-                        Bloque 8, salón 316-318 </p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+57 314 509 3025</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i> cei@utch.edu.co</p>
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-light rounded-circle me-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href=""><i
-                                class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Enlaces Rapidos</h4>
-                    <a class="btn btn-link" href="index.html">Inicio</a>
-                    <a class="btn btn-link" href="contact.html">Contacto</a>
-                    <a class="btn btn-link" href="service.html">Servicios</a>
-                    <a class="btn btn-link" href="project.html">Cursos</a>
-                    <a class="btn btn-link" href="about.html">Nosotros</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Horario De Atencion</h4>
-                    <p class="mb-1">Lunes - Viernes</p>
-                    <h6 class="text-light">09:00 am - 05:00 pm</h6>
-                    <p class="mb-1">Sabados</p>
-                    <h6 class="text-light">09:00 am - 12:00 pm</h6>
-                    <p class="mb-1">Domingo</p>
-                    <h6 class="text-light">Cerrado</h6>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Informaciones</h4>
-                    <p>Registra tu correo para recibir informacion  </p>
-                    <div class="position-relative w-100">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
-                            placeholder="Correo">
-                        <button type="button"
-                            class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">Enviar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php
+    include_once
+    ?>
     <!-- Footer End -->
+           
 
-
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="fw-medium text-light" href="#">InnoTech</a>,Todos Los Derechos Reservados.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Diseñado Por <a class="fw-medium text-light" href="">Avocado | Team</a>
-                    Distribuido por <a class="fw-medium text-light" href="">Avocado | Team</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Copyright End -->
+   
 
 
     <!-- Back to Top -->

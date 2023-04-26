@@ -1,7 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="img/logo.webp">
-    <title>CEI | inicio</title>
+    <title>CEI | Inicio</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -29,16 +32,18 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>   
+    <link href="css\style.css" rel="stylesheet">
+</head>
+
 <body  >  
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
-    <!-- Spinner End --> 
-    
+    <!-- Spinner End -->
+
+
     <!-- Topbar Start -->
     <div class="container-fluid bg-primary text-white d-none d-lg-flex">
         <div class="container py-3">
@@ -69,75 +74,43 @@
     <div class="container-fluid bg-white sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
-                <a href="index.html" class="navbar-brand d-lg-none">
+                <a href="index.php" class="navbar-brand d-lg-none">
                     <h1 class="fw-bold m-0"></h1>
                 </a>
-                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                <button type="button"   class="navbar-toggler me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
-                        <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link">Nosotros</a>
-                        <a href="service.html" class="nav-item nav-link">Servicios</a>
-                        <a href="project.html" class="nav-item nav-link">Cursos</a>
+                        <a href="index.php" class="nav-item nav-link active">Inicio</a>
+                        <a href="nosotros.php" class="nav-item nav-link">Nosotros</a>
+                        <a href="servicios.php" class="nav-item nav-link">Servicios</a>
+                        <a href="cursos.php" class="nav-item nav-link">Cursos</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Otros</a>
                             <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                                <a href="feature.html" class="dropdown-item">Features</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="quote.html" class="dropdown-item">Quotation</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
+                                <a href="#" class="dropdown-item">Agendar Citas</a>
+                                <a href="#" class="dropdown-item">Descargar Formatos</a>
+                                <a href="#" class="dropdown-item">Galeria De Eventos</a>
+                                <a href="#" class="dropdown-item">Quotation</a>
+                                <a href="#" class="dropdown-item">404 Page</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                        <a href="contacto.php" class="nav-item nav-link">Contacto</a>
                     </div>
-                    <div class="ms-auto d-none d-lg-block">
-     <!-- modal jejeje -->
-                    <div class="ms-auto d-none d-lg-block">
-
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Iniciar Seccion</button>
-                        
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                                <form>
-                                  <div class="mb-3">
-                                    <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                    <input type="text" class="form-control" id="recipient-name">
-                                  </div>
-                                  <div class="mb-3">
-                                    <label for="message-text" class="col-form-label">Message:</label>
-                                    <textarea class="form-control" id="message-text"></textarea>
-                                  </div>
-                                </form>
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-success">Send message</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-
-                    </div> 
-                <!-- modal jejeje -->                   </div>
+                    
                 </div>
             </nav>
         </div>
     </div>
     <!-- Navbar End -->
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
-            class="bi bi-arrow-up"></i></a>
+
+
+    
+
+
+    
 
 
     <!-- JavaScript Libraries -->
@@ -151,3 +124,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+</body>
+
+</html>
