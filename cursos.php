@@ -78,8 +78,14 @@
             <!-- Estructura de Curso -->
               <div class="col">
                 <div class="card h-100">
-                  <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="card-img-top">
-                  <hr>
+                  <div class="project-item mb-5">
+                  <div class="position-relative">
+                    <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">               
+                    <div class="project-overlay">
+                      <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>"data-lightbox="project"><i class="fa fa-eye"></i></a>
+                      <a class="btn btn-lg-square btn-light rounded-circle m-1" href="eventos.php"><i class="fa fa-link"></i></a>
+                   </div>
+                 </div>
                   <div class="card-body">
                     <h5 class="card-title"><?php echo $row["NombreCurso"]; ?></h5>
                     <p class="card-text">Encargado: <?php echo $row["EncargadoCurso"]; ?></p>
@@ -88,6 +94,7 @@
                   </div>
                 </div>
               </div>
+            </div>
               <br>
               <br>
             <?php } ?>

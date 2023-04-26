@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="img/logo.webp">
-    <title>CEI | Cursos</title>
+    <title>CEI | Galeria Eventos</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -64,14 +64,13 @@
                         <div class="card">
                         <div class="card-body">
                         <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="card-img-top">
-
-                            <h5 class="card-title"><?php echo $row["nombreEven"]; ?></h5>
+                          <br>
+                            <br>
                             <p class="card-text"><small class="text-muted">Lugar: <?php echo $row["lugar"]; ?></small></p>
                             <p class="card-text"><small class="text-muted">Fecha: <?php echo $row["fecha"]; ?></small></p>
                             <p class="card-text"><small class="text-muted">Hora: <?php echo $row["hora"]; ?></small></p>
                         </div>
-                        <a href="inscrip_evento.php" class="btn btn-success "> Participar a un evento</a>
-                         <br>
+                         
                         <a href="">ㅤㅤ</a>
                         </div>
 
