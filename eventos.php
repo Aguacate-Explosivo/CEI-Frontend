@@ -90,6 +90,7 @@
                             <p class="card-text"><small class="text-muted">Lugar: <?php echo $row["lugar"]; ?></small></p>
                             <p class="card-text"><small class="text-muted">Fecha: <?php echo $row["fecha"]; ?></small></p>
                             <p class="card-text"><small class="text-muted">Hora: <?php echo $row["hora"]; ?></small></p>
+                            <p class="card-text"><small class="text-muted">Estado del Evento: <?php echo $row["estado"]; ?></small></p>
                         </div>
                         <a style="margin: 2px; border-radius: 5px;" href="inceventos.php?id_evento=<?php echo $row["id_evento"]?>" class="btn btn-primary" > Asistir A Evento</a>
                         <a style="margin: 2px; border-radius: 5px;" href="galeriaeventos.php?id_evento=<?php echo $row["id_evento"]?>" class="btn btn-info" > Ver Mas</a>
