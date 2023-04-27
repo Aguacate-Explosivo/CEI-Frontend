@@ -258,8 +258,8 @@
                   <div class="form-floating">
                   <label for="estado" class="form-label">Estado del Evento:</label>
                   <select required=" " name ="estado"  id="estado" class="form-control"  >
-                      <option value="Evento Activo" selected>Activo</option>
-                      <option value="Evento Terminado">Terminado</option>
+                      <option value=" Activo" >Activo</option>
+                      <option value=" Terminado">Terminado</option>
                   </select>
                   </div>
                   <br> 

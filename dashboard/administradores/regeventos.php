@@ -15,8 +15,8 @@
 
 
     //igresar la informacion a la tabla de datos
-    $consulta="INSERT INTO eventos VALUES ('','$nombre','$descrip','$lugar','$fecha','$hora','$imagen',
-    '$estado','','','','','','')";
+    $consulta="INSERT INTO eventos VALUES ('','$nombre','$descrip','$lugar','$fecha','$hora',
+    '$imagen','$estado' )";
     $resultado=mysqli_query($conexion,$consulta);
     if ($resultado) {
       echo "<script language='JavaScript'>

@@ -1,47 +1,53 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script defer src="../js/bootstrap.min.js"></script>
-    <meta name="description" content="Incentivar, desarrollar la participacion y contrubiur en procesos que fortalezcan la relacion universidad, empresa, sociedad y estado">
-    <link
-      rel="canonical"
-      href="https://www.wrappixel.com/templates/myadmin-lite/"
-    />
-    <!-- Favicon icon -->
-    <!-- Bootstrap Core CSS -->
+<html lang="en">
 
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="../../img/logo.webp">
+    <title>CEI | Eventos</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="../bower_components/bootstrap/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Menu CSS -->
-    <link
-      href="../bower_components/metisMenu/dist/metisMenu.min.css"
-      rel="stylesheet"
-    />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/styles.css">
-    <link href="../css/style.css" rel="stylesheet" />
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
 </head>
 
-<body  >
-  
-  <!-- Cabecera -->
+<body  >  
+
     
-    <!-- Cuerpo de la pagina -->
-    <main>
-      <div class="container-fluid">
-      <h4>ㅤㅤㅤㅤ</h4>
 
-        <div class="jumbotron white-box">
-            <!-- Navegacion -->
-            <h4>Actualizar datos del evento</h4>
 
-            <?php 
+    <!-- Formulario -->
+    <div class="container-xxl py-5">
+        <div class="container" style="width: 3750px; margin-right: 2550px; ">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <h1 class="display-5 mb-5">Editar Eventos
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6 mx-auto wow fadeInUp" data-wow-delay="0.1s">
+          
+                <?php 
          include("conexion.php");
          $conexion=conectar(); 
          $id_evento=$_REQUEST['id_evento'];
@@ -53,119 +59,106 @@
          ?>
            
             <!-- Fin de navegacion -->
+
             <form action="editarevento.php?id_evento=<?php echo $fila["id_evento"]?>" method="POST" enctype="multipart/form-data" >
-                <div class="form__group">
-                    <input  style=" width: 500px;" type="text" id="nombre" name="nombre" class="form__input" 
+                <div class="container" style=" ">
+                  <div class="row g-3">
+                  <div class="col-md-6">
+                  <div class="form-floating">
+                    <input style=" width: 420px; " type="text" id="nombre" name="nombre" class="form-control" 
                     value="<?php echo $fila['nombreEven']?>" placeholder=" " 
-                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+">
+                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
                     <label for="nombre" class="form__label">Nombre del Evento:</label>
                     </div>
-                    <br>
-                    <div class="form__group">
-                    <input style=" width: 500px;" type="text" id="lugar" name="lugar" class="form__input" placeholder=" "
-                    value="<?php echo $fila['lugar']?>" required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
-                    <label for="lugar" class="form__label">Lugar del Evento:</label>
                     </div>
-                    <br>
-                    <div class="form__group">
-                    <input style=" width: 500px;" type="text" id="evento" name="evento" class="form__input"
+                    <div class="col-md-6">
+                  <div class="form-floating">
+                    <input  style="  width: 420px; margin-left: 200px; " type="text" id="lugar" name="lugar" class="form-control" placeholder=" "
+                    value="<?php echo $fila['lugar']?>" required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
+                    <label style="  width: 420px; margin-left: 200px; " for="lugar" class="form__label">Lugar del Evento:</label>
+                    </div>
+                    </div>
+                    
+                  <div class="form-floating">
+                    <input style=" width: 850px; " type="text" id="evento" name="evento" class="form-control"
                     value="<?php echo $fila['descripcionEven']?>" placeholder=" " 
                     required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
                     <label for="evento" class="form__label">Descripcion Breve del Evento:</label>
+                    
                     </div>
-                    <br>
-                    <div class="form__group">
-                    <label for="fecha" class="form-label">Fecha del Evento:</label>
-                    <input style=" width: 500px;" name ="fecha" type="date" class="form-control" id="fecha" 
+                    <div class="col-md-3">
+                  <div class="form-floating">
+                    <label style=" width: 280px; " for="fecha" class="form__label"></label>
+                    <input style=" width: 280px; " name ="fecha" type="date" class="form-control" id="fecha" 
                     value="<?php echo $fila['fecha']?>" required=" ">
                     </div>
-                    <br>
-                    <div class="form__group">
-                    <label for="fecha" class="form-label">Hora del Evento:</label>
-                    <input style=" width: 500px;" name ="hora" type="time" class="form-control" id="hora" 
+                    </div>
+                    <div class="col-md-3">
+                  <div class="form-floating">
+                    <label style=" width: 280px; margin-left: 170px; " for="hora" class="form__label"></label>
+                    <input style=" width: 280px; margin-left: 170px;" name ="hora" type="time" class="form-control" id="hora" 
                     value="<?php echo $fila['hora']?>" required=" ">
                     </div>
+                    </div>
                     <br>
+                    <div class="col-md-3">
+                  <div class="form-floating">
+                    <label style=" width: 280px; margin-left: 340px; " for="estado" class="form__label">Estado del evento:</label>
+                    <select style=" width: 280px; margin-left: 340px; "  value="<?php echo $fila['estado']?>"
+                    name ="estado" type="text" class="form-control" id="estado">
+                    <option value="Activo">Activo</option>
+                    <option value="Terminado">Terminado</option>
+                    
+                  </select>
+                  </div>
+                    </div>
+                    <div class="col-md-6">
+                  <div class="form-floating">
                         <!-- Seccion para cargar la imagen -->
                         <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen"]); ?>" class="card-img-top">
 
-                        <div class="mb-3">
-                            <label for="imagen" class="form-label">Cargar Imagen Para Eventos</label>
-                            <input style=" width: 500px;" class="form-control" type="file" id="imagen" name ="imagen"
+                            <label  style=" width: 520px; margin-left: 340px;   " for="imagen" class="form-label">Cargar Imagen</label>
+                            <input  style=" width: 520px;  " class="form-control" type="file" id="imagen" name ="imagen"
                             required=" "  accept="image/*">
                         </div>
-                    <br> 
-                    <div class="form__group">
-                  <label for="estado" class="form-label">Estado del Evento:</label>
-                  <select required=" " name ="estado"  id="estado" class="form-control"  style=" width: 500px;">
-                      <option value="Evento Activo" selected>Activo</option>
-                      <option value="Evento Terminado">Terminado</option>
-                  </select>
-                  </div>
-                  <br>
-                  <h4>Imagenes Para La Galeria De Eventos Terminados</h4>
-                  <br>
-                  <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen1"]); ?>" class="card-img-top">
-                  <div class="mb-3">
-                     <label for="imagen1" class="form-label">Cargar Imagen</label>
-                     <input style=" width: 500px;"  class="form-control" type="file" id="imagen1" name ="imagen1"
-                       accept="image/*" required=" ">
-                    </div>
-                   <br>
-
-                   <br>
-                  <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen2"]); ?>" class="card-img-top">
-                  <div class="mb-3">
-                     <label for="imagen2" class="form-label">Cargar Imagen</label>
-                     <input  style=" width: 500px;" class="form-control" type="file" id="imagen2" name ="imagen2"
-                       accept="image/*" required=" ">
-                    </div>
-                   <br>
-
-                   <br>
-                  <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen3"]); ?>" class="card-img-top">
-                  <div class="mb-3">
-                     <label for="imagen3" class="form-label">Cargar Imagen</label>
-                     <input style=" width: 500px;"  class="form-control" type="file" id="imagen3" name ="imagen3"
-                       accept="image/*" required=" ">
-                    </div>
-                   <br>
-
-                   <br>
-                  <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen4"]); ?>" class="card-img-top">
-                  <div class="mb-3">
-                     <label for="imagen4" class="form-label">Cargar Imagen</label>
-                     <input style=" width: 500px;"  class="form-control" type="file" id="imagen4" name ="imagen4"
-                       accept="image/*" required=" ">
-                    </div>
-                   <br>
-
-                   <br>
-                  <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen5"]); ?>" class="card-img-top">
-                  <div class="mb-3">
-                     <label for="imagen5" class="form-label">Cargar Imagen</label>
-                     <input style=" width: 500px;"  class="form-control" type="file" id="imagen5" name ="imagen5"
-                       accept="image/*" required=" ">
-                    </div>
-                   <br>
-
-                   <br>
-                  <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen6"]); ?>" class="card-img-top">
-                  <div class="mb-3">
-                     <label for="imagen6" class="form-label">Cargar Imagen</label>
-                     <input style=" width: 500px;" class="form-control" type="file" id="imagen6" name ="imagen6"
-                       accept="image/*" required=" ">
-                    </div>
-                   <br>
-                    <button style="margin: 2px; border-radius: 5px;"  type="submit" class="btn btn-success btn-large">Registrar un Nuevo Evento</button>
-                    <a style="margin: 2px; border-radius: 5px;"  href="admineventos.php" class="btn btn-info" > Regresar</a>
+                        </div>
+                    <button type="submit" class="btn btn-success btn-large">Registrar un Nuevo Evento</button>
+                    <a href="admineventos.php" class="btn btn-info" > Regresar</a>
 
                 </div>
+                </div>
+                </div>
             </form>
-            </div>
-        </div>
-    </main>
-    <!-- Parte Inferior -->
+                                
+                        
+                        
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+        <!-- Fin formulario -->
+
+
     
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../lib/wow/wow.min.js"></script>
+    <script src="../../lib/easing/easing.min.js"></script>
+    <script src="../../lib/waypoints/waypoints.min.js"></script>
+    <script src="../../lib/owlcarousel/owl.carousel.min.js"></script>
+    
+    <script src="../../lib/lightbox/js/lightbox.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="../../js/main.js"></script>
 </body>
+
 </html>
+
