@@ -136,9 +136,9 @@
                     </div>
                     <div class="col-md-6">
                   <div class="form-floating">
-                  <img style="width: 100px; margin: 5px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen2"]); ?>" class="card-img-top">
+                  <img style="width: 100px; margin: 5px; margin-left: 200px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen2"]); ?>" class="card-img-top">
                   
-                     <label style=" width: 420px; margin-left: 200px; margin-top: 60px;"  for="imagen2" class="form-label">Cargar Imagen</label>
+                     <label style=" width: 420px; margin-left: 400px; margin-top: 60px;"  for="imagen2" class="form-label">Cargar Imagen</label>
                      <input style="  width: 420px; margin-left: 200px;"class="form-control" type="file" id="imagen2" name ="imagen2"
                        accept="image/*" required=" ">
                     </div>
@@ -154,9 +154,9 @@
                     </div>
                     <div class="col-md-6">
                     <div class="form-floating">
-                  <img style="width: 100px; margin: 5px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen4"]); ?>" class="card-img-top">
+                  <img style="width: 100px; margin: 5px; margin-left: 200px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen4"]); ?>" class="card-img-top">
                   
-                     <label style=" width: 420px; margin-left: 200px; margin-top: 60px;"  for="imagen4" class="form-label">Cargar Imagen</label>
+                     <label style=" width: 420px; margin-left: 400px; margin-top: 60px;"  for="imagen4" class="form-label">Cargar Imagen</label>
                      <input style="  width: 420px; margin-left: 200px;"class="form-control" type="file" id="imagen4" name ="imagen4"
                        accept="image/*" required=" ">
                     </div>
@@ -172,9 +172,9 @@
                     </div>
                     <div class="col-md-6">
                     <div class="form-floating">
-                  <img style="width: 100px; margin: 5px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen6"]); ?>" class="card-img-top">
+                  <img style="width: 100px; margin: 5px; margin-left: 200px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen6"]); ?>" class="card-img-top">
                   
-                     <label style=" width: 420px; margin-left: 200px; margin-top: 60px;"  for="imagen6" class="form-label">Cargar Imagen</label>
+                     <label style=" width: 420px; margin-left: 400px; margin-top: 60px;"  for="imagen6" class="form-label">Cargar Imagen</label>
                      <input style="  width: 420px; margin-left: 200px;"class="form-control" type="file" id="imagen6" name ="imagen6"
                        accept="image/*" required=" ">
                     </div>
