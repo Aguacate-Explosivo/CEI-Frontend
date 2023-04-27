@@ -11,7 +11,9 @@
     $hora=$_POST['hora'];
     $imagen= addslashes(file_get_contents($_FILES['imagen']['tmp_name']));          
     $estado=$_POST['estado'];
-    
+   
+
+
     //igresar la informacion a la tabla de datos
     $consulta="INSERT INTO eventos VALUES ('','$nombre','$descrip','$lugar','$fecha','$hora','$imagen',
     '$estado','','','','','','')";
