@@ -195,7 +195,7 @@
                                 <span>Clita erat ipsum et lorem et sit sed stet lorem</span>
                             </div>
                         </div>
-                        <a class="btn btn-primary rounded-pill py-3 px-5" href="about.html">Conoce Mas</a>
+                        <a class="btn btn-primary rounded-pill py-3 px-5" href="nosotros.php">Conoce Mas</a>
                     </div>
                 </div>
             </div>
@@ -335,7 +335,7 @@
                     </div>
                     <div style="margin-left:20px;margin-bottom: :20px;">
 
-                        <a  href="inscrip_cursos.php"  class="btn btn-primary"> Inscribirse </a>
+                    <a style="margin: 2px; border-radius: 5px;" href="inscripcursos.php?Id_Curso=<?php echo $row["Id_Curso"]?>" class="btn btn-primary" > Unirse a Curso</a>
                         <br>
                         <a href="">ㅤㅤ</a>
                     </div>

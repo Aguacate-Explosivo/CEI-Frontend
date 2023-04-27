@@ -18,7 +18,7 @@
     if ($busqueda) {
         echo "<script language='JavaScript'>
                   alert('inscrito al curso correctamente');
-                     location.assign('../../inscripcursos.php');
+                     location.assign('../../cursos.php');
                      </script>"; 
           }
 ?>

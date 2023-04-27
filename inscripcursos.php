@@ -114,7 +114,7 @@
                         <!-- </div> -->
                         <br>
                         <br>
-                        <button type="submit" class="btn btn-success btn-large">Confirmar el Registro</button>
+                        <button type="submit" class="btn btn-primary btn-large">Confirmar el Registro</button>
                         <a style="margin: 2px; border-radius: 5px;"  href="cursos.php" class="btn btn-info" > Regresar</a>
 
                     </div>
