@@ -33,11 +33,10 @@
       rel="stylesheet"
     />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
     <link href="css/style.css" rel="stylesheet" />
-    <link href="../../lib/animate/animate.min.css" rel="stylesheet">
+    <!-- <link href="../../lib/animate/animate.min.css" rel="stylesheet">
     <link href="../../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="../../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="../../lib/lightbox/css/lightbox.min.css" rel="stylesheet"> -->
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -156,7 +155,7 @@
               >
             </li>
             <li>
-              <a href="#" class="waves-effect"
+              <a href="http://localhost/aguacate%20Explosivo%20Team/CEI2.0/" class="waves-effect"
                 ><i class="ti-bar-chart fa-fw"></i> Simulaciones</a
               >
             </li>

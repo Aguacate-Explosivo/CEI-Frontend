@@ -40,7 +40,7 @@
 
     <!-- Formulario -->
     <div class="container-xxl py-5">
-        <div class="container" style="width: 3750px; margin-right: 2550px; ">
+        <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
             <h1 class="display-5 mb-5">Editar Eventos
             </div>
@@ -61,11 +61,11 @@
             <!-- Fin de navegacion -->
 
             <form action="editarevento.php?id_evento=<?php echo $fila["id_evento"]?>" method="POST" enctype="multipart/form-data" >
-                <div class="container" style=" ">
+                <!-- <div class="container" style=" "> -->
                   <div class="row g-3">
                   <div class="col-md-6">
                   <div class="form-floating">
-                    <input style=" width: 420px; " type="text" id="nombre" name="nombre" class="form-control" 
+                    <input type="text" id="nombre" name="nombre" class="form-control" 
                     value="<?php echo $fila['nombreEven']?>" placeholder=" " 
                     required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
                     <label for="nombre" class="form__label">Nombre del Evento:</label>
@@ -73,38 +73,38 @@
                     </div>
                     <div class="col-md-6">
                   <div class="form-floating">
-                    <input  style="  width: 420px; margin-left: 200px; " type="text" id="lugar" name="lugar" class="form-control" placeholder=" "
+                    <input type="text" id="lugar" name="lugar" class="form-control" placeholder=" "
                     value="<?php echo $fila['lugar']?>" required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
-                    <label style="  width: 420px; margin-left: 200px; " for="lugar" class="form__label">Lugar del Evento:</label>
+                    <label for="lugar" class="form__label">Lugar del Evento:</label>
                     </div>
                     </div>
                     
                   <div class="form-floating">
-                    <input style=" width: 850px; " type="text" id="evento" name="evento" class="form-control"
+                    <input type="text" id="evento" name="evento" class="form-control"
                     value="<?php echo $fila['descripcionEven']?>" placeholder=" " 
                     required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
                     <label for="evento" class="form__label">Descripcion Breve del Evento:</label>
                     
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                   <div class="form-floating">
-                    <label style=" width: 280px; " for="fecha" class="form__label"></label>
-                    <input style=" width: 280px; " name ="fecha" type="date" class="form-control" id="fecha" 
+                    <label for="fecha" class="form__label"></label>
+                    <input name ="fecha" type="date" class="form-control" id="fecha" 
                     value="<?php echo $fila['fecha']?>" required=" ">
                     </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                   <div class="form-floating">
-                    <label style=" width: 280px; margin-left: 170px; " for="hora" class="form__label"></label>
-                    <input style=" width: 280px; margin-left: 170px;" name ="hora" type="time" class="form-control" id="hora" 
+                    <label for="hora" class="form__label"></label>
+                    <input name ="hora" type="time" class="form-control" id="hora" 
                     value="<?php echo $fila['hora']?>" required=" ">
                     </div>
                     </div>
                     <br>
-                    <div class="col-md-3">
+                    <div class="col-md-12">
                   <div class="form-floating">
-                    <label style=" width: 280px; margin-left: 340px; " for="estado" class="form__label">Estado del evento:</label>
-                    <select style=" width: 280px; margin-left: 340px; "  value="<?php echo $fila['estado']?>"
+                    <label for="estado" class="form__label">Estado del evento:</label>
+                    <select value="<?php echo $fila['estado']?>"
                     name ="estado" type="text" class="form-control" id="estado">
                     <option value="Activo">Activo</option>
                     <option value="Terminado">Terminado</option>
@@ -112,70 +112,70 @@
                   </select>
                   </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                   <div class="form-floating">
                         <!-- Seccion para cargar la imagen -->
                         <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen"]); ?>" class="card-img-top">
 
-                            <label  style=" width: 520px; margin-left: 340px;   " for="imagen" class="form-label">Cargar Imagen</label>
-                            <input  style=" width: 520px;  " class="form-control" type="file" id="imagen" name ="imagen"
+                            <label style=" width: 520px; margin-left: 340px;" for="imagen" class="form-label">Cargar Imagen</label>
+                            <input class="form-control" type="file" id="imagen" name ="imagen"
                             required=" "  accept="image/*">
                         </div>
                         </div>
 
                         <h4>Imagenes Para La Galeria De Eventos Terminados</h4>
 
-                  <div class="col-md-6">
+                  <div class="col-md-12">
                   <div class="form-floating">
                   <img style="width: 100px; margin: 5px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen1"]); ?>" class="card-img-top">
                   
-                     <label style=" width: 420px; margin-left: 150px; margin-top: 60px;"  for="imagen1" class="form-label">Cargar Imagen</label>
-                     <input style=" width: 420px; "  class="form-control" type="file" id="imagen1" name ="imagen1"
+                     <!-- <label style=" width: 420px; margin-left: 150px; margin-top: 60px;"  for="imagen1" class="form-label">Cargar Imagen</label> -->
+                     <input class="form-control" type="file" id="imagen1" name ="imagen1"
                        accept="image/*" required=" ">
                     </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                   <div class="form-floating">
-                  <img style="width: 100px; margin: 5px; margin-left: 200px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen2"]); ?>" class="card-img-top">
+                  <img style="width: 100px; margin: 5px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen2"]); ?>" class="card-img-top">
                   
-                     <label style=" width: 420px; margin-left: 400px; margin-top: 60px;"  for="imagen2" class="form-label">Cargar Imagen</label>
-                     <input style="  width: 420px; margin-left: 200px;"class="form-control" type="file" id="imagen2" name ="imagen2"
+                     <!-- <label style=" width: 420px; margin-left: 400px; margin-top: 60px;"  for="imagen2" class="form-label">Cargar Imagen</label> -->
+                     <input class="form-control" type="file" id="imagen2" name ="imagen2"
                        accept="image/*" required=" ">
                     </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                   <div class="form-floating">
                   <img style="width: 100px; margin: 5px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen3"]); ?>" class="card-img-top">
                   
-                     <label style=" width: 420px; margin-left: 150px; margin-top: 60px;"  for="imagen3" class="form-label">Cargar Imagen</label>
-                     <input style=" width: 420px; "  class="form-control" type="file" id="imagen3" name ="imagen3"
+                     <!-- <label style=" width: 420px; margin-left: 150px; margin-top: 60px;"  for="imagen3" class="form-label">Cargar Imagen</label> -->
+                     <input class="form-control" type="file" id="imagen3" name ="imagen3"
                        accept="image/*" required=" ">
                     </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                     <div class="form-floating">
-                  <img style="width: 100px; margin: 5px; margin-left: 200px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen4"]); ?>" class="card-img-top">
+                  <img style="width: 100px; margin: 5px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen4"]); ?>" class="card-img-top">
                   
-                     <label style=" width: 420px; margin-left: 400px; margin-top: 60px;"  for="imagen4" class="form-label">Cargar Imagen</label>
-                     <input style="  width: 420px; margin-left: 200px;"class="form-control" type="file" id="imagen4" name ="imagen4"
+                     <!-- <label style=" width: 420px; margin-left: 400px; margin-top: 60px;"  for="imagen4" class="form-label">Cargar Imagen</label> -->
+                     <input class="form-control" type="file" id="imagen4" name ="imagen4"
                        accept="image/*" required=" ">
                     </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                   <div class="form-floating">
                   <img style="width: 100px; margin: 5px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen5"]); ?>" class="card-img-top">
                   
-                     <label style=" width: 420px; margin-left: 150px; margin-top: 60px;"  for="imagen5" class="form-label">Cargar Imagen</label>
-                     <input style=" width: 420px; "  class="form-control" type="file" id="imagen5" name ="imagen5"
+                     <!-- <label style=" width: 420px; margin-left: 150px; margin-top: 60px;"  for="imagen5" class="form-label">Cargar Imagen</label> -->
+                     <input class="form-control" type="file" id="imagen5" name ="imagen5"
                        accept="image/*" required=" ">
                     </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                     <div class="form-floating">
-                  <img style="width: 100px; margin: 5px; margin-left: 200px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen6"]); ?>" class="card-img-top">
+                  <img style="width: 100px; margin: 5px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen6"]); ?>" class="card-img-top">
                   
-                     <label style=" width: 420px; margin-left: 400px; margin-top: 60px;"  for="imagen6" class="form-label">Cargar Imagen</label>
-                     <input style="  width: 420px; margin-left: 200px;"class="form-control" type="file" id="imagen6" name ="imagen6"
+                     <!-- <label style=" width: 420px; margin-left: 400px; margin-top: 60px;"  for="imagen6" class="form-label">Cargar Imagen</label> -->
+                     <input class="form-control" type="file" id="imagen6" name ="imagen6"
                        accept="image/*" required=" ">
                     </div>
                     </div>
@@ -184,7 +184,7 @@
 
                 </div>
                 </div>
-                </div>
+                <!-- </div> -->
             </form>
                                 
                         

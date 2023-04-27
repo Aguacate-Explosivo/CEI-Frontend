@@ -139,12 +139,12 @@
               >
             </li>
             <li>
-              <a href="#" class="waves-effect"
+              <a href="DashCursos.php" class="waves-effect"
                 ><i class="ti-ink-pen fa-fw"></i> Cursos</a
               >
             </li>
             <li>
-              <a href="#" class="waves-effect"
+              <a href="http://localhost/aguacate%20Explosivo%20Team/CEI2.0/" class="waves-effect"
                 ><i class="ti-bar-chart fa-fw"></i> Simulaciones</a
               >
             </li>

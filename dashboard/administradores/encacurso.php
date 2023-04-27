@@ -14,7 +14,7 @@
       content="My Admin is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
     />
     <meta name="robots" content="noindex,nofollow" />
-    <title>Dashboard Citas</title>
+    <title>Dashboard Cursos</title>
     <link
       rel="canonical"
       href="https://www.wrappixel.com/templates/myadmin-lite/"
@@ -71,7 +71,7 @@
             <a class="logo" href="../index.php"
               ><i class="glyphicon glyphicon-fire"></i>&nbsp;<span
                 class="hidden-xs"
-                >Citas</span
+                >Cursos</span
               ></a
             >
           </div>
@@ -187,7 +187,7 @@
         <div class="container-fluid">
           <div class="row bg-title">
             <div class="col-lg-12">
-              <h4 class="page-title">Puedes gestionar tus eventos desde este modulo</h4>
+              <h4 class="page-title">Puedes gestionar tus cursos desde este modulo</h4>
               <ol class="breadcrumb">
               </ol>
             </div>
@@ -197,7 +197,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="white-box">
-                <h3>Modulo - Eventos</h3>
+                <h3>Modulo - Cursos</h3>
                 <!-- Container de citas(Data Tables) -->
                 <div class="container-fluid">
                   <div class="jumbotron white-box">

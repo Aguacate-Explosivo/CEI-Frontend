@@ -14,7 +14,7 @@
       content="My Admin is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
     />
     <meta name="robots" content="noindex,nofollow" />
-    <title>Dashboard Eventos</title>
+    <title>Dashboard Cursos</title>
     <link
       rel="canonical"
       href="https://www.wrappixel.com/templates/myadmin-lite/"
@@ -33,7 +33,6 @@
       rel="stylesheet"
     />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
     <link href="css/style.css" rel="stylesheet" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -66,7 +65,7 @@
             <a class="logo" href="index.php"
               ><i class="glyphicon glyphicon-fire"></i>&nbsp;<span
                 class="hidden-xs"
-                >Eventos</span
+                >Cursos</span
               ></a
             >
           </div>
@@ -147,7 +146,7 @@
               >
             </li>
             <li>
-              <a href="#" class="waves-effect"
+              <a href="http://localhost/aguacate%20Explosivo%20Team/CEI2.0/" class="waves-effect"
                 ><i class="ti-bar-chart fa-fw"></i> Simulaciones</a
               >
             </li>
@@ -182,7 +181,7 @@
         <div class="container-fluid">
           <div class="row bg-title">
             <div class="col-lg-12">
-              <h4 class="page-title">Puedes gestionar tus eventos desde este modulo</h4>
+              <h4 class="page-title">Puedes gestionar tus Cursos desde este modulo</h4>
               <ol class="breadcrumb">
               </ol>
             </div>
@@ -192,7 +191,7 @@
           <div class="row" >
             <div class="col-md-12">
               <div class="white-box">
-                <h3>Modulo - Eventos</h3>
+                <h3>Modulo - Cursos</h3>
                 <!-- Container de citas(Data Tables) -->
                 <div class="container-fluid">
                   <div class="jumbotron white-box">
