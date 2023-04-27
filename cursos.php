@@ -90,7 +90,7 @@
                     <h5 class="card-title"><?php echo $row["NombreCurso"]; ?></h5>
                     <p class="card-text">Encargado: <?php echo $row["EncargadoCurso"]; ?></p>
                     <p class="card-text"> Descripcion:<?php echo $row["DescripcionCurso"]; ?></p>
-                    <a href="inscrip_cursos.php"  class="btn btn-success btn-large"> Inscribirse </a>
+                    <a style="margin: 2px; border-radius: 5px;" href="inscripcursos.php?Id_Curso=<?php echo $row["Id_Curso"]?>" class="btn btn-primary" > Unirse a Curso</a>
                   </div>
                 </div>
               </div>

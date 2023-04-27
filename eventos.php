@@ -48,7 +48,7 @@
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a href="#">Inicio</a></li>
                     <li class="breadcrumb-item"><a href="#">Otros</a></li>
-                    <li class="breadcrumb-item text-primary" aria-current="page">Eventos</li>
+                    <li class="breadcrumb-item text-success" aria-current="page">Eventos</li>
                 </ol>
             </nav>
         </div>
@@ -91,7 +91,7 @@
                             <p class="card-text"><small class="text-muted">Fecha: <?php echo $row["fecha"]; ?></small></p>
                             <p class="card-text"><small class="text-muted">Hora: <?php echo $row["hora"]; ?></small></p>
                         </div>
-                        <a style="margin: 2px; border-radius: 5px;" href="inceventos.php?id_evento=<?php echo $row["id_evento"]?>" class="btn btn-success" > Asistir A Evento</a>
+                        <a style="margin: 2px; border-radius: 5px;" href="inceventos.php?id_evento=<?php echo $row["id_evento"]?>" class="btn btn-primary" > Asistir A Evento</a>
                         <a style="margin: 2px; border-radius: 5px;" href="galeriaeventos.php?id_evento=<?php echo $row["id_evento"]?>" class="btn btn-info" > Ver Mas</a>
 
                          <br>

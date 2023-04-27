@@ -147,7 +147,7 @@
               >
             </li>
             <li>
-              <a href="#" class="waves-effect"
+              <a href="../DashCursos.php" class="waves-effect"
                 ><i class="ti-ink-pen fa-fw"></i> Cursos</a
               >
             </li>
@@ -248,7 +248,7 @@
                                 <td><?php echo $elemento["estado"]; ?></td>
                                 <td><img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($elemento["imagen"]); ?>" class="card-img-top"></td>
                                 <td>
-                                <a style="margin: 2px; border-radius: 5px;" href="evento.php?id_evento=<?php echo $elemento["id_evento"]?>" class="btn btn-warning" > galleria</a>
+                                <a style="margin: 2px; border-radius: 5px;" href="evento.php?id_evento=<?php echo $elemento["id_evento"]?>" class="btn btn-warning" > galeria</a>
                                 <a style="margin: 2px; border-radius: 5px;" href="eliminarevento.php?id_evento=<?php echo $elemento["id_evento"]?>" class="btn btn-danger" > eliminar</a>
                                  </td>
                             </tr>

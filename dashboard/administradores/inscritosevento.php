@@ -147,7 +147,7 @@
               >
             </li>
             <li>
-              <a href="#" class="waves-effect"
+              <a href="../DashCursos.php" class="waves-effect"
                 ><i class="ti-ink-pen fa-fw"></i> Cursos</a
               >
             </li>

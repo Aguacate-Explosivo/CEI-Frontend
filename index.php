@@ -65,7 +65,7 @@
                                     </p>
                                     <h1 class="display-1 text-white mb-4 animated slideInRight">Asiste a eventos recientes
                                         </h1>
-                                        <a type="button" href="eventos.php" class="btn btn-success">asiste a eventos</a>
+                                        <a type="button" href="eventos.php" class="btn btn-primary">asiste a eventos</a>
                                             
                                 </div>
                             </div>
@@ -81,41 +81,8 @@
                                     <p class="fs-4 text-white animated slideInLeft">Agenda <strong>Tu Cita</strong>
                                     </p>
                                     <h1 class="display-1 text-white mb-5 animated slideInLeft">simularemos tu emprendimiento</h1>
-                                      <!-- modal jejeje -->
-                                      <div class="ms-auto d-none d-lg-block">
-                                       
-                                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Agendar Citas</button>
-                                        
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                          <div class="modal-dialog">
-                                            <div class="modal-content">
-                                              <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                              </div>
-                                              <div class="modal-body">
-                                                <form>
-                                                  <div class="mb-3">
-                                                    <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                                    <input type="text" class="form-control" id="recipient-name">
-                                                  </div>
-                                                  <div class="mb-3">
-                                                    <label for="message-text" class="col-form-label">Message:</label>
-                                                    <textarea class="form-control" id="message-text"></textarea>
-                                                  </div>
-                                                </form>
-                                              </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-success">Send message</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                
-                
-                                    </div> 
-                                <!-- modal jejeje -->                   
+                                    <a type="button" href="citas.php" class="btn btn-primary">Citas</a>
+                     
                                 </div>
                             </div>
                         </div>
@@ -228,7 +195,7 @@
                                 <span>Clita erat ipsum et lorem et sit sed stet lorem</span>
                             </div>
                         </div>
-                        <a class="btn btn-success rounded-pill py-3 px-5" href="about.html">Conoce Mas</a>
+                        <a class="btn btn-primary rounded-pill py-3 px-5" href="about.html">Conoce Mas</a>
                     </div>
                 </div>
             </div>
@@ -368,7 +335,7 @@
                     </div>
                     <div style="margin-left:20px;margin-bottom: :20px;">
 
-                        <a  href="inscrip_cursos.php"  class="btn btn-success "> Inscribirse </a>
+                        <a  href="inscrip_cursos.php"  class="btn btn-primary"> Inscribirse </a>
                         <br>
                         <a href="">ㅤㅤ</a>
                     </div>

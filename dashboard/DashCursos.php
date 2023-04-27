@@ -201,62 +201,64 @@
                         <main>
           <!-- Navegacion -->
           <nav aria-label="...">
-              <ul class="pagination pagination-lg justify-content-center">
-                  <li class="page-item active" aria-current="page"><a class="page-link" href="DashEventos.php">Añadir un nuevo Evento</a></li>
-                  <li class="page-item"><a class="page-link" href="administradores/admineventos.php">Administrar Eventos </a></li>
-                  <li class="page-item"><a class="page-link" href="administradores/inscritosevento.php">Registro de Eventos </a></li>
+                <ul class="pagination pagination-lg justify-content-center">
+                    <li class="page-item active" aria-current="page"s><a class="page-link" href="DashCursos.php">Añadir un nuevo Curso</a></li>
+                    <li class="page-item"><a class="page-link" href="administradores/admincursos.php">Admin Cursos</a></li>
+                    <li class="page-item"><a class="page-link" href="administradores/encacurso.php ">Añadir Encargado de Curso</a></li>
+                    <li class="page-item"><a class="page-link" href="administradores/administarinscritos.php ">Admin Inscritos a cursos</a></li>
 
-              </ul>
-          </nav>
+                </ul>
+            </nav>
           <!-- Fin de navegacion -->
-          <form action="administradores/regeventos.php" required=" " method="POST" enctype="multipart/form-data">
-              <div class="form-floating">
-                  <input type="text" id="nom_even" name="nom_even" class="form-control" placeholder=" Nombre del Evento:" 
-                  required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+" >
-                  <label for="nom_even" class="form__label"></label>
-                  </div>
-                  <br>
-                  <div class="form-floating">
-                  <input type="text" id="lugar" name="lugar" class="form-control" placeholder=" Lugar del Evento:"
-                  required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+"  >
-                  <label for="lugar" class="form__label"></label>
-                  </div>
-                  <br>
-                  <div class="form-floating">
-                  <input type="text" id="desc_even" name="desc_even" class="form-control" placeholder=" Descripcion Breve del Evento: "
-                  required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+"  >
-                  <label for="desc_even" class="form__label"></label>
-                  </div>
-                  <br>
-                  <div class="form-floating">
-                  <label for="fecha" class="form-label">Fecha del Evento:</label>
-                  <input name ="fecha" type="date" class="form-control" id="fecha" 
-                  required=""  min="2023-03-01 " max="2030-12-31" >
-                  </div>
-                  <br>
-                  <div class="form-floating">
-                  <label for="fecha" class="form-label">Hora del Evento:</label>
-                  <input name ="hora" type="time" class="form-control" id="hora" required=" "  >
-                  </div>
-                  <br>
-                      <!-- Seccion para cargar la imagen -->
-                      <div class="form-floating">
-                          <label for="imagen" class="form-label">Cargar Imagen</label>
-                          <input class="form-control" type="file" id="imagen" name ="imagen" 
-                          required=" " accept="image/*" >
-                      </div>
-                      <br>
-                  <div class="form-floating">
-                  <label for="estado" class="form-label">Estado del Evento:</label>
-                  <select required=" " name ="estado"  id="estado" class="form-control"  >
-                      <option value="Evento Activo" selected>Activo</option>
-                      <option value="Evento Terminado">Terminado</option>
-                  </select>
-                  </div>
-                  <br> 
-                  <button style="margin: 2px; border-radius: 5px;"  type="submit" class="btn btn-success btn-large">Registrar un Nuevo Evento</button>
-              </div>
-          </form>
+          <form action="administradores\registarcursos.php" required=" " method="POST" enctype="multipart/form-data" >
+                <div class="form-floating">
+                    <input type="text" id="nom_curso" name="nom_curso" class="form-control" placeholder="Nombre del curso: " 
+                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+">
+                    <label for="nom_curso" class="form__label"></label>
+                    </div>
+                    <br>
+                    <div class="form-floating">
+                   
+                    <select id="encargado" name="encargado" class="form-control" >
+                                    <!-- Codigo de la base de datos -->
+                                    <?php
+                                include("../conexion.php");
+                                $conexion=conectar();
+
+                                $query1 = "select *from `encargado` order by encargados";
+                                $query2 = mysqli_query($conexion,$query1);
+
+                                while($row = mysqli_fetch_array($query2))
+                                {
+                                    $id = $row['id'];
+                                    $encargado = $row['encargados'];
+
+                                    ?>
+                                    <option value="<?php echo $encargado; ?>"><?php echo $encargado; ?></option>
+                                    <?php
+                                }
+
+                                ?>
+                                <option selected>Seleccione el encargado del curso :</option>
+                                </select>
+                                </div>
+
+                    <br> 
+                    <div class="form-floating">
+                    <input type="text" id="desc_curso" name="desc_curso" class="form-control" placeholder="Descripcion del Curso:" 
+                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
+                    <label for="desc_curso" class="form__label"></label>
+                    </div>
+                    <br>
+                        <!-- Seccion para cargar la imagen -->
+                        <div class="form-floating">
+                            <label for="formFile" class="form-contro">Cargar Imagen</label>
+                            <input class="form-control" required=" " accept="image/*"  name="imagen" id="imagen" type="file" >
+                        </div>
+                    <br> 
+                    <button type="submit" class="btn btn-success btn-large">Registrar un Nuevo Curso</button>
+                </div>
+            </form>
          
   </main>
                                 </div>

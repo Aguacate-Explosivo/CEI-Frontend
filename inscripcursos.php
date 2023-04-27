@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="img/logo.webp">
-    <title>CEI | Citas</title>
+    <title>CEI | Cursos</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -44,77 +44,82 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <h1 class="display-5 mb-5">Asistir a Evento</h1>
+            <h1 class="display-5 mb-5">Incribirse a Cursos
             </div>
             <div class="row g-5">
                 <div class="col-lg-6 mx-auto wow fadeInUp" data-wow-delay="0.1s">
-           <form action="dashboard\administradores\regisevento.php" method="POST"> 
-            <p>En este formulario se le permitirá inscribirse a los Eventos que se realizan en el centro de emprendimiento e inovaccion</p>
+           <form action="dashboard\administradores\regiscurso.php" method="POST"> 
+            <p>En este formulario se le permitirá inscribirse a los cursos que dictamos, por favor llena todos los campos</p>
                           <!-- id="formInscripcion" -->
-                          <div class="col-md-6">
-                        <div class="form-floating">
+                          
+                          <div class="row g-3">
+                            <div class="col-md-6">
+                            <div class="form-floating">
                             <input type="text" id="documento" name="documento" class="form-control" placeholder=" "
-                            required="" style=" width: 500px;"  pattern="[0-9]+" maxlength="10" minlength="7">
-                            <label for="documento" class="form__label">Numero de Documento:</label>
+                            required="" style="width: 520px;" pattern="[0-9]+" maxlength="10" minlength="7">
+                            <label for="documento" class="form__label">Numero de Documento:</label> 
                         </div>
                         </div>
-                        <br>
-                        <div class="col-md-6">
+                       
+                        <div class="row g-3">
                         <div class="form-floating">
                             <input id="nombre" name="nombre" type="text" class="form-control" placeholder=" "
-                            required=" " style=" width: 500px;"  pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+">
+                            required="" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+">
                             <label for="nombre" class="form__label">Nombre Completo</label>
                           </div>
                           </div>
-                          <br>
-                          <div class="col-md-6">
-                        <div class="form-floating">
+                          <div class="row g-3">
+                          <div class="form-floating">
                             <input type="text" id="tel" name="tel" class="form-control" placeholder=" "
-                            required="" style=" width: 500px;"  pattern="[0-9]+"  maxlength="11" minlength="10">
+                            required="" pattern="[0-9]+"  maxlength="11" minlength="10">
                             <label for="tel" class="form__label">Telefono:</label>
                         </div>
                         </div>
-                        <br>
-                        <div class="col-md-6">
+                        <div class="row g-3">
                         <div class="form-floating">
                             <input type="text" id="direccion" name="direccion" class="form-control" placeholder=" "
-                            required="" style=" width: 500px;"  pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
+                            required="" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
                             <label for="direccion" class="form__label">Dirección:</label>
                         </div>
-                        <br>
-                        <div class="col-md-6">
+                        </div>
+                        <div class="row g-3">
                         <div class="form-floating">
                             <input type="text" id="edad" name="edad" class="form-control" placeholder=" "
-                            required="" style=" width: 500px;"  pattern="[ 0-9 ]+">
+                            required="" pattern="[0-9]+">
                             <label for="edad" class="form__label">Edad:</label>
                         </div>
                         </div>
-                        <br>
                         <!-- <div class="form__group"> -->
-                        <div class="col-md-6">
+                        <div class="row g-3">
                         <div class="form-floating">
-                                <select style=" width: 500px;"  name="evento_elegido" class="form-control">
+                                <select name="curso_elegido" class="form-control" >
                                     <!-- Codigo de la base de datos -->
                                     <?php
                                             require 'conexion.php';
                                             $conexion=conectar();
-                                            $id_evento=$_GET['id_evento'];
-                                            $consulta = "select *from eventos where id_evento='".$id_evento."'";
+                                            $Id_Curso=$_GET['Id_Curso'];
+                                            $consulta = "select *from cursos where Id_Curso='".$Id_Curso."'";
                                             $resultado=mysqli_query($conexion,$consulta);
                                             foreach($resultado as $row){ 
-                                                echo '<option value="'.$row["nombreEven"].'">'.$row["nombreEven"].'</option>';
+                                                echo '<option value="'.$row["NombreCurso"].'">'.$row["NombreCurso"].'</option>';
                                             }
                                             ?>
+                                            
+                                            
                                     <!-- Fin bd -->
-                                    
                                 </select>
                                 </div>
+                                </div>
+                                </div>
+                        <!-- </div> -->
+                        <br>
+                        <br>
+                        <button type="submit" class="btn btn-success btn-large">Confirmar el Registro</button>
+                        <a style="margin: 2px; border-radius: 5px;"  href="cursos.php" class="btn btn-info" > Regresar</a>
+
                     </div>
-                        <br>
-                        <br>
-                        
-                        <button style=" margin: 2px; border-radius: 5px;" type="submit" class="btn btn-primary ">Confirmar el Registro</button>
-                        <a style="display: inline-block; margin: 2px; border-radius: 5px;" href="eventos.php" class="btn btn-info" > Regresar</a>
+
+                      <div class="modal-footer">
                         
                         
                     </div>
