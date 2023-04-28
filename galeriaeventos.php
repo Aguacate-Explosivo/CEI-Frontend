@@ -67,9 +67,9 @@
                         <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="card-img-top">
                           <br>
                             <br>
-                            <p class="card-text"><small class="text-muted">Lugar: <?php echo $row["lugar"]; ?></small></p>
-                            <p class="card-text"><small class="text-muted">Fecha: <?php echo $row["fecha"]; ?></small></p>
-                            <p class="card-text"><small class="text-muted">Hora: <?php echo $row["hora"]; ?></small></p>
+                            <p class="card-text"><small class="text-muted">Lugar:ㅤㅤ <?php echo $row["lugar"]; ?></small></p>
+                            <p class="card-text"><small class="text-muted">Fecha:ㅤㅤ <?php echo $row["fecha"]; ?></small></p>
+                            <p class="card-text"><small class="text-muted">Hora:ㅤㅤ <?php echo $row["hora"]; ?></small></p>
                         </div>
                          
                         <a style="margin: 2px; border-radius: 5px;" href="eventos.php" class="btn btn-info" > Regresar</a>
@@ -87,15 +87,15 @@
                             <br>
                             <br>
                             <br>
-                        <h1 class="display-6 mb-4">Nombre Del Evento: <?php echo $row["nombreEven"]; ?></h1>
+                        <h1 class="display-6 mb-4">Nombre Del Evento:ㅤㅤ <?php echo $row["nombreEven"]; ?></h1>
                          <br>
                             
-                            <p class="card-text">Descripcion Del Evento: <?php echo $row["descripcionEven"]; ?></p>
+                            <p class="card-text">Descripcion Del Evento:ㅤㅤ <?php echo $row["descripcionEven"]; ?></p>
 
-                            <p class="card-text"><small class="text-muted">Lugar: <?php echo $row["lugar"]; ?></small></p>
-                            <p class="card-text"><small class="text-muted">Fecha: <?php echo $row["fecha"]; ?></small></p>
-                            <p class="card-text"><small class="text-muted">Hora: <?php echo $row["hora"]; ?></small></p>
-                             <p class="card-text"><small class="text-muted">Estado Del Evento: <?php echo $row["estado"]; ?></small></p>
+                            <p class="card-text"><small class="text-muted">Lugar:ㅤㅤ <?php echo $row["lugar"]; ?></small></p>
+                            <p class="card-text"><small class="text-muted">Fecha:ㅤㅤ <?php echo $row["fecha"]; ?></small></p>
+                            <p class="card-text"><small class="text-muted">Hora:ㅤㅤ <?php echo $row["hora"]; ?></small></p>
+                             <p class="card-text"><small class="text-muted">Estado Del Evento:ㅤㅤ <?php echo $row["estado"]; ?></small></p>
 
                         </div>
                          <br>

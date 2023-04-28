@@ -187,7 +187,7 @@
         <div class="container-fluid">
           <div class="row bg-title">
             <div class="col-lg-12">
-              <h4 class="page-title">Puedes gestionar tus eventos desde este modulo</h4>
+              <h4 class="page-title">Puedes gestionar tus Citas desde este modulo</h4>
               <ol class="breadcrumb">
               </ol>
             </div>

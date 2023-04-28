@@ -18,7 +18,7 @@
     if ($resultado) {
         echo "<script language='JavaScript'>
                 alert('los datos se agregaron correctamente');
-                   location.assign('../../inceventos.php');
+                   location.assign('../../eventos.php');
                    </script>"; 
         }
     
