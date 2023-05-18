@@ -1,0 +1,58 @@
+Etapa de Iniciacion
+En esta Etapa se analiza el estudio de factibilidad, planificacion del proyecto, recopilacion de requisitos, planificacion de seguirdad, analisis de requisitos, especificaciones tecnicas y el diseño.
+
+Etapa de Planficacion del sprint
+
+Si entendemos el significado del sprint como un miniproyecto dentro del proyecto principal, cada uno de ellos tiene un objetivo en particular. 
+En la primera reunión del equipo se definirán aspectos como la funcionalidad, objetivos, riesgos del sprint, plazos de entrega, entre otros. Posteriormente se realiza una junta entre el equipo y el jefe del proyecto para explicar cómo se desarrollará cada punto del intervalo. Aquí se evaluarán cambios, toma de decisiones, mejoras y más factores.
+
+Etapa de Desarrollo
+
+Cuando el trabajo del sprint está en curso, los encargados deben garantizar que no se generen cambios de último momento que puedan afectar los objetivos del mismo. Además, se asegura el cumplimiento de los plazos establecidos para su término.
+En esta etapa se empieza la creacion de la aplicacion como tal donde con base a los requerimientos ya definidos se empiezan a crear los modulos del proyecto
+
+Revision del sprint
+
+Cuando el trabajo del sprint está en curso, los encargados deben garantizar que no se generen cambios de último momento que puedan afectar los objetivos del mismo. Además, se asegura el cumplimiento de los plazos establecidos para su término.
+
+Colaboración entre equipos, supervisores, jefes y dueños de productos.
+Se admiten análisis externos como forma de complementación.
+El equipo de trabajo responde qué es lo que se ha desarrollado y qué carencias han tenido.
+En base a ello, se puede regresar a la etapa de planificación para evaluar cómo mejorar el siguiente sprint.
+La revisión incluye cómo, hasta ahora, el producto podría generar más valor.
+Se analizan las capacidades del equipo, la línea de tiempo, entre otros detalles, para saber qué potenciar.
+
+Retroalimentacion
+
+Los resultados pueden ser entregados para recibir un feedback no solo por parte de los profesionales dentro del proyecto, sino también de las personas que utilizarán directamente lo que se desea lograr; es decir, los clientes potenciales. Las lecciones aprendidas durante esta etapa permitirán que el siguiente sprint pueda ser mucho más efectivo y ágil.
+
+
+Para el cronograma
+
+Iniciacion/Planeacion:
+Estudio de factibilidad
+Planificación de proyectos
+Recopilación de requisitos
+Planificación de seguridad
+Análisis de requisitos completado
+
+Diseño:
+Diseño detallado
+Diseño completado
+
+Desarrollo:
+Planificación de integración
+Planificación de prueba
+Planificación de implementación
+Desarrollo de la app completada
+
+Pruebas y Respuestas:
+Prueba de funcionamiento
+Prueba de aceptación del usuario
+Pruebas de Seguridad
+Pruebas de Rendimiento
+
+Implementacion:
+Despliegue
+Formación
+Soporte
