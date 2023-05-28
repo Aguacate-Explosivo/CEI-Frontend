@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -476,9 +476,10 @@
 <div>
     
     </div>
+    </div>
     
     <!-- Footer Start -->
-    
+    <?php require("footer.php");  ?> 
     <!-- Footer End -->
     
     
@@ -498,7 +499,6 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <?php require("footer.php");  ?>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
