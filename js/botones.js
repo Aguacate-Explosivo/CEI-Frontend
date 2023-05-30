@@ -55,12 +55,31 @@ $('#asistir').click(function(){
               
             })
           }
-          else{ Swal.fire({
-        title: `${valor}`,
-        icon: 'success',
-        text: 'Agregado con exito ',
-        
-      })
+          else{ 
+
+            let timerInterval
+                          
+              Swal.fire({
+                title: `${valor}`,
+                text: 'Añadido con exito ',
+                timer: 2000,
+                timerProgressBar: true,
+                didOpen: () => {
+                  Swal.showLoading()
+                  const b = Swal.getHtmlContainer().querySelector('b')
+                  timerInterval = setInterval(() => {
+                    b.textContent = Swal.getTimerLeft()
+                  }, 100)
+                },
+                willClose: () => {
+                  clearInterval(timerInterval)
+                }
+              }).then((result) => {
+                /* Read more about handling dismissals below */
+                if (result.dismiss === Swal.DismissReason.timer) {
+                  console.log('I was closed by the timer')
+                }
+              }) 
     }
     
   });
@@ -129,13 +148,31 @@ $('#asistir').click(function(){
               }
               
           
-      else{ Swal.fire({
+      else{ 
+        let timerInterval
+                          
+        Swal.fire({
           title: `${valor9}`,
-          icon: 'success',
           text: 'Cita agendada con exito ',
-         
-          
-        })
+          timer: 2000,
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading()
+            const b = Swal.getHtmlContainer().querySelector('b')
+            timerInterval = setInterval(() => {
+              b.textContent = Swal.getTimerLeft()
+            }, 100)
+          },
+          willClose: () => {
+            clearInterval(timerInterval)
+          }
+        }).then((result) => {
+          /* Read more about handling dismissals below */
+          if (result.dismiss === Swal.DismissReason.timer) {
+            console.log('I was closed by the timer')
+          }
+        }) 
+        
       }
       
     });
@@ -198,12 +235,33 @@ $('#asistir').click(function(){
                   
                 })
               }
-              else{ Swal.fire({
-            title: `${valor}`,
-            icon: 'success',
-            text: 'Registrado con exito ',
-            
-          })
+              else{ 
+                
+                let timerInterval
+                          
+                Swal.fire({
+                  title: `${valor}`,
+                  text: 'Registrado con exito ',
+                  timer: 2000,
+                  timerProgressBar: true,
+                  didOpen: () => {
+                    Swal.showLoading()
+                    const b = Swal.getHtmlContainer().querySelector('b')
+                    timerInterval = setInterval(() => {
+                      b.textContent = Swal.getTimerLeft()
+                    }, 100)
+                  },
+                  willClose: () => {
+                    clearInterval(timerInterval)
+                  }
+                }).then((result) => {
+                  /* Read more about handling dismissals below */
+                  if (result.dismiss === Swal.DismissReason.timer) {
+                    console.log('I was closed by the timer')
+                  }
+                })
+                
+           
         }
         
       });
