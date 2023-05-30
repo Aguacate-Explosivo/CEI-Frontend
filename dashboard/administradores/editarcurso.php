@@ -1,7 +1,7 @@
 
             <!-- Navegacion -->
             <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -52,7 +52,7 @@
                 <div class="col-lg-6 mx-auto wow fadeInUp" data-wow-delay="0.1s">
           
                 <?php 
-         include("conexion.php");
+         include("../../conexion.php");
          $conexion=conectar(); 
          $Id_Curso=$_REQUEST['Id_Curso'];
          

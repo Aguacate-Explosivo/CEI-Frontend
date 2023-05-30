@@ -232,7 +232,7 @@
                             </tr>
                         </thead>
                                 <?php
-                                 require_once('conexion.php');
+                                 require_once('../../conexion.php');
                                  $conexion=conectar(); 
                                  $consulta2 ="SELECT * FROM `eventos` ";
                                  $busqueda=mysqli_query($conexion,$consulta2);

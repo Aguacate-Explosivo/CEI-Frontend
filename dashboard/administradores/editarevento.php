@@ -1,6 +1,6 @@
 <?php
     //Conexion con la base de datos
-	include("conexion.php");
+	include("../../conexion.php");
 	$conexion=conectar();
     $id_evento=$_REQUEST['id_evento'];
 

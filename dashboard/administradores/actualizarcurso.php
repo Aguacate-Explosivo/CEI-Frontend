@@ -1,6 +1,6 @@
 <?php
     //Conexion con la base de datos
-	include("conexion.php");
+	include("../../conexion.php");
 	$conexion=conectar();
     $Id_Curso=$_REQUEST['Id_Curso'];
 

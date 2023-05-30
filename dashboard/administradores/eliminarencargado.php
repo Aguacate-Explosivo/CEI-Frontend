@@ -1,5 +1,5 @@
 <?php 
-include_once('conexion.php');
+include_once('../../conexion.php');
 $conexion=conectar(); 
    $id=$_GET['id'];
 
