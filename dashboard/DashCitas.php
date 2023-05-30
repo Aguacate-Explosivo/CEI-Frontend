@@ -49,6 +49,9 @@
   </head>
 
   <body>
+  <?php
+    include_once("../php/sesion_validacion.php")
+    ?>
     <!-- Preloader -->
     <div class="preloader">
       <div class="cssload-speeding-wheel"></div>
@@ -170,7 +173,7 @@
           <div class="center p-20">
             <span class="hide-menu"
               ><a
-                href="../index.php"
+                href="../php/log_out.php"
                 class="
                   btn btn-info btn-block btn-rounded
                   waves-effect waves-light

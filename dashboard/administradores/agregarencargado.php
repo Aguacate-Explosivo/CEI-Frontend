@@ -1,7 +1,7 @@
 
             <!-- Navegacion -->
             <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -36,7 +36,9 @@
 </head>
 
 <body  >  
-
+<?php
+      include_once("sesion_validacion.php")
+      ?>
     
 
 

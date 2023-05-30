@@ -36,7 +36,7 @@
 
 <body>
 
-    <!-- <?php require("cabecera.php");  ?> -->
+    <?php //require("cabecera.php");  ?>
     <!-- Navbar End -->
 
 
@@ -54,9 +54,9 @@
                             <div class="card-body login-card-body">
                                 <p>Ingrese sus datos para iniciar sesion</p>
 
-                                <form action="#" method="POST">
+                                <form action="php/login_validacion.php" method="POST">
                                     <div class="input-group mb-3">
-                                        <input type="email" class="form-control" placeholder="Email" id="user"
+                                        <input type="text" class="form-control" placeholder="Email" id="user"
                                             name="user">
                                         <div class="input-group-append">
                                             <div class="input-group-text">
@@ -123,7 +123,7 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <?php require("footer.php");  ?>
+    <?php //require("footer.php");  ?>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
