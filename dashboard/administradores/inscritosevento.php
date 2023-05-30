@@ -45,6 +45,7 @@
     <!--datables estilo bootstrap 4 CSS-->  
     <link rel="stylesheet"  type="text/css" href="../datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
     <!--font awesome con CDN-->  
+    <link rel="stylesheet" href="../../sweet\dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">  
   </head>
 
@@ -246,7 +247,7 @@
                                 <td><?php echo $elemento["edad"]; ?></td>
                                 <td><?php echo $elemento["evento_inscrito"]; ?></td>
                                 <td>
-                                <a style="margin: 2px; border-radius: 5px;"  href="eliminareventos.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" > eliminar</a>
+                                <a style="margin: 2px; border-radius: 5px;"  type="submit" href="eliminareventos.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" id="eliminar" name="eliminar" > eliminar</a>
                                 </td>
                             </tr>
                                                       
@@ -305,5 +306,8 @@
     <script src="../datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
     <!-- código JS propìo-->    
     <script type="text/javascript" src="../js/main.js"></script>  
+    <script src="../../sweet/dist/sweetalert2.all.min.js"></script>
+    <script src="../../js/botones.js"></script>
   </body>
+  <script src="../../sweet/dist/sweetalert2.all.min.js"></script>
 </html>

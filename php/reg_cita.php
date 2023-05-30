@@ -17,7 +17,6 @@
     $resultado=mysqli_query($conexion,$consulta);
     if ($resultado) {
       echo "<script language='JavaScript'>
-                alert('tu cita se ha registrado correctamente');
                    location.assign('../citas.php');
                    </script>"; 
           

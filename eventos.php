@@ -33,13 +33,23 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- sweet alert  -->
+    <link rel="stylesheet" href="sweet/dist/sweetalert2.min.css">
 </head>
 
 <body>
      <?php require("cabecera.php");  ?>
 <!-- Navbar End -->
 
-
+<?php
+          if(isset($_SESSION['msj'])) {
+            $respuesta = $_SESSION['msj']; ?>
+          <script>
+               alert('hola');
+          </script>
+          <?php
+        }
+          ?>
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
@@ -59,7 +69,7 @@
           <div class="container-fluid">
         <!-- Seccion de cursos -->
         <div class="jumbotron">
-        <h1 class="display-6 mb-4">Eventos Disponibles</h1>
+        <h1 class="display-6 mb-4">Eventos Disponibles</h1> 
         <br>
         <br>
         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -72,6 +82,16 @@
                 
                 foreach($resultado as $row){ $id = $row["id_evento"]; ?>
           <!-- Fin bd -->
+
+          <?php
+          if(isset($_SESSION['msj'])) {
+            $respuesta = $_SESSION['msj']; ?>
+          <script>
+               alert('hola');
+          </script>
+          <?php
+        }
+          ?>
             <!-- Estructura de eventos -->
                         <div class="card">
                         <div class="card-body">
@@ -92,7 +112,7 @@
                             <p class="card-text"><small class="text-muted">Hora: <?php echo $row["hora"]; ?></small></p>
                             <p class="card-text"><small class="text-muted">Estado del Evento: <?php echo $row["estado"]; ?></small></p>
                         </div>
-                        <a style="margin: 2px; border-radius: 5px;" href="inceventos.php?id_evento=<?php echo $row["id_evento"]?>" class="btn btn-primary" > Asistir A Evento</a>
+                        <a style="margin: 2px; border-radius: 5px;" href="inceventos.php?id_evento=<?php echo $row["id_evento"]?>" class="btn btn-primary" id = "asistir" > Asistir A Evento</a>
                         <a style="margin: 2px; border-radius: 5px;" href="galeriaeventos.php?id_evento=<?php echo $row["id_evento"]?>" class="btn btn-info" > Ver Mas</a>
 
                          <br>
@@ -113,6 +133,8 @@
 
 
     <!-- JavaScript Libraries -->
+    <script src="botones.js"></script>
+    <script src="sweet/dist/sweetalert2.all.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -125,5 +147,5 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
+<script src="sweet/dist/sweetalert2.all.min.js"></script>
 </html>

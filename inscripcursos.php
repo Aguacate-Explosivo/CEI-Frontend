@@ -32,6 +32,9 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- sweet alert  -->
+    <link rel="stylesheet" href="sweet\dist\sweetalert2.min.css">
+
 </head>
 
 <body  >  
@@ -114,7 +117,7 @@
                         <!-- </div> -->
                         <br>
                         <br>
-                        <button type="submit" class="btn btn-primary btn-large">Confirmar el Registro</button>
+                        <button type="submit" class="btn btn-primary btn-large" id ="registar" name ="registar">Confirmar el Registro</button>
                         <a style="margin: 2px; border-radius: 5px;"  href="cursos.php" class="btn btn-info" > Regresar</a>
 
                     </div>
@@ -138,6 +141,7 @@
 
 
     <!-- JavaScript Libraries -->
+    <script src="js/botones.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -149,5 +153,5 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
+<script src="sweet/dist/sweetalert2.all.min.js"></script>
 </html>

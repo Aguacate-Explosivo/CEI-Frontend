@@ -17,7 +17,7 @@
     $busqueda=mysqli_query($conexion,$consulta);
     if ($busqueda) {
         echo "<script language='JavaScript'>
-                  alert('inscrito al curso correctamente');
+            
                      location.assign('../../cursos.php');
                      </script>"; 
           }

@@ -1,3 +1,4 @@
+
 <?php
     //Conexion con la base de datos
 	include("conexion.php");
@@ -12,14 +13,13 @@
     $evento=$_POST['evento_elegido'];
     //se Obtiene la longitud del string
     
+    
     //igresar la informacion a la tabla de datos
     $consulta="INSERT INTO inscritos_eventos VALUES ('','$documento','$nombre','$tel','$direccion','$edad','$evento');";
     $resultado=mysqli_query($conexion,$consulta);
     if ($resultado) {
-        echo "<script language='JavaScript'>
-                alert('los datos se agregaron correctamente');
-                   location.assign('../../eventos.php');
-                   </script>"; 
-        }
+        header ('location: ' .$URL. '/CEI-frontend/eventos.php');
+        
+    } 
     
 ?>

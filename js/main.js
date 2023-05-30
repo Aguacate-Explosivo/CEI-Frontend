@@ -85,3 +85,11 @@
     
 })(jQuery);
 
+function mostraralerta(titulo, descripcion, tipoalert){
+    Swal.fire(
+        titulo,
+        descripcion,
+        tipoalert 
+    )
+}
+

@@ -32,6 +32,9 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+     <!-- sweet alert  -->
+     <link rel="stylesheet" href="sweet\dist\sweetalert2.min.css">
+     
 </head>
 
 <body  >  
@@ -48,7 +51,7 @@
             </div>
             <div class="row g-5">
                 <div class="col-lg-6 mx-auto wow fadeInUp" data-wow-delay="0.1s">
-           <form action="dashboard\administradores\regisevento.php" method="POST"> 
+           <form  action="dashboard\administradores\regisevento.php" method="POST"> 
             <p>En este formulario se le permitirá inscribirse a los Eventos que se realizan en el centro de emprendimiento e inovaccion</p>
                           <!-- id="formInscripcion" -->
                           <div class="col-md-6">
@@ -113,7 +116,7 @@
                         <br>
                         <br>
                         
-                        <button style=" margin: 2px; border-radius: 5px;" type="submit" class="btn btn-primary ">Confirmar el Registro</button>
+                        <button style=" margin: 2px; border-radius: 5px;" type="submit" class="btn btn-primary " name="asistir" id="asistir" >Confirmar el Registro</button>
                         <a style="display: inline-block; margin: 2px; border-radius: 5px;" href="eventos.php" class="btn btn-info" > Regresar</a>
                         
                         
@@ -133,6 +136,7 @@
 
 
     <!-- JavaScript Libraries -->
+    <script src="js/botones.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -144,5 +148,5 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
+<script src="sweet/dist/sweetalert2.all.min.js"></script>
 </html>
