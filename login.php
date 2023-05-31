@@ -54,7 +54,7 @@
                             <div class="card-body login-card-body">
                                 <p>Ingrese sus datos para iniciar sesion</p>
 
-                                <form action="php/login_validacion.php" method="POST">
+                                <form action="php\login_validacion.php" required=" " method="POST" enctype="multipart/form-data">
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control" placeholder="Email" id="user"
                                             name="user">
