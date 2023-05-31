@@ -39,7 +39,7 @@
         </div>
         <div class="col-xs-4">
 
-          <button href="\CEI-Frontend\index.php" class="btn btn-danger btn-block btn-flat">Regresar</button>
+          <a href="\CEI-Frontend\index.php" class="btn btn-danger btn-block btn-flat">Regresar</a>
         
         </div>
       </div>
