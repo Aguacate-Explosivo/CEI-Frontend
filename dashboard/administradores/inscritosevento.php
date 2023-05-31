@@ -232,7 +232,8 @@
                                  $conexion=conectar(); 
                                  $consulta2 ="SELECT * FROM `inscritos_eventos` ";
                                  $busqueda=mysqli_query($conexion,$consulta2);
-                                    
+                            
+                            if (is_array($consulta2)) {     
                             foreach($busqueda as $elemento){ ?>
                             <!-- Contenido de la tabla -->
 
@@ -252,7 +253,7 @@
                                                       
                         
                                  <?php
-                                }
+                                }}
                                 ?>
                        
                          
