@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
     <meta
       name="keywords"
       content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 4 admin, bootstrap 4, css3 dashboard, bootstrap 4 dashboard, severny admin bootstrap 4 dashboard, frontend, responsive bootstrap 4 admin template, my admin design, my admin dashboard bootstrap 4 dashboard template"
@@ -33,12 +32,7 @@
     />
     <!-- Custom CSS -->
     <link href="../css/style.css" rel="stylesheet" />
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
     
     <!--datables CSS básico-->
     <link rel="stylesheet" type="text/css" href="../datatables/datatables.min.css"/>
@@ -89,33 +83,17 @@
           </ul>
           <ul class="nav navbar-top-links navbar-right pull-right">
             <!-- Buscador -->
-            <!-- <li>
-              <form role="search" class="app-search hidden-xs">
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  class="form-control"
-                />
-                <a href=""><i class="ti-search"></i></a>
-              </form>
-            </li> -->
+
             <li>
               <a class="profile-pic" href="#">
-                <!-- <img
-                  src="images/users/hritik.jpg"
-                  alt="user-img"
-                  width="36"
-                  class="img-circle"
-                /> -->
+
                 <i class="ti-user"></i>
                 <b class="hidden-xs">Administrador</b>
               </a>
             </li>
           </ul>
         </div>
-        <!-- /.navbar-header -->
-        <!-- /.navbar-top-links -->
-        <!-- /.navbar-static-side -->
+
       </nav>
       <div class="navbar-default sidebar nicescroll" role="navigation">
         <div class="sidebar-nav navbar-collapse">
@@ -154,17 +132,7 @@
                 ><i class="ti-ink-pen fa-fw"></i> Cursos</a
               >
             </li>
-            
-            <!-- <li>
-              <a href="blank.html" class="waves-effect"
-                ><i class="ti-files fa-fw"></i> Dashboard</a
-              >
-            </li> -->
-            <!-- <li>
-              <a href="404.html" class="waves-effect"
-                ><i class="ti-info fa-fw"></i> Error 404</a
-              >
-            </li> -->
+
           </ul>
           <div class="center p-20">
             <span class="hide-menu"
@@ -235,8 +203,6 @@
                             foreach($busqueda as $elemento){ ?>
                             <!-- Contenido de la tabla -->
 
-
-                       
                             <tr>
                                 <td><?php echo $elemento["NombreCurso"]; ?></td>
                                 <td><?php echo $elemento["DescripcionCurso"]; ?></td>
@@ -246,15 +212,11 @@
                                    <a href="editarcurso.php?Id_Curso=<?php echo $elemento["Id_Curso"]?>" class="btn btn-warning" > editar</a>
                                    <a href="eliminarcurso.php?Id_Curso=<?php echo $elemento["Id_Curso"]?>" class="btn btn-danger" > eliminar</a>
                                 </td>
-                            </tr>
-                                                      
+                            </tr>                  
                         
                                  <?php
                                 }
-                                ?>
-                       
-                         
-                                       
+                                ?>     
                        </table> 
                 
                                       </div>
