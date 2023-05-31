@@ -35,7 +35,13 @@
           <button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
         
         </div>
+        <div class="col-xs-4">
+        </div>
+        <div class="col-xs-4">
 
+          <button href="\CEI-Frontend\index.php" class="btn btn-danger btn-block btn-flat">Regresar</button>
+        
+        </div>
       </div>
 
       <?php
