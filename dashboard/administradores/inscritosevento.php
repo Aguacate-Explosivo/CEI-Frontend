@@ -14,7 +14,7 @@
       content="My Admin is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
     />
     <meta name="robots" content="noindex,nofollow" />
-    <title>Dashboard Citas</title>
+    <title>Dashboard Eventos</title>
     <link
       rel="canonical"
       href="https://www.wrappixel.com/templates/myadmin-lite/"
@@ -172,7 +172,7 @@
               ><a
                 href="../../php/log_out.php"
                 class="
-                  btn btn-success btn-block btn-rounded
+                  btn btn-successs btn-block btn-rounded
                   waves-effect waves-light
                 "
                 >Cerra sesión</a
