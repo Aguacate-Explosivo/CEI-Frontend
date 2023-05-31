@@ -149,10 +149,7 @@
               >
             </li>
             <li>
-              <a href="http://localhost/aguacate%20Explosivo%20Team/CEI2.0/" class="waves-effect"
-                ><i class="ti-bar-chart fa-fw"></i> Simulaciones</a
-              >
-            </li>
+           
             <!-- <li>
               <a href="blank.html" class="waves-effect"
                 ><i class="ti-files fa-fw"></i> Dashboard</a
@@ -169,7 +166,7 @@
               ><a
                 href="../php/log_out.php"
                 class="
-                  btn btn-info btn-block btn-rounded
+                  btn btn-success btn-block btn-rounded
                   waves-effect waves-light
                 "
                 >Cerra sesión</a
