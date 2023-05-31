@@ -172,7 +172,7 @@
               ><a
                 href="../../php/log_out.php"
                 class="
-                  btn btn-successs btn-block btn-rounded
+                  btn btn-success btn-block btn-rounded
                   waves-effect waves-light
                 "
                 >Cerra sesión</a
@@ -228,12 +228,12 @@
                             </tr>
                         </thead>
                                 <?php
-                                 include("../../conexion.php");
+                                 include("conexion.php");
                                  $conexion=conectar(); 
                                  $consulta2 ="SELECT * FROM `inscritos_eventos` ";
                                  $busqueda=mysqli_query($conexion,$consulta2);
                             
-                            if (is_array($consulta2)) {     
+                                
                             foreach($busqueda as $elemento){ ?>
                             <!-- Contenido de la tabla -->
 
@@ -253,7 +253,7 @@
                                                       
                         
                                  <?php
-                                }}
+                                }
                                 ?>
                        
                          

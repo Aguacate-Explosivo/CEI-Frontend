@@ -1,14 +1,13 @@
 <?php
-// function conectar(){
+ function conectar(){
 
-// 	$hostname="127.0.0.1:33065";
-// 	$username="root";
-// 	$password="";
-// 	$dbname="cei";
+ 	$hostname="localhost";
+ 	$username="root";
+ 	$password="";
+ 	$dbname="cei";
 	
-// 	$conexion = mysqli_connect($hostname,$username, $password, $dbname);
-	
-// 	return $conexion;
-print("conexion vieja")
+ 	$conexion = mysqli_connect($hostname,$username, $password, $dbname);
+	return $conexion;
+
 }
 ?>

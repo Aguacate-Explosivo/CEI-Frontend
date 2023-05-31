@@ -51,7 +51,7 @@
           
 
 <?php 
-include("../../conexion.php");
+include("conexion.php");
 $conexion=conectar(); 
 $idcita=$_REQUEST['idcita'];
 

@@ -247,7 +247,7 @@
                                      deseen emprender en cualquier ámbito.</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="service.html">Ver Mas<i
+                            <a class="text-success fw-medium" href="nosotros.php">Ver Mas<i
                                     class="bi bi-chevron-double-right ms-2"></i></a>
                         </div>
                     </div>
@@ -265,7 +265,7 @@
                                     está especializado en brindarle un apoyo en su educación </p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="service.html">Ver Mas<i
+                            <a class="text-success fw-medium" href="nosotros.php">Ver Mas<i
                                     class="bi bi-chevron-double-right ms-2"></i></a>
                         </div>
                     </div>
@@ -285,7 +285,7 @@
                                       Utechino.</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="service.html">Ver Mas<i
+                            <a class="text-success fw-medium" href="nosotros.php">Ver Mas<i
                                     class="bi bi-chevron-double-right ms-2"></i></a>
                         </div>
                     </div>

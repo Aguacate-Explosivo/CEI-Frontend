@@ -195,7 +195,7 @@
                             </tr>
                         </thead>
                                 <?php
-                                 include("../../conexion.php");
+                                 include("conexion.php");
                                  $conexion=conectar(); 
                                  $consulta2 ="SELECT * FROM `cursos` ";
                                  $busqueda=mysqli_query($conexion,$consulta2);

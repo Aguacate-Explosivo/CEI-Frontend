@@ -231,12 +231,12 @@
                             </tr>
                         </thead>
                                 <?php
-                                 include("../../conexion.php");
+                                 include("conexion.php");
                                  $conexion=conectar(); 
                                  $consulta2 ="SELECT * FROM `inscritos_cursos` ";
                                  $busqueda=mysqli_query($conexion,$consulta2);
                                 
-                             if (is_array($consulta2)) {
+                            
                             foreach($busqueda as $elemento){ ?>
                             <!-- Contenido de la tabla -->
 
@@ -254,7 +254,7 @@
                                                       
                         
                                  <?php
-                                }}
+                                }
                                 ?>
                        
                          
