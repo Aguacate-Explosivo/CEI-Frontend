@@ -120,7 +120,7 @@
                   placeholder="Search..."
                 />
                 <span class="input-group-btn">
-                  <button class="btn btn-default" type="button">
+                  <button class="btn btn-success" type="button">
                     <i class="ti-search"></i>
                   </button>
                 </span>
@@ -167,7 +167,7 @@
               ><a
                 href="../php/log_out.php"
                 class="
-                  btn btn-info btn-block btn-rounded
+                  btn btn-success btn-block btn-rounded
                   waves-effect waves-light
                 "
                 >Cerra sesión</a

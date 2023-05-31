@@ -316,6 +316,9 @@
                 
                 
                 foreach($resultado as $row){ $id = $row["Id_Curso"]; ?>
+   
+            
+                
           <!-- Fin bd -->
             <!-- Estructura de Curso -->
                <div class="project-item mb-5">
@@ -348,6 +351,7 @@
         </div>
     </div>
     <!-- Project End -->
+
 
 
    
@@ -419,12 +423,11 @@
     <!-- Team End -->
 
 
-    <!-- Testimonial Start -->
-    <div class="container-xxl pt-5">
+ <!-- Testimonial Start -->
+ <div class="container-xxl pt-5">
         <div class="container">
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
                 style="max-width: 500px;">
-
                 <p class="fs-5 fw-medium text-success">Talento Humano</p>
                 <h1 class="display-5 mb-5">Conoce a algunos integrantes del CEI</h1>
             </div>
@@ -470,17 +473,16 @@
                 </div>
             </div>
         </div>
-
     </div>
     <!-- Testimonial End -->
+
 <div>
     
     </div>
     </div>
+    </div>
     
-    <!-- Footer Start -->
-    <?php require("footer.php");  ?> 
-    <!-- Footer End -->
+   
     
     
     
@@ -498,6 +500,9 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+     <!-- Footer Start -->
+     <?php require("footer.php");  ?> 
+    <!-- Footer End -->
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
