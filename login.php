@@ -93,7 +93,7 @@
 
                                 <div class="social-auth-links text-center mb-3">
                                     <p>- O -</p>
-                                    <a href="\CEI-Frontend\simulacion\index.php" class="btn btn-block btn-primary">Simular </a>
+                                    <a href="simulacion/index.php" class="btn btn-block btn-primary">Simular </a>
                                     <a href="index.php" class="btn btn-block btn-danger">Volver</a>
                                 </div>
                                 <!-- /.social-auth-links -->
