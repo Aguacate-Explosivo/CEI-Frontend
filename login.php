@@ -93,10 +93,11 @@
 
                                 <div class="social-auth-links text-center mb-3">
                                     <p>- O -</p>
-                                    <a href="#" class="btn btn-block btn-primary">Simular </a>
+                                    <a href="/backend2/index.php" class="btn btn-block btn-primary">Simular </a>
                                     <a href="index.php" class="btn btn-block btn-danger">Volver</a>
                                 </div>
                                 <!-- /.social-auth-links -->
+                                
 
                                 <p class="mb-0">
                                     <a href="#" class="text-center">Registrarse</a>
