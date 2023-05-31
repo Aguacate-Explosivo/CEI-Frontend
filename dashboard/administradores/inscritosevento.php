@@ -14,7 +14,7 @@
       content="My Admin is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
     />
     <meta name="robots" content="noindex,nofollow" />
-    <title>Dashboard Citas</title>
+    <title>Dashboard Eventos</title>
     <link
       rel="canonical"
       href="https://www.wrappixel.com/templates/myadmin-lite/"
@@ -155,11 +155,7 @@
                 ><i class="ti-ink-pen fa-fw"></i> Cursos</a
               >
             </li>
-            <li>
-              <a href="#" class="waves-effect"
-                ><i class="ti-bar-chart fa-fw"></i> Simulaciones</a
-              >
-            </li>
+            
             <!-- <li>
               <a href="blank.html" class="waves-effect"
                 ><i class="ti-files fa-fw"></i> Dashboard</a
@@ -176,7 +172,7 @@
               ><a
                 href="../../php/log_out.php"
                 class="
-                  btn btn-info btn-block btn-rounded
+                  btn btn-successs btn-block btn-rounded
                   waves-effect waves-light
                 "
                 >Cerra sesión</a
