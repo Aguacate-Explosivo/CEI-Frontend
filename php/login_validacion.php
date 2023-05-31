@@ -1,33 +1,39 @@
 <?php
-	include("../conexion.php");
-	$conexion=conectar();
+    include("../conexion.php");
+    $conexion = conectar();
 
-    //Valores del formulario
-    $user=$_POST['user'];
-    $passwd=$_POST['password'];
+    // Valores del formulario
+    $user = $_POST['user'];
+    $passwd = $_POST['password'];
 
-    //consulta la base de datos
-    $consulta="SELECT * FROM `datos` WHERE usuario='$user' and contraseña='$passwd';";
-    $resultado=mysqli_query($conexion,$consulta);
-    
-    //validacion
-    $fila=mysqli_num_rows($resultado);
-    
-    if($fila){
-        //Se inicia la sesion
+    // Evitar inyección de SQL utilizando sentencias preparadas
+    $consulta = "SELECT * FROM `datos` WHERE usuario=? AND contraseña=?";
+    $stmt = mysqli_prepare($conexion, $consulta);
+    mysqli_stmt_bind_param($stmt, "ss", $user, $passwd);
+    mysqli_stmt_execute($stmt);
+
+    // Validación
+    $resultado = mysqli_stmt_get_result($stmt);
+    $fila = mysqli_num_rows($resultado);
+
+    if ($fila) {
+        // Se inicia la sesión
         session_start();
-        $_SESSION['user']=$user;
-        //alerta de ingreso
+        $_SESSION['user'] = $user;
+
+        // Alerta de ingreso
         echo "<script language='JavaScript'>
-        alert('Validacion Exitosa');
-           location.assign('../dashboard/index.php');
-           </script>"; 
-    }
-    else{
+              alert('Validación exitosa');
+              location.href = '../dashboard/index.php';
+              </script>";
+    } else {
         echo "<script language='JavaScript'>
-        alert('Error, verifique sus datos');
-           location.assign('../login.php');
-           </script>"; 
+              alert('Error, verifique sus datos');
+              location.href = '../login.php';
+              </script>";
     }
-    mysqli_free_result($resultado);
+
+    // Liberar recursos
+    mysqli_stmt_close($stmt);
+    mysqli_close($conexion);
 ?>
