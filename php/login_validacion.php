@@ -1,4 +1,5 @@
 <?php
+    // Se llama al archivo de conexión a la base de datos
     include("../conexion.php");
     $conexion = conectar();
 
@@ -6,34 +7,29 @@
     $user = $_POST['user'];
     $passwd = $_POST['password'];
 
-    // Evitar inyección de SQL utilizando sentencias preparadas
-    $consulta = "SELECT * FROM `datos` WHERE usuario=? AND contraseña=?";
-    $stmt = mysqli_prepare($conexion, $consulta);
-    mysqli_stmt_bind_param($stmt, "ss", $user, $passwd);
-    mysqli_stmt_execute($stmt);
+    // Consulta la base de datos
+    $consulta="SELECT * FROM `datos` WHERE usuario='$user' and contraseña='$passwd';";
+    $resultado = mysqli_query($conexion, $consulta);
 
     // Validación
-    $resultado = mysqli_stmt_get_result($stmt);
-    $fila = mysqli_num_rows($resultado);
+    $fila = mysqli_fetch_assoc($resultado);
 
     if ($fila) {
-        // Se inicia la sesión
-        session_start();
-        $_SESSION['user'] = $user;
+        // Generar un token único
+        $token = uniqid();
 
-        // Alerta de ingreso
-        echo "<script language='JavaScript'>
-              alert('Validación exitosa');
-              location.href = '../dashboard/index.php';
+        // Almacenar el token en el Local Storage del navegador
+        echo "<script>
+                localStorage.setItem('auth_token', '$token');
               </script>";
+        echo "<script>
+              window.location.href = '../dashboard/index.php';
+            </script>";
     } else {
         echo "<script language='JavaScript'>
-              alert('Error, verifique sus datos');
-              location.href = '../login.php';
-              </script>";
+        alert('Error, verifique sus datos');
+        location.assign('../login.php');
+        </script>";
     }
-
-    // Liberar recursos
-    mysqli_stmt_close($stmt);
-    mysqli_close($conexion);
+    mysqli_free_result($resultado);
 ?>
