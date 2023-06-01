@@ -18,8 +18,9 @@
     $consulta="INSERT INTO inscritos_eventos VALUES ('','$documento','$nombre','$tel','$direccion','$edad','$evento');";
     $resultado=mysqli_query($conexion,$consulta);
     if ($resultado) {
-        header ('location: ' .$URL. '/CEI-frontend/eventos.php');
-        
+        echo "<script language='JavaScript'>
+                    location.assign('../../eventos.php');
+                     </script>"; 
     } 
     
 ?>
