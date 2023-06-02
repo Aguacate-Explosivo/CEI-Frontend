@@ -31,10 +31,11 @@
               icon: 'success',
               title: 'Registro Exitoso...',
               text: 'Su Cita ha sido guardada de forma correcta',
+              showConfirmButton: false,
             })
             setInterval(()=>{
               location.assign('../citas.php');
-            },5000)
+            },3500)
             </script>"; 
           
         }else{
@@ -43,10 +44,11 @@
             icon: 'error',
             title: 'Oops...',
             text: 'ya hay una cita para esta fecha y hora!',
+            showConfirmButton: false,
           })
           setInterval(()=>{
             location.assign('../citas.php');
-          },5000)
+          },3500)
              </script>"; 
         }
 ?>
