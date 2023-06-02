@@ -10,15 +10,19 @@
 <body>  
 <?php
     //Conexion con la base de datos
-	include_once("../conexion.php");
-	$conexion=conectar();
+    include_once("../conexion.php");
+    $conexion = conectar();
 
     //Valores del formulario
-    $documento=$_POST['documento'];
-    $nombre=$_POST['nombre'];
-    $tel=$_POST['tel'];
-    $direccion=$_POST['direccion'];
-    $fecha=$_POST['fecha'];
+    $documento = $_POST['documento'];
+    $nombre = $_POST['nombre'];
+    $tel = $_POST['tel'];
+    $direccion = $_POST['direccion'];
+    $fecha = $_POST['fecha'];
+
+    // Verificar si existe una cita con la misma fecha y hora
+    $consultaExistente = "SELECT * FROM citas WHERE fecha_hora = '$fecha'";
+    $resultadoExistente = mysqli_query($conexion, $consultaExistente);
     
     //se Obtiene la longitud del string
     
@@ -26,29 +30,17 @@
    $consulta = "INSERT INTO citas VALUES ('','$documento','$nombre','$tel','$direccion','$fecha')";
     $resultado=mysqli_query($conexion,$consulta);
     if ($resultado) {
-      echo "<script>
-            Swal.fire({
-              icon: 'success',
-              title: 'Registro Exitoso...',
-              text: 'Su Cita ha sido guardada de forma correcta',
-            })
-            setInterval(()=>{
-              location.assign('../citas.php');
-            },5000)
-            </script>"; 
+      echo "<script language='JavaScript'>
+                   location.assign('../citas.php');
+                   </script>"; 
           
         }else{
-          echo "<script>
-          Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'ya hay una cita para esta fecha y hora!',
-          })
-          setInterval(()=>{
-            location.assign('../citas.php');
-          },5000)
+          echo "<script language='JavaScript'>
+          alert('ya hay una cita para esta fecha y hora ');
+             location.assign('../citas.php');
              </script>"; 
         }
+    }
 ?>
 </body>
 </html>
