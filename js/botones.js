@@ -153,7 +153,7 @@ $('#asistir').click(function(){
                           
         Swal.fire({
           title: `${valor9}`,
-          text: 'Cita agendada con exito ',
+          text: 'Termina de completar los datos y recuerda que las citas se asignan con intervalos de 30 minutos  ',
           timer: 2000,
           timerProgressBar: true,
           didOpen: () => {

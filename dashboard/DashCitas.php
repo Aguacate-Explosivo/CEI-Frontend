@@ -168,7 +168,7 @@
           </ul>
           <div class="center p-20">
             <span class="hide-menu"
-              ><a
+              ><a 
                 href="../php/log_out.php"
                 class="
                   btn btn-success btn-block btn-rounded

@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <title>Procesando Evento</title>
+</head>
+<body>  
 <?php
     //Conexion con la base de datos
 	include("conexion.php");
@@ -26,10 +36,26 @@
     `imagen1`='$imagen1',`imagen2`='$imagen2',`imagen3`='$imagen3',
     `imagen4`='$imagen4',`imagen5`='$imagen5',`imagen6`='$imagen6' WHERE id_evento=$id_evento";
     $resultado=mysqli_query($conexion,$consulta);
+ 
     if ($resultado) {
-        echo "<script language='JavaScript'>
-                  alert(' generada correctamente');
-                     location.assign('admineventos.php');
-                     </script>";
-    }
+
+                echo "<script>
+            Swal.fire({
+              icon: 'success',
+              title: 'Dato actualizado...',
+              text: 'El dato se ha actualizado de forma correcta',
+              showConfirmButton: false,
+            });
+         setInterval(()=>{
+         location.assign('admineventos.php');
+         },3000);
+            </script>"; 
+          
+     }
 ?>
+</body>
+</html>
+
+
+
+  
