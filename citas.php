@@ -14,8 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
         rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
@@ -32,14 +31,12 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="sweet\dist\sweetalert2.min.css">
+    <link rel="stylesheet" href="sweet/dist/sweetalert2.min.css">
 </head>
 
-<body  >  
-   
-    <?php require("cabecera.php");  ?>
+<body>
+    <?php require("cabecera.php"); ?>
     <!-- Navbar End -->
-
 
     <!-- Contact Start -->
     <div class="container-xxl py-5">
@@ -55,7 +52,7 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="documento" name="documento" placeholder="Your Name" required=""  pattern="[0-9]+" maxlength="10" minlength="7">
+                                    <input type="text" class="form-control" id="documento" name="documento" placeholder="Your Name" required="" pattern="[0-9]+" maxlength="10" minlength="7">
                                     <label for="documento">Numero de Documento</label>
                                 </div>
                             </div>
@@ -96,13 +93,8 @@
     </div>
     <!-- Contact End -->
 
-
-    
-
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="js/botones.js"></script>
@@ -112,11 +104,11 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-     <?php require("footer.php");  ?>
+    <?php require("footer.php"); ?>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="sweet/dist/sweetalert2.all.min.js"></script>
 </body>
-<script src="sweet/dist/sweetalert2.all.min.js"></script>
 
 </html>
