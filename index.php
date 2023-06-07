@@ -8,29 +8,23 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
-
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
         rel="stylesheet">
-
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Template Stylesheet -->
     <link href="css\style.css" rel="stylesheet">
 </head>
@@ -42,14 +36,9 @@
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
     <!-- Spinner End -->
-
-
     <!-- Topbar Start -->
-   
-   <?php require("cabecera.php");  ?>
+      <?php require("cabecera.php");  ?>
     <!-- Navbar End -->
-
-
     <!-- Carousel Start -->
     <div class="container-fluid px-0 mb-5">
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -66,7 +55,6 @@
                                     <h1 class="display-1 text-white mb-4 animated slideInRight">Asiste a eventos recientes
                                         </h1>
                                         <a type="button" href="eventos.php" class="btn btn-primary">asiste a eventos</a>
-                                            
                                 </div>
                             </div>
                         </div>
@@ -100,8 +88,6 @@
         </div>
     </div>
     <!-- Carousel End -->
-
-
     <!-- Features Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -150,18 +136,12 @@
                         <p class="mb-0">» Alumnos de pregrado y postgrados <br</p>
                         <p class="mb-0">» Empresas de egresados <br</p>
                         <p class="mb-0">» Grupos empresariales de universitarios <br</p>
-                              
-                            
-                            
-                              
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Features End -->
-
-
     <!-- About Start -->
     <div class="container-xxl about my-5">
         <div class="container">
@@ -202,8 +182,6 @@
         </div>
     </div>
     <!-- About End -->
-
-
     <!-- Video Modal Start -->
     <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -224,8 +202,6 @@
         </div>
     </div>
     <!-- Video Modal End -->
-
-
     <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -294,10 +270,7 @@
         </div>
     </div>
     <!-- Service End -->
-
-
- 
-     <!-- Project Start -->
+    <!-- Project Start -->
     <div class="container-xxl pt-5">
         <div class="container">
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
@@ -313,12 +286,8 @@
 
                 $consulta ="SELECT *FROM `cursos`;";
                 $resultado=mysqli_query($conexion,$consulta);
-                
-                
+                                
                 foreach($resultado as $row){ $id = $row["Id_Curso"]; ?>
-   
-            
-                
           <!-- Fin bd -->
             <!-- Estructura de Curso -->
                <div class="project-item mb-5">
@@ -340,7 +309,7 @@
 
                     <a style="margin: 2px; border-radius: 5px;" href="inscripcursos.php?Id_Curso=<?php echo $row["Id_Curso"]?>" class="btn btn-primary" > Unirse a Curso</a>
                         <br>
-                        <a href="">ㅤㅤ</a>
+                        <a href=""></a>
                     </div>
                 </div>
 
@@ -351,12 +320,6 @@
         </div>
     </div>
     <!-- Project End -->
-
-
-
-   
-
-
     <!-- Team Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -421,8 +384,6 @@
         </div>
     </div>
     <!-- Team End -->
-
-
  <!-- Testimonial Start -->
  <div class="container-xxl pt-5">
         <div class="container">
@@ -445,8 +406,7 @@
                     <img class="mb-4" src="img/jesus_cuesta_copete.jpg" alt="">
                     <p class="mb-4">Es administrador de empresas, Magister en desarrollo 
                         empresarial e innovación, Especialista en formación y capacitación 
-                        en emprendimiento y Especialista en control organizacionalㅤㅤㅤㅤ
-                        ㅤㅤㅤㅤㅤㅤ</p>
+                        en emprendimiento y Especialista en control organizacional</p>
                     <h5>Jesús Antonio Cuesta Copete</h5>
                     <span class="text-success">Docente Asesor.</span>
                 </div>
@@ -455,19 +415,14 @@
                     <p class="mb-4">Es administrador de empresas, Especialista en gerencia 
                         estratégica de mercados Magister en administración de negocios 
                         y estudiante de Doctorado en proyecto.</p>
-                    <h5>Sebastián Murillo Barahonaㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
-                        ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
-                    </h5>
+                    <h5>Sebastián Murillo Barahona</h5>
                     <span class="text-success">Asesor interno.</span>
                 </div>
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
                     <img class="mb-4" src="img/fadilio_fines_conto_garcia.jpg" alt="">
                     <p class="mb-4">Es economista especializado en finanzas públicas. 
                         Actualmente brinda capacitaciones de proyectos productivos
-                         en el CEI.ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
-                         ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
-                         ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
-                         ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+                         en el CEI.</p>
                     <h5>Fadilo Fines Conto García</h5>
                     <span class="text-success">Docente.</span>
                 </div>
@@ -475,24 +430,13 @@
         </div>
     </div>
     <!-- Testimonial End -->
-
 <div>
-    
     </div>
     </div>
     </div>
-    
-   
-    
-    
-    
-    
-    
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
     class="bi bi-arrow-up"></i></a>
-    
-    
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
