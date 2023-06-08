@@ -7,14 +7,10 @@
             $('#spinner').removeClass('show');
         }, 1);
     };
-    spinner();
-
-    // Initiate the wowjs
-    new WOW().init();
 
     // Sticky Navbar
     $(window).scroll(function() {
-        var $stickyNav = $('.sticky-top');
+        var $stickyNav = $('header .sticky-top');
         if ($(this).scrollTop() > 300) {
             $stickyNav.addClass('shadow-sm').css('top', '0');
         } else {
@@ -79,6 +75,8 @@
             }
         }
     });
+
+    spinner();
 
 })(jQuery);
 
