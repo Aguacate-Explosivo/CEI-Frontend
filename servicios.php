@@ -9,7 +9,7 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 <!-- Favicon -->
-<link href="img/favicon.ico" rel="icon">
+<link href="img/favicon.webp" rel="icon">
 <!-- Google Web Fonts -->
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
@@ -60,7 +60,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-5.png" alt="Icon">
+                                <img class="img-fluid" src="img/icon/icon-5.webp" alt="Icon">
                             </div>
                             <h5 class="mb-3">Digital Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
@@ -77,7 +77,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-6.png" alt="Icon">
+                                <img class="img-fluid" src="img/icon/icon-6.webp" alt="Icon">
                             </div>
                             <h5 class="mb-3">Internet Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
@@ -94,7 +94,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-7.png" alt="Icon">
+                                <img class="img-fluid" src="img/icon/icon-7.webp" alt="Icon">
                             </div>
                             <h5 class="mb-3">Content Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
@@ -111,7 +111,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon">
+                                <img class="img-fluid" src="img/icon/icon-8.webp" alt="Icon">
                             </div>
                             <h5 class="mb-3">Social Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
@@ -128,7 +128,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-9.png" alt="Icon">
+                                <img class="img-fluid" src="img/icon/icon-9.webp" alt="Icon">
                             </div>
                             <h5 class="mb-3">B2B Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
@@ -145,7 +145,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-10.png" alt="Icon">
+                                <img class="img-fluid" src="img/icon/icon-10.webp" alt="Icon">
                             </div>
                             <h5 class="mb-3">E-mail Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
@@ -184,7 +184,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-2.jpg" alt="">
+                        <img class="img-fluid mb-4" src="img/team-2.webp" alt="">
                         <h5>Adam Crew</h5>
                         <span class="text-success">Estudiante Administracion </span>
                         <ul class="team-social">

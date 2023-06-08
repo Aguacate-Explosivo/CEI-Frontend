@@ -9,7 +9,7 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 <!-- Favicon -->
-<link href="img/favicon.ico" rel="icon">
+<link href="img/favicon.webp" rel="icon">
 <!-- Google Web Fonts -->
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
@@ -77,9 +77,9 @@
                             <div class="card h-100">
                                 <div class="project-item mb-5">
                                     <div class="position-relative">
-                                        <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">
+                                        <img src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">
                                         <div class="project-overlay">
-                                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" data-lightbox="project"><i class="fa fa-eye"></i></a>
+                                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>" data-lightbox="project"><i class="fa fa-eye"></i></a>
                                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="cursos.php"><i class="fa fa-link"></i></a>
                                         </div>
                                     </div>

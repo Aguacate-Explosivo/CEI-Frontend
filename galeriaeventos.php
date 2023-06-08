@@ -28,7 +28,7 @@ if (mysqli_num_rows($resultado) > 0) {
     <meta content="" name="keywords">
     <meta content="" name="description">
 <!-- Favicon -->
-<link href="img/favicon.ico" rel="icon">
+<link href="img/favicon.webp" rel="icon">
 <!-- Google Web Fonts -->
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
@@ -66,7 +66,7 @@ if (mysqli_num_rows($resultado) > 0) {
                     <!-- Estructura de eventos -->
                     <div class="card">
                         <div class="card-body">
-                            <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="card-img-top">
+                            <img src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="card-img-top">
                             <br>
                             <br>
                             <p class="card-text"><small class="text-muted">Lugar: <?php echo htmlspecialchars($row["lugar"]); ?></small></p>
