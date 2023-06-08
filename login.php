@@ -8,24 +8,27 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+<!-- Favicon -->
+<link href="img/favicon.ico" rel="icon">
 <!-- Google Web Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com" defer>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin defer>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap">
+</noscript>
 <!-- Icon Font Stylesheet -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" defer>
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+</noscript>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" defer>
 <!-- Libraries Stylesheet -->
-<link href="lib/animate/animate.min.css" rel="stylesheet" defer>
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" defer>
-<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" defer>
+<link href="lib/animate/animate.min.css" rel="stylesheet" async>
+<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" async>
+<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" async>
 <!-- Customized Bootstrap Stylesheet -->
-<link href="css/bootstrap.min.css" rel="stylesheet" defer>
+<link href="css/bootstrap.min.css" rel="stylesheet" async>
 <!-- Template Stylesheet -->
-<link href="css/style.css" rel="stylesheet" defer>
-<link rel="stylesheet" href="sweet/dist/sweetalert2.min.css" defer>
+<link href="css/style.css" rel="stylesheet" async>
 </head>
 
 <body>
