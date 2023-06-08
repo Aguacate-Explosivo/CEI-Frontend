@@ -1,7 +1,7 @@
 <?php
     // Verificar si el token de autenticación está presente en el Local Storage
     echo "<script>
-            var tiempoInactividad = 1 * 60 * 1000;
+            var tiempoInactividad = 30 * 60 * 1000;
             var inactividad;
         
             function iniciarTemporizador() {
