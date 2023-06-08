@@ -305,7 +305,7 @@
                         <br>
                         <span>Descripcion: <?php echo $row["DescripcionCurso"]; ?></span>
                     </div>
-                    <div style="margin-left:20px;margin-bottom: :20px;">
+                    <div style="margin-left:20px; margin-bottom:20px;">
 
                     <a style="margin: 2px; border-radius: 5px;" href="inscripcursos.php?Id_Curso=<?php echo $row["Id_Curso"]?>" class="btn btn-primary" > Unirse a Curso</a>
                         <br>

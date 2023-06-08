@@ -17,7 +17,7 @@
     if ($fila) {
         // Generar un token único
         $token = uniqid();
-
+ 
         // Almacenar el token en el Local Storage del navegador
         echo "<script>
                 localStorage.setItem('auth_token', '$token');
