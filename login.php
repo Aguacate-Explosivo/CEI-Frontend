@@ -10,36 +10,24 @@
     <meta content="" name="description">
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
-
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-
-    <?php //require("cabecera.php");  ?>
-    <!-- Navbar End -->
-
-
     <!-- Login Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -54,10 +42,9 @@
                             <div class="card-body login-card-body">
                                 <p>Ingrese sus datos para iniciar sesion</p>
 
-                                <form action="php\login_validacion.php" required=" " method="POST" enctype="multipart/form-data">
+                                <form action="php/login_validacion.php" method="POST" enctype="multipart/form-data">
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Email" id="user"
-                                            name="user">
+                                        <input type="text" class="form-control" placeholder="Email" id="user" name="user" required>
                                         <div class="input-group-append">
                                             <div class="input-group-text">
                                                 <span class="fas fa-envelope"></span>
@@ -65,8 +52,7 @@
                                         </div>
                                     </div>
                                     <div class="input-group mb-3">
-                                        <input type="password" class="form-control" placeholder="Password" id="password"
-                                            name="password">
+                                        <input type="password" class="form-control" placeholder="Password" id="password" name="password" required>
                                         <div class="input-group-append">
                                             <div class="input-group-text">
                                                 <span class="fas fa-lock"></span>
@@ -84,7 +70,7 @@
                                         </div>
                                         <!-- /.col -->
                                         <div class="col-4">
-                                            <button type="submit" class="btn btn-primary btn-block" id = "asistir">Iniciar
+                                            <button type="submit" class="btn btn-primary btn-block" id="asistir">Iniciar
                                                 Sesion</button>
                                         </div>
                                         <!-- /.col -->
@@ -93,15 +79,9 @@
 
                                 <div class="social-auth-links text-center mb-3">
                                     <p>- O -</p>
-                                    <a href="simulacion/index.php" class="btn btn-block btn-primary">Simular </a>
+                                    <a href="simulacion/index.php" class="btn btn-block btn-primary">Simular</a>
                                     <a href="index.php" class="btn btn-block btn-danger">Volver</a>
                                 </div>
-                                <!-- /.social-auth-links -->
-
-
-                                <!-- <p class="mb-0">
-                                    <a href="#" class="text-center">Registrarse</a>
-                                </p> -->
                             </div>
                             <!-- /.login-card-body -->
                         </div>
@@ -113,10 +93,6 @@
         </div>
     </div>
     <!-- Login End -->
-
-
-
-
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
