@@ -29,7 +29,7 @@
         <div class="container py-3">
             <div class="d-flex align-items-center">
                 <a href="index.html">
-                    <amp-img src="img/logo.webp" class="img-fluid" alt="LOGO CEI" width="120px" height="56px"></amp-img>
+                    <amp-img src="img/logo.webp" class="img-fluid" alt="LOGO CEI" width="120px" height="56px">
                 </a>
                 <div class="ms-auto d-flex align-items-center">
                     <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>Cra. 22 No 18B-10 B/ Nicolás Medrano</small>
@@ -81,9 +81,13 @@
     </div>
     <!-- Navbar End -->
 
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+<script src="js/botones.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" defer></script>
 <!-- Template Javascript -->
-
+<script src="js/main.js" defer></script>
+<script src="sweet/dist/sweetalert2.all.min.js" defer></script>
 
 </body>
 </html>
