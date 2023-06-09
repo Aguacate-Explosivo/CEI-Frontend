@@ -29,6 +29,7 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" async>
 <!-- Template Stylesheet -->
 <link href="css/style.css" rel="stylesheet" async>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
 
 <body>
@@ -77,7 +78,7 @@
                             <div class="card h-100">
                                 <div class="project-item mb-5">
                                     <div class="position-relative">
-                                        <img src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">
+                                        <amp-img src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid"></amp-img>
                                         <div class="project-overlay">
                                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>" data-lightbox="project"><i class="fa fa-eye"></i></a>
                                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="cursos.php"><i class="fa fa-link"></i></a>

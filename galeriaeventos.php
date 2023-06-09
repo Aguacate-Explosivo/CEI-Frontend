@@ -48,6 +48,7 @@ if (mysqli_num_rows($resultado) > 0) {
 <link href="css/bootstrap.min.css" rel="stylesheet" async>
 <!-- Template Stylesheet -->
 <link href="css/style.css" rel="stylesheet" async>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
 
 <body>
@@ -66,7 +67,7 @@ if (mysqli_num_rows($resultado) > 0) {
                     <!-- Estructura de eventos -->
                     <div class="card">
                         <div class="card-body">
-                            <img src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="card-img-top">
+                            <amp-img src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="card-img-top"></amp-img>
                             <br>
                             <br>
                             <p class="card-text"><small class="text-muted">Lugar: <?php echo htmlspecialchars($row["lugar"]); ?></small></p>
