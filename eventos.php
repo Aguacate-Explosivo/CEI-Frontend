@@ -90,7 +90,7 @@
                                 <div class="card-body">
                                     <div class="project-item mb-5">
                                         <div class="position-relative">
-                                            <amp-img src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>"></amp-img>
+                                            <img class="lazyload" src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>"
                                                 class="img-fluid">
                                             <div class="project-overlay">
                                                 <a class="btn btn-lg-square btn-light rounded-circle m-1"

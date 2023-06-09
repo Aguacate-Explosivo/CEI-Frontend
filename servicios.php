@@ -61,7 +61,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <amp-img class="img-fluid" src="img/icon/icon-5.webp" alt="Icon"></amp-img>
+                                <img class="lazyload" class="img-fluid" src="img/icon/icon-5.webp" alt="Icon">
                             </div>
                             <h5 class="mb-3">Digital Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
@@ -78,7 +78,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <amp-img class="img-fluid" src="img/icon/icon-6.webp" alt="Icon"></amp-img>
+                                <img class="lazyload" class="img-fluid" src="img/icon/icon-6.webp" alt="Icon">
                             </div>
                             <h5 class="mb-3">Internet Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
@@ -95,7 +95,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <amp-img class="img-fluid" src="img/icon/icon-7.webp" alt="Icon"></amp-img>
+                                <img class="lazyload" class="img-fluid" src="img/icon/icon-7.webp" alt="Icon">
                             </div>
                             <h5 class="mb-3">Content Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
@@ -112,7 +112,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <amp-img class="img-fluid" src="img/icon/icon-8.webp" alt="Icon"></amp-img>
+                                <img class="lazyload" class="img-fluid" src="img/icon/icon-8.webp" alt="Icon">
                             </div>
                             <h5 class="mb-3">Social Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
@@ -129,7 +129,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <amp-img class="img-fluid" src="img/icon/icon-9.webp" alt="Icon"></amp-img>
+                                <img class="lazyload" class="img-fluid" src="img/icon/icon-9.webp" alt="Icon">
                             </div>
                             <h5 class="mb-3">B2B Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
@@ -146,7 +146,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <amp-img class="img-fluid" src="img/icon/icon-10.webp" alt="Icon"></amp-img>
+                                <img class="lazyload" class="img-fluid" src="img/icon/icon-10.webp" alt="Icon">
                             </div>
                             <h5 class="mb-3">E-mail Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
@@ -172,7 +172,7 @@
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <amp-img class="img-fluid mb-4" src="img/team-1.webp" alt="equipo"></amp-img>
+                        <img class="lazyload" class="img-fluid mb-4" src="img/team-1.webp" alt="">
                         <h5>Alex Robin</h5>
                         <span class="text-success">Estudiante ING. Agroforestal</span>
                         <ul class="team-social">
@@ -185,7 +185,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <amp-img class="img-fluid mb-4" src="img/team-2.webp" alt="equipo"></amp-img>
+                        <img class="lazyload" class="img-fluid mb-4" src="img/team-2.webp" alt="">
                         <h5>Adam Crew</h5>
                         <span class="text-success">Estudiante Administracion </span>
                         <ul class="team-social">
@@ -198,7 +198,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <amp-img class="img-fluid mb-4" src="img/team-3.webp" alt="equipo"></amp-img>
+                        <img class="lazyload" class="img-fluid mb-4" src="img/team-3.webp" alt="">
                         <h5>Boris Johnson</h5>
                         <span class="text-success">Estudiante ING. Agroforestal</span>
                         <ul class="team-social">
@@ -211,7 +211,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <amp-img class="img-fluid mb-4" src="img/team-4.webp" alt="equipo"></amp-img>
+                        <img class="lazyload" class="img-fluid mb-4" src="img/team-4.webp" alt="">
                         <h5>Robert Jordan</h5>
                         <span class="text-success">Estudiante ING. Agroforestal</span>
                         <ul class="team-social">
