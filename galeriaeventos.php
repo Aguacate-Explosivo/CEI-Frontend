@@ -66,7 +66,7 @@ if (mysqli_num_rows($resultado) > 0) {
                     <!-- Estructura de eventos -->
                     <div class="card">
                         <div class="card-body">
-                            <amp-img src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="card-img-top">
+                            <amp-img src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="card-img-top"></amp-img>
                             <br>
                             <br>
                             <p class="card-text"><small class="text-muted">Lugar: <?php echo htmlspecialchars($row["lugar"]); ?></small></p>
