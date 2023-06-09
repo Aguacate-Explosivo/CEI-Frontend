@@ -30,7 +30,7 @@
 <!-- Template Stylesheet -->
 <link href="css/style.css" rel="stylesheet" async>
 <script async src="https://cdn.ampproject.org/v0.js"></script>
-<link rel="canonical" href="/index.php">
+</head>
 
 <body>
     <?php require_once("cabecera.php"); ?>
@@ -78,11 +78,7 @@
                             <div class="card h-100">
                                 <div class="project-item mb-5">
                                     <div class="position-relative">
-<<<<<<< HEAD
-                                        <img class="lazyload" src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">
-=======
-                                        <amp-img src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">
->>>>>>> parent of 16c6c93 (hot fix)
+                                        <amp-img src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid"></amp-img>
                                         <div class="project-overlay">
                                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>" data-lightbox="project"><i class="fa fa-eye"></i></a>
                                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="cursos.php"><i class="fa fa-link"></i></a>
