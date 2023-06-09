@@ -76,7 +76,7 @@
                     <div class="col-md-6">
                   <div class="form-floating">
                     <input type="text" id="lugar" name="lugar" class="form-control" placeholder=" "
-                    value="<?php echo $fila['lugar']?>" required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
+                    value="<?php echo $fila['lugar']?>" required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#]+">
                     <label for="lugar" class="form__label">Lugar del Evento:</label>
                     </div>
                     </div>

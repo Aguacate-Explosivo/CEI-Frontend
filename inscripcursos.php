@@ -47,12 +47,12 @@
                             todos los campos</p>
 
                         <div class="row g-3">
-                            <div class="col-md-6">
+                          
                                 <div class="form-floating">
                                     <input type="text" id="documento" name="documento" class="form-control" placeholder=" "
                                         required pattern="[0-9]+" maxlength="10" minlength="7">
                                     <label for="documento" class="form__label">Numero de Documento:</label>
-                                </div>
+                            
                             </div>
                         </div>
                         <br/>
@@ -75,7 +75,7 @@
                         <div class="row g-3">
                             <div class="form-floating">
                                 <input type="text" id="direccion" name="direccion" class="form-control" placeholder=" "
-                                    required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
+                                    required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#]+">
                                 <label for="direccion" class="form__label">Dirección:</label>
                             </div>
                         </div>

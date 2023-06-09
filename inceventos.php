@@ -74,7 +74,7 @@
                         <div class="col-md-6">
                             <div class="form-floating">
                                 <input type="text" id="direccion" name="direccion" class="form-control" placeholder=""
-                                    required="" style="width: 500px;" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
+                                    required="" style="width: 500px;" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#]+">
                                 <label for="direccion" class="form__label">Dirección:</label>
                             </div>
                         </div>

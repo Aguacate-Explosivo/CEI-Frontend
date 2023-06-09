@@ -21,14 +21,21 @@
     $fecha = $_POST['fecha'];
 
     // Verificar si existe una cita con la misma fecha y hora
-    $consultaExistente = "SELECT * FROM citas WHERE fecha = '$fecha'";
+    $consultaExistente = "SELECT * FROM citas WHERE fecha_hora = '$fecha'";
     $resultadoExistente = mysqli_query($conexion, $consultaExistente);
     
     if (mysqli_num_rows($resultadoExistente) > 0) {
-        echo "<script language='JavaScript'>
-                prompt('Ya hay una cita para esta fecha y hora. Introduce otro horario:', '$fecha');
-                location.assign('../citas.php');
-              </script>";
+      echo "<script language='JavaScript'>
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'ya hay una cita para esta fecha y hora por favor llena los datos nuevamente!',
+        showConfirmButton: false,
+      })
+      setInterval(()=>{
+        location.assign('../citas.php');
+      },3500)
+  </script>";
     } else {
         // Insertar la información en la tabla de datos
         $consulta = "INSERT INTO citas VALUES ('', '$documento', '$nombre', '$tel', '$direccion', '$fecha')";

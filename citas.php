@@ -74,7 +74,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="direccion" name="direccion" required="" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 - ]+" placeholder="Subject">
+                                    <input type="text" class="form-control" id="direccion" name="direccion" required="" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#]+" placeholder="Subject">
                                     <label for="direccion">Dirección</label>
                                 </div>
                             </div>
