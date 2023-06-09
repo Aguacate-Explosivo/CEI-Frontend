@@ -48,7 +48,7 @@
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <amp-img class="w-100" src="img/2.webp" alt="Image">
+                    <img class="w-100" src="img/2.webp" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-start">
@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <amp-img class="w-100" src="img/0.webp" alt="Image">
+                    <img class="w-100" src="img/0.webp" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-end">
@@ -102,7 +102,7 @@
                     
                     <div class="feature-item border h-100 p-5">
                         <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
-                            <amp-img class="img-fluid" src="img/icon/icon-1.webp" alt="Icon">
+                            <img class="img-fluid" src="img/icon/icon-1.webp" alt="Icon">
                         </div>
                         <h5 class="mb-3">Investigación</h5>
                         <p class="mb-0">Desarrollo de metodología, herramientas, 
@@ -113,7 +113,7 @@
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <div class="feature-item border h-100 p-5">
                         <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
-                            <amp-img class="img-fluid" src="img/icon/icon-2.webp" alt="Icon">
+                            <img class="img-fluid" src="img/icon/icon-2.webp" alt="Icon">
                         </div>
                         <h5 class="mb-3">Formación</h5>
                         <p class="mb-0">Contribuir al fortalecimiento de los procesos de formación de la
@@ -123,7 +123,7 @@
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
                     <div class="feature-item border h-100 p-5">
                         <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
-                            <amp-img class="img-fluid" src="img/icon/icon-3.webp" alt="Icon">
+                            <img class="img-fluid" src="img/icon/icon-3.webp" alt="Icon">
                         </div>
                         <h5 class="mb-3">Extensión</h5>
                         <p class="mb-0">Incentivar, desarrollar la participación y contribución en procesos que fortalezcan
@@ -133,7 +133,7 @@
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <div class="feature-item border h-100 p-5">
                         <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
-                            <amp-img class="img-fluid" src="img/icon/icon-4.webp" alt="Icon">
+                            <img class="img-fluid" src="img/icon/icon-4.webp" alt="Icon">
                         </div>
                         <h5 class="mb-3">Usuarios del programa</h5>
                         <p class="mb-0">» Personas emprendedoras <br</p>
@@ -169,12 +169,12 @@
                               tecnológico e impacto social.</p>
                         <div class="row g-5 pt-2 mb-5">
                             <div class="col-sm-6">
-                                <amp-img class="img-fluid mb-4"  src="img/icon/11.webp" alt="">
+                                <img class="img-fluid mb-4"  src="img/icon/11.webp" alt="">
                                 <h5 class="mb-3">Mision</h5>
                                 <span>Clita erat ipsum et lorem et sit sed stet lorem</span>
                             </div>
                             <div class="col-sm-6">
-                                <amp-img class="img-fluid mb-4" src="img/icon/13.webp" alt="">
+                                <img class="img-fluid mb-4" src="img/icon/13.webp" alt="">
                                 <h5 class="mb-3">Vision</h5>
                                 <span>Clita erat ipsum et lorem et sit sed stet lorem</span>
                             </div>
@@ -219,7 +219,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <amp-img class="img-fluid" src="img/icon/icon-5.webp" alt="Icon">
+                                <img class="img-fluid" src="img/icon/icon-5.webp" alt="Icon">
                             </div>
                             <h5 class="mb-3">Servicios de asesorías, consultorías y educación continuada.</h4>
                                 <p class="mb-0">Se cuentan con profesionales especialistas capaces de 
@@ -237,7 +237,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <amp-img class="img-fluid" src="img/icon/icon-6.webp" alt="Icon">
+                                <img class="img-fluid" src="img/icon/icon-6.webp" alt="Icon">
                             </div>
                             <h5 class="mb-3">Programas de capacitación en los niveles de cursos y Diplomados.</h4>
                                 <p class="mb-0">La capacitación es muy importante para el desarrollo de 
@@ -255,7 +255,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <amp-img class="img-fluid" src="img/icon/icon-7.webp" alt="Icon">
+                                <img class="img-fluid" src="img/icon/icon-7.webp" alt="Icon">
                             </div>
                             <h5 class="mb-3">Organización de eventos regionales, nacionales 
                                 e internacionales sobre emprendimiento, innovación y desarrollo
@@ -296,7 +296,7 @@
             <!-- Estructura de Curso -->
                <div class="project-item mb-5">
                     <div class="position-relative">
-                        <amp-img src="data:image/jgp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">               
+                        <img src="data:image/jgp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">               
                         <div class="project-overlay">
                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jgp;base64,<?php echo base64_encode($row["imagen"]); ?>"
                                 data-lightbox="project"><i class="fa fa-eye"></i></a>
@@ -334,7 +334,7 @@
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <amp-img class="img-fluid mb-4" src="img/team-1.webp" alt="">
+                        <img class="img-fluid mb-4" src="img/team-1.webp" alt="">
                         <h5>Alex Robin</h5>
                         <span class="text-success">Estudiante ING. Agroforestal</span>
                         <ul class="team-social">
@@ -347,7 +347,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <amp-img class="img-fluid mb-4" src="img/team-2.webp" alt="">
+                        <img class="img-fluid mb-4" src="img/team-2.webp" alt="">
                         <h5>Adam Crew</h5>
                         <span class="text-success">Estudiante Administracion </span>
                         <ul class="team-social">
@@ -360,7 +360,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <amp-img class="img-fluid mb-4" src="img/team-3.webp" alt="">
+                        <img class="img-fluid mb-4" src="img/team-3.webp" alt="">
                         <h5>Boris Johnson</h5>
                         <span class="text-success">Estudiante ING. Agroforestal</span>
                         <ul class="team-social">
@@ -373,7 +373,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <amp-img class="img-fluid mb-4" src="img/team-4.webp" alt="">
+                        <img class="img-fluid mb-4" src="img/team-4.webp" alt="">
                         <h5>Robert Jordan</h5>
                         <span class="text-success">Estudiante ING. Agroforestal</span>
                         <ul class="team-social">
@@ -398,7 +398,7 @@
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <amp-img class="mb-4" src="img/dorian_perea_palacios.webp" alt="">
+                    <img class="mb-4" src="img/dorian_perea_palacios.webp" alt="">
                     <p class="mb-4">Es economista de profesión, tiene un Msc. en ciencias
                          económicas, Magister en desarrollo emprendedor e innovación,
                           Especialista desarrollo rural y Especialista en formación y
@@ -407,7 +407,7 @@
                     <span class="text-success">Coordinador Centro de Emprendimiento e Innovación.</span>
                 </div>
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <amp-img class="mb-4" src="img/jesus_cuesta_copete.webp" alt="">
+                    <img class="mb-4" src="img/jesus_cuesta_copete.webp" alt="">
                     <p class="mb-4">Es administrador de empresas, Magister en desarrollo 
                         empresarial e innovación, Especialista en formación y capacitación 
                         en emprendimiento y Especialista en control organizacional</p>
@@ -415,7 +415,7 @@
                     <span class="text-success">Docente Asesor.</span>
                 </div>
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <amp-img class="mb-4" src="img/sebastian_murillo_barahona.webp" alt="">
+                    <img class="mb-4" src="img/sebastian_murillo_barahona.webp" alt="">
                     <p class="mb-4">Es administrador de empresas, Especialista en gerencia 
                         estratégica de mercados Magister en administración de negocios 
                         y estudiante de Doctorado en proyecto.</p>
@@ -423,7 +423,7 @@
                     <span class="text-success">Asesor interno.</span>
                 </div>
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <amp-img class="mb-4" src="img/fadilio_fines_conto_garcia.webp" alt="">
+                    <img class="mb-4" src="img/fadilio_fines_conto_garcia.webp" alt="">
                     <p class="mb-4">Es economista especializado en finanzas públicas. 
                         Actualmente brinda capacitaciones de proyectos productivos
                          en el CEI.</p>
