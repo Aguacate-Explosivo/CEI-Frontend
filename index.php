@@ -19,17 +19,17 @@
 <!-- Icon Font Stylesheet -->
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" preload>
 </noscript>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" defer>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" preload>
 <!-- Libraries Stylesheet -->
 <link href="lib/animate/animate.min.css" rel="stylesheet" async>
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" async>
+<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" preload>
 <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" async>
 <!-- Customized Bootstrap Stylesheet -->
-<link href="css/bootstrap.min.css" rel="stylesheet" defer>
+<link href="css/bootstrap.min.css" rel="stylesheet" preload>
 <!-- Template Stylesheet -->
-<link href="css/style.css" rel="stylesheet" async>
+<link href="css/style.css" rel="stylesheet" preload>
 
 </head>
 
@@ -390,7 +390,7 @@
     <!-- Team End -->
  <!-- Testimonial Start -->
  <div class="container-xxl pt-5">
-        <div class="container">
+        <div class="container-xxl pt-5">
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
                 style="max-width: 500px;">
                 <p class="fs-5 fw-medium text-success">Talento Humano</p>
