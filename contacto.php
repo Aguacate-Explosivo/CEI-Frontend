@@ -16,26 +16,27 @@
             emailjs.init('user_NbWHHoXNBSbJSJeC7s6uJ');
         })();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Favicon -->
     <link href="img/favicon.webp" rel="icon">
-<!-- Google Web Fonts --><link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap">
-</noscript>
-<!-- Icon Font Stylesheet -->
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-</noscript>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" defer>
-<!-- Libraries Stylesheet -->
-<link href="lib/animate/animate.min.css" rel="stylesheet" async>
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" async>
-<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" async>
-<!-- Customized Bootstrap Stylesheet -->
-<link href="css/bootstrap.min.css" rel="stylesheet" async>
-<!-- Template Stylesheet -->
-<link href="css/style.css" rel="stylesheet" async>
+    <!-- Google Web Fonts --><link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap">
+    </noscript>
+    <!-- Icon Font Stylesheet -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    </noscript>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" defer>
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" async>
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" async>
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" async>
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" async>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" async>
 
 </head>
 
@@ -69,12 +70,8 @@
             </div>
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h3 class="mb-4">Need a functional contact form?</h3>
-                    <p class="mb-4">The contact form is currently
-                         inactive. Get a functional and working contact
-                          form with Ajax & PHP in a few minutes. Just 
-                          copy and paste the files, add a little code
-                           and you're don</p>
+                    <h3 class="mb-4">Formulario de Contacto</h3>
+                    <p class="mb-4">Llena este formulario para contactarte con nosotros via correo electronico</p>
                     <form id="ContactoID">
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -177,10 +174,21 @@
                 event.preventDefault();
                 emailjs.sendForm('11932238243234854645', 'template_28hzft8', this)
                     .then(function() {
-                        console.log('SUCCESS!');
-                        alert(`Correo Enviado, Pronto le Responderemos a su peticion :D`)
+                        console.log("se envió")
+                        Swal.fire({
+                          icon: 'success',
+                          title: 'Registro Exitoso...',
+                          text: 'Se envió correctamente su formulario, nos pondremos en contacto',
+                          showConfirmButton: true,
+                        })
                   }, function(error) {
-                      console.log('FAILED...', error);
+                    console.log("no se envió")
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'no se pudo enviar el formulario, por favor intentelo de nuevo',
+                            showConfirmButton: true,
+                        })
                   });
           });
       }
