@@ -15,6 +15,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" defer>
 <!-- Template Stylesheet -->
 <link href="css/style.css" rel="stylesheet" async>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
 
 </head>
 <body>
@@ -29,7 +30,7 @@
         <div class="container py-3">
             <div class="d-flex align-items-center">
                 <a href="index.html">
-                    <img src="img/logo.webp" class="img-fluid" alt="#" width="120px" height="56px">
+                    <amp-img src="img/logo.webp" class="img-fluid" alt="LOGO CEI" width="120px" height="56px"></amp-img>
                 </a>
                 <div class="ms-auto d-flex align-items-center">
                     <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>Cra. 22 No 18B-10 B/ Nicolás Medrano</small>
