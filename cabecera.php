@@ -15,7 +15,6 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" defer>
 <!-- Template Stylesheet -->
 <link href="css/style.css" rel="stylesheet" async>
-<script async src="https://cdn.ampproject.org/v0.js"></script>
 
 </head>
 <body>

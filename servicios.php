@@ -29,7 +29,6 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" async>
 <!-- Template Stylesheet -->
 <link href="css/style.css" rel="stylesheet" async>
-<script async src="https://cdn.ampproject.org/v0.js"></script>
 
 <body>
      <?php require("cabecera.php");  ?>

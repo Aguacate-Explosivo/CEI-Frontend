@@ -30,7 +30,7 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" preload>
 <!-- Template Stylesheet -->
 <link href="css/style.css" rel="stylesheet" preload>
-<script async src="https://cdn.ampproject.org/v0.js"></script>
+
 
 </head>
 
