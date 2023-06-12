@@ -29,13 +29,13 @@
         echo "<script>
         Swal.fire({
           icon: 'success',
-          title: 'Dato agregado con exito...',
-          text: 'El dato se ha agregado de forma correcta',
+          title: 'Has sido a単adido al curso con exito...',
+          text: '${nombre} Te has agregado de forma correcta al curso ${curso}',
           showConfirmButton: false,
         });
      setInterval(()=>{
      location.assign('../../cursos.php');
-     },2000);
+     },4000);
         </script>"; 
         }
 ?>
