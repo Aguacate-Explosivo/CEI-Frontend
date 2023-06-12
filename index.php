@@ -49,7 +49,7 @@
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <amp class="w-100" src="img/2.webp" alt="Image">
+                    <img class="w-100" src="img/2.webp" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-start">
@@ -59,7 +59,7 @@
                                     </p>
                                     <h1 class="display-1 text-white mb-4 animated slideInRight">Asiste a eventos recientes
                                         </h1>
-                                        <a type="button" href="eventos.php" class="btn btn-primary">asiste a eventos</a>
+                                        <a type="button" href="eventos.php" class="btn btn-primary">Asiste a eventos</a>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +73,7 @@
                                 <div class="col-lg-7 text-end">
                                     <p class="fs-4 text-white animated slideInLeft">Agenda <strong>Tu Cita</strong>
                                     </p>
-                                    <h1 class="display-1 text-white mb-5 animated slideInLeft">simularemos tu emprendimiento</h1>
+                                    <h1 class="display-1 text-white mb-5 animated slideInLeft">Simularemos tu emprendimiento</h1>
                                     <a type="button" href="citas.php" class="btn btn-primary">Citas</a>
                      
                                 </div>
