@@ -69,7 +69,7 @@
                   <div class="form-floating">
                     <input type="text" id="nombre" name="nombre" class="form-control" 
                     value="<?php echo $fila['nombreEven']?>" placeholder=" " 
-                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
+                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+">
                     <label for="nombre" class="form__label">Nombre del Evento:</label>
                     </div>
                     </div>
