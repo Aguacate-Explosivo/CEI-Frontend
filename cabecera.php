@@ -28,7 +28,7 @@
     <div class="container-fluid bg-primary text-white d-none d-lg-flex">
         <div class="container py-3">
             <div class="d-flex align-items-center">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="img/logo.webp" class="img-fluid" alt="#" width="120px" height="56px">
                 </a>
                 <div class="ms-auto d-flex align-items-center">
