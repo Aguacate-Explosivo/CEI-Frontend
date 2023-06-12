@@ -29,13 +29,13 @@
         echo "<script>
         Swal.fire({
           icon: 'success',
-          title: 'Dato agregado con exito...',
-          text: 'El dato se ha agregado de forma correcta',
+          title: 'Te has agregado al con exito...',
+          text: '${nombre} Esperamos que puedas asistir a el evento ${evento} ' ,
           showConfirmButton: false,
         });
      setInterval(()=>{
      location.assign('../../eventos.php');
-     },2000);
+     },4000);
         </script>"; 
         }
 ?>
