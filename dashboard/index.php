@@ -102,10 +102,43 @@
             </ol>
           </div>
         </div>
-        <div class="row">
+<!-- Graficas para citas -->
+    <div class="row">
+      <?php require_once("infoIndex.php") ?>
+      <div class="col-md-4">
+        <div class="white-box">
+          <h3 class="text-center">Total de Citas Agendadas</h3>
+              <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="<?php echo $fila["total_citas"]; ?>" aria-valuemin="0" aria-valuemax="1000">
+                <div class="progress-bar" style="width: <?php echo $fila["total_citas"]; ?>%"><?php echo $fila["total_citas"]; ?></div>
+              </div>
+            </div>
+          </div>
+
+        <div class="col-md-4">
+        <div class="white-box">
+          <h3 class="text-center">Total de Inscritos en Cursos</h3>
+              <div class="progress" role="progressbar" aria-valuenow="<?php echo $fila2["total_inscritos_cursos"]; ?>" aria-valuemin="0" aria-valuemax="1000">
+                <div class="progress-bar bg-success" style="width: <?php echo $fila2["total_inscritos_cursos"]; ?>%"><?php echo $fila2["total_inscritos_cursos"]; ?></div>
+              </div>
+            </div>
+          </div>
+
+        <div class="col-md-4">
+        <div class="white-box">
+          <h3 class="text-center">Total de Inscritos en Eventos</h3>
+              <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="<?php echo $fila3["total_inscritos_eventos"]; ?>" aria-valuemin="0" aria-valuemax="1000">
+                <div class="progress-bar bg-warning" style="width: <?php echo $fila3["total_inscritos_eventos"]; ?>%"><?php echo $fila3["total_inscritos_eventos"]; ?></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+  <!-- Iframe del mapa -->
+      <div class="row">
           <div class="col-md-12">
             <div class="white-box">
-              <h3>Blank Page</h3>
+              <h3 class="text-center">Localizacion</h3>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2574.373678526185!2d-76.64616398764448!3d5.680276366382267!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4932ec47709e37%3A0x5698132ef36d83ae!2sUniversidad%20Tecnol%C3%B3gica%20Del%20Choc%C3%B3!5e0!3m2!1ses-419!2sco!4v1686588550411!5m2!1ses-419!2sco" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>
@@ -115,6 +148,7 @@
       FACNET - 2023 &copy; 
     </footer>
   </div>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
