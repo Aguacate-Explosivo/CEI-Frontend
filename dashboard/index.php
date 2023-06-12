@@ -104,7 +104,7 @@
         </div>
 <!-- Graficas para citas -->
     <div class="row">
-      <?php require_once("infoIndex.php") ?>
+      <?php require_once("progressBar.php"); ?>
       <div class="col-md-4">
         <div class="white-box">
           <h3 class="text-center">Total de Citas Agendadas</h3>
