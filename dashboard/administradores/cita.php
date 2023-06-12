@@ -89,7 +89,7 @@ $fila = $busqueda -> fetch_assoc();
   <div class="row g-3">
   <div class="form-floating">
   <input style=" width: 500px;" type="text" id="direccion" name="direccion" class="form-control" placeholder=" "
-  required="" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 - ]+"
+  required="" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 #-]+"
   value="<?php echo $fila['direccion']?>" >
   <label for="direccion" class="form__label">Dirección:</label>
   </div>

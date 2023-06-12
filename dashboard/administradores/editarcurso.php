@@ -68,7 +68,7 @@
              <div class="col-md-6">
                <div class="form-floating">
                     <input type="text" id="nom_curso" name="nom_curso" class="form-control" placeholder=" "
-                    value="<?php echo $fila['NombreCurso']?>" required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+">
+                    value="<?php echo $fila['NombreCurso']?>" required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+">
                     <label for="nom_curso" class="form__label">Nombre del curso:</label>
                     </div>
                     </div>
@@ -105,7 +105,7 @@
              <div class="col-md-6">
                      <div class="form-floating">
                     <input type="text" id="desc_curso" name="desc_curso" class="form-control" placeholder=" " 
-                    value="<?php echo $fila['DescripcionCurso']?>" required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
+                    value="<?php echo $fila['DescripcionCurso']?>" required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+">
                     <label for="desc_curso" class="form__label">Descripcion del Curso:</label>
                     </div>
                     </div>

@@ -212,7 +212,7 @@
           <form action="administradores\registarcursos.php" required=" " method="POST" enctype="multipart/form-data" >
                 <div class="form-floating">
                     <input type="text" id="nom_curso" name="nom_curso" class="form-control" placeholder="Nombre del curso: " 
-                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+">
+                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+">
                     <label for="nom_curso" class="form__label"></label>
                     </div>
                     <br>
@@ -245,7 +245,7 @@
                     <br> 
                     <div class="form-floating">
                     <input type="text" id="desc_curso" name="desc_curso" class="form-control" placeholder="Descripcion del Curso:" 
-                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+">
+                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+">
                     <label for="desc_curso" class="form__label"></label>
                     </div>
                     <br>

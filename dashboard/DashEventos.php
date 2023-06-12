@@ -216,7 +216,7 @@
           <form action="administradores/regeventos.php" required=" " method="POST" enctype="multipart/form-data">
               <div class="form-floating">
                   <input type="text" id="nom_even" name="nom_even" class="form-control" placeholder=" Nombre del Evento:" 
-                  required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+" >
+                  required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+" >
                   <label for="nom_even" class="form__label"></label>
                   </div>
                   <br>
