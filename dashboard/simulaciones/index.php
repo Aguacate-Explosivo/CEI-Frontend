@@ -9,6 +9,7 @@
   <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/stylese.css" rel="stylesheet">
 </head>
 <body>
   <?php
@@ -108,9 +109,15 @@
             </ol>
           </div>
         </div>
-<!-- Graficas para citas -->
-    
-    <footer class="footer text-center">
+   
+<!-- inicio-->
+            <div class="boton">
+            <a type="button" href="mercado.php" class="btny">Empieza a Simular</a>
+
+          </div>
+<!-- inicio -->
+
+        <footer class="footer text-center">
       FACNET - 2023 &copy; 
     </footer>
   </div>
