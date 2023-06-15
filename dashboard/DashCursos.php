@@ -149,7 +149,12 @@
               >
             </li>
             <li>
-           
+            <li>
+            <a href="simulaciones\index.php" class="waves-effect">
+              <i class="ti-ink-pen fa-fw"></i>
+             Simulaciones
+            </a>
+          </li>
             <!-- <li>
               <a href="blank.html" class="waves-effect"
                 ><i class="ti-files fa-fw"></i> Dashboard</a

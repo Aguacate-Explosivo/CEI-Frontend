@@ -128,12 +128,18 @@
               >
             </li>
             <li>
-              <a href="../DashCursos.php" class="waves-effect"
+              <a href="../DashCursos.php" class="waves-effect active"
                 ><i class="ti-ink-pen fa-fw"></i> Cursos</a
               >
             </li>
-
+            <li>
+            <a href="../simulaciones\index.php" class="waves-effect ">
+              <i class="ti-ink-pen fa-fw"></i>
+             Simulaciones
+            </a>
+          </li>
           </ul>
+
           <div class="center p-20">
             <span class="hide-menu"
               ><a

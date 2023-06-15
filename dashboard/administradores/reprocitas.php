@@ -140,7 +140,7 @@
               >
             </li>
             <li>
-              <a href="../DashCitas.php" class="waves-effect"
+              <a href="../DashCitas.php" class="waves-effect active"
                 ><i class="ti-calendar fa-fw"></i>Citas</a
               >
             </li>
@@ -154,7 +154,12 @@
                 ><i class="ti-ink-pen fa-fw"></i> Cursos</a
               >
             </li>
-           
+            <li>
+            <a href="../simulaciones\index.php" class="waves-effect ">
+              <i class="ti-ink-pen fa-fw"></i>
+             Simulaciones
+            </a>
+          </li>
             <!-- <li>
               <a href="blank.html" class="waves-effect"
                 ><i class="ti-files fa-fw"></i> Dashboard</a

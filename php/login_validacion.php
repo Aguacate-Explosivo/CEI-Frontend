@@ -17,7 +17,7 @@
         $passwd = $_POST['password'];
 
         // Consulta la base de datos
-        $consulta="SELECT * FROM `datos` WHERE usuario='$user' and contrasena='$passwd';";
+        $consulta="SELECT * FROM `datos` WHERE usuario='$user' and contraseña='$passwd';";
         $resultado = mysqli_query($conexion, $consulta);
 
         // Validación
