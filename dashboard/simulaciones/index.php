@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dashboard Admin</title>
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.png">
   <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
@@ -102,7 +102,7 @@
         <div class="row bg-title">
           <div class="col-lg-12">
             <h4 class="page-title">
-              Bienvenido Administrador, ¡desde aquí puedes gestionar los módulos!
+              Bienvenido Administrador, ¡desde aquí puedes Simular tus emprendimientos!
             </h4>
             <ol class="breadcrumb">
               <li><a href="#">Dashboard</a></li>
