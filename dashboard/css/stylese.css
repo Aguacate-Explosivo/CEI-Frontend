@@ -1,6 +1,7 @@
 .boton{
 background-image: url(../simulaciones/img/fondo.png);
 background-repeat: no-repeat;
+background-size: cover;
 height: 400px;
 text-align: center;
 padding-top: 200px;
