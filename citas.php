@@ -50,31 +50,31 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="documento" name="documento" placeholder="Your Name" required="" pattern="[0-9]+" maxlength="10" minlength="7">
+                                    <input type="text" class="form-control" id="documento" name="documento" placeholder="Your Name" required pattern="[0-9]+" maxlength="10" minlength="7">
                                     <label for="documento">Numero de Documento</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Your Email" required="" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+">
+                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Your Email" required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+">
                                     <label for="nombre">Tu Nombre</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="tel" name="tel" placeholder="Your Name" required="" pattern="[0-9]+"  maxlength="10" minlength="9">
+                                    <input type="text" class="form-control" id="tel" name="tel" placeholder="Your Name" required pattern="[0-9]+"  maxlength="10" minlength="9">
                                     <label for="tel">Telefono</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="datetime-local" class="form-control" id="fecha" name="fecha" placeholder="Your Email" min="2023-03-01 " max="2030-12-31" step="1800" required="" >
+                                    <input type="datetime-local" class="form-control" id="fecha" name="fecha" placeholder="Your Email" min="2023-03-01 " max="2030-12-31" step="1800" required >
                                     <label for="fecha">Fecha y Hora</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="direccion" name="direccion" required="" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#]+" placeholder="Subject">
+                                    <input type="text" class="form-control" id="direccion" name="direccion" required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#]+" placeholder="Subject">
                                     <label for="direccion">Dirección</label>
                                 </div>
                             </div>

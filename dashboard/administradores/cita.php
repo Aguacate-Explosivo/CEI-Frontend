@@ -65,7 +65,7 @@ $fila = $busqueda -> fetch_assoc();
 <div class="col-md-6">
 <div class="form-floating">
   <input style=" width: 500px;" type="text" id="documento" name="documento" class="form-control" placeholder=" " 
-  required=""  pattern="[0-9]+" maxlength="10" minlength="7"
+  required  pattern="[0-9]+" maxlength="10" minlength="7"
   value="<?php echo $fila['documento']?>" >
   <label for="documento" class="form__label">Numero de Documento:</label>
   </div>
@@ -73,7 +73,7 @@ $fila = $busqueda -> fetch_assoc();
   <div class="row g-3">
   <div class="form-floating">
   <input style=" width: 500px;" type="text" id="nombre" name="nombre" class="form-control" placeholder=" " 
-  required="" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+"
+  required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+"
   value="<?php echo $fila['nombre']?>" >
   <label for="name" class="form__label">Nombre:</label>
   </div>
@@ -81,7 +81,7 @@ $fila = $busqueda -> fetch_assoc();
   <div class="row g-3">
   <div class="form-floating">
   <input style=" width: 500px;" type="text" id="tel" name="tel" class="form-control" placeholder=" "
-  required="" pattern="[0-9]+"  maxlength="10" minlength="9"
+  required pattern="[0-9]+"  maxlength="10" minlength="9"
   value="<?php echo $fila['telefono']?>" >
   <label for="tel" class="form__label">Telefono:</label>
   </div>
@@ -89,7 +89,7 @@ $fila = $busqueda -> fetch_assoc();
   <div class="row g-3">
   <div class="form-floating">
   <input style=" width: 500px;" type="text" id="direccion" name="direccion" class="form-control" placeholder=" "
-  required="" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 #-]+"
+  required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 #-]+"
   value="<?php echo $fila['direccion']?>" >
   <label for="direccion" class="form__label">Dirección:</label>
   </div>
@@ -102,7 +102,7 @@ $fila = $busqueda -> fetch_assoc();
   <input style=" width: 500px;" name ="fecha" type="datetime-local"
   class="form-control" id="fecha"
    min="2023-03-01 " max="2054-12-31" step="1800"
-  required="" value="<?php echo $fila['fecha_hora']?>" >
+  required value="<?php echo $fila['fecha_hora']?>" >
   </div>
   </div>
   

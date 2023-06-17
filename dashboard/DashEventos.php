@@ -240,7 +240,7 @@
                   <div class="form-floating">
                   <label for="fecha" class="form-label">Fecha del Evento:</label>
                   <input name ="fecha" type="date" class="form-control" id="fecha" 
-                  required=""  min="2023-03-01 " max="2030-12-31" >
+                  required min="2023-03-01 " max="2030-12-31" >
                   </div>
                   <br>
                   <div class="form-floating">

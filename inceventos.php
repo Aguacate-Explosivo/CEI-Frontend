@@ -50,7 +50,7 @@
                         <div class="col-md-6">
                             <div class="form-floating">
                                 <input type="text" id="documento" name="documento" class="form-control" placeholder=""
-                                    required="" style="width: 500px;" pattern="[0-9]+" maxlength="10" minlength="7">
+                                    required style="width: 500px;" pattern="[0-9]+" maxlength="10" minlength="7">
                                 <label for="documento" class="form__label">Numero de Documento:</label>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                         <br>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" id="tel" name="tel" class="form-control" placeholder="" required=""
+                                <input type="text" id="tel" name="tel" class="form-control" placeholder="" required
                                     style="width: 500px;" pattern="[0-9]+" maxlength="11" minlength="10">
                                 <label for="tel" class="form__label">Telefono:</label>
                             </div>
@@ -74,7 +74,7 @@
                         <div class="col-md-6">
                             <div class="form-floating">
                                 <input type="text" id="direccion" name="direccion" class="form-control" placeholder=""
-                                    required="" style="width: 500px;" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#]+">
+                                    required style="width: 500px;" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#]+">
                                 <label for="direccion" class="form__label">Dirección:</label>
                             </div>
                         </div>
@@ -82,7 +82,7 @@
                         <div class="col-md-6">
                             <div class="form-floating">
                                 <input type="text" id="edad" name="edad" class="form-control" placeholder=""
-                                    required="" style="width: 500px;" pattern="[ 0-9 ]+">
+                                    required style="width: 500px;" pattern="[ 0-9 ]+">
                                 <label for="edad" class="form__label">Edad:</label>
                             </div>
                         </div>

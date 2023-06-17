@@ -102,20 +102,54 @@
         <div class="row bg-title">
           <div class="col-lg-12">
             <h4 class="page-title">
-              Bienvenido Administrador, ¡desde aquí puedes Simular tus emprendimientos!
+              Primer Paso!
             </h4>
             <ol class="breadcrumb">
-              <li><a href="#">Dashboard</a></li>
             </ol>
           </div>
         </div>
-   
-<!-- inicio-->
-            <div class="boton">
-            <a type="button" href="overview.php" class="btny">Empieza a Simular</a>
-
-          </div>
-<!-- inicio -->
+        <!-- inicio-->
+            <div class="row">
+                    <div class="col-md-12">
+                        <div class="white-box">
+                        <h3 class="text-center">Overview</h3>
+                            <!-- Container de Formulario -->
+                            <div class="container-fluid">
+                                    <div class="jumbotron white-box">
+                                        <div class="container">
+                                            <div class="row">
+                                                <main>
+                                                    <form action="#" required=" " method="POST" enctype="multipart/form-data">
+                                                        <div class="form-floating">
+                                                            <input type="text" id="doc_autor_plan" name="doc_autor_plan" class="form-control" placeholder="Documento del Autor del Plan:" required pattern="[0-9]+"  >
+                                                            <label for="doc_autor_plan" class="form__label"></label>
+                                                        </div>
+                                                            <br>
+                                                        <div class="form-floating">
+                                                            <input type="text" id="autor_plan" name="autor_plan" class="form-control" placeholder="Nombre del Autor del Plan de Negocio:" required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+" >
+                                                            <label for="autor_plan" class="form__label"></label>
+                                                        </div>
+                                                            <br>
+                                                        <div class="form-floating">
+                                                            <input type="email" id="autor_email" name="autor_email" class="form-control" placeholder="Correo Electronico del Autor:">
+                                                            <label for="autor_email" class="form__label"></label>
+                                                        </div>
+                                                            <br>
+                                                            <button type="submit" class="btn btn-success btn-lg btn-rounded">Siguiente</button>     
+                                                        </div>
+                                                    </form>
+                                                </main>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>  
+                            <!-- Fin Formulario -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- fin -->
         <footer class="footer text-center">
       FACNET - 2023 &copy; 
     </footer>
