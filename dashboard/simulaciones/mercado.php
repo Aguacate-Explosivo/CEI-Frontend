@@ -119,7 +119,7 @@
                                         <div class="container">
                                             <div class="row">
                                                 <main>
-                                                    <form action="#" required method="POST" enctype="multipart/form-data">
+                                                    <form action="estudio_mercado_datos.php" required method="POST" enctype="multipart/form-data">
                                                       <div class="form-floating">
                                                         <input type="text" id="nombre_negocio_plan" name="nombre_negocio_plan" class="form-control" placeholder="Nombre del Negocio:" 
                                                         required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+" >
@@ -157,8 +157,8 @@
                                                         </div>
                                                         <div class="form-floating">
                                                           <label for="zona_geografica_plan" class="form__label">El estado del negocio es:</label>
-                                                          <label><input type="checkbox" id="negocio_nuevo" value="negocio_nuevo"> Nuevo</label>
-                                                          <label><input type="checkbox" id="negocio_existente" value="negocio_existente"> Existen</label><br>
+                                                          <label><input type="checkbox" name="negocio_nuevo" value="negocio_nuevo"> Nuevo</label>
+                                                          <label><input type="checkbox" name="negocio_existente" value="negocio_existente"> Existen</label><br>
                                                       </div>
                                                       <br>
                                                       <div class="form-floating">

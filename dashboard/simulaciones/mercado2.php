@@ -120,7 +120,7 @@
                                         <div class="container">
                                             <div class="row">
                                                 <main>
-                                                    <form action="#" required method="POST" enctype="multipart/form-data">
+                                                    <form action="estudio_mercado_datos.php" required method="POST" enctype="multipart/form-data">
                                                         <br>
                                                         <div class="form-floating">
                                                             <input type="number" id="clientes_interesados_plan" name="clientes_interesados_plan" class="form-control" placeholder="Ingrese el número de clientes que podrían estar interesados en comprar sus productos y / o servicios:" required pattern="[0-9]+"  >

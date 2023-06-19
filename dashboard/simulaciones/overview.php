@@ -119,7 +119,7 @@
                                         <div class="container">
                                             <div class="row">
                                                 <main>
-                                                    <form action="#" required=" " method="POST" enctype="multipart/form-data">
+                                                    <form action="estudio_mercado_datos.php" required=" " method="POST" enctype="multipart/form-data">
                                                         <div class="form-floating">
                                                             <input type="text" id="doc_autor_plan" name="doc_autor_plan" class="form-control" placeholder="Documento del Autor del Plan:" required pattern="[0-9]+"  >
                                                             <label for="doc_autor_plan" class="form__label"></label>
