@@ -1,15 +1,14 @@
 <?php
-if(isset($_POST["Siguiente"])){
   session_start();
-  $_SESSION['nombre'] = htmlentities($_POST
-    ["nombre"]);
-    $_SESSION['nombren'] = htmlentities($_POST
-    ["nombren"]);
+if(isset($_POST["Siguiente"])){
+  $_SESSION['nombre_autor'] = htmlentities($_POST
+    ["nombre_autor"]);
+    $_SESSION['nombre_negocio'] = htmlentities($_POST
+    ["nombre_negocio"]);
 
     header("location:agregarproducto.php");
 }
- 
-  ?>   
+?>  
 
 <!DOCTYPE html>
 <html lang="es">
@@ -239,7 +238,6 @@ if(isset($_POST["Siguiente"])){
                                                             <br>
                                                       
                                                         <br>
-                                                        
                                                             <br>
                                                             <button style="width: 250px;" value="Siguiente" name="Siguiente"  type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Siguiente</button>                  
                                                           

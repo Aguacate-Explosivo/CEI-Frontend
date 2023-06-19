@@ -2,10 +2,10 @@
 session_start();
 if(isset($_POST["Siguiente"])){
  
-  $_SESSION['nombre'] = htmlentities($_POST
-    ["nombre"]);
-    $_SESSION['nombren'] = htmlentities($_POST
-    ["nombren"]);
+  $_SESSION['nombre_autor'] = htmlentities($_POST
+    ["nombre_autor"]);
+    $_SESSION['nombre_negocio'] = htmlentities($_POST
+    ["nombre_negocio_plan"]);
     $_SESSION['total'] = htmlentities($_POST
     ["total"]);
     $_SESSION['total2'] = htmlentities($_POST
@@ -16,8 +16,8 @@ if(isset($_POST["Siguiente"])){
     ["total4"]);
     header("location:valores.php");
 }
-$nombre = $_SESSION['nombre'] ;
-$nombren =  $_SESSION['nombren'] ;
+$nombre = $_SESSION['nombre_autor'] ;
+$nombren =  $_SESSION['nombre_negocio'] ;
 $total3 =  $_SESSION['total3'] ;
 $total4 =  $_SESSION['total4'] ;
 $total2 =  $_SESSION['total2'] ;
@@ -217,7 +217,7 @@ $total2 =  $_SESSION['total2'] ;
         <div class="container-fluid">
           <div class="row bg-title">
             <div class="col-lg-12">
-              <h4 class="page-title">Paso 5 Agregar Productos</h4>
+              <h4 class="page-title">Paso 6 Agregar Gastos</h4>
               <ol class="breadcrumb">
               </ol>
             </div>

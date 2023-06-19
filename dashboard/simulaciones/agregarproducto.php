@@ -2,10 +2,10 @@
 session_start();
 if(isset($_POST["Siguiente"])){
   
-  $_SESSION['nombre'] = htmlentities($_POST
-    ["nombre"]);
-    $_SESSION['nombren'] = htmlentities($_POST
-    ["nombren"]);
+  $_SESSION['nombre_autor'] = htmlentities($_POST
+    ["nombre_autor"]);
+    $_SESSION['nombre_negocio'] = htmlentities($_POST
+    ["nombre_negocio_plan"]);
     $_SESSION['total4'] = htmlentities($_POST
     ["total4"]);
     $_SESSION['total3'] = htmlentities($_POST
@@ -14,8 +14,8 @@ if(isset($_POST["Siguiente"])){
     ["total2"]);
     header("location:agregargastos.php");
 }
-$nombre = $_SESSION['nombre'] ;
-$nombren =  $_SESSION['nombren'] ;
+$nombre = $_SESSION['nombre_autor'] ;
+$nombren =  $_SESSION['nombre_negocio'] ;
 ?>
 
 <!DOCTYPE html>
@@ -109,25 +109,8 @@ $nombren =  $_SESSION['nombren'] ;
             </li>
           </ul>
           <ul class="nav navbar-top-links navbar-right pull-right">
-            <!-- Buscador -->
-            <!-- <li>
-              <form role="search" class="app-search hidden-xs">
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  class="form-control"
-                />
-                <a href=""><i class="ti-search"></i></a>
-              </form>
-            </li> -->
             <li>
               <a class="profile-pic" href="#">
-                <!-- <img
-                  src="images/users/hritik.jpg"
-                  alt="user-img"
-                  width="36"
-                  class="img-circle"
-                /> -->
                 <i class="ti-user"></i>
                 <b class="hidden-xs">Administrador</b>
               </a>
@@ -181,16 +164,6 @@ $nombren =  $_SESSION['nombren'] ;
              Simulaciones
             </a>
           </li>
-            <!-- <li>
-              <a href="blank.html" class="waves-effect"
-                ><i class="ti-files fa-fw"></i> Dashboard</a
-              >
-            </li> -->
-            <!-- <li>
-              <a href="404.html" class="waves-effect"
-                ><i class="ti-info fa-fw"></i> Error 404</a
-              >
-            </li> -->
           </ul>
           <div class="center p-20">
             <span class="hide-menu"
@@ -262,7 +235,7 @@ $nombren =  $_SESSION['nombren'] ;
 <button type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Agregar Producto</button>
 </div>
 <br>
-<a  href="plan.php" class="btn btn-info btn-block btn-rounded waves-effect waves-light" > Regresar</a>
+<a  href="mercado2.php" class="btn btn-info btn-block btn-rounded waves-effect waves-light" > Regresar</a>
 
 </form>
 </div>
@@ -324,7 +297,7 @@ $nombren =  $_SESSION['nombren'] ;
                                 <th ><?php echo $total44; ?></th>
                                 
                                 
-                                <th>PORSENTAJES</th>
+                                <th>PORCENTAJES</th>
                             </tr>
                                 </thead>
                        </table>
