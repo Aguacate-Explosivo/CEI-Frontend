@@ -70,6 +70,8 @@
   $preciovmax =  $_SESSION['preciovmax'];
   $gastosgmin =  $_SESSION['gastosgmin'];
   $gastosgmax =  $_SESSION['gastosgmax'];
+
+  //agregar tabla a base de datos
 ?>
 
 <!DOCTYPE html>
@@ -282,6 +284,8 @@
     </div>
 <br>
 <br>
+<input type="hidden" id="nombre_negocio_plan" name="nombre_negocio_plan" value="<?php  echo $nombre_negocio_plan; ?>">
+
 <br>
  <div>
  <br>
@@ -289,7 +293,7 @@
 <button type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Agregar Producto</button>
 </div>
 <br>
-<a  href="mercado2.php" class="btn btn-info btn-block btn-rounded waves-effect waves-light" > Regresar</a>
+<a  href="valores.php" class="btn btn-info btn-block btn-rounded waves-effect waves-light" > Regresar</a>
 
 </form>
 </div>
@@ -309,20 +313,20 @@
                                 <?php
                                  require_once('../administradores/conexion.php');
                                  $conexion=conectar(); 
-                                 $consulta2 ="SELECT * FROM `producto` ";
+                                 $consulta2 ="SELECT * FROM ` $nombre_negocio_plan` ";
                                  $busqueda=mysqli_query($conexion,$consulta2);
                                    
-                                 $consulta21 ="SELECT SUM(cantidad) as total22  FROM `producto` ";
+                                 $consulta21 ="SELECT SUM(cantidad) as total22  FROM ` $nombre_negocio_plan` ";
                                  $busqueda1=mysqli_query($conexion,$consulta21);
                                  $total222= mysqli_fetch_array($busqueda1);
                                  $total22 = $total222['total22'];
 
-                                 $consulta22 ="SELECT SUM(coste_unitario) as total33  FROM `producto` ";
+                                 $consulta22 ="SELECT SUM(coste_unitario) as total33  FROM ` $nombre_negocio_plan` ";
                                  $busqueda2=mysqli_query($conexion,$consulta22);
                                  $total333= mysqli_fetch_array($busqueda2);
                                  $total33 = $total333['total33'];
 
-                                 $consulta23 ="SELECT SUM(precio_venta) as total44  FROM `producto` ";
+                                 $consulta23 ="SELECT SUM(precio_venta) as total44  FROM ` $nombre_negocio_plan` ";
                                  $busqueda3=mysqli_query($conexion,$consulta23);
                                  $total444= mysqli_fetch_array($busqueda3);
                                  $total44 = $total444['total44']; 
@@ -334,7 +338,6 @@
                                 <td><?php echo $elemento["coste_unitario"]; ?></td>
                                 <td><?php echo $elemento["precio_venta"]; ?></td>
                                 <td>
-                                <a style="margin: 2px; border-radius: 5px;" href="editarproducto.php?id=<?php echo $elemento["id"]?>" class="btn btn-warning" > Editar</a>
                                 <a style="margin: 2px; border-radius: 5px;" href="eliminar.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" > Eliminar</a>
                                  </td>
                             </tr>
@@ -398,6 +401,23 @@
                                                             <label for="tipo_marketing_plan" class="form__label"></label>
                                                             <input type="text" id="inversion_publicidad" name="inversion_publicidad" value="<?php echo $inversion_publicidad; ?>">
                                                             <label for="inversion_publicidad" class="form__label"></label>
+
+                                                            <input type="text" id="cantidadmin" name="cantidadmin" value="<?php echo $cantidadmin; ?>">
+                                                            <label for="cantidadmin" class="form__label"></label>
+                                                            <input type="text" id="cantidadmax" name="cantidadmax" value="<?php echo $cantidadmax; ?>">
+                                                            <label for="cantidadmax" class="form__label"></label>
+                                                            <input type="text" id="precioumin" name="precioumin" value="<?php echo $precioumin; ?>">
+                                                            <label for="precioumin" class="form__label"></label>
+                                                            <input type="text" id="precioumax" name="precioumax" value="<?php echo $precioumax; ?>">
+                                                            <label for="precioumax" class="form__label"></label>
+                                                            <input type="text" id="preciovmin" name="preciovmin" value="<?php echo $preciovmin; ?>">
+                                                            <label for="preciovmin" class="form__label"></label>
+                                                            <input type="text" id="preciovmax" name="preciovmax" value="<?php echo $preciovmax; ?>">
+                                                            <label for="preciovmax" class="form__label"></label>
+                                                            <input type="text" id="gastosgmin" name="gastosgmin" value="<?php echo $gastosgmin; ?>">
+                                                            <label for="gastosgmin" class="form__label"></label>
+                                                            <input type="text" id="gastosgmax" name="gastosgmax" value="<?php echo $gastosgmax; ?>">
+                                                            <label for="gastosgmax class="form__label"></label>
                                                         </div>
                       </form>
 

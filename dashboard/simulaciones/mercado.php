@@ -27,6 +27,9 @@
   $documento = $_SESSION['doc_autor_plan'] ;
   $nombre = $_SESSION['autor_plan'] ;
   $autor_email =  $_SESSION['autor_email'] ;
+  $nombre_negocio_plan = $_SESSION['nombre_negocio_plan'];
+
+ 
 ?>
 
 <!DOCTYPE html>

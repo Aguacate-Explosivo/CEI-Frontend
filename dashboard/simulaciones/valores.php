@@ -59,6 +59,8 @@
   $socios_productores =  $_SESSION['socios_productores'];
   $tipo_marketing_plan =  $_SESSION['tipo_marketing_plan'];
   $inversion_publicidad =  $_SESSION['inversion_publicidad'];
+
+ 
 ?>
 <!DOCTYPE html>
 <html lang="es">

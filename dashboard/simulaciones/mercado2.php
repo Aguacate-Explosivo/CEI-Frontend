@@ -45,6 +45,26 @@
   $Calidad_negocio_plan = $_SESSION['Calidad_negocio_plan'];
   $Rapidez_negocio_plan =  $_SESSION['Rapidez_negocio_plan'];
 
+//agregar tabla de productos a base de datos
+  require_once('../administradores/conexion.php');
+  $conexion=conectar(); 
+  $creartabla ="CREATE TABLE ` $nombre_negocio_plan` (
+   `id` int(11) NOT NULL, 
+   `nombre` text NOT NULL,
+   `cantidad` int(11) NOT NULL,
+   `coste_unitario` int(11) NOT NULL,
+   `precio_venta` int(11) NOT NULL
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci; ";
+  $creartabla1=mysqli_query($conexion,$creartabla);
+
+  $creartabla2 =" ALTER TABLE ` $nombre_negocio_plan`
+  ADD PRIMARY KEY (`id`); ";
+   $creartabla3=mysqli_query($conexion,$creartabla2);
+   
+   $creartabla3 ="  ALTER TABLE ` $nombre_negocio_plan`
+    CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; ";
+    $creartabla4=mysqli_query($conexion,$creartabla3);
+  
 ?>
 <!DOCTYPE html>
 <html lang="es">

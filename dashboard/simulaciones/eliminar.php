@@ -11,9 +11,9 @@
 <?php
  include_once('../administradores/conexion.php');
  $conexion=conectar(); 
-    $id=$_GET['id'];
+ $id=$_GET['id'];
  
-    $sql="delete from producto where id='".$id."'";
+    $sql="delete from '$nombre_negocio_plan' where id='".$id."'";
         $resultado=mysqli_query($conexion,$sql);
  
     if ($resultado) {

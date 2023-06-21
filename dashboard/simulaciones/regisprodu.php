@@ -19,8 +19,9 @@
     $cantidad=$_POST['cantidad'];
     $costeu=$_POST['costeu'];
     $preciov=$_POST['preciov'];
+    $nombre_negocio_plan=$_POST['nombre_negocio_plan'];
     //igresar la informacion a la tabla de datos
-    $consulta="INSERT INTO producto VALUES ('','$producto','$cantidad','$costeu','$preciov')";
+    $consulta="INSERT INTO ` $nombre_negocio_plan` VALUES ('','$producto','$cantidad','$costeu','$preciov')";
     $resultado=mysqli_query($conexion,$consulta);
     if ($resultado) {
         echo "<script>

@@ -10,6 +10,9 @@
       ["autor_email"]);
       header("location:mercado.php");
     }
+
+
+ 
 ?>
 <!DOCTYPE html>
 <html lang="es">
