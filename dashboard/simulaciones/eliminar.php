@@ -8,17 +8,17 @@
   <title>Procesando Producto</title>
 </head>
 <body>  
-<?php
- include_once('../administradores/conexion.php');
- $conexion=conectar(); 
- $id=$_GET['id'];
- 
-    $sql="delete from '$nombre_negocio_plan' where id='".$id."'";
-        $resultado=mysqli_query($conexion,$sql);
- 
-    if ($resultado) {
 
-                echo "<script>
+<?php
+    session_start();
+    $id=$_SESSION['Id_producto'];
+    $tabla=$_SESSION['nombre_negocio_plan'];
+    include_once('../administradores/conexion.php');
+    $conexion=conectar();
+    $sql="DELETE FROM ` $tabla` WHERE id='$id'";
+    $resultado=mysqli_query($conexion,$sql);
+    if ($resultado) {
+          echo "<script>
             Swal.fire({
               icon: 'success',
               title: 'Dato eliminado...',
@@ -29,7 +29,9 @@
          location.assign('agregarproducto.php');
          },1000);
             </script>"; 
-          
+     }
+     else {
+      echo 'no se realizó la operacion correctamente -'. mysqli_error($conexion);
      }
 ?>
 </body>
