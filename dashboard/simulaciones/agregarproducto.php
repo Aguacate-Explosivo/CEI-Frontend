@@ -4,7 +4,7 @@ if(isset($_POST["Siguiente"])){
   
   $_SESSION['nombre_autor'] = htmlentities($_POST
     ["nombre_autor"]);
-    $_SESSION['nombre_negocio'] = htmlentities($_POST
+    $_SESSION['nombre_negocio_plan'] = htmlentities($_POST
     ["nombre_negocio_plan"]);
     $_SESSION['total4'] = htmlentities($_POST
     ["total4"]);
@@ -15,7 +15,7 @@ if(isset($_POST["Siguiente"])){
     header("location:agregargastos.php");
 }
 $nombre = $_SESSION['nombre_autor'] ;
-$nombren =  $_SESSION['nombre_negocio'] ;
+$nombren =  $_SESSION['nombre_negocio_plan'] ;
 ?>
 
 <!DOCTYPE html>

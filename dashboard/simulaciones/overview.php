@@ -1,3 +1,16 @@
+<?php
+  session_start();
+  if(isset($_POST["Siguiente"])){
+    // Envio de la informacion al siguiente formulario
+    $_SESSION['doc_autor_plan'] = htmlentities($_POST
+      ["doc_autor_plan"]);
+      $_SESSION['autor_plan'] = htmlentities($_POST
+      ["autor_plan"]);
+      $_SESSION['autor_email'] = htmlentities($_POST
+      ["autor_email"]);
+      header("location:mercado.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -119,7 +132,7 @@
                                         <div class="container">
                                             <div class="row">
                                                 <main>
-                                                    <form action="estudio_mercado_datos.php" required=" " method="POST" enctype="multipart/form-data">
+                                                    <form required method="POST" enctype="multipart/form-data">
                                                         <div class="form-floating">
                                                             <input type="text" id="doc_autor_plan" name="doc_autor_plan" class="form-control" placeholder="Documento del Autor del Plan:" required pattern="[0-9]+"  >
                                                             <label for="doc_autor_plan" class="form__label"></label>
@@ -135,7 +148,7 @@
                                                             <label for="autor_email" class="form__label"></label>
                                                         </div>
                                                             <br>
-                                                            <button type="submit" class="btn btn-success btn-lg btn-rounded">Siguiente</button>     
+                                                            <button type="submit" id="Siguiente" name="Siguiente" class="btn btn-success btn-lg btn-rounded">Siguiente</button>     
                                                         </div>
                                                     </form>
                                                 </main>

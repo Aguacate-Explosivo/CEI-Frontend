@@ -1,3 +1,51 @@
+<?php
+  session_start();
+  if(isset($_POST["Siguiente"])){
+
+    //Datos del formulario 1
+    $_SESSION['doc_autor_plan'] = htmlentities($_POST["doc_autor_plan"]);
+      $_SESSION['autor_plan'] = htmlentities($_POST["autor_plan"]);
+      $_SESSION['autor_email'] = htmlentities($_POST["autor_email"]);
+
+      //Datos del formulario 2
+      $_SESSION['nombre_negocio_plan'] = htmlentities($_POST["nombre_negocio_plan"]);
+      $_SESSION['industria_plan'] = htmlentities($_POST["industria_plan"]);
+      $_SESSION['zona_geografica_plan'] = htmlentities($_POST["zona_geografica_plan"]);
+      $_SESSION['negocio_nuevo'] = htmlentities($_POST["negocio_nuevo"]);
+      $_SESSION['negocio_existente'] = htmlentities($_POST['negocio_existente']);
+      $_SESSION['publico_objetivo_plan'] = htmlentities($_POST["publico_objetivo_plan"]);
+      $_SESSION['innovacion_negocio_plan'] = htmlentities($_POST["innovacion_negocio_plan"]);
+      $_SESSION['Precio_negocio_plan'] = htmlentities($_POST["Precio_negocio_plan"]);
+      $_SESSION['Calidad_negocio_plan'] = htmlentities($_POST["Calidad_negocio_plan"]);
+      $_SESSION['Rapidez_negocio_plan'] = htmlentities($_POST["Rapidez_negocio_plan"]);
+
+      // Nuevos datos de este formulario
+      $_SESSION['clientes_interesados_plan'] = htmlentities($_POST["clientes_interesados_plan"]);
+      $_SESSION['cantidadMonetaria_interesados_plan'] = htmlentities($_POST["cantidadMonetaria_interesados_plan"]);
+      $_SESSION['socios_productores'] = htmlentities($_POST["socios_productores"]);
+      $_SESSION['tipo_marketing_plan'] = htmlentities($_POST["tipo_marketing_plan"]);
+      $_SESSION['inversion_publicidad'] = htmlentities($_POST["inversion_publicidad"]);
+
+      // Redirecion a la siguiente pagina
+      header("location:valores.php");
+  }
+
+  // Variables de los datos anteriores
+  $documento = $_SESSION['doc_autor_plan'] ;
+  $nombre = $_SESSION['autor_plan'] ;
+  $autor_email =  $_SESSION['autor_email'] ;
+  $nombre_negocio_plan = $_SESSION['nombre_negocio_plan'];
+  $industria_plan = $_SESSION['industria_plan'];
+  $zona_geografica_plan = $_SESSION['zona_geografica_plan'];
+  $negocio_nuevo = $_SESSION['negocio_nuevo'];
+  $negocio_existente = $_SESSION['negocio_existente'];
+  $publico_objetivo_plan = $_SESSION['publico_objetivo_plan'];
+  $innovacion_negocio_plan = $_SESSION['innovacion_negocio_plan'];
+  $Precio_negocio_plan = $_SESSION['Precio_negocio_plan'];
+  $Calidad_negocio_plan = $_SESSION['Calidad_negocio_plan'];
+  $Rapidez_negocio_plan =  $_SESSION['Rapidez_negocio_plan'];
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -120,7 +168,7 @@
                                         <div class="container">
                                             <div class="row">
                                                 <main>
-                                                    <form action="estudio_mercado_datos.php" required method="POST" enctype="multipart/form-data">
+                                                    <form required method="POST" enctype="multipart/form-data">
                                                         <br>
                                                         <div class="form-floating">
                                                             <input type="number" id="clientes_interesados_plan" name="clientes_interesados_plan" class="form-control" placeholder="Ingrese el número de clientes que podrían estar interesados en comprar sus productos y / o servicios:" required pattern="[0-9]+"  >
@@ -129,10 +177,6 @@
                                                         <div class="form-floating">
                                                             <input type="number" id="cantidadMonetaria_interesados_plan" name="cantidadMonetaria_interesados_plan" class="form-control" placeholder="Introducir la cantidad monetaria que estos clientes podrían estar dispuestos a gastar, en sus productos y / o servicios:" required pattern="[0-9]+"  >
                                                             <label for="cantidadMonetaria_interesados_plan" class="form__label"></label>
-                                                        </div>
-                                                        <div class="form-floating">
-                                                            <label for="ganancias_estipuladas_interesados_plan" class="form__label">Su total de Ganancias es de :</label>
-                                                            <input type="number" disabled id="ganancias_estipuladas_interesados_plan" name="ganancias_estipuladas_interesados_plan" class="form-control" placeholder="Aqui se mostrará una idea de las ganancias estimadas:" required pattern="[0-9]+"  >
                                                         </div>
                                                         <br>
                                                         <div class="form-floating">
@@ -167,7 +211,43 @@
                                                             </div>
                                                             <br>
                                                         </div>
-                                                          <button type="submit" class="btn btn-success btn-lg btn-rounded">Siguiente</button>                                             
+                                                        <div class="form-floating">
+                                                        <a href="mercado.php" class="btn btn-info btn-lg btn-rounded" > Regresar</a>
+                                                        <button type="submit" name="Siguiente" value = "Siguiente" class="btn btn-success btn-lg btn-rounded">Siguiente</button>     
+                                                        </div>  
+                                                        
+                                                         <!-- Inputs para transferir informacion -->
+                                                          <div>
+                                                            <!-- Form 1 -->
+                                                            <input type="text" id="doc_autor_plan" name="doc_autor_plan" value="<?php  echo $documento; ?>">
+                                                            <label for="doc_autor_plan" class="form__label"></label>
+                                                            <input type="text" id="autor_plan" name="autor_plan" value="<?php echo $nombre; ?>">
+                                                            <label for="autor_plan" class="form__label"></label>
+                                                            <input type="email" id="autor_email" name="autor_email" value="<?php echo $autor_email; ?>">
+                                                            <label for="autor_email" class="form__label"></label>
+
+                                                            <!-- Form 2 -->
+                                                            <input type="text" id="nombre_negocio_plan" name="nombre_negocio_plan" value="<?php  echo $nombre_negocio_plan; ?>">
+                                                            <label for="nombre_negocio_plan" class="form__label"></label>
+                                                            <input type="text" id="industria_plan" name="industria_plan" value="<?php echo $industria_plan; ?>">
+                                                            <label for="industria_plan" class="form__label"></label>
+                                                            <input type="text" id="negocio_nuevo" name="negocio_nuevo" value="<?php echo $negocio_nuevo ?> - <?php echo $negocio_existente ?>"">
+                                                            <label for="negocio_nuevo" class="form__label"></label>
+                                                            <input type="text" id="zona_geografica_plan" name="zona_geografica_plan" value="<?php  echo $zona_geografica_plan; ?>">
+                                                            <label for="zona_geografica_plan" class="form__label"></label>
+                                                            <input type="text" id="publico_objetivo_plan" name="publico_objetivo_plan" value="<?php echo $publico_objetivo_plan; ?>">
+                                                            <label for="publico_objetivo_plan" class="form__label"></label>
+                                                            <input type="text" id="innovacion_negocio_plan" name="innovacion_negocio_plan" value="<?php echo $innovacion_negocio_plan ?>">
+                                                            <label for="innovacion_negocio_plan" class="form__label"></label>
+                                                            <input type="text" id="Precio_negocio_plan" name="Precio_negocio_plan" value="<?php  echo $Precio_negocio_plan; ?>">
+                                                            <label for="Precio_negocio_plan" class="form__label"></label>
+                                                            <input type="text" id="Calidad_negocio_plan" name="Calidad_negocio_plan" value="<?php echo $Calidad_negocio_plan; ?>">
+                                                            <label for="Calidad_negocio_plan" class="form__label"></label>
+                                                            <input type="text" id="Rapidez_negocio_plan" name="Rapidez_negocio_plan" value="<?php echo $Rapidez_negocio_plan; ?>">
+                                                            <label for="Rapidez_negocio_plan" class="form__label"></label>
+                                                          
+                                                        </div>
+
                                                     </form>
                                                 </main>
                                             </div>

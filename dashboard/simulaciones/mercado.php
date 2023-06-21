@@ -1,3 +1,34 @@
+<?php
+  session_start();
+  if(isset($_POST["Siguiente"])){
+
+    //Datos del formulario 1
+      $_SESSION['doc_autor_plan'] = htmlentities($_POST["doc_autor_plan"]);
+      $_SESSION['autor_plan'] = htmlentities($_POST["autor_plan"]);
+      $_SESSION['autor_email'] = htmlentities($_POST["autor_email"]);
+
+      // Nuevos datos de este formulario
+      $_SESSION['nombre_negocio_plan'] = htmlentities($_POST["nombre_negocio_plan"]);
+      $_SESSION['industria_plan'] = htmlentities($_POST["industria_plan"]);
+      $_SESSION['zona_geografica_plan'] = htmlentities($_POST["zona_geografica_plan"]);
+      $_SESSION['negocio_nuevo'] = htmlentities($_POST["negocio_nuevo"]);
+      $_SESSION['negocio_existente'] = htmlentities($_POST["negocio_existente"]);
+      $_SESSION['publico_objetivo_plan'] = htmlentities($_POST["publico_objetivo_plan"]);
+      $_SESSION['innovacion_negocio_plan'] = htmlentities($_POST["innovacion_negocio_plan"]);
+      $_SESSION['Precio_negocio_plan'] = htmlentities($_POST["Precio_negocio_plan"]);
+      $_SESSION['Calidad_negocio_plan'] = htmlentities($_POST["Calidad_negocio_plan"]);
+      $_SESSION['Rapidez_negocio_plan'] = htmlentities($_POST["Rapidez_negocio_plan"]);
+
+      // Redirecion a la siguiente pagina
+      header("location:mercado2.php");
+  }
+
+  // Variables de los datos anteriores
+  $documento = $_SESSION['doc_autor_plan'] ;
+  $nombre = $_SESSION['autor_plan'] ;
+  $autor_email =  $_SESSION['autor_email'] ;
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -119,12 +150,13 @@
                                         <div class="container">
                                             <div class="row">
                                                 <main>
-                                                    <form action="estudio_mercado_datos.php" required method="POST" enctype="multipart/form-data">
+                                                    <form required method="POST" enctype="multipart/form-data">
                                                       <div class="form-floating">
                                                         <input type="text" id="nombre_negocio_plan" name="nombre_negocio_plan" class="form-control" placeholder="Nombre del Negocio:" 
                                                         required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+" >
                                                         <label for="nombre_negocio_plan" class="form__label"></label>
                                                       </div>
+                                                      <br>
                                                         <br>
                                                         <div class="form-floating">
                                                             <label for="industria_plan" class="form-label">Industria en la que Opera el Negocio:</label>
@@ -156,7 +188,7 @@
                                                             <br>
                                                         </div>
                                                         <div class="form-floating">
-                                                          <label for="zona_geografica_plan" class="form__label">El estado del negocio es:</label>
+                                                          <label for="negocio_nuevo" class="form__label">El estado del negocio es:</label>
                                                           <label><input type="checkbox" name="negocio_nuevo" value="negocio_nuevo"> Nuevo</label>
                                                           <label><input type="checkbox" name="negocio_existente" value="negocio_existente"> Existen</label><br>
                                                       </div>
@@ -229,9 +261,21 @@
                                                              <br>
                                                         </div>
                                                         <br>
+
+                                                        <!-- Inputs para transferir informacion -->
+                                                        <div>
+                                                            <input hidden type="text" id="doc_autor_plan" name="doc_autor_plan" value="<?php  echo $documento; ?>">
+                                                            <label hidden for="doc_autor_plan" class="form__label"></label>
+                                                            <input hidden type="text" id="autor_plan" name="autor_plan" value="<?php echo $nombre; ?>">
+                                                            <label hidden for="autor_plan" class="form__label"></label>
+                                                            <input hidden type="email" id="autor_email" name="autor_email" value="<?php echo $autor_email; ?>">
+                                                            <label hidden for="autor_email" class="form__label"></label>
+                                                        </div>
+
                                                       <hr/>
                                                         <div class="form-floating">
-                                                        <button type="submit" class="btn btn-success btn-lg btn-rounded">Siguiente</button>     
+                                                        <a href="overview.php" class="btn btn-info btn-lg btn-rounded" > Regresar</a>
+                                                        <button type="submit" name="Siguiente" value = "Siguiente" class="btn btn-success btn-lg btn-rounded">Siguiente</button>     
                                                         </div>
                                                         
                                                     </form>
