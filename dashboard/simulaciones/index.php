@@ -83,7 +83,7 @@
           </li>
           <li>
             <a href="index.php" class="waves-effect active">
-              <i class="ti-ink-pen fa-fw"></i>
+              <i class="ti-stats-up fa-fw"></i>
              Simulaciones
             </a>
           </li>
