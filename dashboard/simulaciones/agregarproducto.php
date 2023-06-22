@@ -36,6 +36,10 @@
       $_SESSION['gastosgmin'] = htmlentities($_POST["gastosgmin"]);
       $_SESSION['gastosgmax'] = htmlentities($_POST["gastosgmax"]);
       // nuevos datos de formulario
+      $_SESSION['nombre_producto'] = htmlentities($_POST["nombre_producto"]);
+      $_SESSION['cantidad_producto'] = htmlentities($_POST["cantidad_producto"]);
+      $_SESSION['coste_unidad_producto'] = htmlentities($_POST["coste_unidad_producto"]);
+      $_SESSION['precio_venta_producto'] = htmlentities($_POST["precio_venta_producto"]);
 
   
       // Redirecion a la siguiente pagina
@@ -254,7 +258,7 @@
  <div class="inicio">
     <div class="scroll">
     <div class="col-md-9">
-    <input type="text" id="producto" name="producto" class="form-control"
+    <input type="text" id="nombre_producto1" name="nombre_producto1" class="form-control"
     placeholder="Nombre Producto:" required="" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-,.]+"  >
     <label for="producto" class="form__label"></label>
     </div>
@@ -263,23 +267,23 @@
 <br>
   <div class="col-md-9">
       <label for="cantidad" class="form__label"></label>
-    <input type="text"  class="form-control" id="cantidad" name="cantidad"
+    <input type="text"  class="form-control" id="cantidad_producto1" name="cantidad_producto1"
     placeholder="Cantidad producto:" required pattern="[0-9]+" >
     </div>
 <br>
 <br>
 <br>
   <div class="col-md-9">
-      <label for="costeu" class="form__label"></label>
-    <input type="text"  class="form-control" id="costeu" name="costeu"
+      <label for="coste_unidad_producto1" class="form__label"></label>
+    <input type="text"  class="form-control" id="coste_unidad_producto1" name="coste_unidad_producto1"
     placeholder="Coste Unitario:" required pattern="[0-9]+" >
     </div>
 <br>
 <br>
 <br>
   <div class="col-md-9">
-      <label for="preciov" class="form__label"></label>
-    <input type="text"  class="form-control" id="preciov" name="preciov"
+      <label for="precio_venta_producto1" class="form__label"></label>
+    <input type="text"  class="form-control" id="precio_venta_producto1" name="precio_venta_producto1"
     placeholder="Precio Venta:" required pattern="[0-9]+" >
     </div>
 <br>
@@ -316,20 +320,20 @@
                                  $consulta2 ="SELECT * FROM ` $nombre_negocio_plan` ";
                                  $busqueda=mysqli_query($conexion,$consulta2);
                                    
-                                 $consulta21 ="SELECT SUM(cantidad) as total22  FROM ` $nombre_negocio_plan` ";
+                                 $consulta21 ="SELECT SUM(cantidad) as cantidad_producto  FROM ` $nombre_negocio_plan` ";
                                  $busqueda1=mysqli_query($conexion,$consulta21);
                                  $total222= mysqli_fetch_array($busqueda1);
-                                 $total22 = $total222['total22'];
+                                 $cantidad_producto = $total222['cantidad_producto'];
 
-                                 $consulta22 ="SELECT SUM(coste_unitario) as total33  FROM ` $nombre_negocio_plan` ";
+                                 $consulta22 ="SELECT SUM(coste_unitario) as coste_unidad_producto  FROM ` $nombre_negocio_plan` ";
                                  $busqueda2=mysqli_query($conexion,$consulta22);
                                  $total333= mysqli_fetch_array($busqueda2);
-                                 $total33 = $total333['total33'];
+                                 $coste_unidad_producto = $total333['coste_unidad_producto'];
 
-                                 $consulta23 ="SELECT SUM(precio_venta) as total44  FROM ` $nombre_negocio_plan` ";
+                                 $consulta23 ="SELECT SUM(precio_venta) as precio_venta_producto  FROM ` $nombre_negocio_plan` ";
                                  $busqueda3=mysqli_query($conexion,$consulta23);
                                  $total444= mysqli_fetch_array($busqueda3);
-                                 $total44 = $total444['total44']; 
+                                 $precio_venta_producto = $total444['precio_venta_producto']; 
                             foreach($busqueda as $elemento){ 
                                 $_SESSION['Id_producto'] =  $elemento["id"];
                               ?>
@@ -353,9 +357,9 @@
                                 <thead>
                                 <tr>
                                 <th ></th>
-                                <th ><?php echo $total22; ?></th>
-                                <th ><?php echo $total33; ?></th>
-                                <th ><?php echo $total44; ?></th>
+                                <th ><?php echo $cantidad_producto; ?></th>
+                                <th ><?php echo $coste_unidad_producto; ?></th>
+                                <th ><?php echo $precio_venta_producto; ?></th>
                                 
                                 
                                 <th>PORCENTAJES</th>
@@ -421,8 +425,15 @@
                                                             <input type="text" id="gastosgmin" name="gastosgmin" value="<?php echo $gastosgmin; ?>">
                                                             <label for="gastosgmin" class="form__label"></label>
                                                             <input type="text" id="gastosgmax" name="gastosgmax" value="<?php echo $gastosgmax; ?>">
-                                                            <label for="gastosgmax class="form__label"></label>
-                                                        </div>
+                                                            <label for="gastosgmax" class="form__label"></label>
+                                                       
+                                                            <input type="text" id="cantidad_producto" name="cantidad_producto" value="<?php echo $cantidad_producto; ?>">
+                                                            <label for="cantidad_producto" class="form__label"></label>
+                                                            <input type="text" id="coste_unidad_producto" name="coste_unidad_producto" value="<?php echo $coste_unidad_producto; ?>">
+                                                            <label for="coste_unidad_producto" class="form__label"></label>
+                                                            <input type="text" id="precio_venta_producto" name="precio_venta_producto" value="<?php echo $precio_venta_producto; ?>">
+                                                            <label for="precio_venta_producto" class="form__label"></label>
+                                                          </div>
                       </form>
 
 

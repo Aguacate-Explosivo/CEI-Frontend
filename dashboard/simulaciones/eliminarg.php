@@ -9,14 +9,15 @@
 </head>
 <body>  
 <?php
+ session_start();
+ $id=$_SESSION['id'];
+ $tabla=$_SESSION['documento'];
  include_once('../administradores/conexion.php');
- $conexion=conectar(); 
-    $id=$_GET['id'];
+ $conexion=conectar();  
+ $sql="DELETE FROM ` $tabla` WHERE id='$id'";     
+ $resultado=mysqli_query($conexion,$sql);
  
-    $sql="delete from gastos where id='".$id."'";
-        $resultado=mysqli_query($conexion,$sql);
- 
-    if ($resultado) {
+    if ($resultado) { 
 
                 echo "<script>
             Swal.fire({

@@ -15,13 +15,13 @@
 	$conexion=conectar();
 
     //Valores del formulario
-    $producto=$_POST['producto'];
-    $cantidad=$_POST['cantidad'];
-    $costeu=$_POST['costeu'];
-    $preciov=$_POST['preciov'];
+    $nombre_producto1=$_POST['nombre_producto1'];
+    $cantidad_producto1=$_POST['cantidad_producto1'];
+    $coste_unidad_producto1=$_POST['coste_unidad_producto1'];
+    $precio_venta_producto1=$_POST['precio_venta_producto1'];
     $nombre_negocio_plan=$_POST['nombre_negocio_plan'];
     //igresar la informacion a la tabla de datos
-    $consulta="INSERT INTO ` $nombre_negocio_plan` VALUES ('','$producto','$cantidad','$costeu','$preciov')";
+    $consulta="INSERT INTO ` $nombre_negocio_plan` VALUES ('','$nombre_producto1','$cantidad_producto1','$coste_unidad_producto1 ','$precio_venta_producto1')";
     $resultado=mysqli_query($conexion,$consulta);
     if ($resultado) {
         echo "<script>

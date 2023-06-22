@@ -3,7 +3,7 @@
   if(isset($_POST["Siguiente"])){
 
     //Datos del formulario 1
-    $_SESSION['doc_autor_plan'] = htmlentities($_POST["doc_autor_plan"]);
+      $_SESSION['doc_autor_plan'] = htmlentities($_POST["doc_autor_plan"]);
       $_SESSION['autor_plan'] = htmlentities($_POST["autor_plan"]);
       $_SESSION['autor_email'] = htmlentities($_POST["autor_email"]);
 
@@ -45,7 +45,7 @@
   $Calidad_negocio_plan = $_SESSION['Calidad_negocio_plan'];
   $Rapidez_negocio_plan =  $_SESSION['Rapidez_negocio_plan'];
 
-//agregar tabla de productos a base de datos
+//agregar tabla de productos  a base de datos
   require_once('../administradores/conexion.php');
   $conexion=conectar(); 
   $creartabla ="CREATE TABLE ` $nombre_negocio_plan` (
@@ -64,7 +64,23 @@
    $creartabla3 ="  ALTER TABLE ` $nombre_negocio_plan`
     CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; ";
     $creartabla4=mysqli_query($conexion,$creartabla3);
-  
+  //agregar tabla de gastos  a base de datos
+
+
+    $creartablag ="CREATE TABLE ` $documento` (
+      `id` int(11) NOT NULL, 
+      `nombre` text NOT NULL,
+      `valor` int(11) NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci; ";
+     $creartabla1g=mysqli_query($conexion,$creartablag);
+   
+     $creartabla2g =" ALTER TABLE ` $documento`
+     ADD PRIMARY KEY (`id`); ";
+      $creartabla3=mysqli_query($conexion,$creartabla2g);
+      
+      $creartabla3g ="  ALTER TABLE ` $documento`
+       CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; ";
+       $creartabla4g=mysqli_query($conexion,$creartabla3g);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -227,7 +243,7 @@
                                                             <br>
                                                             <div class="form-floating">
                                                                 <input type="number" id="inversion_publicidad" name="inversion_publicidad" class="form-control" placeholder="Cantidad de $ a Invertir en Publicidad:" required pattern="[0-9]+"  >
-                                                                <label for="inversion_publicidad" class="form__label"></label>
+                                                                 <label for="inversion_publicidad" class="form__label"></label>
                                                             </div>
                                                             <br>
                                                         </div>

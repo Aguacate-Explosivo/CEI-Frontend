@@ -16,9 +16,10 @@
     //Valores del formulario
     $nombre=$_POST['nombre'];
     $valor=$_POST['valor'];
-    
+    $documento=$_POST['documento'];
+
     //igresar la informacion a la tabla de datos
-    $consulta="INSERT INTO gastos VALUES ('','$nombre','$valor')";
+    $consulta="INSERT INTO  ` $documento` VALUES ('','$nombre','$valor')";
     $resultado=mysqli_query($conexion,$consulta);
     if ($resultado) {
         echo "<script>
@@ -32,7 +33,7 @@
      location.assign('agregargastos.php');
      },1000);
         </script>"; 
-        }
+        } 
 ?>
 </body>
 </html>
