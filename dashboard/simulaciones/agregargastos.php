@@ -342,7 +342,9 @@
                                  $total11= mysqli_fetch_array($busqueda1);
                                  $valor_total_gasto = $total11['valor_total_gasto'];
 
-                            foreach($busqueda as $elemento){ ?>
+                            foreach($busqueda as $elemento){ 
+                              $_SESSION['Id_producto_gasto'] =  $elemento["id"];
+                              ?>
                             <!-- Contenido de la tabla -->
                             <tr>
                                 <td><?php echo $elemento["nombre"]; ?></td>

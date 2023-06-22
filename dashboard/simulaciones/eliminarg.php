@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,17 +12,14 @@
 </head>
 <body>  
 <?php
- session_start();
- $id=$_SESSION['id'];
- $tabla=$_SESSION['documento'];
+ $id = $_SESSION['Id_producto_gasto'];
+ $tabla=$_SESSION['doc_autor_plan'];
  include_once('../administradores/conexion.php');
  $conexion=conectar();  
  $sql="DELETE FROM ` $tabla` WHERE id='$id'";     
  $resultado=mysqli_query($conexion,$sql);
- 
     if ($resultado) { 
-
-                echo "<script>
+          echo "<script>
             Swal.fire({
               icon: 'success',
               title: 'Dato eliminado...',
@@ -30,7 +30,6 @@
          location.assign('agregargastos.php');
          },1000);
             </script>"; 
-          
      }
 ?>
 </body>
