@@ -151,7 +151,7 @@
             <li>
             <li>
             <a href="simulaciones\index.php" class="waves-effect">
-              <i class="ti-ink-pen fa-fw"></i>
+              <i class="ti-stats-up fa-fw"></i>
              Simulaciones
             </a>
           </li>
