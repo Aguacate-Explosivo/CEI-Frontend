@@ -277,7 +277,6 @@
 
                                                       <hr/>
                                                         <div class="form-floating">
-                                                        <a href="overview.php" class="btn btn-info btn-lg btn-rounded" > Regresar</a>
                                                         <button type="submit" name="Siguiente" value = "Siguiente" class="btn btn-success btn-lg btn-rounded">Siguiente</button>     
                                                         </div>
                                                         

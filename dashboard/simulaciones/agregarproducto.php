@@ -297,7 +297,6 @@
 <button type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Agregar Producto</button>
 </div>
 <br>
-<a  href="valores.php" class="btn btn-info btn-block btn-rounded waves-effect waves-light" > Regresar</a>
 
 </form>
 </div>
@@ -373,65 +372,65 @@
                         <!-- Inputs para transferir informacion -->
                         <div>
                                                             <!-- Form 1 -->
-                                                            <input type="text" id="doc_autor_plan" name="doc_autor_plan" value="<?php  echo $documento; ?>">
+                                                            <input type="hidden" id="doc_autor_plan" name="doc_autor_plan" value="<?php  echo $documento; ?>">
                                                             <label for="doc_autor_plan" class="form__label"></label>
-                                                            <input type="text" id="autor_plan" name="autor_plan" value="<?php echo $nombre; ?>">
+                                                            <input type="hidden" id="autor_plan" name="autor_plan" value="<?php echo $nombre; ?>">
                                                             <label for="autor_plan" class="form__label"></label>
-                                                            <input type="email" id="autor_email" name="autor_email" value="<?php echo $autor_email; ?>">
+                                                            <input type="hidden" id="autor_email" name="autor_email" value="<?php echo $autor_email; ?>">
                                                             <label for="autor_email" class="form__label"></label>
 
                                                             <!-- Form 2 -->
-                                                            <input type="text" id="nombre_negocio_plan" name="nombre_negocio_plan" value="<?php  echo $nombre_negocio_plan; ?>">
+                                                            <input type="hidden" id="nombre_negocio_plan" name="nombre_negocio_plan" value="<?php  echo $nombre_negocio_plan; ?>">
                                                             <label for="nombre_negocio_plan" class="form__label"></label>
-                                                            <input type="text" id="industria_plan" name="industria_plan" value="<?php echo $industria_plan; ?>">
+                                                            <input type="hidden" id="industria_plan" name="industria_plan" value="<?php echo $industria_plan; ?>">
                                                             <label for="industria_plan" class="form__label"></label>
-                                                            <input type="text" id="negocio_nuevo" name="negocio_nuevo" value="<?php echo $negocio_nuevo ?> - <?php echo $negocio_existente ?>">
+                                                            <input type="hidden" id="negocio_nuevo" name="negocio_nuevo" value="<?php echo $negocio_nuevo ?> - <?php echo $negocio_existente ?>">
                                                             <label for="negocio_nuevo" class="form__label"></label>
-                                                            <input type="text" id="zona_geografica_plan" name="zona_geografica_plan" value="<?php  echo $zona_geografica_plan; ?>">
+                                                            <input type="hidden" id="zona_geografica_plan" name="zona_geografica_plan" value="<?php  echo $zona_geografica_plan; ?>">
                                                             <label for="zona_geografica_plan" class="form__label"></label>
-                                                            <input type="text" id="publico_objetivo_plan" name="publico_objetivo_plan" value="<?php echo $publico_objetivo_plan; ?>">
+                                                            <input type="hidden" id="publico_objetivo_plan" name="publico_objetivo_plan" value="<?php echo $publico_objetivo_plan; ?>">
                                                             <label for="publico_objetivo_plan" class="form__label"></label>
-                                                            <input type="text" id="innovacion_negocio_plan" name="innovacion_negocio_plan" value="<?php echo $innovacion_negocio_plan ?>">
+                                                            <input type="hidden" id="innovacion_negocio_plan" name="innovacion_negocio_plan" value="<?php echo $innovacion_negocio_plan ?>">
                                                             <label for="innovacion_negocio_plan" class="form__label"></label>
-                                                            <input type="text" id="Precio_negocio_plan" name="Precio_negocio_plan" value="<?php  echo $Precio_negocio_plan; ?>">
+                                                            <input type="hidden" id="Precio_negocio_plan" name="Precio_negocio_plan" value="<?php  echo $Precio_negocio_plan; ?>">
                                                             <label for="Precio_negocio_plan" class="form__label"></label>
-                                                            <input type="text" id="Calidad_negocio_plan" name="Calidad_negocio_plan" value="<?php echo $Calidad_negocio_plan; ?>">
+                                                            <input type="hidden" id="Calidad_negocio_plan" name="Calidad_negocio_plan" value="<?php echo $Calidad_negocio_plan; ?>">
                                                             <label for="Calidad_negocio_plan" class="form__label"></label>
-                                                            <input type="text" id="Rapidez_negocio_plan" name="Rapidez_negocio_plan" value="<?php echo $Rapidez_negocio_plan; ?>">
+                                                            <input type="hidden" id="Rapidez_negocio_plan" name="Rapidez_negocio_plan" value="<?php echo $Rapidez_negocio_plan; ?>">
                                                             <label for="Rapidez_negocio_plan" class="form__label"></label>
-                                                            <input type="text" id="clientes_interesados_plan" name="clientes_interesados_plan" value="<?php echo $clientes_interesados_plan; ?>">
+                                                            <input type="hidden" id="clientes_interesados_plan" name="clientes_interesados_plan" value="<?php echo $clientes_interesados_plan; ?>">
                                                             <label for="clientes_interesados_plan" class="form__label"></label>
-                                                            <input type="text" id="cantidadMonetaria_interesados_plan" name="cantidadMonetaria_interesados_plan" value="<?php echo $cantidadMonetaria_interesados_plan; ?>">
+                                                            <input type="hidden" id="cantidadMonetaria_interesados_plan" name="cantidadMonetaria_interesados_plan" value="<?php echo $cantidadMonetaria_interesados_plan; ?>">
                                                             <label for="cantidadMonetaria_interesados_plan " class="form__label"></label>
-                                                            <input type="text" id="socios_productores" name="socios_productores" value="<?php echo $socios_productores; ?>">
+                                                            <input type="hidden" id="socios_productores" name="socios_productores" value="<?php echo $socios_productores; ?>">
                                                             <label for="socios_productores" class="form__label"></label>
-                                                            <input type="text" id="tipo_marketing_plan" name="tipo_marketing_plan" value="<?php echo $tipo_marketing_plan; ?>">
+                                                            <input type="hidden" id="tipo_marketing_plan" name="tipo_marketing_plan" value="<?php echo $tipo_marketing_plan; ?>">
                                                             <label for="tipo_marketing_plan" class="form__label"></label>
-                                                            <input type="text" id="inversion_publicidad" name="inversion_publicidad" value="<?php echo $inversion_publicidad; ?>">
+                                                            <input type="hidden" id="inversion_publicidad" name="inversion_publicidad" value="<?php echo $inversion_publicidad; ?>">
                                                             <label for="inversion_publicidad" class="form__label"></label>
 
-                                                            <input type="text" id="cantidadmin" name="cantidadmin" value="<?php echo $cantidadmin; ?>">
+                                                            <input type="hidden" id="cantidadmin" name="cantidadmin" value="<?php echo $cantidadmin; ?>">
                                                             <label for="cantidadmin" class="form__label"></label>
-                                                            <input type="text" id="cantidadmax" name="cantidadmax" value="<?php echo $cantidadmax; ?>">
+                                                            <input type="hidden" id="cantidadmax" name="cantidadmax" value="<?php echo $cantidadmax; ?>">
                                                             <label for="cantidadmax" class="form__label"></label>
-                                                            <input type="text" id="precioumin" name="precioumin" value="<?php echo $precioumin; ?>">
+                                                            <input type="hidden" id="precioumin" name="precioumin" value="<?php echo $precioumin; ?>">
                                                             <label for="precioumin" class="form__label"></label>
-                                                            <input type="text" id="precioumax" name="precioumax" value="<?php echo $precioumax; ?>">
+                                                            <input type="hidden" id="precioumax" name="precioumax" value="<?php echo $precioumax; ?>">
                                                             <label for="precioumax" class="form__label"></label>
-                                                            <input type="text" id="preciovmin" name="preciovmin" value="<?php echo $preciovmin; ?>">
+                                                            <input type="hidden" id="preciovmin" name="preciovmin" value="<?php echo $preciovmin; ?>">
                                                             <label for="preciovmin" class="form__label"></label>
-                                                            <input type="text" id="preciovmax" name="preciovmax" value="<?php echo $preciovmax; ?>">
+                                                            <input type="hidden" id="preciovmax" name="preciovmax" value="<?php echo $preciovmax; ?>">
                                                             <label for="preciovmax" class="form__label"></label>
-                                                            <input type="text" id="gastosgmin" name="gastosgmin" value="<?php echo $gastosgmin; ?>">
+                                                            <input type="hidden" id="gastosgmin" name="gastosgmin" value="<?php echo $gastosgmin; ?>">
                                                             <label for="gastosgmin" class="form__label"></label>
-                                                            <input type="text" id="gastosgmax" name="gastosgmax" value="<?php echo $gastosgmax; ?>">
+                                                            <input type="hidden" id="gastosgmax" name="gastosgmax" value="<?php echo $gastosgmax; ?>">
                                                             <label for="gastosgmax" class="form__label"></label>
                                                        
-                                                            <input type="text" id="cantidad_producto" name="cantidad_producto" value="<?php echo $cantidad_producto; ?>">
+                                                            <input type="hidden" id="cantidad_producto" name="cantidad_producto" value="<?php echo $cantidad_producto; ?>">
                                                             <label for="cantidad_producto" class="form__label"></label>
-                                                            <input type="text" id="coste_unidad_producto" name="coste_unidad_producto" value="<?php echo $coste_unidad_producto; ?>">
+                                                            <input type="hidden" id="coste_unidad_producto" name="coste_unidad_producto" value="<?php echo $coste_unidad_producto; ?>">
                                                             <label for="coste_unidad_producto" class="form__label"></label>
-                                                            <input type="text" id="precio_venta_producto" name="precio_venta_producto" value="<?php echo $precio_venta_producto; ?>">
+                                                            <input type="hidden" id="precio_venta_producto" name="precio_venta_producto" value="<?php echo $precio_venta_producto; ?>">
                                                             <label for="precio_venta_producto" class="form__label"></label>
                                                           </div>
                       </form>
