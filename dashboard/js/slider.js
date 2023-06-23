@@ -1,5 +1,5 @@
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
+var slider = document.getElementById("cantidad_producto");
+var output = document.getElementById("cantidad_producto_barra");
 output.innerHTML = slider.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
@@ -7,16 +7,16 @@ slider.oninput = function() {
     output.innerHTML = this.value;
 }
  
-var slidere = document.getElementById("myRangee");
-var outpute = document.getElementById("demoe");
+var slidere = document.getElementById("precio_unitario");
+var outpute = document.getElementById("precio_unitario_barra");
 outpute.innerHTML = slidere.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
 slidere.oninput = function() {
     outpute.innerHTML = this.value;
 }
-var slideree = document.getElementById("myRangeee");
-var outputee = document.getElementById("demoee");
+var slideree = document.getElementById("precio_venta");
+var outputee = document.getElementById("precio_venta_barra");
 outputee.innerHTML = slideree.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
@@ -24,8 +24,8 @@ slideree.oninput = function() {
     outputee.innerHTML = this.value;
 }
 
-var slidereee = document.getElementById("myRangeeee");
-var outputeee = document.getElementById("demoeee");
+var slidereee = document.getElementById("gastos_generales");
+var outputeee = document.getElementById("gastos_generales_barra");
 outputeee.innerHTML = slidereee.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)

@@ -209,11 +209,11 @@
     <div class="col-md-9">
       <label for="formControlRange">Cantidad</label>
     <input type="range" min="<?php echo $cantidadmin ; ?>" max="<?php echo $cantidadmax ; ?>"  step="1" class="form-control-range range-slider"
-     id="myRange"
+     id="cantidad_producto" name="cantidad_producto"
     >
     </div>
     <div class="col-md-3">
-      <span id="demo">0</span>
+      <span id="cantidad_producto_barra">0</span>
   </div>
   <br>
 <br><br>
@@ -225,10 +225,11 @@
 
   <div class="col-md-9">
       <label for="formControlRange">Precio Unitario</label>
-    <input type="range" min="<?php echo $precioumin ; ?>" max="<?php echo $precioumax ; ?>"  step="1" class="form-control-range range-slider" id="myRangee">
+    <input type="range" min="<?php echo $precioumin ; ?>" max="<?php echo $precioumax ; ?>"  step="1"
+     class="form-control-range range-slider" id="precio_unitario" name="precio_unitario">
     </div>
     <div class="col-md-3">
-      <span id="demoe">0</span>
+      <span id="precio_unitario_barra">0</span>
   </div>
   <br>
 <br><br>
@@ -239,10 +240,11 @@
 
   <div class="col-md-9">
       <label for="formControlRange">Precio Venta</label>
-    <input type="range" min="<?php echo $preciovmin ; ?>" max="<?php echo $preciovmax ; ?>"  step="1" class="form-control-range range-slider" id="myRangeeee">
+    <input type="range" min="<?php echo $preciovmin ; ?>" max="<?php echo $preciovmax ; ?>"  step="1"
+     class="form-control-range range-slider" id="precio_venta" name="precio_venta">
     </div>
     <div class="col-md-3">
-      <span id="demoeee">0</span>
+      <span id="precio_venta_barra">0</span>
   </div>
   <br>
 <br><br>
@@ -253,10 +255,11 @@
 
   <div class="col-md-9">
       <label for="formControlRange">Gastos Generales</label>
-    <input type="range" min="<?php echo $gastosgmin ; ?>" max="<?php echo $gastosgmax ; ?>"  step="1" class="form-control-range range-slider" id="myRangeee">
+    <input type="range" min="<?php echo $gastosgmin ; ?>" max="<?php echo $gastosgmax ; ?>"  step="1"
+     class="form-control-range range-slider" id="gastos_generales" name="gastos_generales">
     </div>
     <div class="col-md-3">
-      <span id="demoee">0</span>
+      <span id="gastos_generales_barra">0</span>
   </div>
   <br>
 <br><br>
@@ -333,12 +336,12 @@ $Margen_Total= $ingresos_totales - $valor_total_gasto  ;
                             </tr>
                         </thead>
                             <tr>
-                            <td>  Productos: <a style="margin: 2px; border-radius: 5px;" href="#" class="btn btn-info" > Ver Mas</a></td>
+                            <td>  Productos: <a style="margin: 2px; border-radius: 5px;" href="productos_reales.php" class="btn btn-info" > Ver Mas</a></td>
                                 <td>  Productos: <a style="margin: 2px; border-radius: 5px;" href="#" class="btn btn-info" > Ver Mas</a></td>
                             </tr>
                                 
                             <tr>
-                            <td> Datos Generales: <a style="margin: 2px; border-radius: 5px;" href="#" class="btn btn-info" > Ver Mas</a></td> 
+                            <td> Datos Generales: <a style="margin: 2px; border-radius: 5px;" href="gastos_reales.php" class="btn btn-info" > Ver Mas</a></td> 
 
                                 <td> Datos Generales: <a style="margin: 2px; border-radius: 5px;" href="#" class="btn btn-info" > Ver Mas</a></td> 
                             </tr>           
