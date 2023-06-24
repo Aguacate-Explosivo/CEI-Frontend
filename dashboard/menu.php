@@ -1,15 +1,14 @@
 <head>
-  <!--ESTILOS-->
-  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
-  <!--datables CSS básico-->
-  <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
-  <link rel="stylesheet"  type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <link href="css/style.css" rel="stylesheet">
+<!--ESTILOS-->
+<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+<!--datables CSS básico-->
+<link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
+<link rel="stylesheet"  type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link href="css/style.css" rel="stylesheet">
 
-
-  <!--SCRIPTS-->
+<!--SCRIPTS-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" defer></script>
 <script src="bower_components/metisMenu/dist/metisMenu.min.js" defer></script>
@@ -29,8 +28,8 @@
 <script src="../../lib/owlcarousel/owl.carousel.min.js" defer></script>
 <script src="../../lib/lightbox/js/lightbox.min.js" defer></script>
 <script src="js/main.js" defer></script>
-
 </head>
+
 <?php include_once("../php/sesion_validacion.php"); ?>
 
 <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0">
@@ -99,7 +98,7 @@
             </a>
           </li>
           <li>
-            <a href="simulaciones\index.php" class="waves-effect">
+            <a href="DashSimulaciones.php" class="waves-effect">
               <i class="ti-stats-up fa-fw"></i>
              Simulaciones
             </a>
