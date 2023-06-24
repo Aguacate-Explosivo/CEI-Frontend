@@ -20,7 +20,6 @@
 <link href="lib/animate/animate.min.css" rel="stylesheet" async>
 <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" preload>
 <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" async>
-
 <link href="css/bootstrap.min.css" rel="stylesheet" preload>
 <link href="css/style.css" rel="stylesheet" preload>
 
