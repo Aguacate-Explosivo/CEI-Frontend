@@ -221,11 +221,21 @@
  <a href="gastos_reales.php" class="btn btn-info btn-block btn-rounded waves-effect waves-light">Gastos</a>
 </div>
 <br><br>
+<?php
+ $_SESSION['gastos_generales'] = htmlentities($_POST["gastos_generales"]);
+ $_SESSION['precio_unitario'] = htmlentities($_POST["precio_unitario"]);
+ $_SESSION['cantidad_productos'] = htmlentities($_POST["cantidad_productos"]);
+ $_SESSION['precio_venta'] = htmlentities($_POST["precio_venta"]);
+ $precio_unitario =  $_SESSION['precio_unitario'];
+ $cantidad_productos =  $_SESSION['cantidad_productos'];
+ $precio_venta =  $_SESSION['precio_venta'];
+ $gastos_generales =  $_SESSION['gastos_generales']; 
+ ?>
     <div class="scroll">
     <div class="col-md-9">
       <label for="formControlRange">Cantidad Prouctos</label>
     <input type="range" min="1" max="100"  step="1"
-     class="form-control-range range-slider" value="10"  id="cantidad_productos" name="cantidad_productos">
+     class="form-control-range range-slider" value="<?php echo $cantidad_productos; ?>"  id="cantidad_productos" name="cantidad_productos">
     </div>
     <div class="col-md-3">
       <span id="cantidad_productos_barra">0</span>
@@ -238,7 +248,7 @@
   <div class="col-md-9">
       <label for="formControlRange">Precio Unitario</label>
     <input type="range" min="1" max="100"  step="1"
-     class="form-control-range range-slider" value="10" id="precio_unitario" name="precio_unitario">
+     class="form-control-range range-slider" value="<?php echo $precio_unitario; ?>" id="precio_unitario" name="precio_unitario">
     </div>
     <div class="col-md-3">
       <span id="precio_unitario_barra">0</span>
@@ -250,8 +260,8 @@
 
   <div class="col-md-9">
       <label for="formControlRange">Precio Venta</label>
-    <input type="range" min="1" max="100" value="10"  step="1"
-     class="form-control-range range-slider" id="precio_venta" name="precio_venta">
+    <input type="range" min="1" max="100" value="<?php echo $precio_venta; ?>"  step="1"
+     class="form-control-range range-slider" id="precio_venta"  name="precio_venta">
     </div>
     <div class="col-md-3">
       <span id="precio_venta_barra">0</span>
@@ -264,7 +274,7 @@
  
   <div class="col-md-9">
       <label for="formControlRange">Gastos Generales</label>
-    <input type="range" min="1" max="100" value="10"  step="1"
+    <input type="range" min="1" max="100" value="<?php echo $gastos_generales; ?>"  step="1"
      class="form-control-range range-slider" id="gastos_generales" name="gastos_generales">
     </div>
     <div class="col-md-3">
@@ -280,6 +290,7 @@
 </div>
 </div>
 <div class="table">
+
 <?php
 $ingresos_totales = $cantidad_producto * $coste_unidad_producto;
 $Margen_Total= $ingresos_totales - $valor_total_gasto  ;
@@ -336,7 +347,8 @@ $Margen_Total= $ingresos_totales - $valor_total_gasto  ;
 <hr>
 
 <br><br><br><br><br><br>
-<h1 class="text-center">Simulaciones Resultados Empresa</h1>
+
+<h1 class="text-center">Productos Sinulados  </h1>
 <div class="bajo">
 <?php
 
