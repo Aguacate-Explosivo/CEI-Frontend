@@ -403,7 +403,7 @@ echo "";
                             <!-- Contenido de la tabla -->
                             <tr>
                            
-                                <td><?php echo $elemento["nombre"]; print( $cantidad); ?></td>
+                                <td><?php echo $elemento["nombre"]; ?></td>
                                 <td><?php echo $cantidad;?></td>
                                 <td><?php echo $coste_unitario;?></td>
                                 <td><?php echo $precio_venta1;?></td>

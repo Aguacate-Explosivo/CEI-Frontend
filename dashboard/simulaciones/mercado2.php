@@ -27,7 +27,7 @@
       $_SESSION['inversion_publicidad'] = htmlentities($_POST["inversion_publicidad"]);
 
       // Redirecion a la siguiente pagina
-      header("location:valores.php");
+      header("location:agregarproducto.php");
   }
 
   // Variables de los datos anteriores
