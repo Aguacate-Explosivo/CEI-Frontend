@@ -42,7 +42,10 @@
       $_SESSION['precio_venta_producto'] = htmlentities($_POST["precio_venta_producto"]);
       // nuevos datos de formulario
       $_SESSION['valor_total_gasto'] = htmlentities($_POST["valor_total_gasto"]);
-
+      $_SESSION['precio_unitario'] = htmlentities($_POST["precio_unitario"]);
+      $_SESSION['cantidad_productos'] = htmlentities($_POST["cantidad_productos"]);
+      $_SESSION['precio_venta'] = htmlentities($_POST["precio_venta"]);
+      $_SESSION['gastos_generales'] = htmlentities($_POST["gastos_generales"]);
 
   
       // Redirecion a la siguiente pagina
@@ -82,6 +85,11 @@
   $coste_unidad_producto =  $_SESSION['coste_unidad_producto'];
   $precio_venta_producto =  $_SESSION['precio_venta_producto'];
   $valor_total_gasto =  $_SESSION['valor_total_gasto'];
+  $precio_unitario =  $_SESSION['precio_unitario'];
+  $cantidad_productos =  $_SESSION['cantidad_productos'];
+  $precio_venta =  $_SESSION['precio_venta'];
+  $gastos_generales =  $_SESSION['gastos_generales'];
+
 
   //agregar tabla a base de datos
 ?>
@@ -204,43 +212,45 @@
 
  <a href="agregargastos.php" class="btn btn-warning btn-block btn-rounded waves-effect waves-light">Agregar Gastos</a>
 </div>
+<div style="float: right;  width: 200px;">
 
+ <a href="productos_reales.php" class="btn btn-info btn-block btn-rounded waves-effect waves-light">Productos</a>
+</div>
+<div style="float: right;  width: 200px;">
+
+ <a href="gastos_reales.php" class="btn btn-info btn-block btn-rounded waves-effect waves-light">Gastos</a>
+</div>
+<br><br>
     <div class="scroll">
     <div class="col-md-9">
-      <label for="formControlRange">Cantidad</label>
-    <input type="range" min="<?php echo $cantidadmin ; ?>" max="<?php echo $cantidadmax ; ?>"  step="1" class="form-control-range range-slider"
-     id="cantidad_producto" name="cantidad_producto"
-    >
+      <label for="formControlRange">Cantidad Prouctos</label>
+    <input type="range" min="1" max="100"  step="1"
+     class="form-control-range range-slider" value="10"  id="cantidad_productos" name="cantidad_productos">
     </div>
     <div class="col-md-3">
-      <span id="cantidad_producto_barra">0</span>
+      <span id="cantidad_productos_barra">0</span>
   </div>
   <br>
 <br><br>
-
-  <label value="<?php echo $cantidad_producto ; ?>"> porsentaje: <?php echo $cantidad_producto ; ?></label>
-<br>
 <br>
 <br>
 
   <div class="col-md-9">
       <label for="formControlRange">Precio Unitario</label>
-    <input type="range" min="<?php echo $precioumin ; ?>" max="<?php echo $precioumax ; ?>"  step="1"
-     class="form-control-range range-slider" id="precio_unitario" name="precio_unitario">
+    <input type="range" min="1" max="100"  step="1"
+     class="form-control-range range-slider" value="10" id="precio_unitario" name="precio_unitario">
     </div>
     <div class="col-md-3">
       <span id="precio_unitario_barra">0</span>
   </div>
   <br>
 <br><br>
-  <label for="" value="<?php echo $coste_unidad_producto ; ?>">porcentaje: <?php echo $coste_unidad_producto ; ?></label>
-<br>
 <br>
 <br>
 
   <div class="col-md-9">
       <label for="formControlRange">Precio Venta</label>
-    <input type="range" min="<?php echo $preciovmin ; ?>" max="<?php echo $preciovmax ; ?>"  step="1"
+    <input type="range" min="1" max="100" value="10"  step="1"
      class="form-control-range range-slider" id="precio_venta" name="precio_venta">
     </div>
     <div class="col-md-3">
@@ -248,14 +258,13 @@
   </div>
   <br>
 <br><br>
-  <label for="" value="<?php echo $precio_venta_producto ; ?>">porcentaje: <?php echo $precio_venta_producto ; ?></label>
+ 
 <br>
 <br>
-<br>
-
+ 
   <div class="col-md-9">
       <label for="formControlRange">Gastos Generales</label>
-    <input type="range" min="<?php echo $gastosgmin ; ?>" max="<?php echo $gastosgmax ; ?>"  step="1"
+    <input type="range" min="1" max="100" value="10"  step="1"
      class="form-control-range range-slider" id="gastos_generales" name="gastos_generales">
     </div>
     <div class="col-md-3">
@@ -263,8 +272,7 @@
   </div>
   <br>
 <br><br>
-  <label for="" value="<?php echo $valor_total_gasto ; ?>">porcentaje: <?php echo $valor_total_gasto ; ?></label>
-  <br>
+
   <br>
  <div>
  <button type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Calcular Datos</button>     
@@ -326,29 +334,143 @@ $Margen_Total= $ingresos_totales - $valor_total_gasto  ;
 </form>
  
 <hr>
+
+<br><br><br><br><br><br>
+<h1 class="text-center">Simulaciones Resultados Empresa</h1>
 <div class="bajo">
+<?php
+
+$dato = $cantidad_productos;
+if ($dato){
+echo "";
+}else{
+ 
+}
+
+?>
 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th>Datos Reales </th>
-                                <th>Análisis datos simulados</th>    
-                                                          
+                                <th>Producto </th>
+                                <th>Cantidad </th>    
+                                <th>Coste Unitario</th> 
+                                <th>Precio Venta</th> 
+                                <th>Margen unitario</th> 
+                                <th>Margen unitario %</th> 
+                                <th>Costes totales </th> 
+                                <th>Ingresos totales </th> 
+                                <th>Margen total </th> 
+                                
                             </tr>
                         </thead>
-                            <tr>
-                            <td>  Productos: <a style="margin: 2px; border-radius: 5px;" href="productos_reales.php" class="btn btn-info" > Ver Mas</a></td>
-                                <td>  Productos: <a style="margin: 2px; border-radius: 5px;" href="#" class="btn btn-info" > Ver Mas</a></td>
-                            </tr>
-                                
-                            <tr>
-                            <td> Datos Generales: <a style="margin: 2px; border-radius: 5px;" href="gastos_reales.php" class="btn btn-info" > Ver Mas</a></td> 
+                                <?php
+                                 require_once('../administradores/conexion.php');
+                                 $conexion=conectar(); 
+                                 $consulta2 ="SELECT * FROM ` $nombre_negocio_plan` ";
+                                 $busqueda=mysqli_query($conexion,$consulta2);
 
-                                <td> Datos Generales: <a style="margin: 2px; border-radius: 5px;" href="#" class="btn btn-info" > Ver Mas</a></td> 
-                            </tr>           
-        </table>
+                            foreach($busqueda as $elemento){ 
+                                // operaciones
+                                $_SESSION['gastos_generales'] = htmlentities($_POST["gastos_generales"]);
+                                $_SESSION['precio_unitario'] = htmlentities($_POST["precio_unitario"]);
+                                $_SESSION['cantidad_productos'] = htmlentities($_POST["cantidad_productos"]);
+                                $_SESSION['precio_venta'] = htmlentities($_POST["precio_venta"]);
+                                $precio_unitario =  $_SESSION['precio_unitario'];
+                                $cantidad_productos =  $_SESSION['cantidad_productos'];
+                                $precio_venta =  $_SESSION['precio_venta'];
+                                $gastos_generales =  $_SESSION['gastos_generales']; 
+                                $precio_unitario_porcentaje= $precio_unitario/100 ;
+                                $cantidad_productos_porcentaje= $cantidad_productos/100;
+                                $precio_venta_porcentaje= $precio_venta /100;
+                                $gastos_generales_porcentaje= $gastos_generales /100;
+                                $cantidad = ($elemento["cantidad"]  *  $precio_unitario_porcentaje) +$elemento["cantidad"];
+                                $cantidad = intval($cantidad, 0);
+                                $coste_unitario =($elemento["coste_unitario" ] *  $precio_unitario_porcentaje )+ $elemento["coste_unitario" ];
+                    
+                                $precio_venta = ($elemento["precio_venta"] *$precio_venta_porcentaje )+ $elemento["precio_venta"] ;
+                                $precio_venta = intval($precio_venta, 0);
+                                $margen_unitario = $precio_venta - $coste_unitario    ;
+                                $margen_unitario1 = $margen_unitario / $precio_venta *100;
+                                $margen_unitario1 = number_format($margen_unitario1, 0);
+                                $costes_totales = $cantidad * $coste_unitario ;
+                                $costes_totales = intval($costes_totales, 0);
+                                $ingresos_totales = $cantidad * $precio_venta ;
+                                $ingresos_totales = intval($ingresos_totales, 0);
+                                $margenes_total = $ingresos_totales - $costes_totales  ;
+                                $margenes_total = number_format($margenes_total, 0 ,',', '.');
+                               
+                              ?>
+                            <!-- Contenido de la tabla -->
+                            <tr>
+                           
+                                <td><?php echo $elemento["nombre"]; print( $cantidad); ?></td>
+                                <td><?php echo $cantidad;?></td>
+                                <td><?php echo $coste_unitario;?></td>
+                                <td><?php echo $precio_venta;?></td>
+                                <td><?php echo $margen_unitario; ?></td>
+                                <td><?php echo $margen_unitario1; ?> %</td>
+                                <td><?php echo $costes_totales; ?></td>
+                                <td><?php echo $ingresos_totales; ?></td>
+                                <td><?php echo $margenes_total; ?></td>
+                     
+                            </tr>
+                           
+                                 <?php
+                                }
+                                ?>   
+                                
+                       </table>
 </div>
+<br><br><br><br><br>
+<h1 class="text-center">Simulaciones Resultados Empresa</h1>
+<div class="bajo">
+  
+
+<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Concepto </th>
+                                <th>Importe</th>     
+                                             
+                            </tr>
+                        </thead>
+                                <?php
+                                 require_once('../administradores/conexion.php');
+                                 $conexion=conectar(); 
+                                 $consulta2 ="SELECT * FROM ` $documento` ";
+                                 $busqueda=mysqli_query($conexion,$consulta2);
+                                   
+                                 
+
+                            foreach($busqueda as $elemento){ 
+                       
+
+
+                              ?>
+                            <!-- Contenido de la tabla -->
+                            <tr>
+                                <td><?php echo $elemento["nombre"]; ?></td>
+                                <td><?php echo ($elemento["valor"] * $gastos_generales_porcentaje) + $elemento["valor"]; ?></td>
+                                
+                              
+                            </tr>
+                           
+                                 <?php
+                                }
+                                ?>   
+                                
+                                <thead>
+                                <tr><th >TOTAL</th>
+                                <th ><?php echo $valor_total_gasto; ?></th>
+                                
+                            
+                            </tr>
+                                </thead>
+                       </table>
+</div>
+
 <form  method="POST" enctype="multipart/form-data" >
-                       <button style="width: 250px;" value="Siguiente" name="Siguiente"  type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Siguiente</button>                  
+<button style="width: 250px;" value="Siguiente" name="Siguiente"  type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Siguiente</button>                  
                       
    <!-- Inputs para transferir informacion -->
    <div>
@@ -413,9 +535,19 @@ $Margen_Total= $ingresos_totales - $valor_total_gasto  ;
                                                             <label for="coste_unidad_producto" class="form__label"></label>
                                                             <input type="text" id="precio_venta_producto" name="precio_venta_producto" value="<?php echo $precio_venta_producto; ?>">
                                                             <label for="precio_venta_producto" class="form__label"></label>
-
                                                             <input type="text" id="valor_total_gasto" name="valor_total_gasto" value="<?php echo $valor_total_gasto; ?>">
                                                             <label for="valor_total_gasto" class="form__label"></label>
+
+                                                            <input type="text" id="cantidad_productos" name="cantidad_productos" value="<?php echo $cantidad_productos; ?>">
+                                                            <label for="cantidad_productos" class="form__label"></label>
+                                                            <input type="text" id="precio_unitario" name="precio_unitario" value="<?php echo $precio_unitario; ?>">
+                                                            <label for="precio_unitario" class="form__label"></label>
+                                                            <input type="text" id="precio_venta" name="precio_venta" value="<?php echo $precio_venta; ?>">
+                                                            <label for="precio_venta" class="form__label"></label>
+                                                            <input type="text" id="gastos_generales" name="gastos_generales" value="<?php echo $gastos_generales; ?>">
+                                                            <label for="gastos_generales" class="form__label"></label>
+
+                                                            
                                                         </div>
                                                         </form>       
 

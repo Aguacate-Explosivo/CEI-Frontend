@@ -40,7 +40,16 @@
       $_SESSION['cantidad_producto'] = htmlentities($_POST["cantidad_producto"]);
       $_SESSION['coste_unidad_producto'] = htmlentities($_POST["coste_unidad_producto"]);
       $_SESSION['precio_venta_producto'] = htmlentities($_POST["precio_venta_producto"]);
-
+ // datos formulario 5
+ $_SESSION['cantidad_producto'] = htmlentities($_POST["cantidad_producto"]);
+ $_SESSION['coste_unidad_producto'] = htmlentities($_POST["coste_unidad_producto"]);
+ $_SESSION['precio_venta_producto'] = htmlentities($_POST["precio_venta_producto"]);
+ // nuevos datos de formulario
+ $_SESSION['valor_total_gasto'] = htmlentities($_POST["valor_total_gasto"]);
+ $_SESSION['precio_unitario'] = htmlentities($_POST["precio_unitario"]);
+ $_SESSION['cantidad_productos'] = htmlentities($_POST["cantidad_productos"]);
+ $_SESSION['precio_venta'] = htmlentities($_POST["precio_venta"]);
+ $_SESSION['gastos_generales'] = htmlentities($_POST["gastos_generales"]);
   
       // Redirecion a la siguiente pagina
       header("location:agregargastos.php");
@@ -74,6 +83,16 @@
   $preciovmax =  $_SESSION['preciovmax'];
   $gastosgmin =  $_SESSION['gastosgmin'];
   $gastosgmax =  $_SESSION['gastosgmax'];
+  $nombre_producto =  $_SESSION['nombre_producto'];
+  $cantidad_producto =  $_SESSION['cantidad_producto'];
+  $coste_unidad_producto =  $_SESSION['coste_unidad_producto'];
+  $precio_venta_producto =  $_SESSION['precio_venta_producto'];
+  $valor_total_gasto =  $_SESSION['valor_total_gasto'];
+  $precio_unitario =  $_SESSION['precio_unitario'];
+  $cantidad_productos =  $_SESSION['cantidad_productos'];
+  $precio_venta =  $_SESSION['precio_venta'];
+  $gastos_generales =  $_SESSION['gastos_generales'];
+
 
   //agregar tabla a base de datos
 ?>
