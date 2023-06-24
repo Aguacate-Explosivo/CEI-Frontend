@@ -1,7 +1,10 @@
 <?php
   session_start();
   if(isset($_POST["Siguiente"])){
+  
 
+ 
+    
     //Datos del formulario 1
     $_SESSION['doc_autor_plan'] = htmlentities($_POST["doc_autor_plan"]);
       $_SESSION['autor_plan'] = htmlentities($_POST["autor_plan"]);
@@ -46,10 +49,7 @@
  $_SESSION['precio_venta_producto'] = htmlentities($_POST["precio_venta_producto"]);
  // nuevos datos de formulario
  $_SESSION['valor_total_gasto'] = htmlentities($_POST["valor_total_gasto"]);
- $_SESSION['precio_unitario'] = htmlentities($_POST["precio_unitario"]);
- $_SESSION['cantidad_productos'] = htmlentities($_POST["cantidad_productos"]);
- $_SESSION['precio_venta'] = htmlentities($_POST["precio_venta"]);
- $_SESSION['gastos_generales'] = htmlentities($_POST["gastos_generales"]);
+
   
       // Redirecion a la siguiente pagina
       header("location:agregargastos.php");
@@ -88,10 +88,6 @@
   $coste_unidad_producto =  $_SESSION['coste_unidad_producto'];
   $precio_venta_producto =  $_SESSION['precio_venta_producto'];
   $valor_total_gasto =  $_SESSION['valor_total_gasto'];
-  $precio_unitario =  $_SESSION['precio_unitario'];
-  $cantidad_productos =  $_SESSION['cantidad_productos'];
-  $precio_venta =  $_SESSION['precio_venta'];
-  $gastos_generales =  $_SESSION['gastos_generales'];
 
 
   //agregar tabla a base de datos
@@ -387,7 +383,16 @@
                                       
                        <form  method="POST" enctype="multipart/form-data" >
                        <button style="width: 250px;" value="Siguiente" name="Siguiente"  type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Siguiente</button>                  
-                      
+                       <script>
+       
+
+       
+
+       function retroceder() {
+           history.back(); // Retrocede en el historial del navegador
+           document.getElementById("calcular").click(); // Simula el clic en el botón del formulario
+       }
+   </script>
                         <!-- Inputs para transferir informacion -->
                         <div>
                                                             <!-- Form 1 -->
@@ -445,12 +450,12 @@
                                                             <input type="hidden" id="gastosgmax" name="gastosgmax" value="<?php echo $gastosgmax; ?>">
                                                             <label for="gastosgmax" class="form__label"></label>
                                                        
-                                                            <input type="hidden" id="cantidad_producto" name="cantidad_producto" value="<?php echo $cantidad_producto; ?>">
+                                                            <idden" id="precio_venta_producto" name="precio_venta_producto" value="<?php echo $precio_venta_producto; ?>">
+                                                            <lae_unidad_producto" class="form__label"></label>
+                                                            <input type="h_vbel for="precioinput type="hidden" id="cantidad_producto" name="cantidad_producto" value="<?php echo $cantidad_producto; ?>">
                                                             <label for="cantidad_producto" class="form__label"></label>
                                                             <input type="hidden" id="coste_unidad_producto" name="coste_unidad_producto" value="<?php echo $coste_unidad_producto; ?>">
-                                                            <label for="coste_unidad_producto" class="form__label"></label>
-                                                            <input type="hidden" id="precio_venta_producto" name="precio_venta_producto" value="<?php echo $precio_venta_producto; ?>">
-                                                            <label for="precio_venta_producto" class="form__label"></label>
+                                                            <label for="costenta_producto" class="form__label"></label>
                                                           </div>
                       </form>
 
