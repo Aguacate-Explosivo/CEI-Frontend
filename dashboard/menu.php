@@ -10,22 +10,26 @@
 
 
   <!--SCRIPTS-->
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
-  <script src="js/jquery.nicescroll.js"></script>
-  <script src="js/waves.js"></script>
-  <script src="js/myadmin.js"></script>
-  <script src="jquery/jquery-3.3.1.min.js"></script>
-  <script src="popper/popper.min.js"></script>
-  <script src="bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="datatables/datatables.min.js"></script>     
-  <script src="datatables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>  
-  <script src="datatables/JSZip-2.5.0/jszip.min.js"></script>    
-  <script src="datatables/pdfmake-0.1.36/pdfmake.min.js"></script>    
-  <script src="datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
-  <script src="datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="bower_components/metisMenu/dist/metisMenu.min.js" defer></script>
+<script src="js/jquery.nicescroll.js" defer></script>
+<script src="js/waves.js" defer></script>
+<script src="js/myadmin.js" defer></script>
+<script src="popper/popper.min.js" defer></script>
+<script type="text/javascript" src="datatables/datatables.min.js" defer></script>
+<script src="datatables/Buttons-1.5.6/js/dataTables.buttons.min.js" defer></script>
+<script src="datatables/JSZip-2.5.0/jszip.min.js" defer></script>
+<script src="datatables/pdfmake-0.1.36/pdfmake.min.js" defer></script>
+<script src="datatables/pdfmake-0.1.36/vfs_fonts.js" defer></script>
+<script src="datatables/Buttons-1.5.6/js/buttons.html5.min.js" defer></script>
+<script src="../../lib/wow/wow.min.js" defer></script>
+<script src="../../lib/easing/easing.min.js" defer></script>
+<script src="../../lib/waypoints/waypoints.min.js" defer></script>
+<script src="../../lib/owlcarousel/owl.carousel.min.js" defer></script>
+<script src="../../lib/lightbox/js/lightbox.min.js" defer></script>
+<script src="js/main.js" defer></script>
+
 </head>
 <?php include_once("../php/sesion_validacion.php"); ?>
 

@@ -4,15 +4,6 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="keywords"
-      content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 4 admin, bootstrap 4, css3 dashboard, bootstrap 4 dashboard, severny admin bootstrap 4 dashboard, frontend, responsive bootstrap 4 admin template, my admin design, my admin dashboard bootstrap 4 dashboard template"
-    />
-    <meta
-      name="description"
-      content="My Admin is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
-    />
-    <meta name="robots" content="noindex,nofollow" />
     <title>Dashboard Citas</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../images/img/logo.webp" />  
@@ -24,8 +15,6 @@
     <div class="preloader">
       <div class="cssload-speeding-wheel"></div>
     </div>
-        <!-- /.sidebar-collapse -->
-      </div>
       <!-- Page Content -->
       <div id="page-wrapper">
         <div class="container-fluid">
