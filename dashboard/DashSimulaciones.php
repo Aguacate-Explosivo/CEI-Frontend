@@ -28,8 +28,7 @@
             <a type="button" href="simulaciones/overview.php" class="btny">Empieza a Simular</a>
 
           </div>
-
-          <?php require_once ("footer.php"); ?>
   </div>
+  <?php require_once ("footer.php"); ?>
 </body>
 </html>
