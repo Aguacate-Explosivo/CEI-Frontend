@@ -387,14 +387,14 @@ echo "";
                                 $cantidad = intval($cantidad, 0);
                                 $coste_unitario =($elemento["coste_unitario" ] *  $precio_unitario_porcentaje )+ $elemento["coste_unitario" ];
                     
-                                $precio_venta = ($elemento["precio_venta"] *$precio_venta_porcentaje )+ $elemento["precio_venta"] ;
-                                $precio_venta = intval($precio_venta, 0);
-                                $margen_unitario = $precio_venta - $coste_unitario    ;
-                                $margen_unitario1 = $margen_unitario / $precio_venta *100;
+                                $precio_venta1 = ($elemento["precio_venta"] *$precio_venta_porcentaje )+ $elemento["precio_venta"] ;
+                                $precio_venta1 = intval($precio_venta1, 0);
+                                $margen_unitario = $precio_venta1 - $coste_unitario    ;
+                                $margen_unitario1 = $margen_unitario / $precio_venta1 *100;
                                 $margen_unitario1 = number_format($margen_unitario1, 0);
                                 $costes_totales = $cantidad * $coste_unitario ;
                                 $costes_totales = intval($costes_totales, 0);
-                                $ingresos_totales = $cantidad * $precio_venta ;
+                                $ingresos_totales = $cantidad * $precio_venta1 ;
                                 $ingresos_totales = intval($ingresos_totales, 0);
                                 $margenes_total = $ingresos_totales - $costes_totales  ;
                                 $margenes_total = number_format($margenes_total, 0 ,',', '.');
@@ -406,7 +406,7 @@ echo "";
                                 <td><?php echo $elemento["nombre"]; print( $cantidad); ?></td>
                                 <td><?php echo $cantidad;?></td>
                                 <td><?php echo $coste_unitario;?></td>
-                                <td><?php echo $precio_venta;?></td>
+                                <td><?php echo $precio_venta1;?></td>
                                 <td><?php echo $margen_unitario; ?></td>
                                 <td><?php echo $margen_unitario1; ?> %</td>
                                 <td><?php echo $costes_totales; ?></td>
@@ -422,7 +422,7 @@ echo "";
                        </table>
 </div>
 <br><br><br><br><br>
-<h1 class="text-center">Simulaciones Resultados Empresa</h1>
+<h1 class="text-center">Gastos Simulados</h1>
 <div class="bajo">
   
 
@@ -443,8 +443,11 @@ echo "";
                                  
 
                             foreach($busqueda as $elemento){ 
-                       
-
+                              $consulta21 ="SELECT SUM(valor) as valor_total_gasto  FROM ` $documento` ";
+                              $busqueda1=mysqli_query($conexion,$consulta21);
+                              $total11= mysqli_fetch_array($busqueda1);
+                              $valor_total = $total11['valor_total_gasto'];
+                              $valor_total = number_format($valor_total, 0);
 
                               ?>
                             <!-- Contenido de la tabla -->
@@ -461,7 +464,7 @@ echo "";
                                 
                                 <thead>
                                 <tr><th >TOTAL</th>
-                                <th ><?php echo $valor_total_gasto; ?></th>
+                                <th ><?php echo  ($valor_total_gasto * $gastos_generales_porcentaje) + $elemento["valor"]; ?></td>
                                 
                             
                             </tr>
