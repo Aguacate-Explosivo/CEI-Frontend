@@ -395,7 +395,7 @@ echo "";
                                 $cantidad_productos_porcentaje= $cantidad_productos/100;
                                 $precio_venta_porcentaje= $precio_venta /100;
                                 $gastos_generales_porcentaje= $gastos_generales /100;
-                                $cantidad = ($elemento["cantidad"]  *  $precio_unitario_porcentaje) +$elemento["cantidad"];
+                                $cantidad = ($elemento["cantidad"] * $cantidad_productos_porcentaje) +$elemento["cantidad"];
                                 $cantidad = intval($cantidad, 0);
                                 $coste_unitario =($elemento["coste_unitario" ] *  $precio_unitario_porcentaje )+ $elemento["coste_unitario" ];
                     
@@ -413,10 +413,11 @@ echo "";
                                
                               ?>
                             <!-- Contenido de la tabla -->
+                            
                             <tr>
                            
                                 <td><?php echo $elemento["nombre"]; ?></td>
-                                <td><?php echo $cantidad;?></td>
+                                <td><?php echo $cantidad ; ?></td>
                                 <td><?php echo $coste_unitario;?></td>
                                 <td><?php echo $precio_venta1;?></td>
                                 <td><?php echo $margen_unitario; ?></td>
@@ -428,7 +429,8 @@ echo "";
                             </tr>
                            
                                  <?php
-                                }
+                            } 
+                        
                                 ?>   
                                 
                        </table>
@@ -459,8 +461,7 @@ echo "";
                               $busqueda1=mysqli_query($conexion,$consulta21);
                               $total11= mysqli_fetch_array($busqueda1);
                               $valor_total = $total11['valor_total_gasto'];
-                              $valor_total = number_format($valor_total, 0);
-
+                              $valor_total = intval($valor_total, 0);
                               ?>
                             <!-- Contenido de la tabla -->
                             <tr>
@@ -471,12 +472,12 @@ echo "";
                             </tr>
                            
                                  <?php
-                                }
+                                }  
                                 ?>   
                                 
                                 <thead>
                                 <tr><th >TOTAL</th>
-                                <th ><?php echo  ($valor_total_gasto * $gastos_generales_porcentaje) + $elemento["valor"]; ?></td>
+                                <th ><?php echo ($valor_total * $gastos_generales_porcentaje)  + $valor_total  ; ?></td>
                                 
                             
                             </tr>
