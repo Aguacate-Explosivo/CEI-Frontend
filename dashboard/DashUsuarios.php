@@ -36,7 +36,9 @@
             <div class="col-lg-auto">
             <div >  
             <nav aria-label="...">
-                  
+                <ul class="pagination pagination-lg justify-content-center">
+                  <li class="page-item active rounded" class="nav-item"><a class="nav-link" href="administradores/regisusuario.php"><i class="fa fa-edit fa-fw"></i> Registrar usuario</a></li>
+                </ul>
                 <br>
             </nav>
             <!-- /.card -->
