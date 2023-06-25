@@ -207,14 +207,17 @@
 </div>
 <br><br>
 <?php
- $_SESSION['gastos_generales'] = htmlentities($_POST["gastos_generales"]);
- $_SESSION['precio_unitario'] = htmlentities($_POST["precio_unitario"]);
- $_SESSION['cantidad_productos'] = htmlentities($_POST["cantidad_productos"]);
- $_SESSION['precio_venta'] = htmlentities($_POST["precio_venta"]);
- $precio_unitario =  $_SESSION['precio_unitario'];
- $cantidad_productos =  $_SESSION['cantidad_productos'];
- $precio_venta =  $_SESSION['precio_venta'];
- $gastos_generales =  $_SESSION['gastos_generales']; 
+
+$_SESSION['gastos_generales'] = isset($_POST["gastos_generales"]) ? htmlentities($_POST["gastos_generales"]) : 20;
+$_SESSION['precio_unitario'] = isset($_POST["precio_unitario"]) ? htmlentities($_POST["precio_unitario"]) :20;
+$_SESSION['cantidad_productos'] = isset($_POST["cantidad_productos"]) ? htmlentities($_POST["cantidad_productos"]) : 20;
+$_SESSION['precio_venta'] = isset($_POST["precio_venta"]) ? htmlentities($_POST["precio_venta"]) : 20;
+
+$precio_unitario =  $_SESSION['precio_unitario'];
+$cantidad_productos =  $_SESSION['cantidad_productos'];
+$precio_venta =  $_SESSION['precio_venta'];
+$gastos_generales =  $_SESSION['gastos_generales'];
+
 
 ?>   
     <div class="scroll">
@@ -431,14 +434,7 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
 
                             foreach($busqueda as $elemento){ 
                                 // operaciones
-                                $_SESSION['gastos_generales'] = htmlentities($_POST["gastos_generales"]);
-                                $_SESSION['precio_unitario'] = htmlentities($_POST["precio_unitario"]);
-                                $_SESSION['cantidad_productos'] = htmlentities($_POST["cantidad_productos"]);
-                                $_SESSION['precio_venta'] = htmlentities($_POST["precio_venta"]);
-                                $precio_unitario =  $_SESSION['precio_unitario'];
-                                $cantidad_productos =  $_SESSION['cantidad_productos'];
-                                $precio_venta =  $_SESSION['precio_venta'];
-                                $gastos_generales =  $_SESSION['gastos_generales']; 
+                              
                                 
                                 $gastos_generales_porcentaje= $gastos_generales /100;
                                 $cantidad = ($elemento["cantidad"] * $cantidad_productos_porcentaje) +$elemento["cantidad"];
