@@ -26,16 +26,7 @@
       $_SESSION['tipo_marketing_plan'] = htmlentities($_POST["tipo_marketing_plan"]);
       $_SESSION['inversion_publicidad'] = htmlentities($_POST["inversion_publicidad"]);
 
-      // datos formulario 4 
-      $_SESSION['cantidadmin'] = htmlentities($_POST["cantidadmin"]);
-      $_SESSION['cantidadmax'] = htmlentities($_POST["cantidadmax"]);
-      $_SESSION['precioumin'] = htmlentities($_POST["precioumin"]);
-      $_SESSION['precioumax'] = htmlentities($_POST["precioumax"]);
-      $_SESSION['preciovmin'] = htmlentities($_POST["preciovmin"]);
-      $_SESSION['preciovmax'] = htmlentities($_POST["preciovmax"]);
-      $_SESSION['gastosgmin'] = htmlentities($_POST["gastosgmin"]);
-      $_SESSION['gastosgmax'] = htmlentities($_POST["gastosgmax"]);
-
+     
       // datos formulario 5
       $_SESSION['cantidad_producto'] = htmlentities($_POST["cantidad_producto"]);
       $_SESSION['coste_unidad_producto'] = htmlentities($_POST["coste_unidad_producto"]);
@@ -71,20 +62,16 @@
   $socios_productores =  $_SESSION['socios_productores'];
   $tipo_marketing_plan =  $_SESSION['tipo_marketing_plan'];
   $inversion_publicidad =  $_SESSION['inversion_publicidad'];
-  $cantidadmin =  $_SESSION['cantidadmin'];
-  $cantidadmax =  $_SESSION['cantidadmax'];
-  $precioumin =  $_SESSION['precioumin'];
-  $precioumax =  $_SESSION['precioumax'];
-  $preciovmin =  $_SESSION['preciovmin'];
-  $preciovmax =  $_SESSION['preciovmax'];
-  $gastosgmin =  $_SESSION['gastosgmin'];
-  $gastosgmax =  $_SESSION['gastosgmax'];
 
   $nombre_producto =  $_SESSION['nombre_producto'];
   $cantidad_producto =  $_SESSION['cantidad_producto'];
   $coste_unidad_producto =  $_SESSION['coste_unidad_producto'];
   $precio_venta_producto =  $_SESSION['precio_venta_producto'];
   $valor_total_gasto =  $_SESSION['valor_total_gasto'];
+
+
+
+  
   $precio_unitario =  $_SESSION['precio_unitario'];
   $cantidad_productos =  $_SESSION['cantidad_productos'];
   $precio_venta =  $_SESSION['precio_venta'];
@@ -350,16 +337,7 @@ $Margen_Total= $ingresos_totales - $valor_total_gasto  ;
 
 <h1 class="text-center">Productos Sinulados  </h1>
 <div class="bajo">
-<?php
 
-$dato = $cantidad_productos;
-if ($dato){
-echo "";
-}else{
- 
-}
-
-?>
 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>
@@ -376,7 +354,7 @@ echo "";
                             </tr>
                         </thead>
                                 <?php
-                                 require_once('../administradores/conexion.php');
+                                 require_once('../../conexion.php');
                                  $conexion=conectar(); 
                                  $consulta2 ="SELECT * FROM ` $nombre_negocio_plan` ";
                                  $busqueda=mysqli_query($conexion,$consulta2);
@@ -449,7 +427,7 @@ echo "";
                             </tr>
                         </thead>
                                 <?php
-                                 require_once('../administradores/conexion.php');
+                                
                                  $conexion=conectar(); 
                                  $consulta2 ="SELECT * FROM ` $documento` ";
                                  $busqueda=mysqli_query($conexion,$consulta2);
@@ -528,22 +506,6 @@ echo "";
                                                             <input type="text" id="inversion_publicidad" name="inversion_publicidad" value="<?php echo $inversion_publicidad; ?>">
                                                             <label for="inversion_publicidad" class="form__label"></label>
 
-                                                            <input type="text" id="cantidadmin" name="cantidadmin" value="<?php echo $cantidadmin; ?>">
-                                                            <label for="cantidadmin" class="form__label"></label>
-                                                            <input type="text" id="cantidadmax" name="cantidadmax" value="<?php echo $cantidadmax; ?>">
-                                                            <label for="cantidadmax" class="form__label"></label>
-                                                            <input type="text" id="precioumin" name="precioumin" value="<?php echo $precioumin; ?>">
-                                                            <label for="precioumin" class="form__label"></label>
-                                                            <input type="text" id="precioumax" name="precioumax" value="<?php echo $precioumax; ?>">
-                                                            <label for="precioumax" class="form__label"></label>
-                                                            <input type="text" id="preciovmin" name="preciovmin" value="<?php echo $preciovmin; ?>">
-                                                            <label for="preciovmin" class="form__label"></label>
-                                                            <input type="text" id="preciovmax" name="preciovmax" value="<?php echo $preciovmax; ?>">
-                                                            <label for="preciovmax" class="form__label"></label>
-                                                            <input type="text" id="gastosgmin" name="gastosgmin" value="<?php echo $gastosgmin; ?>">
-                                                            <label for="gastosgmin" class="form__label"></label>
-                                                            <input type="text" id="gastosgmax" name="gastosgmax" value="<?php echo $gastosgmax; ?>">
-                                                            <label for="gastosgmax" class="form__label"></label>
 
                                                             <input type="text" id="cantidad_producto" name="cantidad_producto" value="<?php echo $cantidad_producto; ?>">
                                                             <label for="cantidad_producto" class="form__label"></label>
