@@ -51,7 +51,7 @@
           
 
 <?php 
-include("conexion.php");
+require_once('../../conexion.php');
 $conexion=conectar(); 
 $idcita=$_REQUEST['idcita'];
 

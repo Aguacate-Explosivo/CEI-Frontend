@@ -9,7 +9,7 @@
 </head>
 <body>  
 <?php
- include_once('conexion.php');
+ require_once('../../conexion.php');
  $conexion=conectar(); 
     $idcita=$_GET['idcita'];
  

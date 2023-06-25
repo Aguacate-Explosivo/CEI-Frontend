@@ -52,7 +52,7 @@
                 <div class="col-lg-6 mx-auto wow fadeInUp" data-wow-delay="0.1s">
           
                 <?php 
-         include("conexion.php");
+         require_once('../../conexion.php');
          $conexion=conectar(); 
          $Id_Curso=$_REQUEST['Id_Curso'];
          

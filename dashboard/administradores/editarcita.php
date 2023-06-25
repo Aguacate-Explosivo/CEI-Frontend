@@ -12,7 +12,7 @@
 <body>  
 <?php
     //Conexion con la base de datos
-    include("conexion.php");
+    include("../../conexion.php");
     $conexion=conectar();
       $idcita=$_REQUEST['idcita'];
   
