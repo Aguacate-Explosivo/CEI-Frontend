@@ -399,17 +399,17 @@
                                                             <label for="inversion_publicidad" class="form__label"></label>
 
                                                             
-                                                            <input type="text" id="cantidad_producto" name="cantidad_producto" value="<?php echo $cantidad_producto; ?>">
+                                                            <input type="hidden" id="cantidad_producto" name="cantidad_producto" value="<?php echo $cantidad_producto; ?>">
                                                             <label for="cantidad_producto" class="form__label"></label>
-                                                            <input type="text" id="coste_unidad_producto" name="coste_unidad_producto" value="<?php echo $coste_unidad_producto; ?>">
+                                                            <input type="hidden" id="coste_unidad_producto" name="coste_unidad_producto" value="<?php echo $coste_unidad_producto; ?>">
                                                             <label for="coste_unidad_producto" class="form__label"></label>
-                                                            <input type="text" id="precio_venta_producto" name="precio_venta_producto" value="<?php echo $precio_venta_producto; ?>">
+                                                            <input type="hidden" id="precio_venta_producto" name="precio_venta_producto" value="<?php echo $precio_venta_producto; ?>">
                                                             <label for="precio_venta_producto" class="form__label"></label>
 
-                                                            <input type="text" id="valor_total_gasto" name="valor_total_gasto" value="<?php echo $valor_total_gasto; ?>">
+                                                            <input type="hidden" id="valor_total_gasto" name="valor_total_gasto" value="<?php echo $valor_total_gasto; ?>">
                                                             <label for="valor_total_gasto" class="form__label"></label>
                                                             
-                                                            <input type="text" id="importe" name="importe" value="<?php echo $importe; ?>">
+                                                            <input type="hidden" id="importe" name="importe" value="<?php echo $importe; ?>">
                                                             <label for="importe" class="form__label"></label>
                                                         </div>
                                                         </form>                               

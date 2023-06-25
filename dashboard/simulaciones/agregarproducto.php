@@ -367,7 +367,7 @@
                        <form  method="POST" enctype="multipart/form-data" >
     <div class="col-md-6">
     <label for="importe" class="form__label"> Importe de Productos:</label>
-    <input type="text"  class="form-control" id="importe" value="4.6" name="importe"
+    <input type="text"  maxlength="4" minlength="1" class="form-control" id="importe" value="4.6" name="importe"
     placeholder="Importe :" required pattern="[0-9 .]+" >
     </div><br>
                        <button style="width: 250px;" value="Siguiente" name="Siguiente"  type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Siguiente</button>                  
@@ -414,12 +414,12 @@
 
                                                             
                                                        
-                                                            <input type="text" id="precio_venta_producto" name="precio_venta_producto" value="<?php echo $precio_venta_producto; ?>">
+                                                            <input type="hidden" id="precio_venta_producto" name="precio_venta_producto" value="<?php echo $precio_venta_producto; ?>">
                                                             <label for="precio_venta_producto" class="form__label"></label>
                                                           
-                                                            <input type="text" id="cantidad_producto" name="cantidad_producto" value="<?php echo $cantidad_producto; ?>">
+                                                            <input type="hidden" id="cantidad_producto" name="cantidad_producto" value="<?php echo $cantidad_producto; ?>">
                                                             <label for="cantidad_producto" class="form__label"></label>
-                                                            <input type="text" id="coste_unidad_producto" name="coste_unidad_producto" value="<?php echo $coste_unidad_producto; ?>">
+                                                            <input type="hidden" id="coste_unidad_producto" name="coste_unidad_producto" value="<?php echo $coste_unidad_producto; ?>">
                                                             <label for="coste_unidad_producto" class="form__label"></label>
                                                           </div>
                       </form>
