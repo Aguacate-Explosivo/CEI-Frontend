@@ -1,4 +1,5 @@
 <head>
+  
 <!--ESTILOS-->
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="bower_components/metisMenu/dist/metisMenu.min.css">
@@ -98,6 +99,12 @@
             <a href="index.php" class="waves-effect">
               <i class="glyphicon glyphicon-fire fa-fw"></i>
               Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="DashUsuarios.php" class="waves-effect">
+            <i class="fa fa-user fa-fw" aria-hidden="true"></i>
+               Usuarios
             </a>
           </li>
           <li>

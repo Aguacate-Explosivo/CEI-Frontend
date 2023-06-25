@@ -5,7 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dashboard Admin</title>
-  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.png">
+  <title>Dashboard CEI</title>
+  <link rel="icon" type="image/webp" sizes="16x16" href="../img/logo.webp">
 </head>
 <body>
 <?php require_once ("menu.php"); ?>
