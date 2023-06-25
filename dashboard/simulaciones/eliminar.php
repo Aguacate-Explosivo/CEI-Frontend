@@ -14,9 +14,9 @@
 <body>  
 
 <?php
-    $id=$_SESSION['Id_producto'];
-    $tabla=$_SESSION['nombre_negocio_plan'];
-    include_once('../administradores/conexion.php');
+    $id = $_SESSION['Id_producto'];
+    $tabla = $_SESSION['nombre_negocio_plan'];
+    include_once('../../conexion.php');
     $conexion=conectar();
     $sql="DELETE FROM ` $tabla` WHERE id='$id'";
     $resultado=mysqli_query($conexion,$sql);

@@ -38,6 +38,7 @@
       $_SESSION['precio_venta'] = htmlentities($_POST["precio_venta"]);
       $_SESSION['gastos_generales'] = htmlentities($_POST["gastos_generales"]);
 
+
   
       // Redirecion a la siguiente pagina
       header("location:producto.php");
@@ -68,15 +69,10 @@
   $coste_unidad_producto =  $_SESSION['coste_unidad_producto'];
   $precio_venta_producto =  $_SESSION['precio_venta_producto'];
   $valor_total_gasto =  $_SESSION['valor_total_gasto'];
-
-
-
-  
   $precio_unitario =  $_SESSION['precio_unitario'];
   $cantidad_productos =  $_SESSION['cantidad_productos'];
   $precio_venta =  $_SESSION['precio_venta'];
   $gastos_generales =  $_SESSION['gastos_generales'];
-
 
   //agregar tabla a base de datos
 ?>
@@ -279,8 +275,65 @@
 <div class="table">
 
 <?php
+ require_once('../../conexion.php');
+ $conexion=conectar();
+ $consult ="SELECT SUM(cantidad) as cantidad_producto_simulado  FROM ` $nombre_negocio_plan` ";
+ $busque=mysqli_query($conexion,$consult);
+ $tota= mysqli_fetch_array($busque);
+ $cantidad_producto_simulado = $tota['cantidad_producto_simulado'];
+
+ $consult_simulado ="SELECT SUM(coste_unitario) as coste_unitario_simulado  FROM ` $nombre_negocio_plan` ";
+ $busque_simulado =mysqli_query($conexion,$consult_simulado);
+ $tota_simulado = mysqli_fetch_array($busque_simulado);
+ $coste_unitario_simulado = $tota_simulado['coste_unitario_simulado'];
+
+ $consulta_simulado ="SELECT SUM(precio_venta) as precio_venta_simulado  FROM ` $nombre_negocio_plan` ";
+ $busqueda_simulado =mysqli_query($conexion,$consulta_simulado);
+ $total_simulado= mysqli_fetch_array($busqueda_simulado);
+ $precio_venta_simulado = $total_simulado['precio_venta_simulado'];
+
+ $consulta21_simulado ="SELECT SUM(valor) as valor_total_gasto_simulado  FROM ` $documento` ";
+ $busqueda1_simulado=mysqli_query($conexion,$consulta21_simulado);
+ $total11_simulado= mysqli_fetch_array($busqueda1_simulado);
+ $valor_total_gasto_simulado = $total11_simulado['valor_total_gasto_simulado'];
+
+
+$cantidad_productos_porcentaje= $cantidad_productos/100;
+$precio_unitario_porcentaje= $precio_unitario/100 ;
+$precio_venta_porcentaje= $precio_venta /100;
+$gastos_generales_porcentaje= $gastos_generales /100;
+
+
+ $cantidad_producto_simulados = ($cantidad_producto_simulado * $cantidad_productos_porcentaje) + $cantidad_producto_simulado ;
+ $coste_unitario_simulados =($coste_unitario_simulado * $precio_unitario_porcentaje) + $coste_unitario_simulado ;
+ $precio_venta_simulados = ($precio_venta_simulado * $precio_venta_porcentaje) + $precio_venta_simulado ;
+
+$valor_total_gasto_simulados = ($valor_total_gasto_simulado * $gastos_generales_porcentaje) + $valor_total_gasto_simulado ;
+$valor_total_gasto_simuladoss = $valor_total_gasto_simulados ;
+$valor_total_gasto_simuladoss = number_format($valor_total_gasto_simuladoss, 2 ,',', '.');
+
 $ingresos_totales = $cantidad_producto * $coste_unidad_producto;
+$ingresos_totaless = $ingresos_totales ;
+$ingresos_totaless = number_format($ingresos_totaless, 2 ,',', '.');
+
 $Margen_Total= $ingresos_totales - $valor_total_gasto  ;
+$Margen_Totale= $Margen_Total ;
+$Margen_Totale = number_format($Margen_Totale, 2 ,',', '.');
+
+$valor_total_gastos=  $valor_total_gasto  ;
+$valor_total_gastos = number_format($valor_total_gastos, 2 ,',', '.');
+
+
+$ingresos_totales_simulado= $cantidad_producto_simulados * $coste_unitario_simulados;
+$ingresos_totales_simulados= $ingresos_totales_simulado;
+$ingresos_totales_simulados = number_format($ingresos_totales_simulados, 2 ,',', '.');
+
+$Margen_Total_simulado = $ingresos_totales_simulado - $valor_total_gasto_simulados  ;
+$Margen_Total_simulados =$Margen_Total_simulado ;
+$Margen_Total_simulados = number_format($Margen_Total_simulados, 2 ,',', '.');
+
+$gasto_general = $ingresos_totales - $valor_total_gasto - $Margen_Total   ;
+
  ?>  
 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
@@ -289,39 +342,38 @@ $Margen_Total= $ingresos_totales - $valor_total_gasto  ;
                                 <th>TOTALES  </th>
                                 <th>Datos Simulados</th> 
                                 <th>TOTALES  </th>   
-                                                         
                             </tr>
                         </thead>
                             <!-- Contenido de la tabla -->
                             <tr>
                                 <td>Ingresos Totales</td>
-                                <td><?php  echo $ingresos_totales ?></td>
+                                <td><?php  echo $ingresos_totaless ?></td>
                                 <td>Ingresos Totales</td>
-                                <td><?php   $ingresos_totales ?></td>
+                                <td><?php echo  $ingresos_totales_simulados ?></td>
                             </tr>
                             <tr>
                                 <td>Costes Totales</td>
-                                <td><?php echo  $valor_total_gasto ?></td>
+                                <td><?php echo  $valor_total_gastos ?></td>
                                 <td>Costes Totales</td>
-                                <td><?php  $ingresos_totales ?></td>
+                                <td><?php  echo $valor_total_gasto_simuladoss?></td>
                             </tr>
                             <tr>
                                 <td>Margen Total</td>
-                                <td>  <?php echo  $Margen_Total ?> </td>
+                                <td>  <?php echo  $Margen_Totale ?> </td>
                                 <td>Margen Total</td>
-                                <td><?php  $ingresos_totales ?></td>
+                                <td><?php echo  $Margen_Total_simulados ?></td>
                             </tr> 
                             <tr>
                                 <td>Gastos Generales</td>
-                                <td><?php  $ingresos_totales ?> </td>
+                                <td><?php echo $gasto_general ?> </td>
                                 <td>Gastos Generales</td>
-                                <td><?php  $ingresos_totales ?></td>
+                                <td><?php  $ingresos_totaless ?></td>
                             </tr> 
                             <tr>
                                 <td>Resultado Total</td>
-                                <td><?php  $ingresos_totales ?> </td>
+                                <td><?php  $ingresos_totaless ?> </td>
                                 <td>Resultado Total</td>
-                                <td><?php  $ingresos_totales ?></td>
+                                <td><?php  $ingresos_totaless ?></td>
                             </tr> 
                                
                                 
@@ -335,7 +387,7 @@ $Margen_Total= $ingresos_totales - $valor_total_gasto  ;
 
 <br><br><br><br><br><br>
 
-<h1 class="text-center">Productos Sinulados  </h1>
+<h1 class="text-center">Productos Simulados  </h1>
 <div class="bajo">
 
 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -354,7 +406,7 @@ $Margen_Total= $ingresos_totales - $valor_total_gasto  ;
                             </tr>
                         </thead>
                                 <?php
-                                 require_once('../../conexion.php');
+                                
                                  $conexion=conectar(); 
                                  $consulta2 ="SELECT * FROM ` $nombre_negocio_plan` ";
                                  $busqueda=mysqli_query($conexion,$consulta2);
@@ -369,25 +421,39 @@ $Margen_Total= $ingresos_totales - $valor_total_gasto  ;
                                 $cantidad_productos =  $_SESSION['cantidad_productos'];
                                 $precio_venta =  $_SESSION['precio_venta'];
                                 $gastos_generales =  $_SESSION['gastos_generales']; 
-                                $precio_unitario_porcentaje= $precio_unitario/100 ;
-                                $cantidad_productos_porcentaje= $cantidad_productos/100;
-                                $precio_venta_porcentaje= $precio_venta /100;
+                                
                                 $gastos_generales_porcentaje= $gastos_generales /100;
                                 $cantidad = ($elemento["cantidad"] * $cantidad_productos_porcentaje) +$elemento["cantidad"];
-                                $cantidad = intval($cantidad, 0);
+                                $cantidadd = $cantidad;
+                                $cantidadd = number_format($cantidadd, 0 ,',', '.');
+
                                 $coste_unitario =($elemento["coste_unitario" ] *  $precio_unitario_porcentaje )+ $elemento["coste_unitario" ];
-                    
+                                $coste_unitarioo =$coste_unitario;
+                                $coste_unitarioo = number_format($coste_unitarioo, 2 ,',', '.');
+
                                 $precio_venta1 = ($elemento["precio_venta"] *$precio_venta_porcentaje )+ $elemento["precio_venta"] ;
-                                $precio_venta1 = intval($precio_venta1, 0);
+                                $precio_venta11 = $precio_venta1;
+                                $precio_venta11 = number_format($precio_venta11, 2 ,',', '.');
+
                                 $margen_unitario = $precio_venta1 - $coste_unitario    ;
+                                $margen_unitarioo = $margen_unitario   ;
+                                $margen_unitarioo = number_format($margen_unitarioo, 2 ,',', '.');
+
                                 $margen_unitario1 = $margen_unitario / $precio_venta1 *100;
-                                $margen_unitario1 = number_format($margen_unitario1, 0);
+                                $margen_unitario11 = $margen_unitario1 ;
+                                $margen_unitario11 = number_format($margen_unitario11, 2);
+
                                 $costes_totales = $cantidad * $coste_unitario ;
-                                $costes_totales = intval($costes_totales, 0);
+                                $costes_totaless = $costes_totales  ;
+                                $costes_totaless = number_format($costes_totaless, 2 ,',', '.');
+
                                 $ingresos_totales = $cantidad * $precio_venta1 ;
-                                $ingresos_totales = intval($ingresos_totales, 0);
+                                $ingresos_totaless =  $ingresos_totales ;
+                                $ingresos_totaless = number_format($ingresos_totaless, 2 ,',', '.');
+                                
                                 $margenes_total = $ingresos_totales - $costes_totales  ;
-                                $margenes_total = number_format($margenes_total, 0 ,',', '.');
+                                $margenes_totale = $margenes_total ;
+                                $margenes_totale = number_format($margenes_totale, 2 ,',', '.');
                                
                               ?>
                             <!-- Contenido de la tabla -->
@@ -395,14 +461,14 @@ $Margen_Total= $ingresos_totales - $valor_total_gasto  ;
                             <tr>
                            
                                 <td><?php echo $elemento["nombre"]; ?></td>
-                                <td><?php echo $cantidad ; ?></td>
-                                <td><?php echo $coste_unitario;?></td>
-                                <td><?php echo $precio_venta1;?></td>
-                                <td><?php echo $margen_unitario; ?></td>
-                                <td><?php echo $margen_unitario1; ?> %</td>
-                                <td><?php echo $costes_totales; ?></td>
-                                <td><?php echo $ingresos_totales; ?></td>
-                                <td><?php echo $margenes_total; ?></td>
+                                <td><?php echo $cantidadd ; ?></td>
+                                <td><?php echo $coste_unitarioo;?></td>
+                                <td><?php echo $precio_venta11;?></td>
+                                <td><?php echo $margen_unitarioo; ?></td>
+                                <td><?php echo $margen_unitario11; ?> %</td>
+                                <td><?php echo $costes_totaless; ?></td>
+                                <td><?php echo $ingresos_totaless; ?></td>
+                                <td><?php echo $margenes_totale; ?></td>
                      
                             </tr>
                            
@@ -439,13 +505,20 @@ $Margen_Total= $ingresos_totales - $valor_total_gasto  ;
                               $busqueda1=mysqli_query($conexion,$consulta21);
                               $total11= mysqli_fetch_array($busqueda1);
                               $valor_total = $total11['valor_total_gasto'];
-                              $valor_total = intval($valor_total, 0);
+
+                              $total= ( $elemento["valor"] * $gastos_generales_porcentaje) + $elemento["valor"]; 
+                              $totale= $total ; 
+                              $totale= number_format($totale, 0 ,',', '.');
+
+                              $totales =($valor_total * $gastos_generales_porcentaje)  + $valor_total  ;
+                              $totaless = $totales ;
+                              $totaless = number_format($totaless, 2 ,',', '.');
+
                               ?>
                             <!-- Contenido de la tabla -->
                             <tr>
                                 <td><?php echo $elemento["nombre"]; ?></td>
-                                <td><?php echo ($elemento["valor"] * $gastos_generales_porcentaje) + $elemento["valor"]; ?></td>
-                                
+                                <td><?php echo  $totale; ?></td>
                               
                             </tr>
                            
@@ -455,7 +528,7 @@ $Margen_Total= $ingresos_totales - $valor_total_gasto  ;
                                 
                                 <thead>
                                 <tr><th >TOTAL</th>
-                                <th ><?php echo ($valor_total * $gastos_generales_porcentaje)  + $valor_total  ; ?></td>
+                                <th ><?php echo $totaless ; ?></td>
                                 
                             
                             </tr>
@@ -507,7 +580,7 @@ $Margen_Total= $ingresos_totales - $valor_total_gasto  ;
                                                             <label for="inversion_publicidad" class="form__label"></label>
 
 
-                                                            <input type="text" id="cantidad_producto" name="cantidad_producto" value="<?php echo $cantidad_producto; ?>">
+                                                            <input type="text" id="cantidad_producto" name="cantidad_producto" placeholder="4222" value="<?php echo $cantidad_producto; ?>">
                                                             <label for="cantidad_producto" class="form__label"></label>
                                                             <input type="text" id="coste_unidad_producto" name="coste_unidad_producto" value="<?php echo $coste_unidad_producto; ?>">
                                                             <label for="coste_unidad_producto" class="form__label"></label>
@@ -545,4 +618,5 @@ $Margen_Total= $ingresos_totales - $valor_total_gasto  ;
   <script src="../js/slider.js"></script>
   <script src="js/myadmin.js"></script>
 </body>
+
 </html>

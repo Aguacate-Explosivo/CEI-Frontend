@@ -214,7 +214,7 @@
 
 
 
-
+<div class="bajo">
 
 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
@@ -234,7 +234,8 @@
                                  $busqueda1=mysqli_query($conexion,$consulta21);
                                  $total11= mysqli_fetch_array($busqueda1);
                                  $valor_total_gasto = $total11['valor_total_gasto'];
-                                 $valor_total_gasto = number_format($valor_total_gasto, 0);
+                                 $valor_total_gastos = $valor_total_gasto;
+                                 $valor_total_gastos = number_format($valor_total_gastos, 2 ,',', '.');
 
                             foreach($busqueda as $elemento){ 
                               $_SESSION['Id_producto_gasto'] =  $elemento["id"];
@@ -253,14 +254,23 @@
                                 
                                 <thead>
                                 <tr><th >TOTAL</th>
-                                <th ><?php echo $valor_total_gasto; ?></th>
+                                <th ><?php echo $valor_total_gastos; ?></th>
                                 
                             
                             </tr>
                                 </thead>
                        </table>
-                       <form  method="POST" enctype="multipart/form-data" >
+                       </div>
+                      
+                      <div>
+                      <br>
+                       <br>
+                       <br>
+                       <br>
                        <a style="width: 250px;" value="Siguiente" name="Siguiente" href="producto.php" type="submit" class="btn btn-info btn-block btn-rounded waves-effect waves-light">Atras</a>                  
+                      </div>
+                       <form  method="POST" enctype="multipart/form-data" >
+                      
                                     
    <!-- Inputs para transferir informacion -->
    <div>
