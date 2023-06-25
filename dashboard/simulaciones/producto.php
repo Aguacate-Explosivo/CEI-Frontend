@@ -332,6 +332,8 @@ $Margen_Total_simulado = $ingresos_totales_simulado - $valor_total_gasto_simulad
 $Margen_Total_simulados =$Margen_Total_simulado ;
 $Margen_Total_simulados = number_format($Margen_Total_simulados, 2 ,',', '.');
 
+$gasto_general = $ingresos_totales - $valor_total_gasto - $Margen_Total   ;
+
  ?>  
 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
@@ -340,7 +342,6 @@ $Margen_Total_simulados = number_format($Margen_Total_simulados, 2 ,',', '.');
                                 <th>TOTALES  </th>
                                 <th>Datos Simulados</th> 
                                 <th>TOTALES  </th>   
-                                <?php echo  $valor_total_gasto_simulados ?>
                             </tr>
                         </thead>
                             <!-- Contenido de la tabla -->
@@ -364,7 +365,7 @@ $Margen_Total_simulados = number_format($Margen_Total_simulados, 2 ,',', '.');
                             </tr> 
                             <tr>
                                 <td>Gastos Generales</td>
-                                <td><?php  $ingresos_totaless ?> </td>
+                                <td><?php echo $gasto_general ?> </td>
                                 <td>Gastos Generales</td>
                                 <td><?php  $ingresos_totaless ?></td>
                             </tr> 

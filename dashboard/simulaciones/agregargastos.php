@@ -325,6 +325,8 @@
                                  $busqueda1=mysqli_query($conexion,$consulta21);
                                  $total11= mysqli_fetch_array($busqueda1);
                                  $valor_total_gasto = $total11['valor_total_gasto'];
+                                 $valor_total_gastos = $valor_total_gasto;                                                            
+                                 $valor_total_gastos = number_format($valor_total_gastos, 2 ,',', '.');
 
                             foreach($busqueda as $elemento){ 
                               $_SESSION['Id_producto_gasto'] =  $elemento["id"];
@@ -345,7 +347,7 @@
                                 
                                 <thead>
                                 <tr><th ></th>
-                                <th ><?php echo $valor_total_gasto; ?></th>
+                                <th ><?php echo $valor_total_gastos; ?></th>
                                 
                                 <th>PORSENTAJES</th>
                             </tr>
