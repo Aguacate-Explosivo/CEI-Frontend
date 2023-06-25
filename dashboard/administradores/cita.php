@@ -108,7 +108,7 @@ $fila = $busqueda -> fetch_assoc();
   
   <br>
   <button style="margin: 2px; border-radius: 5px;" type="submit" class="btn btn-primary">Reprogramar cita</button>
-  <a style="margin: 2px; border-radius: 5px;" href="reprocitas.php" class="btn btn-info" > Regresar</a>
+  <a style="margin: 2px; border-radius: 5px;" href="../reprocitas.php" class="btn btn-info" > Regresar</a>
 
 </div>
      
