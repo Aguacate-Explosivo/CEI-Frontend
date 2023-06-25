@@ -38,43 +38,125 @@
             <div class="col-lg-18">
             <div class="table-responsive">  
             <nav aria-label="...">
-                  
                 <ul class="pagination pagination-lg justify-content-center">
                   <li class="page-item active rounded" class="nav-item"><a class="nav-link" href="DashCitas.php">Citas Disponibles</a></li>
                   <li class="page-item rounded" aria-current="page"><a class="page-link" href="reprocitas.php">Reprogramar Citas</a></li>
                 </ul>
                 <br>
             </nav>
-                  
-            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
-            <thead>
-                <tr>
-                    <th>Numero de Documento</th>
-                    <th>Nombre Completo</th>                             
-                    <th>Numero de Telefono</th>
-                    <th>Barrio</th>
-                    <th>Fecha y Hora de Cita</th>
-                </tr>
-            </thead>
-                    <?php
-                      include("../conexion.php");
-                      $conexion=conectar(); 
-                      $consulta2 ="SELECT * FROM `citas` ";
-                      $busqueda=mysqli_query($conexion,$consulta2);
+            <section class="content">
 
-                foreach($busqueda as $row){ ?>
-                <!-- Contenido de la tabla -->
-                <tr>
-                    <td><?php echo $row["documento"]; ?></td>
-                    <td><?php echo $row["nombre"]; ?></td>
-                    <td><?php echo $row["telefono"]; ?></td>
-                    <td><?php echo $row["direccion"]; ?></td>
-                    <td><?php echo $row["fecha_hora"]; ?></td>
-                </tr>
-                    <?php } ?> 
-                    
-                    
-            </table>                  
+    <div class="box">
+
+      <div class="box-header with-border">
+  
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarUsuario">
+          
+          Agregar usuario
+
+        </button>
+
+      </div>
+
+      <div class="box-body">
+        
+       <table class="table table-bordered table-striped dt-responsive tablas">
+         
+        <thead>
+         
+         <tr>
+           
+           <th style="width:10px">#</th>
+           <th>Nombre</th>
+           <th>Usuario</th>
+           <th>Foto</th>
+           <th>Perfil</th>
+           <th>Estado</th>
+           <th>Último login</th>
+           <th>Acciones</th>
+
+         </tr> 
+
+        </thead>
+
+        <tbody>
+          
+          <tr>
+            <td>1</td>
+            <td>Usuario Administrador</td>
+            <td>admin</td>
+            <td><img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail" width="40px"></td>
+            <td>Administrador</td>
+            <td><button class="btn btn-success btn-xs">Activado</button></td>
+            <td>2017-12-11 12:05:32</td>
+            <td>
+
+              <div class="btn-group">
+                  
+                <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
+
+                <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+
+              </div>  
+
+            </td>
+
+          </tr>
+
+           <tr>
+            <td>1</td>
+            <td>Usuario Administrador</td>
+            <td>admin</td>
+            <td><img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail" width="40px"></td>
+            <td>Administrador</td>
+            <td><button class="btn btn-success btn-xs">Activado</button></td>
+            <td>2017-12-11 12:05:32</td>
+            <td>
+
+              <div class="btn-group">
+                  
+                <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
+
+                <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+
+              </div>  
+
+            </td>
+
+          </tr>
+
+           <tr>
+            <td>1</td>
+            <td>Usuario Administrador</td>
+            <td>admin</td>
+            <td><img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail" width="40px"></td>
+            <td>Administrador</td>
+            <td><button class="btn btn-danger btn-xs">Desactivado</button></td>
+            <td>2017-12-11 12:05:32</td>
+            <td>
+
+              <div class="btn-group">
+                  
+                <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
+
+                <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+
+              </div>  
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+       </table>
+
+      </div>
+
+    </div>
+
+  </section>      
+                          
             </div>
             </div>
             </div>
