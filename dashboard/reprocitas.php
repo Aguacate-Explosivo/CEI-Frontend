@@ -76,8 +76,8 @@
                                 <td><?php echo $row["fecha_hora"]; ?></td>
                                 <td>
                                 <div>
-                                <a style="margin: 2px; border-radius: 5px; position: relative;" href="cita.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
-                                <a style="margin: 2px; border-radius: 5px;"  href="eliminarcitas.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-danger" > <i class="fas fa-trash-alt fa-flip-horizontal"></i></a>
+                                <a style="margin: 2px; border-radius: 5px; position: relative;" href="administradores/cita.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                                <a style="margin: 2px; border-radius: 5px;"  href="administradores/eliminarcitas.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-danger" > <i class="fas fa-trash-alt fa-flip-horizontal"></i></a>
                                 </div>
                               </td>
                             </tr>
