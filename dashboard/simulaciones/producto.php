@@ -428,15 +428,15 @@ $Margen_Total_simulados = number_format($Margen_Total_simulados, 2 ,',', '.');
 
                                 $coste_unitario =($elemento["coste_unitario" ] *  $precio_unitario_porcentaje )+ $elemento["coste_unitario" ];
                                 $coste_unitarioo =$coste_unitario;
-                                $coste_unitarioo = number_format($coste_unitarioo, 0 ,',', '.');
+                                $coste_unitarioo = number_format($coste_unitarioo, 2 ,',', '.');
 
                                 $precio_venta1 = ($elemento["precio_venta"] *$precio_venta_porcentaje )+ $elemento["precio_venta"] ;
                                 $precio_venta11 = $precio_venta1;
-                                $precio_venta11 = number_format($precio_venta11, 0 ,',', '.');
+                                $precio_venta11 = number_format($precio_venta11, 2 ,',', '.');
 
                                 $margen_unitario = $precio_venta1 - $coste_unitario    ;
                                 $margen_unitarioo = $margen_unitario   ;
-                                $margen_unitarioo = number_format($margen_unitarioo, 0 ,',', '.');
+                                $margen_unitarioo = number_format($margen_unitarioo, 2 ,',', '.');
 
                                 $margen_unitario1 = $margen_unitario / $precio_venta1 *100;
                                 $margen_unitario11 = $margen_unitario1 ;
