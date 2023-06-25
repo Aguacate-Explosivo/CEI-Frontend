@@ -35,7 +35,7 @@
 
 <body  >  
 <?php
-      include_once("sesion_validacion.php")
+      include_once("../sesion_validacion.php")
       ?>
     
 

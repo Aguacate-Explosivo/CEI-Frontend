@@ -9,7 +9,7 @@
 </head>
 <body>  
 <?php
- include_once('conexion.php');
+require_once('../../conexion.php');
  $conexion=conectar(); 
 
  $id_evento=$_GET['id_evento'];

@@ -12,7 +12,7 @@
 <?php
 //Conexion con la base de datos
    //Conexion con la base de datos
-   include("conexion.php");
+   require_once('../../conexion.php');
    $conexion=conectar();
    $Id_Curso=$_REQUEST['Id_Curso'];
 

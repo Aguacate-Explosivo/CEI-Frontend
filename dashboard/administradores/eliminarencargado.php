@@ -10,7 +10,7 @@
 </head>
 <body>  
 <?php
-include_once('conexion.php');
+require_once('../../conexion.php'); 
 $conexion=conectar(); 
    $id=$_GET['id'];
 

@@ -15,7 +15,7 @@
     include("../../conexion.php");
     $conexion=conectar();
       $idcita=$_REQUEST['idcita'];
-  
+   
       //Valores del formulario
       $documento=$_POST['documento'];
       $nombre=$_POST['nombre'];

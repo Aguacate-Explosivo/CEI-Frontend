@@ -50,7 +50,7 @@
 
   <body>
   <?php
-      include_once("sesion_validacion.php")
+      include_once("../sesion_validacion.php")
       ?>
     <!-- Preloader -->
     <div class="preloader">
@@ -233,7 +233,7 @@
                             </tr>
                         </thead>
                                 <?php
-                                 require_once('conexion.php');
+                                 require_once('../../conexion.php');
                                  $conexion=conectar(); 
                                  $consulta2 ="SELECT * FROM `eventos` ";
                                  $busqueda=mysqli_query($conexion,$consulta2);
