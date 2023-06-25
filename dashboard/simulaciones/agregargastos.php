@@ -27,14 +27,6 @@
       $_SESSION['inversion_publicidad'] = htmlentities($_POST["inversion_publicidad"]);
 
       // datos formulario 4 
-      $_SESSION['cantidadmin'] = htmlentities($_POST["cantidadmin"]);
-      $_SESSION['cantidadmax'] = htmlentities($_POST["cantidadmax"]);
-      $_SESSION['precioumin'] = htmlentities($_POST["precioumin"]);
-      $_SESSION['precioumax'] = htmlentities($_POST["precioumax"]);
-      $_SESSION['preciovmin'] = htmlentities($_POST["preciovmin"]);
-      $_SESSION['preciovmax'] = htmlentities($_POST["preciovmax"]);
-      $_SESSION['gastosgmin'] = htmlentities($_POST["gastosgmin"]);
-      $_SESSION['gastosgmax'] = htmlentities($_POST["gastosgmax"]);
 
       // datos formulario 5
       $_SESSION['cantidad_producto'] = htmlentities($_POST["cantidad_producto"]);
@@ -68,19 +60,12 @@
   $socios_productores =  $_SESSION['socios_productores'];
   $tipo_marketing_plan =  $_SESSION['tipo_marketing_plan'];
   $inversion_publicidad =  $_SESSION['inversion_publicidad'];
-  $cantidadmin =  $_SESSION['cantidadmin'];
-  $cantidadmax =  $_SESSION['cantidadmax'];
-  $precioumin =  $_SESSION['precioumin'];
-  $precioumax =  $_SESSION['precioumax'];
-  $preciovmin =  $_SESSION['preciovmin'];
-  $preciovmax =  $_SESSION['preciovmax'];
-  $gastosgmin =  $_SESSION['gastosgmin'];
-  $gastosgmax =  $_SESSION['gastosgmax'];
 
-  $nombre_producto =  $_SESSION['nombre_producto'];
   $cantidad_producto =  $_SESSION['cantidad_producto'];
   $coste_unidad_producto =  $_SESSION['coste_unidad_producto'];
   $precio_venta_producto =  $_SESSION['precio_venta_producto'];
+
+  $valor_total_gasto =  $_SESSION['valor_total_gasto'];
 
   //agregar tabla a base de datos
 ?>
@@ -331,7 +316,7 @@
                             </tr>
                         </thead>
                                 <?php
-                                 require_once('../administradores/conexion.php');
+                                 require_once('../../conexion.php');
                                  $conexion=conectar(); 
                                  $consulta2 ="SELECT * FROM ` $documento` ";
                                  $busqueda=mysqli_query($conexion,$consulta2);
@@ -409,31 +394,15 @@
                                                             <input type="hidden" id="inversion_publicidad" name="inversion_publicidad" value="<?php echo $inversion_publicidad; ?>">
                                                             <label for="inversion_publicidad" class="form__label"></label>
 
-                                                            <input type="hidden" id="cantidadmin" name="cantidadmin" value="<?php echo $cantidadmin; ?>">
-                                                            <label for="cantidadmin" class="form__label"></label>
-                                                            <input type="hidden" id="cantidadmax" name="cantidadmax" value="<?php echo $cantidadmax; ?>">
-                                                            <label for="cantidadmax" class="form__label"></label>
-                                                            <input type="hidden" id="precioumin" name="precioumin" value="<?php echo $precioumin; ?>">
-                                                            <label for="precioumin" class="form__label"></label>
-                                                            <input type="hidden" id="precioumax" name="precioumax" value="<?php echo $precioumax; ?>">
-                                                            <label for="precioumax" class="form__label"></label>
-                                                            <input type="hidden" id="preciovmin" name="preciovmin" value="<?php echo $preciovmin; ?>">
-                                                            <label for="preciovmin" class="form__label"></label>
-                                                            <input type="hidden" id="preciovmax" name="preciovmax" value="<?php echo $preciovmax; ?>">
-                                                            <label for="preciovmax" class="form__label"></label>
-                                                            <input type="hidden" id="gastosgmin" name="gastosgmin" value="<?php echo $gastosgmin; ?>">
-                                                            <label for="gastosgmin" class="form__label"></label>
-                                                            <input type="hidden" id="gastosgmax" name="gastosgmax" value="<?php echo $gastosgmax; ?>">
-                                                            <label for="gastosgmax" class="form__label"></label>
-
-                                                            <input type="hidden" id="cantidad_producto" name="cantidad_producto" value="<?php echo $cantidad_producto; ?>">
+                                                            
+                                                            <input type="text" id="cantidad_producto" name="cantidad_producto" value="<?php echo $cantidad_producto; ?>">
                                                             <label for="cantidad_producto" class="form__label"></label>
-                                                            <input type="hidden" id="coste_unidad_producto" name="coste_unidad_producto" value="<?php echo $coste_unidad_producto; ?>">
+                                                            <input type="text" id="coste_unidad_producto" name="coste_unidad_producto" value="<?php echo $coste_unidad_producto; ?>">
                                                             <label for="coste_unidad_producto" class="form__label"></label>
-                                                            <input type="hidden" id="precio_venta_producto" name="precio_venta_producto" value="<?php echo $precio_venta_producto; ?>">
+                                                            <input type="text" id="precio_venta_producto" name="precio_venta_producto" value="<?php echo $precio_venta_producto; ?>">
                                                             <label for="precio_venta_producto" class="form__label"></label>
 
-                                                            <input type="hidden" id="valor_total_gasto" name="valor_total_gasto" value="<?php echo $valor_total_gasto; ?>">
+                                                            <input type="text" id="valor_total_gasto" name="valor_total_gasto" value="<?php echo $valor_total_gasto; ?>">
                                                             <label for="valor_total_gasto" class="form__label"></label>
                                                         </div>
                                                         </form>                               
