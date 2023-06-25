@@ -26,7 +26,7 @@
               showConfirmButton: false,
             });
          setInterval(()=>{
-         location.assign('reprocitas.php');
+         location.assign('../reprocitas.php');
          },1000);
             </script>"; 
           
