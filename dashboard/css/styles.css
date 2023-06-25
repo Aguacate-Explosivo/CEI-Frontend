@@ -103,7 +103,7 @@
    display: block;
  }
 
- /*PERSONALIZACION DE IMPUTS ----------------------------------------------*/
+ /*PERSONALIZACION DE INPUTS ----------------------------------------------*/
  .form__group {
    position: relative;
    --color: #5757577e;
@@ -231,34 +231,3 @@
   padding: 0 2rem;
   text-align: center;
  }
-
- /* Listado de Cursos-------------------------------------------------- */
- /* 
-.listado{
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-gap: 2em
-}
-
-.cartas {
-  border: solid 1px var(--border-color);
-  box-shadow: 1px 1px 4px;
-  padding: .5em;
-  background-color: azure;
-}
-
-.listado img {
-  max-width: 100%;
-}
-
-.listado h2 {
-  text-align: center;
-} */
-
- /* --------------------------Select-------------------------------------- */
- /* .select_p {
-  background-color: #2f9020;
-  border: 5px solid red;
-} */
-
- /* ---------------------------------------------------------------- */

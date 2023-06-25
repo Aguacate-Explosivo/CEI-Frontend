@@ -16,18 +16,18 @@
 <link rel="preload" href="js/jquery.nicescroll.js" as="script">
 <link rel="preload" href="js/waves.js" as="script">
 <link rel="preload" href="js/myadmin.js" as="script">
-<link rel="preload" href="popper/popper.min.js" as="script">
+<link rel="preload" href="../plugins/popper/popper.min.js" as="script">
 <link rel="preload" href="datatables/datatables.min.js" as="script">
 <link rel="preload" href="datatables/Buttons-1.5.6/js/dataTables.buttons.min.js" as="script">
 <link rel="preload" href="datatables/JSZip-2.5.0/jszip.min.js" as="script">
 <link rel="preload" href="datatables/pdfmake-0.1.36/pdfmake.min.js" as="script">
 <link rel="preload" href="datatables/pdfmake-0.1.36/vfs_fonts.js" as="script">
 <link rel="preload" href="datatables/Buttons-1.5.6/js/buttons.html5.min.js" as="script">
-<link rel="preload" href="../../lib/wow/wow.min.js" as="script">
-<link rel="preload" href="../../lib/easing/easing.min.js" as="script">
-<link rel="preload" href="../../lib/waypoints/waypoints.min.js" as="script">
-<link rel="preload" href="../../lib/owlcarousel/owl.carousel.min.js" as="script">
-<link rel="preload" href="../../lib/lightbox/js/lightbox.min.js" as="script">
+<link rel="preload" href="../lib/wow/wow.min.js" as="script">
+<link rel="preload" href="../lib/easing/easing.min.js" as="script">
+<link rel="preload" href="../lib/waypoints/waypoints.min.js" as="script">
+<link rel="preload" href="../lib/owlcarousel/owl.carousel.min.js" as="script">
+<link rel="preload" href="../lib/lightbox/js/lightbox.min.js" as="script">
 <link rel="preload" href="js/main.js" as="script">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
@@ -36,23 +36,22 @@
 <script src="js/jquery.nicescroll.js" defer></script>
 <script src="js/waves.js" defer></script>
 <script src="js/myadmin.js" defer></script>
-<script src="popper/popper.min.js" defer></script>
+<script src="../plugins/popper/popper.min.js" defer></script>
 <script type="text/javascript" src="datatables/datatables.min.js" defer></script>
 <script src="datatables/Buttons-1.5.6/js/dataTables.buttons.min.js" defer></script>
 <script src="datatables/JSZip-2.5.0/jszip.min.js" defer></script>
 <script src="datatables/pdfmake-0.1.36/pdfmake.min.js" defer></script>
 <script src="datatables/pdfmake-0.1.36/vfs_fonts.js" defer></script>
 <script src="datatables/Buttons-1.5.6/js/buttons.html5.min.js" defer></script>
-<script src="../../lib/wow/wow.min.js" defer></script>
-<script src="../../lib/easing/easing.min.js" defer></script>
-<script src="../../lib/waypoints/waypoints.min.js" defer></script>
-<script src="../../lib/owlcarousel/owl.carousel.min.js" defer></script>
-<script src="../../lib/lightbox/js/lightbox.min.js" defer></script>
+<script src="../lib/wow/wow.min.js" defer></script>
+<script src="../lib/easing/easing.min.js" defer></script>
+<script src="../lib/waypoints/waypoints.min.js" defer></script>
+<script src="../lib/owlcarousel/owl.carousel.min.js" defer></script>
+<script src="../lib/lightbox/js/lightbox.min.js" defer></script>
 <script src="js/main.js" defer></script>
-
 </head>
 
-<?php include_once("../php/sesion_validacion.php"); ?>
+<?php include_once("sesion_validacion.php"); ?>
 
 <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0">
       <div class="navbar-header">

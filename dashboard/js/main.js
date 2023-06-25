@@ -1,5 +1,6 @@
 $(document).ready(function() {    
-    $('#example').DataTable({        
+    
+	$('#example').DataTable({        
         language: {
                 "lengthMenu": "Mostrar _MENU_ registros",
                 "zeroRecords": "No se encontraron resultados",
