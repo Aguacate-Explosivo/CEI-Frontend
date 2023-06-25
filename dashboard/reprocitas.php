@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dashboard Citas</title> 
   
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-
   </head>
 
   <body>
@@ -42,7 +39,6 @@
                                     <div class="table-responsive"> 
                                     <nav aria-label="...">
                 <ul class="pagination pagination-lg justify-content-center">
-
                     <li style="margin: 2px; border-radius: 5px; position: relative;" class="page-item "><a class="page-link" href="DashCitas.php">Citas Disponibles</a></li>
                     <li style="margin: 2px; border-radius: 5px; position: relative;" class="page-item active" aria-current="page"><a class="page-link" href="reprocitas.php">Reprogramar Citas </a></li>
                 </ul>
@@ -80,18 +76,19 @@
                                 <td><?php echo $row["fecha_hora"]; ?></td>
                                 <td>
                                 <div>
-                                <!-- Button trigger modal -->
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarUsuario">
-                                  Agregar usuario
-                                </button>
-
-                                <a href="eliminarcitas.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-danger" > <i class="fas fa-trash-alt fa-flip-horizontal"></i></a>
+                                <a style="margin: 2px; border-radius: 5px; position: relative;" href="cita.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                                <a style="margin: 2px; border-radius: 5px;"  href="eliminarcitas.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-danger" > <i class="fas fa-trash-alt fa-flip-horizontal"></i></a>
                                 </div>
                               </td>
                             </tr>
+                            <div class="modal-dialog modal-lg">...</div>           
+                        
                                  <?php
                                 }
-                                ?>    
+                                ?>
+                       
+                         
+                                       
                        </table>       
                 
                                       </div>
@@ -99,48 +96,17 @@
                                 </div>
                               </div>
                         </div>  
-                        <!--=====================================
-                        MODAL AGREGAR USUARIO
-                        ======================================-->
-
-                        <div id="modalAgregarUsuario" class="modal fade" role="dialog">
-
-                        <div class="modal-dialog">
-
-                        <div class="modal-content">
-
-                        <form role="form" method="post" enctype="multipart/form-data">
-                        <!--=====================================
-                        CABEZA DEL MODAL
-                        ======================================-->
-
-                        <div class="modal-header" style="background:#3c8dbc; color:white">
-
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                        <h4 class="modal-title">Agregar usuario</h4>
-
-                        </div>
-
-                        <!--=====================================
-                        CUERPO DEL MODAL
-                        ======================================-->
-
-                        <div class="modal-footer">
-
-                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
-
-                        <button type="submit" class="btn btn-primary">Guardar usuario</button>
-
-                        </div>
                     </div>  
                 <!-- Fin data Table -->
               </div>
             </div>
           </div>
+          <!-- /.row -->
         </div>
+        <!-- /.container-fluid -->
       </div>
-      <?php require_once ("footer.php"); ?>
+      <!-- /#page-wrapper -->
+      <?php require_once ("../footer.php"); ?>
     </div>
   </body>
 </html>
