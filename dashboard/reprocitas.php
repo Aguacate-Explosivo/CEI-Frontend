@@ -105,7 +105,7 @@
         <!-- /.container-fluid -->
       </div>
       <!-- /#page-wrapper -->
-      <?php require_once ("../footer.php"); ?>
+      <?php require_once ("footer.php"); ?>
     </div>
   </body>
 </html>
