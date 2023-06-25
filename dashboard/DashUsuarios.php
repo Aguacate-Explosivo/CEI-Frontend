@@ -26,56 +26,67 @@
    
 <!-- inicio-->
             <div>
-            <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Blank Page</h1>
+            <div class="row">
+            
+            <div class="white-box">
+            <h3>Modulo - Citas</h3>
+            <!-- Container de citas(Data Tables) -->
+            <div class="container-fluid">
+            <div class="jumbotron white-box">
+            <div class="container">
+            <div class="row">
+            <div class="col-lg-18">
+            <div class="table-responsive">  
+            <nav aria-label="...">
+                  
+                <ul class="pagination pagination-lg justify-content-center">
+                  <li class="page-item active rounded" class="nav-item"><a class="nav-link" href="DashCitas.php">Citas Disponibles</a></li>
+                  <li class="page-item rounded" aria-current="page"><a class="page-link" href="reprocitas.php">Reprogramar Citas</a></li>
+                </ul>
+                <br>
+            </nav>
+                  
+            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Numero de Documento</th>
+                    <th>Nombre Completo</th>                             
+                    <th>Numero de Telefono</th>
+                    <th>Barrio</th>
+                    <th>Fecha y Hora de Cita</th>
+                </tr>
+            </thead>
+                    <?php
+                      include("../conexion.php");
+                      $conexion=conectar(); 
+                      $consulta2 ="SELECT * FROM `citas` ";
+                      $busqueda=mysqli_query($conexion,$consulta2);
+
+                foreach($busqueda as $row){ ?>
+                <!-- Contenido de la tabla -->
+                <tr>
+                    <td><?php echo $row["documento"]; ?></td>
+                    <td><?php echo $row["nombre"]; ?></td>
+                    <td><?php echo $row["telefono"]; ?></td>
+                    <td><?php echo $row["direccion"]; ?></td>
+                    <td><?php echo $row["fecha_hora"]; ?></td>
+                </tr>
+                    <?php } ?> 
+                    
+                    
+            </table>                  
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>  
+            </div>  
+            <!-- Fin data Table -->
+            </div>
+            
           </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Blank Page</li>
-            </ol>
-          </div>
+          <!-- /.row -->
         </div>
-      </div><!-- /.container-fluid -->
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
-
-      <!-- Default box -->
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Title</h3>
-
-          <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fas fa-minus"></i>
-            </button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-        </div>
-        <div class="card-body">
-          Start creating your amazing application!
-        </div>
-        <!-- /.card-body -->
-        <div class="card-footer">
-          Footer
-        </div>
-        <!-- /.card-footer-->
-      </div>
-      <!-- /.card -->
-
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
 
             </div>
   </div>
