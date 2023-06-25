@@ -38,6 +38,7 @@
       $_SESSION['precio_venta'] = htmlentities($_POST["precio_venta"]);
       $_SESSION['gastos_generales'] = htmlentities($_POST["gastos_generales"]);
 
+      $_SESSION['importe'] = htmlentities($_POST["importe"]);
 
   
       // Redirecion a la siguiente pagina
@@ -73,6 +74,7 @@
   $cantidad_productos =  $_SESSION['cantidad_productos'];
   $precio_venta =  $_SESSION['precio_venta'];
   $gastos_generales =  $_SESSION['gastos_generales'];
+  $importe =  $_SESSION['importe'];
 
   //agregar tabla a base de datos
 ?>
@@ -213,7 +215,8 @@
  $cantidad_productos =  $_SESSION['cantidad_productos'];
  $precio_venta =  $_SESSION['precio_venta'];
  $gastos_generales =  $_SESSION['gastos_generales']; 
- ?>
+
+?>   
     <div class="scroll">
     <div class="col-md-9">
       <label for="formControlRange">Cantidad Prouctos</label>
@@ -273,7 +276,10 @@
 </div>
 </div>
 <div class="table">
+<?php
+require_once 'conf.php';
 
+?>
 <?php
  require_once('../../conexion.php');
  $conexion=conectar();
@@ -302,11 +308,11 @@ $cantidad_productos_porcentaje= $cantidad_productos/100;
 $precio_unitario_porcentaje= $precio_unitario/100 ;
 $precio_venta_porcentaje= $precio_venta /100;
 $gastos_generales_porcentaje= $gastos_generales /100;
+$importe_porcentaje= $importe /100;
 
-
- $cantidad_producto_simulados = ($cantidad_producto_simulado * $cantidad_productos_porcentaje) + $cantidad_producto_simulado ;
- $coste_unitario_simulados =($coste_unitario_simulado * $precio_unitario_porcentaje) + $coste_unitario_simulado ;
- $precio_venta_simulados = ($precio_venta_simulado * $precio_venta_porcentaje) + $precio_venta_simulado ;
+$cantidad_producto_simulados = ($cantidad_producto_simulado * $cantidad_productos_porcentaje) + $cantidad_producto_simulado ;
+$coste_unitario_simulados =($coste_unitario_simulado * $precio_unitario_porcentaje) + $coste_unitario_simulado ;
+$precio_venta_simulados = ($precio_venta_simulado * $precio_venta_porcentaje) + $precio_venta_simulado ;
 
 $valor_total_gasto_simulados = ($valor_total_gasto_simulado * $gastos_generales_porcentaje) + $valor_total_gasto_simulado ;
 $valor_total_gasto_simuladoss = $valor_total_gasto_simulados ;
@@ -323,6 +329,9 @@ $Margen_Totale = number_format($Margen_Totale, 2 ,',', '.');
 $valor_total_gastos=  $valor_total_gasto  ;
 $valor_total_gastos = number_format($valor_total_gastos, 2 ,',', '.');
 
+$importese = ($valor_total_gasto * $importe_porcentaje) + $valor_total_gasto ;
+$gasto_general = $importese  ;
+$gasto_general = number_format($gasto_general, 2 ,',', '.');
 
 $ingresos_totales_simulado= $cantidad_producto_simulados * $coste_unitario_simulados;
 $ingresos_totales_simulados= $ingresos_totales_simulado;
@@ -332,8 +341,17 @@ $Margen_Total_simulado = $ingresos_totales_simulado - $valor_total_gasto_simulad
 $Margen_Total_simulados =$Margen_Total_simulado ;
 $Margen_Total_simulados = number_format($Margen_Total_simulados, 2 ,',', '.');
 
-$gasto_general = $ingresos_totales - $valor_total_gasto - $Margen_Total   ;
+$resultado_Total1 = $Margen_Total - $importese  ;
+$resultado_Total = $resultado_Total1   ;
+$resultado_Total = number_format($resultado_Total, 2 ,',', '.');
 
+$importe_simulados = ($valor_total_gasto_simulados * $importe_porcentaje) + $valor_total_gasto_simulados ;
+$gasto_general_simulados = $importe_simulados  ;
+$gasto_general_simulados = number_format($gasto_general_simulados, 2 ,',', '.');
+
+$resultado_Total11 = $Margen_Total_simulado - $importe_simulados  ;
+$resultado_Total_simulados = $resultado_Total11   ;
+$resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '.');
  ?>  
 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
@@ -341,7 +359,7 @@ $gasto_general = $ingresos_totales - $valor_total_gasto - $Margen_Total   ;
                                 <th>Datos Reales  </th>
                                 <th>TOTALES  </th>
                                 <th>Datos Simulados</th> 
-                                <th>TOTALES  </th>   
+                                <th>TOTALES  </th>
                             </tr>
                         </thead>
                             <!-- Contenido de la tabla -->
@@ -367,13 +385,13 @@ $gasto_general = $ingresos_totales - $valor_total_gasto - $Margen_Total   ;
                                 <td>Gastos Generales</td>
                                 <td><?php echo $gasto_general ?> </td>
                                 <td>Gastos Generales</td>
-                                <td><?php  $ingresos_totaless ?></td>
+                                <td><?php echo $gasto_general_simulados ?></td>
                             </tr> 
                             <tr>
                                 <td>Resultado Total</td>
-                                <td><?php  $ingresos_totaless ?> </td>
+                                <td><?php echo $resultado_Total ?> </td>
                                 <td>Resultado Total</td>
-                                <td><?php  $ingresos_totaless ?></td>
+                                <td><?php echo  $resultado_Total_simulados ?></td>
                             </tr> 
                                
                                 
@@ -597,7 +615,8 @@ $gasto_general = $ingresos_totales - $valor_total_gasto - $Margen_Total   ;
                                                             <label for="precio_venta" class="form__label"></label>
                                                             <input type="text" id="gastos_generales" name="gastos_generales" value="<?php echo $gastos_generales; ?>">
                                                             <label for="gastos_generales" class="form__label"></label>
-
+                                                            <input type="text" id="importe" name="importe" value="<?php echo $importe; ?>">
+                                                            <label for="importe" class="form__label"></label>
                                                             
                                                         </div>
                                                         </form>       

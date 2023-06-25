@@ -35,6 +35,7 @@
       $_SESSION['cantidad_producto'] = htmlentities($_POST["cantidad_producto"]);
       $_SESSION['coste_unidad_producto'] = htmlentities($_POST["coste_unidad_producto"]);
       $_SESSION['precio_venta_producto'] = htmlentities($_POST["precio_venta_producto"]);
+      $_SESSION['importe'] = htmlentities($_POST["importe"]);
  
   
       // Redirecion a la siguiente pagina
@@ -63,7 +64,7 @@
   $cantidad_producto =  $_SESSION['cantidad_producto'];
   $coste_unidad_producto =  $_SESSION['coste_unidad_producto'];
   $precio_venta_producto =  $_SESSION['precio_venta_producto'];
-
+  $importe =  $_SESSION['importe'];
 
   //agregar tabla a base de datos
 ?>
@@ -364,17 +365,13 @@
                        </table>
                                       
                        <form  method="POST" enctype="multipart/form-data" >
+    <div class="col-md-6">
+    <label for="importe" class="form__label"> Importe de Productos:</label>
+    <input type="text"  class="form-control" id="importe" value="4.6" name="importe"
+    placeholder="Importe :" required pattern="[0-9 .]+" >
+    </div><br>
                        <button style="width: 250px;" value="Siguiente" name="Siguiente"  type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Siguiente</button>                  
-                       <script>
-       
-
-       
-
-       function retroceder() {
-           history.back(); // Retrocede en el historial del navegador
-           document.getElementById("calcular").click(); // Simula el clic en el botón del formulario
-       }
-   </script>
+            
                         <!-- Inputs para transferir informacion -->
                         <div>
                                                             <!-- Form 1 -->

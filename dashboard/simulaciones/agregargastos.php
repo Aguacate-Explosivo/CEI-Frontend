@@ -34,6 +34,7 @@
       $_SESSION['precio_venta_producto'] = htmlentities($_POST["precio_venta_producto"]);
       // nuevos datos de formulario
       $_SESSION['valor_total_gasto'] = htmlentities($_POST["valor_total_gasto"]);
+      $_SESSION['importe'] = htmlentities($_POST["importe"]);
 
 
   
@@ -66,6 +67,7 @@
   $precio_venta_producto =  $_SESSION['precio_venta_producto'];
 
   $valor_total_gasto =  $_SESSION['valor_total_gasto'];
+  $importe =  $_SESSION['importe'];
 
   //agregar tabla a base de datos
 ?>
@@ -406,6 +408,9 @@
 
                                                             <input type="text" id="valor_total_gasto" name="valor_total_gasto" value="<?php echo $valor_total_gasto; ?>">
                                                             <label for="valor_total_gasto" class="form__label"></label>
+                                                            
+                                                            <input type="text" id="importe" name="importe" value="<?php echo $importe; ?>">
+                                                            <label for="importe" class="form__label"></label>
                                                         </div>
                                                         </form>                               
 </div>
