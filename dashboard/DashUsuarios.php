@@ -19,7 +19,7 @@
         <div class="container-fluid">
           <div class="row bg-title">
             <div class="col-lg-auto">
-              <h4 class="page-title">Puedes gestionar tus Citas desde este modulo</h4>
+              <h4 class="page-title">Puedes gestionar los usuarios</h4>
               <ol class="breadcrumb">
               </ol>
             </div>
@@ -29,7 +29,7 @@
           <!-- row -->
           <div class="row">
             <div class="white-box">
-            <h3>Modulo - Citas</h3>
+            <h3>Modulo - Usuarios</h3>
             <div class="container-fluid">
             <div class="jumbotron white-box">
             <div class="container">
@@ -37,14 +37,10 @@
             <div >  
             <nav aria-label="...">
                   
-                <ul class="pagination pagination-lg justify-content-center">
-                  <li class="page-item active rounded" class="nav-item"><a class="nav-link" href="DashCitas.php">Citas Disponibles</a></li>
-                  <li class="page-item rounded" aria-current="page"><a class="page-link" href="reprocitas.php">Reprogramar Citas</a></li>
-                </ul>
                 <br>
             </nav>
             <!-- /.card -->
-            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">         
+            <table id="noexportar" class="table table-striped table-bordered" cellspacing="0" style="width: 100%;">         
 
             <thead>
                 <tr>
@@ -76,9 +72,9 @@
 
               <div class="btn-group">
                   
-                <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
+                <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
 
-                <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                <button class="btn btn-danger"> <i class="fas fa-trash-alt fa-flip-horizontal"></i></button>
 
               </div>  
 
@@ -96,9 +92,9 @@
 
               <div class="btn-group">
                   
-                <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
+              <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
 
-                <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+              <button class="btn btn-danger"> <i class="fas fa-trash-alt fa-flip-horizontal"></i></button>
 
               </div>  
 
@@ -116,9 +112,9 @@
 
               <div class="btn-group">
                   
-                <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
+              <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
 
-                <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+              <button class="btn btn-danger"> <i class="fas fa-trash-alt fa-flip-horizontal"></i></button>
 
               </div>  
 
