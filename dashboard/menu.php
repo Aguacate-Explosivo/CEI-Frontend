@@ -16,7 +16,7 @@
 <link rel="preload" href="js/jquery.nicescroll.js" as="script">
 <link rel="preload" href="js/waves.js" as="script">
 <link rel="preload" href="js/myadmin.js" as="script">
-<link rel="preload" href="../plugins/popper/popper.min.js" as="script">
+<link rel="preload" href="../popper/popper.min.js" as="script">
 <link rel="preload" href="datatables/datatables.min.js" as="script">
 <link rel="preload" href="datatables/Buttons-1.5.6/js/dataTables.buttons.min.js" as="script">
 <link rel="preload" href="datatables/JSZip-2.5.0/jszip.min.js" as="script">
@@ -36,7 +36,7 @@
 <script src="js/jquery.nicescroll.js" defer></script>
 <script src="js/waves.js" defer></script>
 <script src="js/myadmin.js" defer></script>
-<script src="../plugins/popper/popper.min.js" defer></script>
+<script src="../popper/popper.min.js" defer></script>
 <script type="text/javascript" src="datatables/datatables.min.js" defer></script>
 <script src="datatables/Buttons-1.5.6/js/dataTables.buttons.min.js" defer></script>
 <script src="datatables/JSZip-2.5.0/jszip.min.js" defer></script>
