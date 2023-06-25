@@ -214,7 +214,7 @@
 
 
 
-
+<div class="bajo">
 
 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
@@ -259,8 +259,17 @@
                             </tr>
                                 </thead>
                        </table>
-                       <form  method="POST" enctype="multipart/form-data" >
+                       </div>
+                      
+                      <div>
+                      <br>
+                       <br>
+                       <br>
+                       <br>
                        <a style="width: 250px;" value="Siguiente" name="Siguiente" href="producto.php" type="submit" class="btn btn-info btn-block btn-rounded waves-effect waves-light">Atras</a>                  
+                      </div>
+                       <form  method="POST" enctype="multipart/form-data" >
+                      
                                     
    <!-- Inputs para transferir informacion -->
    <div>

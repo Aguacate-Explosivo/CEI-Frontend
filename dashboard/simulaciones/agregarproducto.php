@@ -313,23 +313,30 @@
                                  $busqueda1=mysqli_query($conexion,$consulta21);
                                  $total222= mysqli_fetch_array($busqueda1);
                                  $cantidad_producto = $total222['cantidad_producto'];
+                                 $cantidad_productos = $cantidad_producto;
+                                 $cantidad_productos = number_format($cantidad_productos, 2 ,',', '.');
 
                                  $consulta22 ="SELECT SUM(coste_unitario) as coste_unidad_producto  FROM ` $nombre_negocio_plan` ";
                                  $busqueda2=mysqli_query($conexion,$consulta22);
                                  $total333= mysqli_fetch_array($busqueda2);
                                  $coste_unidad_producto = $total333['coste_unidad_producto'];
+                                 $coste_unidad_productos = $coste_unidad_producto;
+                                 $coste_unidad_productos = number_format($coste_unidad_productos, 2 ,',', '.');
 
                                  $consulta23 ="SELECT SUM(precio_venta) as precio_venta_producto  FROM ` $nombre_negocio_plan` ";
                                  $busqueda3=mysqli_query($conexion,$consulta23);
                                  $total444= mysqli_fetch_array($busqueda3);
                                  $precio_venta_producto = $total444['precio_venta_producto']; 
+                                 $precio_venta_productos = $precio_venta_producto; 
+                                 $precio_venta_productos = number_format($precio_venta_productos, 2 ,',', '.');
+
                             foreach($busqueda as $elemento){ 
                                 $_SESSION['Id_producto'] =  $elemento["id"];
                               ?>
                             <!-- Contenido de la tabla -->
                             <tr>
                                 <td><?php echo $elemento["nombre"]; ?></td>
-                                <td><?php echo $elemento["cantidad"]; ?></td>
+                                <td><?php echo $elemento["cantidad"]; ?></td> 
                                 <td><?php echo $elemento["coste_unitario"]; ?></td>
                                 <td><?php echo $elemento["precio_venta"]; ?></td>
                                 <td>
@@ -346,9 +353,9 @@
                                 <thead>
                                 <tr>
                                 <th ></th>
-                                <th ><?php echo $cantidad_producto; ?></th>
-                                <th ><?php echo $coste_unidad_producto; ?></th>
-                                <th ><?php echo $precio_venta_producto; ?></th>
+                                <th ><?php echo $cantidad_productos; ?></th>
+                                <th ><?php echo $coste_unidad_productos; ?></th>
+                                <th ><?php echo $precio_venta_productos; ?></th>
                                 
                                 
                                 <th>PORCENTAJES</th>
