@@ -11,7 +11,7 @@
 <body>  
 <?php
       //Conexion con la base de datos
-	include("../administradores/conexion.php");
+      require_once('../../conexion.php');
 	$conexion=conectar();
 
     //Valores del formulario

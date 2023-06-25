@@ -108,7 +108,7 @@
 </head>
 <body>
   <?php
-  include_once("../../php/sesion_validacion.php");
+  include_once("../sesion_validacion.php");
   ?>
   <div id="wrapper">
     <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0">

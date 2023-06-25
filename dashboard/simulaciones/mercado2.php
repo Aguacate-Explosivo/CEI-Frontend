@@ -46,7 +46,7 @@
   $Rapidez_negocio_plan =  $_SESSION['Rapidez_negocio_plan'];
 
 //agregar tabla de productos  a base de datos
-  require_once('../administradores/conexion.php');
+  require_once('../../conexion.php');
   $conexion=conectar(); 
   $creartabla ="CREATE TABLE ` $nombre_negocio_plan` (
    `id` int(11) NOT NULL, 
