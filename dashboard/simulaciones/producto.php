@@ -279,10 +279,7 @@ $gastos_generales =  $_SESSION['gastos_generales'];
 </div>
 </div>
 <div class="table">
-<?php
-require_once 'conf.php';
 
-?>
 <?php
  require_once('../../conexion.php');
  $conexion=conectar();
