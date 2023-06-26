@@ -351,7 +351,7 @@
                                 <tr><th ></th>
                                 <th ><?php echo $valor_total_gastos; ?></th>
                                 
-                                <th>PORSENTAJES</th>
+                                <th>PORCENTAJES</th>
                             </tr>
                                 </thead>
                        </table>
