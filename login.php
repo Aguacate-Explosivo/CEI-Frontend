@@ -64,18 +64,17 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-8">
+                                        <!-- <div class="col-8">
                                             <div class="icheck-primary">
                                                 <input type="checkbox" id="remember">
                                                 <label for="remember">
                                                     Recordar
                                                 </label>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- /.col -->
                                         <div class="col-4">
-                                            <button type="submit" class="btn btn-primary btn-block" id="asistir">Iniciar
-                                                Sesion</button>
+
                                         </div>
                                         <!-- /.col -->
                                     </div>
@@ -83,7 +82,7 @@
 
                                 <div class="social-auth-links text-center mb-3">
                                     <p>- O -</p>
-                                    <a href="simulacion/index.php" class="btn btn-block btn-primary">Simular</a>
+                                    <button type="submit" class="btn btn-primary btn-block" id="asistir">Iniciar Sesion</button>
                                     <a href="index.php" class="btn btn-block btn-danger">Volver</a>
                                 </div>
                             </div>
