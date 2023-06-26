@@ -46,76 +46,41 @@
 
             <thead>
                 <tr>
-                    <th>Nombre</th>
                     <th>Usuario</th>
-                    <th>Perfil</th>
+                    <th>Correo</th>
                     <th>Estado</th>
+                    <th>Perfil</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
 
+            <?php
+                      include("../conexion.php");
+                      $conexion=conectar(); 
+                      $consulta2 ="SELECT * FROM `datos` ";
+                      $busqueda=mysqli_query($conexion,$consulta2);
+
+                foreach($busqueda as $row){ ?>
+                <!-- Contenido de la tabla -->
+
+                <tr>
+                    <td><?php echo $row["usuario"]; ?></td>
+                    <td><?php echo $row["email"]; ?></td>
+                    <td><?php echo $row["estado"]; ?></td>
+                    <td><?php echo $row["perfil"]; ?></td>
+                    <td>
+                      <div class="btn-group">
+                         
+                        <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-danger"> <i class="fas fa-trash-alt fa-flip-horizontal"></i></button>
+
+                      </div>  
+                    </td>
+                  
+                </tr>
+            
+            <?php } ?> 
              
-             <tbody>
-          
-          <tr>
-            <td>Usuario Administrador</td>
-            <td>admin</td>
-            <td>Administrador</td>
-            <td><button class="btn btn-success btn-xs">Activado</button></td>
-
-            <td>
-
-              <div class="btn-group">
-                  
-                <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-
-                <button class="btn btn-danger"> <i class="fas fa-trash-alt fa-flip-horizontal"></i></button>
-
-              </div>  
-
-            </td>
-
-          </tr>
-
-           <tr>
-            <td>Usuario Administrador</td>
-            <td>admin</td>
-            <td>Administrador</td>
-            <td><button class="btn btn-success btn-xs">Activado</button></td>
-            <td>
-
-              <div class="btn-group">
-                  
-              <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-
-              <button class="btn btn-danger"> <i class="fas fa-trash-alt fa-flip-horizontal"></i></button>
-
-              </div>  
-
-            </td>
-
-          </tr>
-
-           <tr>
-            <td>Usuario Administrador</td>
-            <td>admin</td>
-            <td>Administrador</td>
-            <td><button class="btn btn-danger btn-xs">Desactivado</button></td>
-            <td>
-
-              <div class="btn-group">
-                  
-              <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-
-              <button class="btn btn-danger"> <i class="fas fa-trash-alt fa-flip-horizontal"></i></button>
-
-              </div>  
-
-            </td>
-
-          </tr>
-
-        </tbody>
             </table>                  
             </div>
             </div>
