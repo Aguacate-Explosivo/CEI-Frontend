@@ -37,7 +37,7 @@
             <div >  
             <nav aria-label="...">
                 <ul class="pagination pagination-lg justify-content-center">
-                  <li class="page-item active rounded" class="nav-item"><a class="nav-link" href="administradores/regisusuario.php"><i class="fa fa-edit fa-fw"></i> Registrar usuario</a></li>
+                  <li class="page-item active rounded" class="nav-item"><a class="nav-link" href="regisusuario.php"><i class="fa fa-edit fa-fw"></i> Registrar usuario</a></li>
                 </ul>
                 <br>
             </nav>
@@ -50,7 +50,6 @@
                     <th>Usuario</th>
                     <th>Perfil</th>
                     <th>Estado</th>
-                    <th>Último login</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -69,7 +68,7 @@
             <td>admin</td>
             <td>Administrador</td>
             <td><button class="btn btn-success btn-xs">Activado</button></td>
-            <td>2017-12-11 12:05:32</td>
+
             <td>
 
               <div class="btn-group">
@@ -89,7 +88,6 @@
             <td>admin</td>
             <td>Administrador</td>
             <td><button class="btn btn-success btn-xs">Activado</button></td>
-            <td>2017-12-11 12:05:32</td>
             <td>
 
               <div class="btn-group">
@@ -109,7 +107,6 @@
             <td>admin</td>
             <td>Administrador</td>
             <td><button class="btn btn-danger btn-xs">Desactivado</button></td>
-            <td>2017-12-11 12:05:32</td>
             <td>
 
               <div class="btn-group">

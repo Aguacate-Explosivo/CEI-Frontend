@@ -3,7 +3,7 @@
     echo "<script>
             var token = localStorage.getItem('auth_token');
             if (!token) {
-              window.location.href = '../../login.php';
+              window.location.href = '../login.php';
             }
           </script>";
 ?>
