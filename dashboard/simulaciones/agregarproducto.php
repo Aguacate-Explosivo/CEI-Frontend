@@ -210,7 +210,7 @@
               >
             </li>
             <li>
-            <a href="../simulaciones\index.php" class="waves-effect active ">
+            <a href="../DashSimulaciones.php" class="waves-effect active ">
               <i class="ti-stats-up fa-fw"></i>
              Simulaciones
             </a>

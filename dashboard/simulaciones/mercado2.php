@@ -97,7 +97,7 @@
 </head>
 <body>
   <?php
-  include_once("../../php/sesion_validacion.php");
+  include_once("../administradores/sesion_validacion.php");
   ?>
   <div id="wrapper">
     <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0">
@@ -166,7 +166,7 @@
             </a>
           </li>
           <li>
-            <a href="index.php" class="waves-effect active">
+            <a href="../DashSimulaciones.php" class="waves-effect active">
               <i class="ti-stats-up fa-fw"></i>
              Simulaciones
             </a>
