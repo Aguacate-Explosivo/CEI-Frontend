@@ -207,14 +207,17 @@
 </div>
 <br><br>
 <?php
- $_SESSION['gastos_generales'] = htmlentities($_POST["gastos_generales"]);
- $_SESSION['precio_unitario'] = htmlentities($_POST["precio_unitario"]);
- $_SESSION['cantidad_productos'] = htmlentities($_POST["cantidad_productos"]);
- $_SESSION['precio_venta'] = htmlentities($_POST["precio_venta"]);
- $precio_unitario =  $_SESSION['precio_unitario'];
- $cantidad_productos =  $_SESSION['cantidad_productos'];
- $precio_venta =  $_SESSION['precio_venta'];
- $gastos_generales =  $_SESSION['gastos_generales']; 
+
+$_SESSION['gastos_generales'] = isset($_POST["gastos_generales"]) ? htmlentities($_POST["gastos_generales"]) : 20;
+$_SESSION['precio_unitario'] = isset($_POST["precio_unitario"]) ? htmlentities($_POST["precio_unitario"]) :20;
+$_SESSION['cantidad_productos'] = isset($_POST["cantidad_productos"]) ? htmlentities($_POST["cantidad_productos"]) : 20;
+$_SESSION['precio_venta'] = isset($_POST["precio_venta"]) ? htmlentities($_POST["precio_venta"]) : 20;
+
+$precio_unitario =  $_SESSION['precio_unitario'];
+$cantidad_productos =  $_SESSION['cantidad_productos'];
+$precio_venta =  $_SESSION['precio_venta'];
+$gastos_generales =  $_SESSION['gastos_generales'];
+
 
 ?>   
     <div class="scroll">
@@ -276,10 +279,7 @@
 </div>
 </div>
 <div class="table">
-<?php
-require_once 'conf.php';
 
-?>
 <?php
  require_once('../../conexion.php');
  $conexion=conectar();
@@ -315,29 +315,33 @@ $coste_unitario_simulados =($coste_unitario_simulado * $precio_unitario_porcenta
 $precio_venta_simulados = ($precio_venta_simulado * $precio_venta_porcentaje) + $precio_venta_simulado ;
 
 $valor_total_gasto_simulados = ($valor_total_gasto_simulado * $gastos_generales_porcentaje) + $valor_total_gasto_simulado ;
-$valor_total_gasto_simuladoss = $valor_total_gasto_simulados ;
-$valor_total_gasto_simuladoss = number_format($valor_total_gasto_simuladoss, 2 ,',', '.');
+$valor_total_gasto_simuladoss = $cantidad_producto_simulados * $coste_unitario_simulados ;
+$valor_total_gasto_simuladosss = $valor_total_gasto_simuladoss ;
+$valor_total_gasto_simuladosss = number_format($valor_total_gasto_simuladoss, 2 ,',', '.');
 
-$ingresos_totales = $cantidad_producto * $coste_unidad_producto;
+$ingresos_totales = $cantidad_producto * $precio_venta_producto;
 $ingresos_totaless = $ingresos_totales ;
 $ingresos_totaless = number_format($ingresos_totaless, 2 ,',', '.');
 
-$Margen_Total= $ingresos_totales - $valor_total_gasto  ;
+
+
+$valor_total_gast= $cantidad_producto * $coste_unidad_producto;
+$valor_total_gastos= $valor_total_gast ;
+$valor_total_gastos = number_format($valor_total_gastos, 2 ,',', '.');
+
+$Margen_Total= $ingresos_totales - $valor_total_gast  ;
 $Margen_Totale= $Margen_Total ;
 $Margen_Totale = number_format($Margen_Totale, 2 ,',', '.');
-
-$valor_total_gastos=  $valor_total_gasto  ;
-$valor_total_gastos = number_format($valor_total_gastos, 2 ,',', '.');
 
 $importese = ($valor_total_gasto * $importe_porcentaje) + $valor_total_gasto ;
 $gasto_general = $importese  ;
 $gasto_general = number_format($gasto_general, 2 ,',', '.');
 
-$ingresos_totales_simulado= $cantidad_producto_simulados * $coste_unitario_simulados;
+$ingresos_totales_simulado= $cantidad_producto_simulados * $precio_venta_simulados;
 $ingresos_totales_simulados= $ingresos_totales_simulado;
 $ingresos_totales_simulados = number_format($ingresos_totales_simulados, 2 ,',', '.');
 
-$Margen_Total_simulado = $ingresos_totales_simulado - $valor_total_gasto_simulados  ;
+$Margen_Total_simulado = $ingresos_totales_simulado - $valor_total_gasto_simuladoss  ;
 $Margen_Total_simulados =$Margen_Total_simulado ;
 $Margen_Total_simulados = number_format($Margen_Total_simulados, 2 ,',', '.');
 
@@ -359,7 +363,8 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
                                 <th>Datos Reales  </th>
                                 <th>TOTALES  </th>
                                 <th>Datos Simulados</th> 
-                                <th>TOTALES  </th>
+                                <th>TOTALES  </th><?php  echo $ingresos_totales_simulado ?>
+                                <?php  echo $valor_total_gasto_simuladosss ?>
                             </tr>
                         </thead>
                             <!-- Contenido de la tabla -->
@@ -373,7 +378,7 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
                                 <td>Costes Totales</td>
                                 <td><?php echo  $valor_total_gastos ?></td>
                                 <td>Costes Totales</td>
-                                <td><?php  echo $valor_total_gasto_simuladoss?></td>
+                                <td><?php  echo $valor_total_gasto_simuladosss?></td>
                             </tr>
                             <tr>
                                 <td>Margen Total</td>
@@ -431,14 +436,7 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
 
                             foreach($busqueda as $elemento){ 
                                 // operaciones
-                                $_SESSION['gastos_generales'] = htmlentities($_POST["gastos_generales"]);
-                                $_SESSION['precio_unitario'] = htmlentities($_POST["precio_unitario"]);
-                                $_SESSION['cantidad_productos'] = htmlentities($_POST["cantidad_productos"]);
-                                $_SESSION['precio_venta'] = htmlentities($_POST["precio_venta"]);
-                                $precio_unitario =  $_SESSION['precio_unitario'];
-                                $cantidad_productos =  $_SESSION['cantidad_productos'];
-                                $precio_venta =  $_SESSION['precio_venta'];
-                                $gastos_generales =  $_SESSION['gastos_generales']; 
+                              
                                 
                                 $gastos_generales_porcentaje= $gastos_generales /100;
                                 $cantidad = ($elemento["cantidad"] * $cantidad_productos_porcentaje) +$elemento["cantidad"];
