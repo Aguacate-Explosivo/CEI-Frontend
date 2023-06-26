@@ -34,7 +34,7 @@
       })
       setInterval(()=>{
         location.assign('../citas.php');
-      },3500)
+      },2500)
   </script>";
     } else {
         // Insertar la información en la tabla de datos
@@ -51,7 +51,7 @@
                         })
                         setInterval(()=>{
                           location.assign('../citas.php');
-                        },3500)
+                        },2500)
                   </script>";
         } else {
             echo "<script language='JavaScript'>
@@ -63,7 +63,7 @@
                       })
                       setInterval(()=>{
                         location.assign('../citas.php');
-                      },3500)
+                      },2500)
                   </script>";
               }
           }

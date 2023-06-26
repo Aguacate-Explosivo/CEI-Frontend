@@ -82,7 +82,7 @@
             ><i class="ti-menu"></i
           ></a>
           <div class="top-left-part">
-            <a class="logo" href="../index.php"
+            <a class="logo" href="../DashSimulaciones.php"
               ><i class="glyphicon glyphicon-fire"></i>&nbsp;<span
                 class="hidden-xs"
                 >Simulaciones</span
@@ -166,7 +166,7 @@
               >
             </li>
             <li>
-            <a href="../simulaciones\index.php" class="waves-effect active ">
+            <a href="../DashSimulaciones.php" class="waves-effect active ">
               <i class="ti-stats-up fa-fw"></i>
              Simulaciones
             </a>

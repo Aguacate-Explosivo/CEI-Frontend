@@ -63,29 +63,21 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <div class="icheck-primary">
-                                                <input type="checkbox" id="remember">
-                                                <label for="remember">
-                                                    Recordar
-                                                </label>
-                                            </div>
-                                        </div>
+                                    <div class="row text-center">
                                         <!-- /.col -->
-                                        <div class="col-4">
-                                            <button type="submit" class="btn btn-primary btn-block" id="asistir">Iniciar
-                                                Sesion</button>
+                                        <div class="social-auth-links text-center mb-3">
+                                            <p>- O -</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <button type="submit" class="btn btn-primary btn-block" style="width:100%">Iniciar Sesion</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="index.php" class="btn btn-block btn-danger" style="width:100%">Volver</a>
                                         </div>
                                         <!-- /.col -->
                                     </div>
                                 </form>
 
-                                <div class="social-auth-links text-center mb-3">
-                                    <p>- O -</p>
-                                    <a href="simulacion/index.php" class="btn btn-block btn-primary">Simular</a>
-                                    <a href="index.php" class="btn btn-block btn-danger">Volver</a>
-                                </div>
                             </div>
                             <!-- /.login-card-body -->
                         </div>
