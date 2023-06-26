@@ -222,7 +222,7 @@ $gastos_generales =  $_SESSION['gastos_generales'];
 ?>   
     <div class="scroll">
     <div class="col-md-9">
-      <label for="formControlRange">Cantidad Prouctos</label>
+      <label for="formControlRange">Cantidad Productos</label>
     <input type="range" min="1" max="100"  step="1"
      class="form-control-range range-slider" value="<?php echo $cantidad_productos; ?>"  id="cantidad_productos" name="cantidad_productos">
     </div>
@@ -363,8 +363,7 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
                                 <th>Datos Reales  </th>
                                 <th>TOTALES  </th>
                                 <th>Datos Simulados</th> 
-                                <th>TOTALES  </th><?php  echo $ingresos_totales_simulado ?>
-                                <?php  echo $valor_total_gasto_simuladosss ?>
+                                <th>TOTALES  </th>
                             </tr>
                         </thead>
                             <!-- Contenido de la tabla -->
