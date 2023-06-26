@@ -58,7 +58,7 @@
                           
                      <div class="form-floating">
                             <input id="nombre" name="nombre" type="text" class="form-control" placeholder=" "
-                            required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+"s>
+                            required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+">
                             <label for="nombre" class="form__label">Nombre Completo</label>
                           </div>
                           <br>

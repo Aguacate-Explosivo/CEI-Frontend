@@ -65,7 +65,7 @@
 
                 foreach($busqueda as $row){ ?>
                 <!-- Contenido de la tabla -->
-            <tbody>
+
                 <tr>
                     <td><?php echo $row["documento"]; ?></td>
                     <td><?php echo $row["nombre"]; ?></td>
@@ -75,7 +75,7 @@
                 </tr>
                     <?php } ?> 
                     
-            </tbody>       
+      
             </table>                  
             </div>
             </div>

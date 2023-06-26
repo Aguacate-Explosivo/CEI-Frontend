@@ -9,31 +9,16 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
     
-
-    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
         rel="stylesheet">
-    <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <!-- Template Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
 </head>
-
-<body  >  
-<?php
-      include_once("sesion_validacion.php");
-      require_once('../conexion.php');
-	    $conexion=conectar();      
-      ?>
-    
-
 
     <!-- Formulario -->
     <div class="container-xxl py-5">
@@ -44,9 +29,6 @@
             <div class="row g-5">
                 <div class="col-lg-6 mx-auto wow fadeInUp" data-wow-delay="0.1s">
           
-
-
-
         <form action="agguser.php" required=" " method="POST" enctype="multipart/form-data"> 
               <div class="card card-primary">
               <div class="card-header">
@@ -54,40 +36,40 @@
               </div>
 
               <div class="card-body">
+              <label>Seleccione Nombre de Usuario</label>
                 <div class="input-group mb-auto">
                     <span class="input-group-text"><i class="fa fa-user " aria-hidden="false"></i></span>
-                  <input type="text" class="form-control" placeholder="Username">
+                  <input type="text" id="nombreu" name="nombreu"  required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+" class="form-control" placeholder="Username">
               </div>
 
               <br>
               
               <div>
+              <label>Seleccione Correo</label>
                 <div class="input-group mb-auto">
                     <span class="input-group-text"><i class="far fa-envelope"></i></span>
-                  <input type="text" class="form-control" placeholder="correo">
+                  <input type="text" id="correou" name="correou"  required class="form-control" placeholder="correo">
               </div>
 
               <br>
 
               <div>
+              <label>Seleccione Contraseña</label>
                 <div class="input-group mb-auto">
                     <span class="input-group-text"><i class="fas fa-unlock"></i></span>
-                  <input type="password" class="form-control" placeholder="Contraseña">
+                  <input type="password" id="psswd" name="psswd"  required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+" class="form-control" placeholder="Contraseña">
               </div>
               
               <br>
 
             <div class="row">
                 <div class="form-group">
-                  <label>Minimal</label>
-                  <select class="form-control select2bs4" style="width: 100%;">
-                    <option selected="selected">Seleccione Rol</option>
-                    <option>Alaska</option>
-                    <option>California</option>
-                    <option>Delaware</option>
-                    <option>Tennessee</option>
-                    <option>Texas</option>
-                    <option>Washington</option>
+                  <label>Seleccione Rol</label>
+                  <select class="form-control select2bs4" id="rolu" name="rolu" style="width: 100%;">
+                    <option selected="selected">Administrador</option>
+                    <option>Docente</option>
+                    <option>Estudiante</option>
+
                   </select>
                 </div>
               </div>
@@ -95,30 +77,20 @@
               <br>
               <br>
               <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
+                <button type="submit" class="btn btn-primary">Registrar</button>
 
-              
+                <a style="margin: 2px; border-radius: 5px;" href="DashUsuarios.php" class="btn btn-info" > Regresar</a>
+              </div>          
       
 </form>
-                                
-                        
-                        
+                                                      
                     </div>
                     </div>
                     </div>
                     </div>
                     </div>
         <!-- Fin formulario -->
-
-
-    
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
+<?php require_once ("footer.php");?>
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -126,9 +98,7 @@
     <script src="../../lib/easing/easing.min.js"></script>
     <script src="../../lib/waypoints/waypoints.min.js"></script>
     <script src="../../lib/owlcarousel/owl.carousel.min.js"></script>
-    
     <script src="../../lib/lightbox/js/lightbox.min.js"></script>
-    <!-- Template Javascript -->
     <script src="../../js/main.js"></script>
 </body>
 

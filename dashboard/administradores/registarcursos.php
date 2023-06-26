@@ -13,7 +13,7 @@
       //Conexion con la base de datos
       require_once('../../conexion.php');
 	$conexion=conectar();
-
+ 
     //Valores del formulario
     $nombre=$_POST['nom_curso'];
     $enc=$_POST['encargado'];
