@@ -1,0 +1,28 @@
+$(document).ready(function() {
+  $('.btnActivar').click(function() {
+    var id = $(this).data('id');
+    var estado = $(this).data('estado');
+    var $button = $(this); // Guarda una referencia al botón actual
+
+    $.ajax({
+      url: 'cambiar_estado.php',
+      type: 'POST',
+      data: { id: id, estado: estado },
+      success: function(response) {
+        console.log(response);
+        
+        // Cambiar el estado del botón
+        if (estado == 0) {
+          $button.removeClass('btn-success').addClass('btn-danger').text('Desactivado');
+          $button.data('estado', 1); // Actualiza el valor del atributo data-estado
+        } else {
+          $button.removeClass('btn-danger').addClass('btn-success').text('Activado');
+          $button.data('estado', 0); // Actualiza el valor del atributo data-estado
+        }
+      },
+      error: function(xhr, status, error) {
+        console.error(error);
+      }
+    });
+  });
+});
