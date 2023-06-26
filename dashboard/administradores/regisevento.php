@@ -35,7 +35,7 @@
         });
      setInterval(()=>{
      location.assign('../../eventos.php');
-     },4000);
+     },2500);
         </script>"; 
         }
 ?>
