@@ -6,8 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dashboard Admin</title>
   <link rel="icon" type="image/webp" sizes="16x16" href="../img/logo.webp">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/main.ajax"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
 </head>
 <body>
   <?php require_once("menu.php");
@@ -71,16 +77,19 @@
                           <td><?php echo $email; ?></td>
                           <td>
                             <?php if ($estado != 0) { ?>
-                              <button class="btn btn-success btn-xs btnActivar" data-id="<?php echo $id; ?>" data-estado="0">Activado</button>
+                              <button class="btn btn-success btn-xs btnActivar" data-id="<?php echo $estaado; ?>" data-estado="0">Activado</button>
                             <?php } else { ?>
-                              <button class="btn btn-danger btn-xs btnActivar" data-id="<?php echo $id; ?>" data-estado="1">Desactivado</button>
+                              <button class="btn btn-danger btn-xs btnActivar" data-id="<?php echo $estaado; ?>" data-estado="1">Desactivado</button>
                             <?php } ?>
                           </td>
                           <td><?php echo $perfil; ?></td>
                           <td>
                             <div class="btn-group">
-                              <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                              <button class="btn btn-danger"><i class="fas fa-trash-alt fa-flip-horizontal"></i></button>
+                            <button class="btn btn-warning btnEditar" data-id="<?php echo $id; ?>" data-usuario="<?php echo $usuario; ?>" data-correo="<?php echo $email; ?>" data-estado="<?php echo $estado; ?>" data-perfil="<?php echo $perfil; ?>">
+                              <i class="fas fa-edit"></i>
+                            </button>
+
+                              <button class="btn btn-danger btnEliminar" data-id="<?php echo $id; ?>"><i class="fas fa-trash-alt fa-flip-horizontal"></i></button>
                             </div>
                           </td>
                         </tr>
