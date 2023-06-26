@@ -53,13 +53,7 @@
                     <th>Acciones</th>
                 </tr>
             </thead>
-                    <?php
-                      include("../conexion.php");
-                      $conexion=conectar(); 
-                      $consulta2 ="SELECT * FROM `citas` ";
-                      $busqueda=mysqli_query($conexion,$consulta2);
 
-                foreach($busqueda as $row){ }?>
              
              <tbody>
           
