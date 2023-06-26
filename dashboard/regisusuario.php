@@ -30,7 +30,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 mx-auto wow fadeInUp" data-wow-delay="0.1s">
 
-                    <form action="agguser.php" required method="POST" enctype="multipart/form-data">
+                    <form action="controladorusuario.php" required method="POST" enctype="multipart/form-data">
                         <div class="card card-primary">
                             <div class="card-header">
                                 <h3 class="card-title">REGISTRO DE USUARIO</h3>

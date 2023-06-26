@@ -5,7 +5,7 @@ $(document).ready(function() {
     var $button = $(this); // Guarda una referencia al botón actual
 
     $.ajax({
-      url: 'cambiar_estado.php',
+      url: 'controladorusuario.php',
       type: 'POST',
       data: { id: id, estado: estado },
       success: function(response) {
@@ -43,7 +43,7 @@ $(document).ready(function() {
       if (result.isConfirmed) {
         // Realizar la solicitud AJAX para eliminar el registro
         $.ajax({
-          url: 'eliminar_registro.php', // Ruta al archivo PHP que manejará la eliminación
+          url: 'controladorusuario.php', // Ruta al archivo PHP que manejará la eliminación
           method: 'POST',
           data: { id: id }, // Pasar el identificador como parámetro
           success: function(response) {
@@ -130,7 +130,7 @@ $(document).ready(function() {
   
       // Realizar la solicitud AJAX para guardar los cambios en el usuario
       $.ajax({
-        url: 'editar_usuario.php', // Ruta al archivo PHP que manejará la edición
+        url: 'controladorusuario.php', // Ruta al archivo PHP que manejará la edición
         method: 'POST',
         data: { id: id, usuario: editUsuario, correo: editCorreo, estado: editEstado, perfil: editPerfil },
         success: function(response) {
