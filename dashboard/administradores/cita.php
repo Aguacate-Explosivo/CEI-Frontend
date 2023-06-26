@@ -64,7 +64,7 @@ $fila = $busqueda -> fetch_assoc();
 <div class="row g-3">
 <div class="col-md-6">
 <div class="form-floating">
-  <input style=" width: 500px;" type="text" id="documento" name="documento" class="form-control" placeholder=" " 
+  <input style=" width: 500px;" type="text" id="documento" name="documento" class="form-control" placeholder="" 
   required  pattern="[0-9]+" maxlength="10" minlength="7"
   value="<?php echo $fila['documento']?>" >
   <label for="documento" class="form__label">Numero de Documento:</label>
