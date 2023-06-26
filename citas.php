@@ -62,7 +62,7 @@
                             <br>
                             <p>Nota: Debes Registar Tu Cita Con Intervalos De 30 Minutos</p>
                             <div class="col-12">
-                                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit" name="agendar" id="agendar">Agendar cita</button>
+                                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit" name="agendar" >Agendar cita</button>
                             </div>
                         </div>
                     </form>
