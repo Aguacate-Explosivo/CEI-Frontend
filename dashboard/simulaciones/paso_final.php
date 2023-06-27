@@ -62,6 +62,7 @@ ob_start();
   $Precio_negocio_plan = $_SESSION['Precio_negocio_plan'];
   $Calidad_negocio_plan = $_SESSION['Calidad_negocio_plan'];
   $Rapidez_negocio_plan =  $_SESSION['Rapidez_negocio_plan'];
+
   $clientes_interesados_plan =  $_SESSION['clientes_interesados_plan'];
   $cantidadMonetaria_interesados_plan =  $_SESSION['cantidadMonetaria_interesados_plan'];
   $socios_productores =  $_SESSION['socios_productores'];
@@ -97,8 +98,10 @@ ob_start();
 <style>
     table {
       border-collapse: collapse;
-    }
-
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      }
     td {
       padding: 10px;
       border: 0.5px solid black;
@@ -106,25 +109,36 @@ ob_start();
     }
     h2 {
       text-align: left;
-    }
+      font-size: 20px; 
+      font-family: "Times New Roman", Times, serif;    }
     span {
       font-weight: normal;
+      font-size: 18px; 
+
     }
   </style>
-  <br><br>
   <h1 class="text-center" style="text-align: center;">Reporte de Simulacion  </h1>
   <br><br>
   <h1 class="text-center" style="text-align: center;">Datos del Autor    </h1>
-  <h2 class="text">Documento del autor del plan   : <span><?php echo  $documento ?>.</span> </h2>
-  <h2 class="text">Nombre del autor del plan   : <span><?php echo  $nombre ?>.</span> </h2>
-  <h2 class="text">E-mail del autor del plan   : <span><?php echo  $autor_email ?>.</span> </h2>
+  <h2 class="text">Documento del autor del plan : <span><?php echo  $documento ?>.</span> </h2>
+  <h2 class="text">Nombre del autor del plan : <span><?php echo  $nombre ?>.</span> </h2>
+  <h2 class="text">E-mail del autor del plan : <span><?php echo  $autor_email ?>.</span> </h2>
   <br>
   <h1 class="text-center" style="text-align: center;">Estudio del Mercado   </h1>
-  <h2 class="text">Nombre del Emprendimiento   : <span><?php echo  $nombre_negocio_plan ?>.</span> </h2>
-  <h2 class="text">Industria del Emprendimiento   : <span><?php echo  $industria_plan ?>.</span> </h2>
-  <h2 class="text">Zona Geografica del Emprendimiento   : <span><?php echo  $zona_geografica_plan ?>.</span> </h2>
-  <h2 class="text">Publico Objetivo del Emprendimiento   : <span><?php echo  $publico_objetivo_plan ?>.</span> </h2>
-  <h2 class="text">Nivej de Innovacion del Emprendimiento   : <span><?php echo  $innovacion_negocio_plan ?>.</span> </h2>
+  <h2 class="text">Nombre del Emprendimiento : <span><?php echo  $nombre_negocio_plan ?>.</span> </h2>
+  <h2 class="text">Industria del Emprendimiento : <span><?php echo  $industria_plan ?>.</span> </h2>
+  <h2 class="text">Zona Geografica del Emprendimiento : <span><?php echo  $zona_geografica_plan ?>.</span> </h2>
+  <h2 class="text">Publico Objetivo del Emprendimiento : <span><?php echo  $publico_objetivo_plan ?>.</span> </h2>
+  <h2 class="text">Nivel de Innovacion del Emprendimiento   : <span><?php echo  $innovacion_negocio_plan ?>.</span> </h2>
+  <h2 class="text">Precio promedio del Emprendimiento : <span><?php echo  $Precio_negocio_plan ?>.</span> </h2>
+  <h2 class="text">Nivel de Calidad del Emprendimiento : <span><?php echo  $Calidad_negocio_plan ?>.</span> </h2>
+  <h2 class="text">Nivel de Rapidez del Emprendimiento : <span><?php echo  $Rapidez_negocio_plan ?>.</span> </h2>
+
+  <h2 class="text">Clientes interesados en el Emprendimiento : <span><?php echo  $clientes_interesados_plan ?>.</span> </h2>
+  <h2 class="text">Candidad que estan dispuestos a pagar por el Emprendimiento : <span><?php echo  $cantidadMonetaria_interesados_plan ?>.</span> </h2>
+  <h2 class="text">Cantidad de socios del Emprendimiento  : <span><?php echo  $socios_productores ?>.</span> </h2>
+  <h2 class="text">Tipo de publicidad del Emprendimiento : <span><?php echo  $tipo_marketing_plan ?>.</span> </h2>
+  <h2 class="text">Invercion para publicidad : <span><?php echo  $inversion_publicidad ?>.</span> </h2>
 
 <h1 class="text-center" style="text-align: center;">Tabla Comparativa de Totales Reales y Simulados  </h1>
 
@@ -383,7 +397,7 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
 <h1 class="text-center" style="text-align: center;">Productos Simulados  </h1>
 <div class="bajo">
 
-<table id="example" class="table table-striped table-bordered" cellspacing="0" width="80%">
+<table id="example" class="table table-striped table-bordered" cellspacing="0">
                         <thead>
                             <tr>
                                 <th>Producto </th>
@@ -427,7 +441,7 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
 
                                 $margen_unitario1 = $margen_unitario / $precio_venta1 *100;
                                 $margen_unitario11 = $margen_unitario1 ;
-                                $margen_unitario11 = number_format($margen_unitario11, 2);
+                                $margen_unitario11 = number_format($margen_unitario11, 0);
 
                                 $costes_totales = $cantidad * $coste_unitario ;
                                 $costes_totaless = $costes_totales  ;
