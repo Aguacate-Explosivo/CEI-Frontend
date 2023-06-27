@@ -476,9 +476,9 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
 <br><br><br>
 
 <h1 class="text-center">Productos Simulados  </h1>
-<div class="bajo">
+<div class="">
 
-<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+<table id="example" class="table table-striped table-bordered" cellspacing="0"style="margin-left: auto; margin-right: auto; width: 100%;" >
                         <thead>
                             <tr>
                                 <th>Producto </th>
@@ -621,10 +621,6 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
 
 <!-- inicio -->
 
-        <footer class="footer text-center">
-      FACNET - 2023 &copy; 
-    </footer>
-  
   <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
