@@ -114,8 +114,17 @@ ob_start();
   <br><br>
   <h1 class="text-center" style="text-align: center;">Reporte de Simulacion  </h1>
   <br><br>
+  <h1 class="text-center" style="text-align: center;">Datos del Autor    </h1>
   <h2 class="text">Documento del autor del plan   : <span><?php echo  $documento ?>.</span> </h2>
-
+  <h2 class="text">Nombre del autor del plan   : <span><?php echo  $nombre ?>.</span> </h2>
+  <h2 class="text">E-mail del autor del plan   : <span><?php echo  $autor_email ?>.</span> </h2>
+  <br>
+  <h1 class="text-center" style="text-align: center;">Estudio del Mercado   </h1>
+  <h2 class="text">Nombre del Emprendimiento   : <span><?php echo  $nombre_negocio_plan ?>.</span> </h2>
+  <h2 class="text">Industria del Emprendimiento   : <span><?php echo  $industria_plan ?>.</span> </h2>
+  <h2 class="text">Zona Geografica del Emprendimiento   : <span><?php echo  $zona_geografica_plan ?>.</span> </h2>
+  <h2 class="text">Publico Objetivo del Emprendimiento   : <span><?php echo  $publico_objetivo_plan ?>.</span> </h2>
+  <h2 class="text">Nivej de Innovacion del Emprendimiento   : <span><?php echo  $innovacion_negocio_plan ?>.</span> </h2>
 
 <h1 class="text-center" style="text-align: center;">Tabla Comparativa de Totales Reales y Simulados  </h1>
 
@@ -251,7 +260,7 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
 <h1 class="text-center" style="text-align: center;">Productos Reales  </h1>
 
 
-<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+<table id="example" class="table table-striped table-bordered" cellspacing="0" width="90%">
                         <thead>
                             <tr>
                                 <th>Producto </th>
@@ -283,14 +292,20 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
                                 
             
                                 $margen_unitario = $precio_venta - $coste_unitario    ;
-                                $margen_unitario1 = $margen_unitario / $precio_venta *100;
+                                $margen_unitario11 = $margen_unitario / $precio_venta *100;
+                                $margen_unitario1 = $margen_unitario11  ;
                                 $margen_unitario1 = number_format($margen_unitario1, 0);
 
-                                $costes_totales = $cantidad * $coste_unitario ;
+                                $costes_totaless = $cantidad * $coste_unitario ;
+                                $costes_totales = $costes_totaless  ;
+                                $costes_totales = number_format($costes_totales, 0 ,',', '.');
 
-                                $ingresos_totales = $cantidad * $precio_venta ;
+                                $ingresos_totaless = $cantidad * $precio_venta ;
+                                $ingresos_totales = $ingresos_totaless  ;
+                                $ingresos_totales = number_format($ingresos_totales, 0 ,',', '.');
 
-                                $margenes_total = $ingresos_totales - $costes_totales  ;
+                                $margenes_totale = $ingresos_totaless - $costes_totaless  ;
+                                $margenes_total = $margenes_totale;
                                 $margenes_total = number_format($margenes_total, 0 ,',', '.');
 
                               
@@ -368,7 +383,7 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
 <h1 class="text-center" style="text-align: center;">Productos Simulados  </h1>
 <div class="bajo">
 
-<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+<table id="example" class="table table-striped table-bordered" cellspacing="0" width="80%">
                         <thead>
                             <tr>
                                 <th>Producto </th>
