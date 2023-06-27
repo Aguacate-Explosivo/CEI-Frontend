@@ -101,6 +101,7 @@ ob_start();
       width: 90%;
       margin-left: auto;
       margin-right: auto;
+      font-size: 12px; 
       }
     td {
       padding: 10px;

@@ -216,10 +216,9 @@
                                                         <label for="nombre" class="form__label"></label>
                                                       </div>
                                                       <br>
-                                                      <div class="form-floating">                                                    
-                                                        <!-- <label style=" width: 420px; margin-left: 400px; margin-top: 60px;"  for="imagen2" class="form-label">Cargar Imagen</label> -->
+                                                      <div class="form-floating">                                                   
                                                         <input class="form-control" type="file" id="pdf" name ="pdf"
-                                                         required=" " accept="pdf/*">
+                                                         required=" " accept="application/pdf">
                                                         </div>
                                                                                                                         
                                     

@@ -250,11 +250,11 @@
     <div class="scroll">
     <div class="col-md-9">
     <input type="text" id="nombre_producto1" name="nombre_producto1" class="form-control"
-    placeholder="Nombre Producto:" required="" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-,.]+"  >
+    placeholder="Nombre Producto:" required=""  maxlength="16" minlength="1" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-,.]+"  >
     <label for="producto" class="form__label"></label>
     </div>
 <br>
-<br>
+<br> 
 <br>
   <div class="col-md-9">
       <label for="cantidad" class="form__label"></label>
