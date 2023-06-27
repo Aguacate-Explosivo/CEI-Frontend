@@ -39,9 +39,9 @@
             <h1 class="display-2 text-white mb-4 animated slideInDown">Conoce Sobre Nosotros</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                    <!-- <li class="breadcrumb-item"><a href="#">Inicio</a></li>
                     <li class="breadcrumb-item"><a href="#">Otros</a></li>
-                    <li class="breadcrumb-item text-success" aria-current="page">Nosotros</li>
+                    <li class="breadcrumb-item text-success" aria-current="page">Nosotros</li> -->
                 </ol>
             </nav>
         </div>
@@ -63,6 +63,72 @@
         </div>
     </div>
     <!-- info End -->
+
+    <!-- Objetivos -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <h2 class="display-6 mb-4">objetivos</h2>
+            <div class="row g-0 feature-row">
+                <div class="col-md-12 col-lg-12 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="feature-item border h-100 p-5">
+                        <p class="mb-0">
+                        A. Fomentar en los estudiantes proceso de formación por competencias en emprendimiento, creatividad e innovación, con enfoque hacia la generación de ideas emprendedoras sostenibles, con alto grado tecnológico e impacto social.
+                        <br><br>
+                        B. Complementar el proceso de formación profesional de los estudiantes en los diferentes programas académicos, mediante la promoción y desarrollo de competencias emprendedoras, innovadoras.
+                        <br><br>
+                        C. Fomentar la creación, fortalecimiento y transformación de empresas.
+                        <br><br>
+                        D. Promover en la comunidad universitaria (profesores, estudiantes, egresados y funcionarios), la comunidad en general, las instituciones que conforman la Red Departamental y los empresarios, el interés por la generación de trabajo productivo, la competitividad y la productividad.
+                        <br><br>
+                        E. Articular el conocimiento resultado de proyectos de investigación y desarrollo tecnológico con los proyectos de alto impacto social y económico.
+                        <br><br>
+                        F. Establecer convenios de cooperación con entidades del orden regional, nacional e internacional, en actividades relacionadas con el emprendimiento, la innovación, la creación y desarrollo de empresas.
+                        <br><br>
+                        G. Promover los procesos de innovación tecnológica en los proyectos emprendedores desarrollados por los docentes, estudiantes, egresados y funcionarios de la Universidad.
+                        <br><br>
+                        H. Apoyar los proyectos productivos que integren los conocimientos de los emprendedores con el desarrollo de mini» cadenas, cadenas productivas, clúster regionales, nacionales y las apuestas productivas del Plan Regional de Productividad y Competitividad.
+                        <br><br>
+                        I. Promover y establecer convenios con incubadoras de empresas para acelerar procesos de emprendimiento y financiación de iniciativas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Obteviso Fin -->
+
+    <!-- valores -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <h2 class="display-6 mb-4">Valores</h2>
+            <div class="row g-0 feature-row">
+                <div class="col-md-12 col-lg-12 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="feature-item border h-100 p-5">
+                        <p class="mb-0">
+                        » El desarrollo del ser humano y su comunidad
+                        <br>
+                        » Autoestima
+                        <br>
+                        » Autonomía
+                        <br>
+                        » Sentido de pertenencia
+                        <br>
+                        » Trabajo en equipo
+                        <br>
+                        » Solidaridad
+                        <br>
+                        » Asociatividad y desarrollo del gusto por la innovación
+                        <br>
+                        » La investigación y aprendizaje permanente
+                        <br>
+                        » Al igual que el apoyo a procesos de emprendimiento sostenible desde la perspectiva social, cultural, ambiental y regional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- valores Fin -->
 
     <?php require("footer.php"); ?>
     <!-- Footer End -->

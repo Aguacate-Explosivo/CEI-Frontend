@@ -38,7 +38,7 @@
                                     </p>
                                     <h1 class="display-1 text-white mb-4 animated slideInRight">Asiste a eventos recientes
                                         </h1>
-                                        <a type="button" href="eventos.php" class="btn btn-primary">Asiste a eventos</a>
+                                        <!-- <a type="button" href="eventos.php" class="btn btn-primary">Asiste a eventos</a> -->
                                 </div>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                                     <p class="fs-4 text-white animated slideInLeft">Agenda <strong>Tu Cita</strong>
                                     </p>
                                     <h1 class="display-1 text-white mb-5 animated slideInLeft">Simularemos tu emprendimiento</h1>
-                                    <a type="button" href="citas.php" class="btn btn-primary">Citas</a>
+                                    <!-- <a type="button" href="citas.php" class="btn btn-primary">Citas</a> -->
                      
                                 </div>
                             </div>

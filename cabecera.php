@@ -85,11 +85,11 @@
                                 <a href="nosotros.php" class="dropdown-item" alt="BOTON NOSOTROS">Nosotros</a>
                                 <a href="servicios.php" class="dropdown-item" alt="BOTON SERVICIOS">Servicios</a>
                                 <a href="#" class="dropdown-item" alt="BOTON DESCARGA FORMULARIOS">Descargar Formatos</a>
+                                <a href="contacto.php" class="dropdown-item" alt = "Botón de Formulario de Contacto Via Correo">Contacto</a>
                                 <!-- <a href="#" class="dropdown-item">Quotation</a> -->
                                 <!-- <a href="#" class="dropdown-item">404 Page</a> -->
                             </div>
                         </div>
-                        <a href="contacto.php" class="nav-item nav-link">Contacto</a>
                         <a href="login.php" class="nav-item nav-link">Login</a>
                     </div>
                 </div>
