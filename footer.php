@@ -8,10 +8,10 @@
                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+57 314 509 3025</p>
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>cei@utch.edu.co</p>
                 <div class="d-flex pt-3">
-                    <a class="btn btn-square btn-light rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-square btn-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-square btn-light rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-square btn-light rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <!-- <a class="btn btn-square btn-light rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a> -->
+                    <a class="btn btn-square btn-light rounded-circle me-2" href="https://web.facebook.com/ceiutch"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.youtube.com/@UTCHChoco/"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.linkedin.com/in/centro-de-emprendimiento-e-innovaci%C3%B3n-796216186/"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
@@ -32,11 +32,9 @@
                 <h6 class="text-light">Cerrado</h6>
             </div>
             <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-4">Informaciones</h4>
-                <p>Registra tu correo para recibir información</p>
+                <h4 class="text-white mb-4 text-center">Centro de Emprendimiento e Innovación - CEI</h4>
                 <div class="position-relative w-100">
-                    <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Correo">
-                    <button type="button" class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">Enviar</button>
+                    <img class="img-fluid mx-auto d-block" src="img\logo-vertica-utch.webp" alt="Logo de la universidad tecnologica del chocó">
                 </div>
             </div>
         </div>
