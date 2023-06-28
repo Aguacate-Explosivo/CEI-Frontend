@@ -132,7 +132,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="waves-effect">
+            <a href="consult_simulaciones.php" class="waves-effect">
               <i class="ti-search fa-fw"></i>
              buscar Simulaciones
             </a>

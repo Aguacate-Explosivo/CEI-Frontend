@@ -639,6 +639,4 @@ $dompdf->render();
 
 $dompdf->stream("document.pdf", array("Attachment" => false));
 
-
-
 ?>
