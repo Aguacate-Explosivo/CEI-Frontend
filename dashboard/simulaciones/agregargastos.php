@@ -234,16 +234,7 @@
              Simulaciones
             </a>
           </li>
-            <!-- <li>
-              <a href="blank.html" class="waves-effect"
-                ><i class="ti-files fa-fw"></i> Dashboard</a
-              >
-            </li> -->
-            <!-- <li>
-              <a href="404.html" class="waves-effect"
-                ><i class="ti-info fa-fw"></i> Error 404</a
-              >
-            </li> -->
+      
           </ul>
           <div class="center p-20">
             <span class="hide-menu"
@@ -280,7 +271,7 @@
       <br><br><br><br><br><br>
     <div class="col-md-9">
     <input type="text" id="nombre" name="nombre" class="form-control"
-    placeholder="Nombre del gasto:" required="" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-,.]+"  >
+    placeholder="Nombre del gasto:" required=""  maxlength="16" minlength="1" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-,.]+"  >
     <label for="nombre" class="form__label"></label>
     </div>
 <br>
