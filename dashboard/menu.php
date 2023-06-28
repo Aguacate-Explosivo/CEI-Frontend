@@ -131,6 +131,24 @@
              Simulaciones
             </a>
           </li>
+          <li>
+            <a href="#" class="waves-effect">
+              <i class="ti-search fa-fw"></i>
+             buscar Simulaciones
+            </a>
+          </li>
+          <li>
+            <a href="#" class="waves-effect">
+              <i class="ti-comments fa-fw"></i>
+             Encuestas de Planes de negocio
+            </a>
+          </li>
+          <li>
+            <a href="#" class="waves-effect">
+              <i class="ti-eye fa-fw"></i>
+             seguimientos a emprendedores
+            </a>
+          </li>
         </ul>
         <div class="center p-20">
           <span class="hide-menu">
