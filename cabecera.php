@@ -53,9 +53,9 @@
                     <small class="ms-4"><i class="fa fa-envelope me-3"></i> cei@utch.edu.co</small>
                     <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+57 314 509 3025</small>
                     <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-success rounded-circle ms-2" href=""><i class="fab fa-facebook-f" alt="BOTON FACEBOOK"></i></a>
-                        <a class="btn btn-sm-square btn-light text-success rounded-circle ms-2" href=""><i class="fab fa-twitter" alt="BOTON TWITTER"></i></a>
-                        <a class="btn btn-sm-square btn-light text-success rounded-circle ms-2" href=""><i class="fab fa-linkedin-in" alt="BOTON LINKEDIN"></i></a>
+                        <a class="btn btn-sm-square btn-light text-success rounded-circle ms-2" href="https://web.facebook.com/ceiutch"><i class="fab fa-facebook-f" alt="BOTON FACEBOOK"></i></a>
+                        <!-- <a class="btn btn-sm-square btn-light text-success rounded-circle ms-2" href=""><i class="fab fa-twitter" alt="BOTON TWITTER"></i></a> -->
+                        <a class="btn btn-sm-square btn-light text-success rounded-circle ms-2" href="https://www.linkedin.com/in/centro-de-emprendimiento-e-innovaci%C3%B3n-796216186/"><i class="fab fa-linkedin-in" alt="BOTON LINKEDIN"></i></a>
                     </div>
                 </div>
             </div>
@@ -84,8 +84,10 @@
                             <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
                                 <a href="nosotros.php" class="dropdown-item" alt="BOTON NOSOTROS">Nosotros</a>
                                 <a href="servicios.php" class="dropdown-item" alt="BOTON SERVICIOS">Servicios</a>
-                                <a href="#" class="dropdown-item" alt="BOTON DESCARGA FORMULARIOS">Descargar Formatos</a>
+                                <a href="formatos.php" class="dropdown-item" alt="BOTON DESCARGA FORMULARIOS">Descargar Formatos</a>
                                 <a href="contacto.php" class="dropdown-item" alt = "Botón de Formulario de Contacto Via Correo">Contacto</a>
+                                <a href="actividades.php" class="dropdown-item" alt="BOTON De actividades Realizadas">Actividades Realizadas</a>
+                                <a href="estructura_logo.php" class="dropdown-item" alt="BOTON De logo y estructura organizacional">Estructura y Logo</a>
                                 <!-- <a href="#" class="dropdown-item">Quotation</a> -->
                                 <!-- <a href="#" class="dropdown-item">404 Page</a> -->
                             </div>
