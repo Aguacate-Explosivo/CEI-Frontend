@@ -1,4 +1,10 @@
-$(document).ready(function() {    
+$(document).ready(function() { 
+	
+	function editarUsuario(id, usuario, correo, estado, perfil) {
+		// Redirigir a la página de edición del usuario con los parámetros en la URL
+		window.location.href = 'editar_usuario.php?id=' + id + '&usuario=' + usuario + '&correo=' + correo + '&estado=' + estado + '&perfil=' + perfil;
+	  }
+	
 	$('#noexportar').DataTable({
 		language: {
 			"lengthMenu": "Mostrar _MENU_ registros",

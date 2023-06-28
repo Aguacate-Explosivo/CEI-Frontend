@@ -11,7 +11,7 @@
 require_once('../conexion.php');
 $conexion = conectar();
 
-  //================= AGREGAR USUARIO
+  //================= eliminar USUARIO
 
 if (isset($_POST['id'])) {
   // Operación de eliminación

@@ -84,7 +84,7 @@
                           <td><?php echo $perfil; ?></td>
                           <td>
                             <div class="btn-group">
-                            <button class="btn btn-warning btnEditar" data-id="<?php echo $id; ?>" data-usuario="<?php echo $usuario; ?>" data-correo="<?php echo $email; ?>" data-estado="<?php echo $estado; ?>" data-perfil="<?php echo $perfil; ?>">
+                            <button class="btn btn-warning btnEditar" onclick="editarUsuario('<?php echo $id; ?>', '<?php echo $usuario; ?>', '<?php echo $correo; ?>', '<?php echo $estado; ?>', '<?php echo $perfil; ?>')">
                               <i class="fas fa-edit"></i>
                             </button>
 
