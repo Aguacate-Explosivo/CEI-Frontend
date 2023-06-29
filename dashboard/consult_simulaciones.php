@@ -42,7 +42,7 @@
                             <tr>
                                 <th>Nombre del evento </th>
                                 <th>descripcion del evento</th>    
-                                <th>Lugar</th> 
+                                <th>Descargar</th> 
                                                            
                                
                             </tr>
