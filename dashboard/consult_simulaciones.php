@@ -62,7 +62,7 @@
                             <tr>
                                 <td><?php echo $elemento["cc"]; ?></td>
                                 <td><?php echo $elemento["nombre"]; ?></td>
-                                <td>  <a style="margin: 2px; border-radius: 5px;" href="descargar.php?id=<?php echo $elemento["id"]; ?>&nombre_negocio_plan=<?php echo $nombre_negocio_plan; ?>" class="btn btn-danger" > Eliminar</a>
+                                <td>  <a style="margin: 2px; border-radius: 5px;" href="simulaciones/descargar.php?id=<?php echo $elemento["id"]; ?>" class="btn btn-warning" > Descargar</a>
     </td>
                             
 
