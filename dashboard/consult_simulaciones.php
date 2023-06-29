@@ -55,7 +55,7 @@
                                     
                             foreach($busqueda as $elemento){ ?>
                             <!-- Contenido de la tabla -->
-                                $_SESSION['id'] =  $elemento["id"];
+                             
 
 
                        
