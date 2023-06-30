@@ -14,6 +14,7 @@
     //Conexion con la base de datos
     include("../../conexion.php");
     $conexion=conectar();
+    include("../../log.php");
       $idcita=$_REQUEST['idcita'];
    
       //Valores del formulario
@@ -43,20 +44,21 @@
           location.assign('../reprocitas.php');
          },1000);
             </script>"; 
-          
+          logAction("Modificacion de Cita","el administrador ha modificado la cita de '$nombre'");
      }else{
       
       echo "<script>
       Swal.fire({
-        icon: 'success',
+        icon: 'error',
         title: 'Ya hay una cita...',
         text: 'ya hay una cita para esa fecha y hora',
         showConfirmButton: false,
       });
    setInterval(()=>{
-    location.assign('reprocitas.php');
+    location.assign('../reprocitas.php');
    },5000);
       </script>"; 
+      logAction("Modificacion de Cita","el administrador ha intentado modificar la cita de '$nombre' pero no ha tenido exito");
      }
 ?>
 </body>
