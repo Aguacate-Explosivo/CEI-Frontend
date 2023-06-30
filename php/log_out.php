@@ -9,4 +9,6 @@
     }
     logout();
   </script>";
+  include("../log.php");
+  logAction("Cerrado de Sesion","el usuario ha cerrado la sesión de forma manual");
 ?>
