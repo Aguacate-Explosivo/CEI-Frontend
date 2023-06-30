@@ -1,4 +1,5 @@
 <?php
+// include("../log.php");
     // Verificar si el token de autenticación está presente en el Local Storage
     echo "<script>
             var tiempoInactividad = 30 * 60 * 1000;
@@ -28,4 +29,5 @@
         
             document.addEventListener('mousemove', reiniciarTemporizador);
           </script>";
+        //   logAction("Cerrado de Sesion","se ha cerrado la sesion del usuario por inactividad");
 ?>

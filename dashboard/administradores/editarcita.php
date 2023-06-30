@@ -14,7 +14,6 @@
     //Conexion con la base de datos
     include("../../conexion.php");
     $conexion=conectar();
-    include("../../log.php");
       $idcita=$_REQUEST['idcita'];
    
       //Valores del formulario
@@ -44,7 +43,7 @@
           location.assign('../reprocitas.php');
          },1000);
             </script>"; 
-          logAction("Modificacion de Cita","el administrador ha modificado la cita de '$nombre'");
+          // logAction("Modificacion de Cita","el administrador ha modificado la cita de '$nombre'");
      }else{
       
       echo "<script>
@@ -58,7 +57,7 @@
     location.assign('../reprocitas.php');
    },5000);
       </script>"; 
-      logAction("Modificacion de Cita","el administrador ha intentado modificar la cita de '$nombre' pero no ha tenido exito");
+      // logAction("Modificacion de Cita","el administrador ha intentado modificar la cita de '$nombre' pero no ha tenido exito");
      }
 ?>
 </body>

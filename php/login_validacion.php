@@ -11,7 +11,7 @@
         // Se llama al archivo de conexión a la base de datos
         include("../conexion.php");
         $conexion = conectar();
-        include("../log.php");
+        // include("../log.php");
         
         // Valores del formulario
         $user = $_POST['user'];
@@ -42,7 +42,7 @@
             },2500)
             </script>";
             // Registro en el log
-            logAction("Inicio de sesión", "El usuario '$user' inició sesión Correctamente.");
+            // logAction("Inicio de sesión", "El usuario '$user' inició sesión Correctamente.");
         } else {
             echo "<script language='JavaScript'>
             Swal.fire({
@@ -57,7 +57,7 @@
                         </script>";
 
                         // Registro en el log
-                        logAction("Inicio de sesión", "El usuario '$user' Intentó iniciar sesión.");
+                        // logAction("Inicio de sesión", "El usuario '$user' Intentó iniciar sesión.");
                     }
             mysqli_free_result($resultado);
         ?>  
