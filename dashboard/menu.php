@@ -134,7 +134,13 @@
           <li>
             <a href="consult_simulaciones.php" class="waves-effect">
               <i class="ti-search fa-fw"></i>
-             buscar Simulaciones
+             Buscar Simulaciones
+            </a>
+          </li>
+          <li>
+            <a href="DashMarketing.php" class="waves-effect">
+              <i class="ti-clipboard fa-fw"></i>
+             Estrategias de Marketing
             </a>
           </li>
           <li>
@@ -146,13 +152,20 @@
           <li>
             <a href="#" class="waves-effect">
               <i class="ti-eye fa-fw"></i>
-             seguimientos a emprendedores
+             Seguimientos a emprendedores
+            </a>
+          </li>
+          <li>
+            <a href="DashEstadisticas.php" class="waves-effect">
+              <i class="ti-receipt fa-fw"></i>
+              Estadísticas de los emprendedores
             </a>
           </li>
         </ul>
         <div class="center p-20">
           <span class="hide-menu">
             <a href="../php/log_out.php" class="btn btn-success btn-block btn-rounded waves-effect waves-light">
+              <i class="ti-shift-right fa-fw"> </i>
               Cerrar sesión
             </a>
           </span>
