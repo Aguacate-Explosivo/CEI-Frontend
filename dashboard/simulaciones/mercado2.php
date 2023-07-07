@@ -64,9 +64,8 @@
    $creartabla3 ="  ALTER TABLE ` $nombre_negocio_plan`
     CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; ";
     $creartabla4=mysqli_query($conexion,$creartabla3);
-  //agregar tabla de gastos  a base de datos
-
-
+  
+    //agregar tabla de gastos  a base de datos
     $creartablag ="CREATE TABLE ` $documento` (
       `id` int(11) NOT NULL, 
       `nombre` text NOT NULL,
