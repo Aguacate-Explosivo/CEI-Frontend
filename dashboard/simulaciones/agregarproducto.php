@@ -2,9 +2,6 @@
   session_start();
   if(isset($_POST["Siguiente"])){
   
-
- 
-    
     //Datos del formulario 1
     $_SESSION['doc_autor_plan'] = htmlentities($_POST["doc_autor_plan"]);
       $_SESSION['autor_plan'] = htmlentities($_POST["autor_plan"]);
@@ -66,7 +63,6 @@
   $precio_venta_producto =  $_SESSION['precio_venta_producto'];
   $importe =  $_SESSION['importe'];
 
-  //agregar tabla a base de datos
 ?>
 
 <!DOCTYPE html>
@@ -342,8 +338,6 @@
                                 <td><?php echo $elemento["precio_venta"]; ?></td>
                                 <td>
                                 <a style="margin: 2px; border-radius: 5px;" href="eliminar.php?id=<?php echo $elemento["id"]; ?>&nombre_negocio_plan=<?php echo $nombre_negocio_plan; ?>" class="btn btn-danger" > Eliminar</a>
-
-                                <!-- <a style="margin: 2px; border-radius: 5px;" href="eliminar.php?id=<?php echo $elemento["id"]; echo $nombre_negocio_plan; ?>" class="btn btn-danger" > Eliminar</a> -->
                                  </td>
                             </tr>
                            
@@ -363,6 +357,44 @@
                             </tr>
                                 </thead>
                        </table>
+                       <?php
+                       //--------------------------------------agregar tabla de marketing a base de datos
+                       // Creacion de la tabla
+                      //  $creartabla ="CREATE TABLE `Marketing` (
+                      //       `id` int(11) NOT NULL, 
+                      //       `documento` int(11) NOT NULL,
+                      //       `nombre` text NOT NULL,
+                      //       `correo` text NOT NULL,
+                      //       `plan de negocio` text NOT NULL,
+                      //       `tipo de marketing` text NOT NULL
+                      //     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci; ";
+                          
+                      //     // Ejecucion del Query
+                      //     $creartabla1=mysqli_query($conexion,$creartabla);
+                          
+                      //     // Agregar id como clave primaria
+                      //     $creartabla2 =" ALTER TABLE `$nombre Marketing $nombre_negocio_plan`
+                      //     ADD PRIMARY KEY (`id`); ";
+                          
+                      //     // Se ejecuta el comando de la primary key
+                      //       $creartabla3=mysqli_query($conexion,$creartabla2);
+                            
+                      //     //  Agregar valores autoincrementable al id
+                      //       $creartabla3 ="  ALTER TABLE `$nombre Marketing $nombre_negocio_plan`
+                      //       CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; ";
+                          
+                      //       // Ejecucion del query autoincrementable para id
+                      //       $creartabla4=mysqli_query($conexion,$creartabla3);
+                          
+                          // Insercion de los Datos
+                          $insercion="INSERT INTO `Marketing` VALUES ('','$documento','$nombre','$autor_email ','$nombre_negocio_plan','$tipo_marketing_plan');";
+                          $ejecucion=mysqli_query($conexion,$insercion);
+                          if ($ejecucion) {
+                              echo "<script>
+                              console.log('se insertaron los datos de forma correcta');
+                              </script>"; 
+                              }
+                       ?>
                                       
                        <form  method="POST" enctype="multipart/form-data" >
     <div class="col-md-6">
