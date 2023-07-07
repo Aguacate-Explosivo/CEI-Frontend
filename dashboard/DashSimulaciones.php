@@ -7,6 +7,7 @@
   <title>Dashboard Admin</title>
   <title>Dashboard CEI</title>
   <link rel="icon" type="image/webp" sizes="16x16" href="../img/logo.webp">
+  <link rel="stylesheet" href="css/stylese.css">
 </head>
 <body>
 <?php require_once ("menu.php"); ?>
