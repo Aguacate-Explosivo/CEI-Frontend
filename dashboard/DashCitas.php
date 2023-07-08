@@ -49,11 +49,17 @@
             <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
             <thead>
                 <tr>
+                <th>Tipo</th>
                     <th>Numero de Documento</th>
-                    <th>Nombre Completo</th>                             
-                    <th>Numero de Telefono</th>
+                    <th>Nombre Completo</th>     
+                    <th>Categria</th>                        
+                    <th>Telefono</th>
+                    <th>Correo</th>
+                    <th>Institucion</th>
                     <th>Barrio</th>
-                    <th>Fecha y Hora de Cita</th>
+                    <th>Fecha Hora</th>
+                    <th>Tema</th>
+                    <th>Descripcion</th>
                 </tr>
             </thead>
                     <?php
@@ -66,11 +72,17 @@
                 <!-- Contenido de la tabla -->
 
                 <tr>
+                <td><?php echo $row["tipodocumento"]; ?></td>
                     <td><?php echo $row["documento"]; ?></td>
+                    <td><?php echo $row["categoria"]; ?></td>
                     <td><?php echo $row["nombre"]; ?></td>
                     <td><?php echo $row["telefono"]; ?></td>
+                    <td><?php echo $row["correo"]; ?></td>
+                    <td><?php echo $row["institucion"]; ?></td>
                     <td><?php echo $row["direccion"]; ?></td>
                     <td><?php echo $row["fecha_hora"]; ?></td>
+                    <td><?php echo $row["tema"]; ?></td>
+                    <td><?php echo $row["descripcion"]; ?></td>
                 </tr>
                     <?php } ?> 
                     

@@ -62,50 +62,96 @@ $fila = $busqueda -> fetch_assoc();
 ?>
 <form action="editarcita.php?idcita=<?php echo $fila["idcita"]?>" method="POST" enctype="multipart/form-data" >
 <div class="row g-3">
-<div class="col-md-6">
-<div class="form-floating">
-  <input style="width: 500px;" type="text" id="documento" name="documento" class="form-control" placeholder="" required  pattern="[0-9]+" maxlength="10" minlength="7"
-  value="<?php echo $fila['documento']?>" >
-  <label for="documento" class="form__label">Numero de Documento:</label>
-  </div>
-  </div>
-  <div class="row g-3">
-  <div class="form-floating">
-  <input style=" width: 500px;" type="text" id="nombre" name="nombre" class="form-control" placeholder=" " 
-  required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+"
-  value="<?php echo $fila['nombre']?>" >
-  <label for="name" class="form__label">Nombre:</label>
-  </div>
-  </div>
-  <div class="row g-3">
-  <div class="form-floating">
-  <input style=" width: 500px;" type="text" id="tel" name="tel" class="form-control" placeholder=" "
-  required pattern="[0-9]+"  maxlength="10" minlength="9"
-  value="<?php echo $fila['telefono']?>" >
-  <label for="tel" class="form__label">Telefono:</label>
-  </div>
-  </div>
-  <div class="row g-3">
-  <div class="form-floating">
-  <input style=" width: 500px;" type="text" id="direccion" name="direccion" class="form-control" placeholder=" "
-  required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 #-]+"
-  value="<?php echo $fila['direccion']?>" >
-  <label for="direccion" class="form__label">Dirección:</label>
-  </div>
-  </div>
-  
-  <div class="row g-3">
-  <div class="form-floating">
-  <label for="fecha" class="form-label"></label>
-  <p>Nota: Debes Registar Tu Cita Con Intervalos De 30 Minutos</p>
-  <input style=" width: 500px;" name ="fecha" type="datetime-local"
-  class="form-control" id="fecha"
-   min="2023-03-01 " max="2054-12-31" step="1800"
-  required value="<?php echo $fila['fecha_hora']?>" >
-  </div>
-  </div>
-  
-  <br>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                            <select  class="form-control" value="<?php echo $fila['tipodocumento']?>"  name="tipodocumento" id="tipodocumento">
+                                <option value="Cedula de ciudadania">Cedula de ciudadania</option>
+                                <option value="Targeta de identidad">Targeta de identidad </option>
+                                <option value="Contraseña">Contraseña</option>
+                                <option value="Documento extranjero">Documento extranjero</option>
+                                <option value="Pasaporte">Pasaporte </option>
+                                </select>
+                                <label  for="tipodocumento" class="form__label">Tipo de Documento:</label>
+
+                            </div>
+                        </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="documento" value="<?php echo $fila['documento']?>"  name="documento" placeholder="Your Name" required pattern="[0-9]+" maxlength="10" minlength="7">
+                                    <label for="documento">Numero de Documento</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                            <div class="form-floating">
+                            <select  class="form-control" name="categoria" value="<?php echo $fila['categoria']?>"  id="categoria">
+                                <option value="Estudiante">Estudiante</option>
+                                <option value="Docente">Docente</option>
+                                <option value="Administrativo">Administrativo</option>
+                                <option value="Comunidad general">Comunidad general</option>
+                                <option value="Otro">Otro</option>
+                                </select>
+                                <label  for="categoria" class="form__label">Categoria:</label>
+
+                            </div>
+                        </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" value="<?php echo $fila['nombre']?>"  id="nombre" name="nombre" placeholder="Your Email" required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+">
+                                    <label for="nombre">Nombre</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="tel" name="tel" value="<?php echo $fila['telefono']?>"  placeholder="Your Name" required pattern="[0-9]+"  maxlength="10" minlength="9">
+                                    <label for="tel">Telefono</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" id="correo" name="correo" class="form-control" value="<?php echo $fila['correo']?>"  placeholder="your email" required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#.@]+">
+                                <label for="correo" >Correo:</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" id="institucion" name="institucion" value="<?php echo $fila['institucion']?>" class="form-control" placeholder="ff"
+                                    required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#.]+" value="UTCH">
+                                <label for="institucion" class="form__label">Institucion:</label>
+                            </div>
+                        </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="datetime-local" value="<?php echo $fila['fecha_hora']?>"  class="form-control" id="fecha" name="fecha" placeholder="Your Email" min="2023-03-01 " max="2030-12-31" step="1800" required >
+                                    <label for="fecha">Fecha y Hora</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="direccion" value="<?php echo $fila['direccion']?>"  name="direccion" required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#]+" placeholder="Subject">
+                                    <label for="direccion">Dirección</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                            <div class="form-floating">
+                            <select  class="form-control" name="tema" value="<?php echo $fila['tema']?>"  id="tema">
+                                <option value="Estudiante">Estudiante</option>
+                                <option value="Docente">Docente</option>
+                                <option value="Administrativo">Administrativo</option>
+                                <option value="Comunidad general">Comunidad general</option>
+                                <option value="Otro">Otro</option>
+                                </select>
+                                <label  for="tema" class="form__label">Tema de Cita:</label>
+
+                            </div>
+                        </div>
+                        <div class="col-12">
+                                <div class="form-floating">
+                                <input value="<?php echo $fila['descripcion']?>"  maxlength="200" type="text" style="height: 170px;"  class="form-control" id="descripcion" name="descripcion" required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#]+" placeholder="Subject">
+                                    <label for="descripcion" >Breve Descripcion de la Cita</label>
+                                </div>
+                            </div>
+                        
+  <br><br><br><br><br><br>
   <button style="margin: 2px; border-radius: 5px;" type="submit" class="btn btn-primary">Reprogramar cita</button>
   <a style="margin: 2px; border-radius: 5px;" href="../reprocitas.php" class="btn btn-info" > Regresar</a>
 

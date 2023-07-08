@@ -14,16 +14,22 @@
 	$conexion=conectar();
 
     //Valores del formulario
+    $tipodocumento=$_POST['tipodocumento'];
     $documento=$_POST['documento'];
+    $categoria=$_POST['categoria'];
     $nombre=$_POST['nombre'];
     $tel=$_POST['tel'];
+    $correo=$_POST['correo'];
+    $institucion=$_POST['institucion'];
+    $programa=$_POST['programa'];
     $direccion=$_POST['direccion'];
     $edad=$_POST['edad'];
-    $curso=$_POST['curso_elegido'];
+    $curso=$_POST['curso_elegido']; 
     //se Obtiene la longitud del string
     
     //igresar la informacion a la tabla de datos
-    $consulta ="INSERT INTO inscritos_cursos VALUES ('','$documento','$nombre','$tel','$direccion','$edad','$curso');";
+    $consulta ="INSERT INTO inscritos_cursos VALUES ('','$tipodocumento','$documento','$categoria','$nombre','$tel',
+    '$correo','$institucion','$programa','$direccion','$edad','$curso');";
     $busqueda=mysqli_query($conexion,$consulta);
     if ($busqueda) {
         echo "<script>

@@ -17,18 +17,24 @@
       $idcita=$_REQUEST['idcita'];
    
       //Valores del formulario
-      $documento=$_POST['documento'];
-      $nombre=$_POST['nombre'];
-      $telefono=$_POST['tel'];
-      $direccion=$_POST['direccion'];
-      $fecha=$_POST['fecha'];
-  
+      $tipodocumento = $_POST['tipodocumento'];
+      $documento = $_POST['documento'];
+      $categoria = $_POST['categoria'];
+      $nombre = $_POST['nombre'];
+      $tel = $_POST['tel'];
+      $correo = $_POST['correo'];
+      $institucion = $_POST['institucion'];
+      $direccion = $_POST['direccion'];
+      $fecha = $_POST['fecha'];
+      $tema = $_POST['tema'];
+      $descripcion = $_POST['descripcion'];
       
   
       
       //igresar la informacion a la tabla de datos
       
-      $consulta="UPDATE `citas` SET `documento`=' $documento',`nombre`='$nombre',`telefono`='$telefono',`direccion`='$direccion',`fecha_hora`='$fecha' WHERE  idcita=$idcita";
+      $consulta="UPDATE `citas` SET `tipodocumento`=' $tipodocumento',`documento`=' $documento',`categoria`=' $categoria',`nombre`='$nombre',
+      `telefono`='$tel',`correo`=' $correo', `institucion`=' $institucion',`direccion`='$direccion',`fecha_hora`='$fecha',`tema`=' $tema',`descripcion`=' $descripcion' WHERE  idcita=$idcita";
       $resultado=mysqli_query($conexion,$consulta);
     if ($resultado) {
 

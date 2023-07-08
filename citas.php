@@ -29,6 +29,19 @@
                     <p class="mb-4">¡Wow, tenemos una gran noticia para ti! Si deseas programar una cita para poder visitar nuestra oficina y ser atendido por nuestro equipo de profesionales, aquí te damos la solución que necesitas. Simplemente, completa el formulario que hemos preparado para poder separar una cita dentro de nuestros horarios de atención. Así, podrás acercarte a nuestras instalaciones con toda la confianza de ser atendido con eficacia y eficiencia por nuestro equipo experto. ¡No esperes más y programa tu cita ahora mismo!</p>
                     <form action="php/reg_cita.php" method="POST">
                         <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                            <select  class="form-control" name="tipodocumento" id="tipodocumento">
+                                <option value="Cedula de ciudadania">Cedula de ciudadania</option>
+                                <option value="Targeta de identidad">Targeta de identidad </option>
+                                <option value="Contraseña">Contraseña</option>
+                                <option value="Documento extranjero">Documento extranjero</option>
+                                <option value="Pasaporte">Pasaporte </option>
+                                </select>
+                                <label  for="tipodocumento" class="form__label">Tipo de Documento:</label>
+
+                            </div>
+                        </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="documento" name="documento" placeholder="Your Name" required pattern="[0-9]+" maxlength="10" minlength="7">
@@ -36,9 +49,22 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
+                            <div class="form-floating">
+                            <select  class="form-control" name="categoria"  id="categoria">
+                                <option value="Estudiante">Estudiante</option>
+                                <option value="Docente">Docente</option>
+                                <option value="Administrativo">Administrativo</option>
+                                <option value="Comunidad general">Comunidad general</option>
+                                <option value="Otro">Otro</option>
+                                </select>
+                                <label  for="categoria" class="form__label">Categoria:</label>
+
+                            </div>
+                        </div>
+                            <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Your Email" required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+">
-                                    <label for="nombre">Tu Nombre</label>
+                                    <label for="nombre">Nombre</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -48,15 +74,47 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" id="correo" name="correo" class="form-control" placeholder="your email" required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#.@]+">
+                                <label for="correo" >Correo:</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" id="institucion" name="institucion" class="form-control" placeholder="ff"
+                                    required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#.]+" value="UTCH">
+                                <label for="institucion" class="form__label">Institucion:</label>
+                            </div>
+                        </div>
+                            <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="datetime-local" class="form-control" id="fecha" name="fecha" placeholder="Your Email" min="2023-03-01 " max="2030-12-31" step="1800" required >
                                     <label for="fecha">Fecha y Hora</label>
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-6">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="direccion" name="direccion" required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#]+" placeholder="Subject">
                                     <label for="direccion">Dirección</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                            <div class="form-floating">
+                            <select  class="form-control" name="tema"  id="tema">
+                                <option value="Estudiante">Estudiante</option>
+                                <option value="Docente">Docente</option>
+                                <option value="Administrativo">Administrativo</option>
+                                <option value="Comunidad general">Comunidad general</option>
+                                <option value="Otro">Otro</option>
+                                </select>
+                                <label  for="tema" class="form__label">Tema de Cita:</label>
+
+                            </div>
+                        </div>
+                        <div class="col-12">
+                                <div class="form-floating">
+                                <textarea maxlength="200" type="text" style="height: 170px;" class="form-control" id="descripcion" name="descripcion" required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#]+" placeholder="Subject"></textarea>
+                                    <label for="descripcion">Breve Descripcion de la Cita</label>
                                 </div>
                             </div>
                             <br>

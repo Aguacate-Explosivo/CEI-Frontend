@@ -14,9 +14,14 @@
 	$conexion=conectar();
 
     //Valores del formulario
+    $tipodocumento=$_POST['tipodocumento'];
     $documento=$_POST['documento'];
+    $categoria=$_POST['categoria'];
     $nombre=$_POST['nombre'];
     $tel=$_POST['tel'];
+    $correo=$_POST['correo'];
+    $institucion=$_POST['institucion'];
+    $programa=$_POST['programa'];
     $direccion=$_POST['direccion'];
     $edad=$_POST['edad'];
     $evento=$_POST['evento_elegido'];
@@ -24,7 +29,8 @@
     
     
     //igresar la informacion a la tabla de datos
-    $consulta="INSERT INTO inscritos_eventos VALUES ('','$documento','$nombre','$tel','$direccion','$edad','$evento');";
+    $consulta="INSERT INTO inscritos_eventos VALUES ('','$tipodocumento','$documento','$categoria','$nombre','$tel',
+    '$correo','$institucion','$programa','$direccion','$edad','$evento');";
     $resultado=mysqli_query($conexion,$consulta);{
         echo "<script>
         Swal.fire({

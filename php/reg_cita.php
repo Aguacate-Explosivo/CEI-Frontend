@@ -15,11 +15,17 @@
     // include_once("../log.php");
 
     //Valores del formulario
+    $tipodocumento = $_POST['tipodocumento'];
     $documento = $_POST['documento'];
+    $categoria = $_POST['categoria'];
     $nombre = $_POST['nombre'];
     $tel = $_POST['tel'];
+    $correo = $_POST['correo'];
+    $institucion = $_POST['institucion'];
     $direccion = $_POST['direccion'];
     $fecha = $_POST['fecha'];
+    $tema = $_POST['tema'];
+    $descripcion = $_POST['descripcion'];
 
     // Verificar si existe una cita con la misma fecha y hora
     $consultaExistente = "SELECT * FROM citas WHERE fecha_hora = '$fecha'";
@@ -40,7 +46,8 @@
   // logAction("Agendado de Cita","El usuario intentó agendar una cita pero ya se encontraba un registro");
     } else {
         // Insertar la información en la tabla de datos
-        $consulta = "INSERT INTO citas VALUES ('', '$documento', '$nombre', '$tel', '$direccion', '$fecha')";
+        $consulta = "INSERT INTO citas VALUES ('', '$tipodocumento','$documento','$categoria', '$nombre', '$tel',
+        '$correo','$institucion', '$direccion', '$fecha','$tema','$descripcion')";
         $resultado = mysqli_query($conexion, $consulta);
 
         if ($resultado) {

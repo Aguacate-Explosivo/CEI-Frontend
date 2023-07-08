@@ -224,9 +224,14 @@
                         <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>
+                            <th>Tipo</th>
                                 <th>Documento</th>
+                                <th>Categoria</th>
                                 <th>Nombre</th>
-                                <th>Telefono</th>                             
+                                <th>Telefono</th>     
+                                <th>Correo</th>
+                                <th>Institucion</th>
+                                <th>Programa</th>                        
                                 <th>Direccion</th>
                                 <th>Edad</th>
                                 <th>Curso inscrito</th>
@@ -246,9 +251,14 @@
                             <!-- Contenido de la tabla -->
 
                             <tr>
+                            <td><?php echo $elemento["tipodocumento"]; ?></td>
                                <td><?php echo $elemento["documento"]; ?></td>
+                               <td><?php echo $elemento["categoria"]; ?></td>
                                 <td><?php echo $elemento["nombre"]; ?></td>
                                 <td><?php echo $elemento["telefono"]; ?></td>
+                                <td><?php echo $elemento["correo"]; ?></td>
+                                <td><?php echo $elemento["institucion"]; ?></td>
+                                <td><?php echo $elemento["programa"]; ?></td>
                                 <td><?php echo $elemento["direccion"]; ?></td>
                                 <td><?php echo $elemento["edad"]; ?></td>
                                 <td><?php echo $elemento["curso_inscrito"]; ?></td>

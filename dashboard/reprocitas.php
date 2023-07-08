@@ -48,11 +48,17 @@
                         <thead>
                             <tr>
                                
-                                <th>Numero de Documento</th>
-                                <th>Nombre Completo</th>
-                                <th>Numero de Telefono</th>
-                                <th>Barrio</th>
-                                <th>Fecha de Cita</th>
+                            <th>Tipo</th>
+                    <th>Numero de Documento</th>
+                    <th>Nombre Completo</th>     
+                    <th>Categria</th>                        
+                    <th>Telefono</th>
+                    <th>Correo</th>
+                    <th>Institucion</th>
+                    <th>Barrio</th>
+                    <th>Fecha Hora</th>
+                    <th>Tema</th>
+                    <th>Descripcion</th>
                                 <th>Acciones</th>
                                 
                             </tr>
@@ -69,11 +75,17 @@
                        
                             <tr>
                               
-                                <td><?php echo $row["documento"]; ?></td>
-                                <td><?php echo $row["nombre"]; ?></td>
-                                <td><?php echo $row["telefono"]; ?></td>
-                                <td><?php echo $row["direccion"]; ?></td>
-                                <td><?php echo $row["fecha_hora"]; ?></td>
+                            <td><?php echo $row["tipodocumento"]; ?></td>
+                    <td><?php echo $row["documento"]; ?></td>
+                    <td><?php echo $row["categoria"]; ?></td>
+                    <td><?php echo $row["nombre"]; ?></td>
+                    <td><?php echo $row["telefono"]; ?></td>
+                    <td><?php echo $row["correo"]; ?></td>
+                    <td><?php echo $row["institucion"]; ?></td>
+                    <td><?php echo $row["direccion"]; ?></td>
+                    <td><?php echo $row["fecha_hora"]; ?></td>
+                    <td><?php echo $row["tema"]; ?></td>
+                    <td><?php echo $row["descripcion"]; ?></td>
                                 <td>
                                 <div class="btn-group">
                                 <a style="margin: 2px; border-radius: 5px; position: relative;" href="administradores/cita.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>

@@ -43,51 +43,107 @@
             <div class="row g-5">
                 <div class="col-lg-6 mx-auto wow fadeInUp" data-wow-delay="0.1s">
                     <form action="dashboard/administradores/regiscurso.php" method="POST">
-                        <p>En este formulario se le permitirá inscribirse a los cursos que dictamos, por favor llena
-                            todos los campos</p>
+                        <p>En este formulario se le permitirá inscribirse a los Eventos que se realizan en el centro de
+                            emprendimiento e innovación</p>
+                    <div class="row g-3">
+                    <div class="col-md-6">
+                            <div class="form-floating">
+                            <select  class="form-control" name="tipodocumento" id="tipodocumento">
+                                <option value="Cedula de ciudadania">Cedula de ciudadania</option>
+                                <option value="Targeta de identidad">Targeta de identidad </option>
+                                <option value="Contraseña">Contraseña</option>
+                                <option value="Documento extranjero">Documento extranjero</option>
+                                <option value="Pasaporte">Pasaporte </option>
+                                </select>
+                                <label  for="tipodocumento" class="form__label">Tipo de Documento:</label>
 
-                        <div class="row g-3">
-                          
-                                <div class="form-floating">
-                                    <input type="text" id="documento" name="documento" class="form-control" placeholder=" "
-                                        required pattern="[0-9]+" maxlength="10" minlength="7">
-                                    <label for="documento" class="form__label">Numero de Documento:</label>
-                            
                             </div>
                         </div>
-                        <br/>
-                        <div class="row g-3">
+                        <div class="col-md-6">
                             <div class="form-floating">
-                                <input id="nombre" name="nombre" type="text" class="form-control" placeholder=" "
-                                    required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+">
+                                <input type="text" id="documento" name="documento" class="form-control" placeholder="ff"
+                                    required  pattern="[0-9]+" maxlength="10" minlength="7">
+                                <label  for="documento" class="form__label">Numero de Documento:</label>
+                            </div>
+                        </div>
+                      
+                        <br>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                            <select  class="form-control" name="categoria"  id="categoria">
+                                <option value="Estudiante">Estudiante</option>
+                                <option value="Docente">Docente</option>
+                                <option value="Administrativo">Administrativo</option>
+                                <option value="Comunidad general">Comunidad general</option>
+                                <option value="Otro">Otro</option>
+                                </select>
+                                <label  for="categoria" class="form__label">Categoria:</label>
+
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input id="nombre" name="nombre" type="text" class="form-control" placeholder="ff"
+                                    required=" "  pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+">
                                 <label for="nombre" class="form__label">Nombre Completo</label>
                             </div>
                         </div>
-                        <br/>
-                        <div class="row g-3">
+                        <br>
+                        <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" id="tel" name="tel" class="form-control" placeholder=" "
-                                    required pattern="[0-9]+" maxlength="11" minlength="10">
+                                <input type="text" id="tel" name="tel" class="form-control" placeholder="ff" required
+                                    pattern="[0-9]+" maxlength="11" minlength="10">
                                 <label for="tel" class="form__label">Telefono:</label>
                             </div>
                         </div>
-                        <br/>
-                        <div class="row g-3">
+                        <br>
+                        <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" id="direccion" name="direccion" class="form-control" placeholder=" "
-                                    required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#]+">
+                                <input type="email" id="correo" name="correo" class="form-control" placeholder="ff"
+                                    required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#.@]+">
+                                <label for="correo" class="form__label">Correo:</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" id="institucion" name="institucion" class="form-control" placeholder="ff"
+                                    required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#.]+" value="UTCH">
+                                <label for="institucion" class="form__label">Institucion:</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                            <select  class="form-control" name="programa" id="programa">
+                                <option value="Administracion de empresas">Administracion de empresas </option>
+                                <option value="Contaduria publica">Contaduria publica</option>
+                                <option value="opcion3">Opción 3</option>
+                                <option value="opcion4">Opción 4</option>
+                                <option value="Otro">Otro</option>
+                                </select>
+                                <label  for="programa" class="form__label">Programa al que pertenece:</label>
+
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" id="direccion" name="direccion" class="form-control" placeholder="ff"
+                                    required  pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#]+">
                                 <label for="direccion" class="form__label">Dirección:</label>
                             </div>
                         </div>
-                        <br/>
-                        <div class="row g-3">
+                        <br>
+                        <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" id="edad" name="edad" class="form-control" placeholder=" "
-                                    required pattern="[0-9]+">
+                                <input type="text" id="edad" name="edad" class="form-control" placeholder="ff"
+                                    required  pattern="[ 0-9 ]+">
                                 <label for="edad" class="form__label">Edad:</label>
                             </div>
                         </div>
-                        <br/>
+                        <br>
                         <div class="row g-3">
                             <div class="form-floating">
                                 <select name="curso_elegido" class="form-control">
@@ -104,6 +160,8 @@
                                     ?>
                                     <!-- Fin bd -->
                                 </select>
+                                <label for="curso" class="form__label">Curso Escogido:</label>
+
                             </div>
                         </div>
                         <br>
@@ -115,6 +173,7 @@
                 <div class="modal-footer">
                 </div>
             </div>
+        </div>
         </div>
     </div>
     <!-- Fin formulario -->
