@@ -25,7 +25,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 mx-auto wow fadeInUp" data-wow-delay="0.1s">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeE9iwdniEh98T7biMgyqZ-Ll0s7wbC49LZoEoahusrACTpUA/viewform?embedded=true" width="700" height="1335" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeE9iwdniEh98T7biMgyqZ-Ll0s7wbC49LZoEoahusrACTpUA/viewform?embedded=true" width="700" height="1635" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
                     
                 </div>
             </div>
