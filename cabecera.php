@@ -83,7 +83,8 @@
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" alt="BOTON OTROS">Otros</a>
                             <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
                                 <a href="nosotros.php" class="dropdown-item" alt="BOTON NOSOTROS">Nosotros</a>
-                                <a href="servicios.php" class="dropdown-item" alt="BOTON SERVICIOS">Servicios</a>
+                                <a href="encuesta.php" class="dropdown-item" alt="BOTON ENCUESTA">Servicios</a>
+                                <a href="servicios.php" class="dropdown-item" alt="BOTON SERVICIOS">Encuesta</a>
                                 <a href="formatos.php" class="dropdown-item" alt="BOTON DESCARGA FORMULARIOS">Descargar Formatos</a>
                                 <a href="contacto.php" class="dropdown-item" alt = "Botón de Formulario de Contacto Via Correo">Contacto</a>
                                 <a href="actividades.php" class="dropdown-item" alt="BOTON De actividades Realizadas">Actividades Realizadas</a>

@@ -30,7 +30,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 mx-auto wow fadeInUp" data-wow-delay="0.1s">
 
-                    <form action="controladorusuario.php" required method="POST" enctype="multipart/form-data">
+                    <form action="dashboard/controladorusuario.php" required method="POST" enctype="multipart/form-data">
                         <div class="card card-primary">
                             <div class="card-header">
                                 <h3 class="card-title">REGISTRO DE USUARIO</h3>
@@ -84,7 +84,7 @@
                                         <div class="card-footer text-center">
                                             <button type="submit" class="btn btn-primary">Registrar</button>
 
-                                            <a style="margin: 2px; border-radius: 5px;" href="DashUsuarios.php"
+                                            <a style="margin: 2px; border-radius: 5px;" href="index.php"
                                                 class="btn btn-info"> Regresar</a>
                                         </div>
                             </div>
