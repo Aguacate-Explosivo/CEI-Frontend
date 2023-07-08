@@ -49,19 +49,19 @@
                                 <form action="php/login_validacion.php" method="POST" enctype="multipart/form-data">
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control" placeholder="Email" id="user" name="user" required>
-                                        <div class="input-group-append">
+                                        
                                             <div class="input-group-text">
                                                 <span class="fas fa-envelope"></span>
                                             </div>
-                                        </div>
+                                        
                                     </div>
                                     <div class="input-group mb-3">
                                         <input type="password" class="form-control" placeholder="Password" id="password" name="password" required>
-                                        <div class="input-group-append">
+                                        
                                             <div class="input-group-text">
                                                 <span class="fas fa-lock"></span>
                                             </div>
-                                        </div>
+                                        
                                     </div>
                                     <div class="row text-center">
                                         <!-- /.col -->
