@@ -44,6 +44,11 @@
   $Precio_negocio_plan = $_SESSION['Precio_negocio_plan'];
   $Calidad_negocio_plan = $_SESSION['Calidad_negocio_plan'];
   $Rapidez_negocio_plan =  $_SESSION['Rapidez_negocio_plan'];
+  $clientes_interesados_plan =  $_SESSION['clientes_interesados_plan'];
+  $cantidadMonetaria_interesados_plan =  $_SESSION['cantidadMonetaria_interesados_plan'];
+  $socios_productores =  $_SESSION['socios_productores'];
+  $tipo_marketing_plan =  $_SESSION['tipo_marketing_plan'];
+  $inversion_publicidad =  $_SESSION['inversion_publicidad'];
 
 //agregar tabla de productos  a base de datos
   require_once('../../conexion.php');
@@ -80,6 +85,17 @@
       $creartabla3g ="  ALTER TABLE ` $documento`
        CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; ";
        $creartabla4g=mysqli_query($conexion,$creartabla3g);
+
+ 
+                     
+       $insercion="INSERT INTO `Marketing` VALUES ('','$documento','$nombre','$autor_email ','$nombre_negocio_plan','$tipo_marketing_plan');";
+       $ejecucion=mysqli_query($conexion,$insercion);
+       if ($ejecucion) {
+           echo "<script>
+           console.log('se insertaron los datos de forma correcta');
+           </script>"; 
+           }
+    
 ?>
 <!DOCTYPE html>
 <html lang="es">
