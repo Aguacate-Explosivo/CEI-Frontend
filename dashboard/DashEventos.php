@@ -46,13 +46,37 @@
 
               </ul>
           </nav>
+          <style>
+  .input-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .input-group .form-control {
+    flex-grow: 1;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .input-group .input-group-append {
+    margin-left: -1px;
+    z-index: 10;
+  }
+</style>
           <!-- Fin de navegacion -->
           <form action="administradores/regeventos.php" required=" " method="POST" enctype="multipart/form-data">
-              <div class="form-floating">
+              <div class="input-group" >
                   <input type="text" id="nom_even" name="nom_even" class="form-control" placeholder=" Nombre del Evento:" 
-                  required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+" >
+                    required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+" >
+              
+                  <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar un nombre adecuado para el evento}">
+                  <i class="fas fa-question"></i>
+                  </button>
                   <label for="nom_even" class="form__label"></label>
-                  </div>
+             
+              </div>
+
+                  
                   <br>
                   <div class="form-floating">
                   <input type="text" id="lugar" name="lugar" class="form-control" placeholder=" Lugar del Evento:"

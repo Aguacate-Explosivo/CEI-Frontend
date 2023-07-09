@@ -35,6 +35,25 @@
     <?php require("cabecera.php"); ?>
     <!-- Navbar End -->
     <!-- Formulario -->
+
+    <style>
+  .input-with-icon {
+    position: relative;
+    display: inline-block;
+  }
+
+  .input-with-icon input {
+    padding-right: 30px; /* Espacio para el icono */
+  }
+
+  .input-with-icon .icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+</style>
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
@@ -60,14 +79,17 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-floating">
-                                <input type="text" id="documento" name="documento" class="form-control" placeholder="ff"
-                                    required  pattern="[0-9]+" maxlength="10" minlength="7">
-                                <label  for="documento" class="form__label">Numero de Documento:</label>
-                            </div>
-                        </div>
-                      
+
+    <div class="form-floating">
+      <input type="text" id="documento" title="Esta es una advertencia" name="documento" class="form-control" placeholder="ff" required pattern="[0-9]+" maxlength="10" minlength="7">
+      
+      <label for="documento" class="form__label">Numero de Documento:</label>
+   
+  </div>
+</div>
+
                         <br>
+                        
                         <div class="col-md-6">
                             <div class="form-floating">
                             <select  class="form-control" name="categoria"  id="categoria">
@@ -143,10 +165,10 @@
                                 <label for="edad" class="form__label">Edad:</label>
                             </div>
                         </div>
-                        <br>
+                        
                         <div class="row g-3">
                             <div class="form-floating">
-                                <select name="curso_elegido" class="form-control">
+                                <select style="width: 535px;" name="curso_elegido" class="form-control">
                                     <!-- Codigo de la base de datos -->
                                     <?php
                                         require 'conexion.php';
@@ -167,7 +189,7 @@
                         <br>
                         <br>
                         <button type="submit" class="btn btn-primary btn-large" id="registar" name="registar">Confirmar el Registro</button>
-                        <a style="margin: 2px; border-radius: 5px;" href="cursos.php" class="btn btn-info">Regresar</a>
+                        <a  class="btn btn-info btn-large" href="cursos.php" class="btn btn-info">Regresar</a>
                     </form>
                 </div>
                 <div class="modal-footer">

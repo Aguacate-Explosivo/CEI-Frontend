@@ -49,8 +49,7 @@
   $socios_productores =  $_SESSION['socios_productores'];
   $tipo_marketing_plan =  $_SESSION['tipo_marketing_plan'];
   $inversion_publicidad =  $_SESSION['inversion_publicidad'];
-
-//agregar tabla de productos  a base de datos
+ 
   require_once('../../conexion.php');
   $conexion=conectar(); 
   $creartabla ="CREATE TABLE ` $nombre_negocio_plan` (
@@ -112,90 +111,25 @@
 </head>
 <body>
   <?php
-  include_once("../administradores/sesion_validacion.php");
+  include_once("menu1.php");
   ?>
-  <div id="wrapper">
-    <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0">
-      <div class="navbar-header">
-        <a class="navbar-toggle hidden-sm hidden-md hidden-lg" href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse">
-          <i class="ti-menu"></i>
-        </a>
-        <div class="top-left-part">
-          <a class="logo" href="index.php">
-            <i class="glyphicon glyphicon-fire"></i>
-            <span class="hidden-xs">Simuladores</span>
-          </a>
-        </div>
-        <ul class="nav navbar-top-links navbar-left hidden-xs">
-          <li>
-            <a href="javascript:void(0)" class="open-close hidden-xs hidden-lg waves-effect waves-light">
-              <i class="ti-arrow-circle-left ti-menu"></i>
-            </a>
-          </li>
-        </ul>
-        <ul class="nav navbar-top-links navbar-right pull-right">
-          <li>
-            <a class="profile-pic" href="#">
-              <i class="ti-user"></i>
-              <b class="hidden-xs">Administrador</b>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="navbar-default sidebar nicescroll" role="navigation">
-      <div class="sidebar-nav navbar-collapse">
-        <ul class="nav" id="side-menu">
-          <li class="sidebar-search hidden-sm hidden-md hidden-lg">
-            <div class="input-group custom-search-form">
-              <input type="text" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
-                <button class="btn btn-success" type="button">
-                  <i class="ti-search"></i>
-                </button>
-              </span>
-            </div>
-          </li>
-          <li>
-            <a href="../index.php" class="waves-effect">
-              <i class="glyphicon glyphicon-fire fa-fw"></i>
-              Dashboard
-            </a>
-          </li>
-          <li>
-            <a href="../DashCitas.php" class="waves-effect">
-              <i class="ti-calendar fa-fw"></i>
-              Citas
-            </a>
-          </li>
-          <li>
-            <a href="../DashEventos.php" class="waves-effect">
-              <i class="ti-video-camera fa-fw"></i>
-              Eventos
-            </a>
-          </li>
-          <li>
-            <a href="../DashCursos.php" class="waves-effect">
-              <i class="ti-ink-pen fa-fw"></i>
-              Cursos
-            </a>
-          </li>
-          <li>
-            <a href="../DashSimulaciones.php" class="waves-effect active">
-              <i class="ti-stats-up fa-fw"></i>
-             Simulaciones
-            </a>
-          </li>
-        </ul>
-        <div class="center p-20">
-          <span class="hide-menu">
-            <a href="../../php/log_out.php" class="btn btn-success btn-block btn-rounded waves-effect waves-light">
-              Cerrar sesión
-            </a>
-          </span>
-        </div>
-      </div>
-    </div>
+    <style>
+  .input-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .input-group .form-control {
+    flex-grow: 1;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .input-group .input-group-append {
+    margin-left: -1px;
+    z-index: 10;
+  }
+</style>
     <div id="page-wrapper">
       <div class="container-fluid">
         <div class="row bg-title">
@@ -221,17 +155,27 @@
                                                 <main>
                                                     <form required method="POST" enctype="multipart/form-data">
                                                         <br>
-                                                        <div class="form-floating">
+                                                        <div class="input-group">
                                                             <input type="number" id="clientes_interesados_plan" name="clientes_interesados_plan" class="form-control" placeholder="Ingrese el número de clientes que podrían estar interesados en comprar sus productos y / o servicios:" required pattern="[0-9]+"  >
+                                                            <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de el plan de negocio, recuerda que no debe incluir espacios al final">
+                                                            <i class="fas fa-question"></i>
+                                                            </button>
                                                             <label for="clientes_interesados_plan" class="form__label"></label>
                                                         </div>
-                                                        <div class="form-floating">
+                                                        <br>
+                                                        <div class="input-group">
                                                             <input type="number" id="cantidadMonetaria_interesados_plan" name="cantidadMonetaria_interesados_plan" class="form-control" placeholder="Introducir la cantidad monetaria que estos clientes podrían estar dispuestos a gastar, en sus productos y / o servicios:" required pattern="[0-9]+"  >
+                                                            <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de el plan de negocio, recuerda que no debe incluir espacios al final">
+                                                            <i class="fas fa-question"></i>
+                                                            </button>
                                                             <label for="cantidadMonetaria_interesados_plan" class="form__label"></label>
                                                         </div>
                                                         <br>
-                                                        <div class="form-floating">
+                                                        <div class="input-group">
                                                             <input type="number" id="socios_productores" name="socios_productores" class="form-control" placeholder="Socios / Productores:" required pattern="[0-9]+"  >
+                                                            <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de el plan de negocio, recuerda que no debe incluir espacios al final">
+                                                            <i class="fas fa-question"></i>
+                                                            </button>
                                                             <label for="socios_productores" class="form__label"></label>
                                                         </div>
                                                         <div class="form-floating">
@@ -256,9 +200,12 @@
                                                                 <option value="Otro" >Otro</option>
                                                             </select>
                                                             <br>
-                                                            <div class="form-floating">
+                                                            <div class="input-group">
                                                                 <input type="number" id="inversion_publicidad" name="inversion_publicidad" class="form-control" placeholder="Cantidad de $ a Invertir en Publicidad:" required pattern="[0-9]+"  >
-                                                                 <label for="inversion_publicidad" class="form__label"></label>
+                                                                <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de el plan de negocio, recuerda que no debe incluir espacios al final">
+                                                            <i class="fas fa-question"></i>
+                                                            </button>
+                                                                <label for="inversion_publicidad" class="form__label"></label>
                                                             </div>
                                                             <br>
                                                         </div>

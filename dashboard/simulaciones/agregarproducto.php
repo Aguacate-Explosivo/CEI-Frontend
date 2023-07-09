@@ -118,115 +118,25 @@
 
   <body>
   <?php
-      include_once("../administradores/sesion_validacion.php")
-      ?>
-    <!-- Preloader -->
-    <div class="preloader">
-      <div class="cssload-speeding-wheel"></div>
-    </div>
-    <div id="wrapper">
-      <!-- Navigation -->
-      <nav
-        class="navbar navbar-default navbar-static-top"
-        style="margin-bottom: 0"
-      >
-        <div class="navbar-header">
-          <a
-            class="navbar-toggle hidden-sm hidden-md hidden-lg"
-            href="javascript:void(0)"
-            data-toggle="collapse"
-            data-target=".navbar-collapse"
-            ><i class="ti-menu"></i
-          ></a>
-          <div class="top-left-part">
-            <a class="logo" href="../index.php"
-              ><i class="glyphicon glyphicon-fire"></i>&nbsp;<span
-                class="hidden-xs"
-                >Simulaciones</span
-              ></a
-            >
-          </div>
-          <ul class="nav navbar-top-links navbar-left hidden-xs">
-            <li>
-              <a
-                href="javascript:void(0)"
-                class="open-close hidden-xs hidden-lg waves-effect waves-light"
-                ><i class="ti-arrow-circle-left ti-menu"></i
-              ></a>
-            </li>
-          </ul>
-          <ul class="nav navbar-top-links navbar-right pull-right">
-            <li>
-              <a class="profile-pic" href="#">
-                <i class="ti-user"></i>
-                <b class="hidden-xs">Administrador</b>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <!-- /.navbar-header -->
-        <!-- /.navbar-top-links -->
-        <!-- /.navbar-static-side -->
-      </nav>
-      <div class="navbar-default sidebar nicescroll" role="navigation">
-        <div class="sidebar-nav navbar-collapse">
-          <ul class="nav" id="side-menu">
-            <li class="sidebar-search hidden-sm hidden-md hidden-lg">
-              <div class="input-group custom-search-form">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Search..."
-                />
-                <span class="input-group-btn">
-                  <button class="btn btn-default" type="button">
-                    <i class="ti-search"></i>
-                  </button>
-                </span>
-              </div>
-            </li>
-            <li>
-              <a href="../index.php" class="waves-effect"
-                ><i class="glyphicon glyphicon-fire fa-fw"></i> Dashboard</a
-              >
-            </li>
-            <li>
-              <a href="../DashCitas.php" class="waves-effect"
-                ><i class="ti-calendar fa-fw"></i>Citas</a
-              >
-            </li>
-            <li>
-              <a href="../DashEventos.php" class="waves-effect "
-                ><i class="ti-video-camera fa-fw"></i>Eventos</a
-              >
-            </li>
-            <li>
-              <a href="../DashCursos.php" class="waves-effect"
-                ><i class="ti-ink-pen fa-fw"></i> Cursos</a
-              >
-            </li>
-            <li>
-            <a href="../DashSimulaciones.php" class="waves-effect active ">
-              <i class="ti-stats-up fa-fw"></i>
-             Simulaciones
-            </a>
-          </li>
-          </ul>
-          <div class="center p-20">
-            <span class="hide-menu"
-              ><a
-                href="../../php/log_out.php"
-                class="
-                  btn btn-success btn-block btn-rounded
-                  waves-effect waves-light
-                "
-                >Cerra sesión</a
-              ></span
-            >
-          </div>
-        </div>
-        <!-- /.sidebar-collapse -->
-      </div>
+  include_once("menu1.php");
+  ?>
+    <style>
+  .input-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .input-group .form-control {
+    flex-grow: 1;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .input-group .input-group-append {
+    margin-left: -1px;
+    z-index: 10;
+  }
+</style>
       <!-- Page Content -->
       <div id="page-wrapper">
         <div class="container-fluid">
@@ -245,33 +155,55 @@
  <div class="inicio">
     <div class="scroll">
     <div class="col-md-9">
-    <input type="text" id="nombre_producto1" name="nombre_producto1" class="form-control"
+    <div class="input-group">
+    <input style="width: 1000px;" type="text" id="nombre_producto1" name="nombre_producto1" class="form-control"
     placeholder="Nombre Producto:" required=""  maxlength="16" minlength="1" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-,.]+"  >
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de el plan de negocio, recuerda que no debe incluir espacios al final">
+     <i class="fas fa-question"></i>
+      </button>
     <label for="producto" class="form__label"></label>
+    </div>
     </div>
 <br>
 <br> 
 <br>
   <div class="col-md-9">
-      <label for="cantidad" class="form__label"></label>
-    <input type="text"  class="form-control" id="cantidad_producto1" name="cantidad_producto1"
+  <div class="input-group">
+    
+      <input type="text" style="width: 1000px;"  class="form-control" id="cantidad_producto1" name="cantidad_producto1"
     placeholder="Cantidad producto:" required pattern="[0-9]+" >
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de el plan de negocio, recuerda que no debe incluir espacios al final">
+     <i class="fas fa-question"></i>
+      </button>
+    <label for="cantidad" class="form__label"></label>
+
+    </div>
     </div>
 <br>
 <br>
 <br>
   <div class="col-md-9">
-      <label for="coste_unidad_producto1" class="form__label"></label>
-    <input type="text"  class="form-control" id="coste_unidad_producto1" name="coste_unidad_producto1"
+  <div class="input-group">
+    <input type="text"  style="width: 1000px;" class="form-control" id="coste_unidad_producto1" name="coste_unidad_producto1"
     placeholder="Coste Unitario:" required pattern="[0-9]+" >
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de el plan de negocio, recuerda que no debe incluir espacios al final">
+     <i class="fas fa-question"></i>
+      </button>
+      <label for="coste_unidad_producto1" class="form__label"></label>
+    </div>
     </div>
 <br>
 <br>
 <br>
   <div class="col-md-9">
-      <label for="precio_venta_producto1" class="form__label"></label>
-    <input type="text"  class="form-control" id="precio_venta_producto1" name="precio_venta_producto1"
+  <div class="input-group">
+    <input type="text" style="width: 1000px;" class="form-control" id="precio_venta_producto1" name="precio_venta_producto1"
     placeholder="Precio Venta:" required pattern="[0-9]+" >
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de el plan de negocio, recuerda que no debe incluir espacios al final">
+     <i class="fas fa-question"></i>
+      </button>
+      <label for="precio_venta_producto1" class="form__label"></label>
+    </div>
     </div>
 <br>
 <br>
@@ -361,10 +293,17 @@
                                       
                        <form  method="POST" enctype="multipart/form-data" >
     <div class="col-md-6">
+    <div class="input-group">
     <label for="importe" class="form__label"> Importe de Productos:</label>
-    <input type="text"  maxlength="4" minlength="1" class="form-control" id="importe" value="4.6" name="importe"
+    <input type="text"  maxlength="4" minlength="1" class="form-control" id="importe" value="19" name="importe"
     placeholder="Importe :" required pattern="[0-9 .]+" >
-    </div><br>
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de el plan de negocio, recuerda que no debe incluir espacios al final">
+     <i class="fas fa-question"></i>
+      </button>
+   
+    </div>
+    </div>
+    <br>
                        <button style="width: 250px;" value="Siguiente" name="Siguiente"  type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Siguiente</button>                  
             
                         <!-- Inputs para transferir informacion -->
@@ -436,34 +375,7 @@
       <!-- /#page-wrapper -->
       
     
-    <!-- /#wrapper -->
-    <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- Menu Plugin JavaScript -->
-    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
-    <!--Nice scroll JavaScript -->
-    <script src="../js/jquery.nicescroll.js"></script>
-    <!--Wave Effects -->
-    <script src="../js/waves.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="../js/myadmin.js"></script>
-    <script src="../js/slider.js"></script>
-    <!-- jQuery, Popper.js, Bootstrap JS -->
-    <script src="../jquery/jquery-3.3.1.min.js"></script>
-    <script src="../popper/popper.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <!-- datatables JS -->
-    <script type="text/javascript" src="../datatables/datatables.min.js"></script>    
-    <!-- para usar botones en datatables JS -->  
-    <script src="../datatables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>  
-    <script src="../datatables/JSZip-2.5.0/jszip.min.js"></script>    
-    <script src="../datatables/pdfmake-0.1.36/pdfmake.min.js"></script>    
-    <script src="../datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
-    <script src="../datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
-    <!-- código JS propìo-->    
-    <script type="text/javascript" src="../js/main.js"></script>  
+      
   </body>
   
 </html>
