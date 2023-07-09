@@ -140,17 +140,17 @@
                                                       </div>
                                                       <br>
                                                       <div class="input-group">
-                                                          <input type="text" id="zona_geografica_plan" name="zona_geografica_plan" class="form-control" placeholder="Zona Geográfica:"
-                                                          required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+"  >
-                                                          <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar la zona geografica donde estara ubicado tu negocio">
-                                                            <i class="fas fa-question"></i>
+                                                        <input type="text" id="zona_geografica_plan" name="zona_geografica_plan" class="form-control" placeholder="Zona Geográfica:"
+                                                        required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+"  >
+                                                        <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar la zona geografica donde estara ubicado tu negocio">
+                                                          <i class="fas fa-question"></i>
                                                             </button>
-                                                          <label for="zona_geografica_plan" class="form__label"></label>
+                                                            <label for="zona_geografica_plan" class="form__label"></label>
                                                       </div>
-                                                          <br>
+                                                      <br>
                                                         <div class="form-floating">
                                                             <label for="publico_objetivo_plan" class="form-label">Publico Objetivo:</label>
-                                                            <select required name ="publico_objetivo_plan"  id="publico_objetivo_plan" class="form-control"  >
+                                                            <select required name ="publico_objetivo_plan"  id="publico_objetivo_plan" class="form-control">
                                                               <option value="poder adquisitivo">poder adquisitivo</option>
                                                               <option value="identidad de género" >Identidad de género</option>
                                                               <option value="lugar de residencia" >Lugar de residencia</option>
@@ -163,52 +163,42 @@
                                                                 <option value="Tamaño de la familia" >Tamaño de la familia</option>
                                                                 <option value="Idioma">Idioma</option>
                                                                 <option value="Otro">Otro</option>
-                                                            </select>
+                                                              </select>
+                                                              <br>
+                                                            </div>
+                                                            <hr/>
+                                                              <div class="form-floating">
+                                                              <button type="submit" name="Siguiente" value = "Siguiente" class="btn btn-success btn-lg btn-rounded">Siguiente</button>     
+                                                              </div>
+                                                                  <select required name ="innovacion_negocio_plan"  id="innovacion_negocio_plan" class="form-control" style="visibility:hidden">
+                                                                      <option value="Muy alta" >Muy Alta</option>
+                                                                      <option value="Alta" >Alta</option>
+                                                                      <option value="Media">Media</option>
+                                                                      <option value="Baja" >Baja</option>
+                                                                      <option value="Muy Baja">Muy Baja</option>
+                                                                  </select>
+                                                                  <select required name ="Precio_negocio_plan"  id="Precio_negocio_plan" class="form-control" style="visibility:hidden">
+                                                                      <option value="Muy alta" >Muy Alta</option>
+                                                                      <option value="Alta" >Alta</option>
+                                                                      <option value="Media">Media</option>
+                                                                      <option value="Baja" >Baja</option>
+                                                                      <option value="Muy Baja">Muy Baja</option>
+                                                                  </select>
+                                                                  <select required name ="Calidad_negocio_plan"  id="Calidad_negocio_plan" class="form-control" style="visibility:hidden">
+                                                                      <option value="Muy alta" >Muy Alta</option>
+                                                                      <option value="Alta" >Alta</option>
+                                                                      <option value="Media">Media</option>
+                                                                      <option value="Baja" >Baja</option>
+                                                                      <option value="Muy Baja">Muy Baja</option>
+                                                                  </select>
+                                                                  <select required name ="Rapidez_negocio_plan"  id="Rapidez_negocio_plan" class="form-control" style="visibility:hidden">
+                                                                      <option value="Muy alta" >Muy Alta</option>
+                                                                      <option value="Alta" >Alta</option>
+                                                                      <option value="Media">Media</option>
+                                                                      <option value="Baja" >Baja</option>
+                                                                      <option value="Muy Baja">Muy Baja</option>
+                                                                  </select>
                                                              <br>
-                                                        </div>
-                                                        <div class="form-floating">
-                                                              <div class="col-md-3">
-                                                              <label for="innovacion_negocio_plan" class="form-label">Innovación:</label>
-                                                                  <select required name ="innovacion_negocio_plan"  id="innovacion_negocio_plan" class="form-control"  >
-                                                                      <option value="Muy alta" >Muy Alta</option>
-                                                                      <option value="Alta" >Alta</option>
-                                                                      <option value="Media">Media</option>
-                                                                      <option value="Baja" >Baja</option>
-                                                                      <option value="Muy Baja">Muy Baja</option>
-                                                                  </select>
-                                                              </div>
-                                                              <div class="col-md-3">
-                                                              <label for="Precio_negocio_plan" class="form-label">Precio:</label>
-                                                                  <select required name ="Precio_negocio_plan"  id="Precio_negocio_plan" class="form-control"  >
-                                                                      <option value="Muy alta" >Muy Alta</option>
-                                                                      <option value="Alta" >Alta</option>
-                                                                      <option value="Media">Media</option>
-                                                                      <option value="Baja" >Baja</option>
-                                                                      <option value="Muy Baja">Muy Baja</option>
-                                                                  </select>
-                                                              </div>
-                                                              <div class="col-md-3">
-                                                              <label for="Calidad_negocio_plan" class="form-label">Calidad:</label>
-                                                                  <select required name ="Calidad_negocio_plan"  id="Calidad_negocio_plan" class="form-control"  >
-                                                                      <option value="Muy alta" >Muy Alta</option>
-                                                                      <option value="Alta" >Alta</option>
-                                                                      <option value="Media">Media</option>
-                                                                      <option value="Baja" >Baja</option>
-                                                                      <option value="Muy Baja">Muy Baja</option>
-                                                                  </select>
-                                                              </div>
-                                                              <div class="col-md-3">
-                                                              <label for="Rapidez_negocio_plan" class="form-label">Rapidez:</label>
-                                                                  <select required name ="Rapidez_negocio_plan"  id="Rapidez_negocio_plan" class="form-control"  >
-                                                                      <option value="Muy alta" >Muy Alta</option>
-                                                                      <option value="Alta" >Alta</option>
-                                                                      <option value="Media">Media</option>
-                                                                      <option value="Baja" >Baja</option>
-                                                                      <option value="Muy Baja">Muy Baja</option>
-                                                                  </select>
-                                                              </div>
-                                                             <br>
-                                                        </div>
                                                         <br>
 
                                                         <!-- Inputs para transferir informacion -->
@@ -221,10 +211,6 @@
                                                             <label hidden for="autor_email" class="form__label"></label>
                                                         </div>
 
-                                                      <hr/>
-                                                        <div class="form-floating">
-                                                        <button type="submit" name="Siguiente" value = "Siguiente" class="btn btn-success btn-lg btn-rounded">Siguiente</button>     
-                                                        </div>
                                                         
                                                     </form>
                                                 </main>
