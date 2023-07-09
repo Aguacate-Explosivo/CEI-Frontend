@@ -78,15 +78,14 @@
                                         </div>
                                     </div>
                                     <h5 class="card-title"><?php echo htmlspecialchars($row["nombreEven"]); ?></h5>
-                                    <p class="card-text"><?php echo htmlspecialchars($row["descripcionEven"]); ?></p>
+                                    
                                     <p class="card-text"><small class="text-muted">Lugar:
                                             <?php echo htmlspecialchars($row["lugar"]); ?></small></p>
                                     <p class="card-text"><small class="text-muted">Fecha:
                                             <?php echo htmlspecialchars($row["fecha"]); ?></small></p>
                                     <p class="card-text"><small class="text-muted">Hora:
                                             <?php echo htmlspecialchars($row["hora"]); ?></small></p>
-                                    <p class="card-text"><small class="text-muted">Estado del Evento:
-                                            <?php echo htmlspecialchars($row["estado"]); ?></small></p>
+                                   
                                 </div>
                                 <a style="margin: 2px; border-radius: 5px;"
                                     href="inceventos.php?id_evento=<?php echo htmlspecialchars($row["id_evento"]); ?>"
@@ -96,7 +95,7 @@
                                     class="btn btn-info"> Ver Mas</a>
 
                                 <br>
-                                <a href="">ㅤㅤ</a>
+                               
                             </div>
                         </div>
                     <?php } ?>

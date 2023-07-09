@@ -69,7 +69,7 @@
                   <input type="text" id="nom_even" name="nom_even" class="form-control" placeholder=" Nombre del Evento:" 
                     required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+" >
               
-                  <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar un nombre adecuado para el evento}">
+                  <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar un NOMBRE adecuado para el evento">
                   <i class="fas fa-question"></i>
                   </button>
                   <label for="nom_even" class="form__label"></label>
@@ -78,42 +78,60 @@
 
                   
                   <br>
-                  <div class="form-floating">
+                  <div class="input-group">
                   <input type="text" id="lugar" name="lugar" class="form-control" placeholder=" Lugar del Evento:"
                   required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#]+"  >
+                  <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el LUGAR en donde se realizara el evento">
+                  <i class="fas fa-question"></i>
+                  </button>
                   <label for="lugar" class="form__label"></label>
                   </div>
                   <br>
-                  <div class="form-floating">
+                  <div class="input-group">
                   <input type="text" id="desc_even" name="desc_even" class="form-control" placeholder=" Descripcion Breve del Evento: "
                   required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 ]+"  >
+                  <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar una DESCRIPCION adecuada para el evento en donde se explique a detalle que se hara en el evento">
+                  <i class="fas fa-question"></i>
+                  </button>
                   <label for="desc_even" class="form__label"></label>
                   </div>
                   <br>
-                  <div class="form-floating">
-                  <label for="fecha" class="form-label">Fecha del Evento:</label>
+                  <div class="input-group">
+                  <label style="width: 170px;" for="fecha" class="form-label">Fecha del Evento:</label>
                   <input name ="fecha" type="date" class="form-control" id="fecha" 
                   required min="2023-03-01 " max="2030-12-31" >
+                  <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar la FECHA en la que se realizara el evento">
+                  <i class="fas fa-question"></i>
+                  </button>
                   </div>
                   <br>
-                  <div class="form-floating">
-                  <label for="fecha" class="form-label">Hora del Evento:</label>
+                  <div class="input-group">
+                  <label style="width: 170px;" for="fecha" class="form-label">Hora del Evento:</label>
                   <input name ="hora" type="time" class="form-control" id="hora" required=" "  >
+                  <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar la HORA en la que se realizara el evento">
+                  <i class="fas fa-question"></i>
+                  </button>
                   </div>
                   <br>
                       <!-- Seccion para cargar la imagen -->
-                      <div class="form-floating">
-                          <label for="imagen" class="form-label">Cargar Imagen</label>
+                      <div class="input-group">
+                          <label style="width: 170px;" for="imagen" class="form-label">Cargar Imagen</label>
                           <input class="form-control" type="file" id="imagen" name ="imagen" 
                           required=" " accept="image/*" >
+                          <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes CARGAR UNA IMAGEN referente a el evento">
+                  <i class="fas fa-question"></i>
+                  </button>
                       </div>
                       <br>
-                  <div class="form-floating">
-                  <label for="estado" class="form-label">Estado del Evento:</label>
+                  <div class="input-group">
+                  <label for="estado" style="width: 170px;" class="form-label">Estado del Evento:</label>
                   <select required=" " name ="estado"  id="estado" class="form-control"  >
                       <option value=" Activo" >Activo</option>
                       <option value=" Terminado">Terminado</option>
                   </select>
+                  <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes marcar el ESTADO del evento">
+                  <i class="fas fa-question"></i>
+                  </button>
                   </div>
                   <br> 
                   <button style="margin: 2px; border-radius: 5px;"  type="submit" class="btn btn-success btn-large">Registrar un Nuevo Evento</button>
