@@ -98,7 +98,13 @@
         
        require_once('../../conexion.php');
        $conexion=conectar();
-       
+       $insercion="INSERT INTO `Marketing` VALUES ('','$documento','$nombre','$autor_email ','$nombre_negocio_plan','$tipo_marketing_plan');";
+       $ejecucion=mysqli_query($conexion,$insercion);
+       if ($ejecucion) {
+           echo "<script>
+           console.log('se insertaron los datos de forma correcta');
+           </script>"; 
+           }
        $tabla=$nombre_negocio_plan;
        $tabla1=$documento;
        
@@ -118,7 +124,7 @@
               });
            setInterval(()=>{
            location.assign('../DashSimulaciones.php');
-           },10000);
+           },4000);
               </script>"; 
         }
       

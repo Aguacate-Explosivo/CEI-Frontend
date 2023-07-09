@@ -87,13 +87,7 @@
 
  
                      
-       $insercion="INSERT INTO `Marketing` VALUES ('','$documento','$nombre','$autor_email ','$nombre_negocio_plan','$tipo_marketing_plan');";
-       $ejecucion=mysqli_query($conexion,$insercion);
-       if ($ejecucion) {
-           echo "<script>
-           console.log('se insertaron los datos de forma correcta');
-           </script>"; 
-           }
+      
     
 ?>
 <!DOCTYPE html>
