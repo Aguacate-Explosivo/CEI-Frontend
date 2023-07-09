@@ -90,28 +90,31 @@
                     </div>
                     <div class="col-md-6">
                   <div class="form-floating">
-                    <label for="fecha" class="form__label"></label>
                     <input name ="fecha" type="date" class="form-control" id="fecha" 
                     value="<?php echo $fila['fecha']?>" required=" ">
+                    <label for="fecha" class="form__label">Fecha</label>
+
                     </div>
                     </div>
                     <div class="col-md-6">
                   <div class="form-floating">
-                    <label for="hora" class="form__label"></label>
+                 
                     <input name ="hora" type="time" class="form-control" id="hora" 
                     value="<?php echo $fila['hora']?>" required=" ">
+                    <label for="hora" class="form__label">Hora</label>
                     </div>
                     </div>
                     <br>
                     <div class="col-md-12">
                   <div class="form-floating">
-                    <label for="estado" class="form__label">Estado del evento:</label>
                     <select value="<?php echo $fila['estado']?>"
                     name ="estado" type="text" class="form-control" id="estado">
                     <option value="Activo">Activo</option>
                     <option value="Terminado">Terminado</option>
                     
                   </select>
+                  <label for="estado" class="form__label">Estado del evento:</label>
+
                   </div>
                     </div>
                     <div class="col-md-12">
