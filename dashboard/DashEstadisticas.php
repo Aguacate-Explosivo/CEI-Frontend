@@ -25,9 +25,19 @@
             </div>
             <!-- /.col-lg-12 -->
           </div>
+
+          <!-- Inicio ROW -->
+          <div class="row">
+            <div class="white-box">
+            <h3 class="text-center">Modulo - Estadisticas Basicas de Emprendedores GRAFOS</h3>
+                <div>
+                  <canvas id="myChart"></canvas>
+                </div>
+            </div>
+          </div>
+          <!-- Fin ROW -->
           <!-- row -->
           <div class="row">
-            
             <div class="white-box">
             <h3 class="text-center">Modulo - Estadisticas Basicas de Emprendedores</h3>
             <!-- Container de citas(Data Tables) -->
@@ -131,12 +141,35 @@
             
           </div>
           <!-- /.row -->
+
         </div>
         <!-- /.container-fluid -->
       </div>
       <!-- /#page-wrapper -->
       <?php require_once ("footer.php"); ?>
     </div>
-    <!-- /#wrapper --> 
+    <!-- /#wrapper -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+          const ctx = document.getElementById('myChart');
+          new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ['Total de Emprendedores', 'Total de Inscritos a Cursos', 'Total de Inscritos a Eventos', 'Promedio de Edad de emprendedores', 'Categorias de Plan mas Frecuentes: <?php echo $Categorias; ?>'],
+              datasets: [{
+                label: 'Cantidades',
+                data: [<?php echo $totalEmprendedores; ?>, <?php echo $cantidad_total_inscritos_cursos; ?>, <?php echo $cantidad_total_inscritos_eventos; ?>, <?php echo $EdadpromedioTotal; ?> , <?php echo $CantidadEmprendedoresCategorias; ?>],
+                borderWidth: 1
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+      </script>
   </body>
-</html> 
+</html>                      
