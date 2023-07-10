@@ -24,7 +24,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.png">
   
 </head>
-<body>
+<body style="background-image: url(img/fondo.png);">
   <?php
   include_once("menu1.php");
   ?>

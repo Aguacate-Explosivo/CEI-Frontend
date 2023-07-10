@@ -103,7 +103,7 @@
   <link href="../css/style.css" rel="stylesheet">
   <link href="../css/stylese.css" rel="stylesheet">
 </head>
-<body>
+<body style="background-image: url(img/fondo.png);">
   <?php
   include_once("menu1.php");
   ?>

@@ -93,7 +93,7 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <title>Procesando Evento</title>
 </head>
-<body>  
+<body style="background-image: url(img/fondo.png);">  
 <?php
         
        require_once('../../conexion.php');
