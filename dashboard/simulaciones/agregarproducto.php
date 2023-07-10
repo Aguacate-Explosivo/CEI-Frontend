@@ -138,13 +138,15 @@
   }
 </style>
       <!-- Page Content -->
-      <div id="page-wrapper">
-        <div class="container-fluid">
+      <div class="wrapper" style="background: white; width: 1200px; margin: auto;">
+        <div class="">
           <div class="row bg-title">
             <div class="col-lg-12">
-              <h4 class="page-title">Paso 5 Agregar Productos</h4>
-              <ol class="breadcrumb">
-              </ol>
+              <h4 class="page-title">Paso 4 Agregar Productos</h4>
+               <div style="float: right;  width: 200px; ">
+                             <a href="drop.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Sumulacion </a>
+                            </div>
+          
             </div>
             <!-- /.col-lg-12 -->
           </div>
@@ -158,7 +160,7 @@
     <div class="input-group">
     <input style="width: 1000px;" type="text" id="nombre_producto1" name="nombre_producto1" class="form-control"
     placeholder="Nombre Producto:" required=""  maxlength="16" minlength="1" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-,.]+"  >
-    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de el plan de negocio, recuerda que no debe incluir espacios al final">
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de cada producto que se operara">
      <i class="fas fa-question"></i>
       </button>
     <label for="producto" class="form__label"></label>
@@ -172,7 +174,7 @@
     
       <input type="text" style="width: 1000px;"  class="form-control" id="cantidad_producto1" name="cantidad_producto1"
     placeholder="Cantidad producto:" required pattern="[0-9]+" >
-    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de el plan de negocio, recuerda que no debe incluir espacios al final">
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar la CANTIDAD de productos que se van a vender ">
      <i class="fas fa-question"></i>
       </button>
     <label for="cantidad" class="form__label"></label>
@@ -186,7 +188,7 @@
   <div class="input-group">
     <input type="text"  style="width: 1000px;" class="form-control" id="coste_unidad_producto1" name="coste_unidad_producto1"
     placeholder="Coste Unitario:" required pattern="[0-9]+" >
-    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de el plan de negocio, recuerda que no debe incluir espacios al final">
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar lo que a usted como emprendedor le cuesta CADA PRODUCTO POR UNIDAD ">
      <i class="fas fa-question"></i>
       </button>
       <label for="coste_unidad_producto1" class="form__label"></label>
@@ -199,7 +201,7 @@
   <div class="input-group">
     <input type="text" style="width: 1000px;" class="form-control" id="precio_venta_producto1" name="precio_venta_producto1"
     placeholder="Precio Venta:" required pattern="[0-9]+" >
-    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de el plan de negocio, recuerda que no debe incluir espacios al final">
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el PRECIO DE VENTA de cada producto">
      <i class="fas fa-question"></i>
       </button>
       <label for="precio_venta_producto1" class="form__label"></label>
@@ -297,7 +299,7 @@
     <label for="importe" class="form__label"> Importe de Productos:</label>
     <input type="text"  maxlength="4" minlength="1" class="form-control" id="importe" value="19" name="importe"
     placeholder="Importe :" required pattern="[0-9 .]+" >
-    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de el plan de negocio, recuerda que no debe incluir espacios al final">
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el IMPORTE o IVA de los productos que agrego anteriormente, por defecto se seleccionara el 19% ">
      <i class="fas fa-question"></i>
       </button>
    
@@ -370,11 +372,14 @@
           <!-- /.row -->
        
         <!-- /.container-fluid -->
-        <br><br><br><br><br><br><br><br>
-      
+  
       <!-- /#page-wrapper -->
       
-    
+    <footer>
+      <?php
+  include_once("../footer.php");
+  ?>
+    </footer>
       
   </body>
   

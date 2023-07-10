@@ -36,9 +36,6 @@
             <h4 class="page-title">
               Primer Paso!
             </h4>
-                <div style="float: right;  width: 200px; ">
-                             <a href="drop.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Sumulacion </a>
-                            </div>
             <ol class="breadcrumb">
             </ol>
           </div>
@@ -69,7 +66,7 @@
                             <!-- Container de Formulario -->
 
                             <div class="container-fluid">
-                                    <div class="jumbotron white-box" style="width: 800px; margin: auto; height: 350px;">
+                                    <div class="jumbotron white-box" style="width: 800px; margin: auto; height: 380px;">
                                         <div class="container">
                                             <div class="row">
                                                 <main>
@@ -100,6 +97,7 @@
                                                         </div>
                                                             <br>
                                                             <button type="submit" id="Siguiente" name="Siguiente" class="btn btn-success btn-lg btn-rounded">Siguiente</button>     
+                                                              <a type="submit" id="atras" name="atras" href="simulaciones.php" class="btn btn-info btn-lg btn-rounded">Atras</a> 
                                                         </div>
                                                     </form>
                                                 </main>

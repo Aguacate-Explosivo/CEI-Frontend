@@ -73,9 +73,7 @@
             <h4 class="page-title">
               Segundo Paso!
             </h4>
-            <div style="float: right;  width: 200px; ">
-                             <a href="drop.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Sumulacion </a>
-                            </div>
+            
             <ol class="breadcrumb"
             <ol class="breadcrumb">
             </ol>
@@ -172,7 +170,7 @@
                                                             </div>
                                                             <hr/>
                                                               <div class="form-floating">
-                                                              <button type="submit" name="Siguiente" value = "Siguiente" class="btn btn-success btn-lg btn-rounded">Siguiente</button>     
+                                                              <button type="submit" name="Siguiente" value = "Siguiente" class="btn btn-success btn-lg btn-rounded">Siguiente</button>        <a type="submit" id="atras" name="atras" href="overview.php" class="btn btn-info btn-lg btn-rounded">Atras</a>  
                                                               </div>
                                                                   <select required name ="innovacion_negocio_plan"  id="innovacion_negocio_plan" class="form-control" style="visibility:hidden">
                                                                       <option value="Muy alta" >Muy Alta</option>
