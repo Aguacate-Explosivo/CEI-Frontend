@@ -29,13 +29,16 @@
   include_once("menu1.php");
   ?>
   
-    <div id="page-wrapper">
+    <div id="">
       <div class="container-fluid">
         <div class="row bg-title">
           <div class="col-lg-12">
             <h4 class="page-title">
               Primer Paso!
             </h4>
+                <div style="float: right;  width: 200px; ">
+                             <a href="drop.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Sumulacion </a>
+                            </div>
             <ol class="breadcrumb">
             </ol>
           </div>
@@ -61,13 +64,16 @@
             <div class="row">
                     <div class="col-md-12">
                         <div class="white-box">
+                              <br>  
                         <h3 class="text-center">Overview</h3>
                             <!-- Container de Formulario -->
+
                             <div class="container-fluid">
-                                    <div class="jumbotron white-box">
+                                    <div class="jumbotron white-box" style="width: 800px; margin: auto; height: 350px;">
                                         <div class="container">
                                             <div class="row">
                                                 <main>
+                                                      <br>  
                                                     <form required method="POST" enctype="multipart/form-data">
                                                         <div class="input-group">
                                                             <input type="text" id="doc_autor_plan" name="doc_autor_plan" class="form-control" placeholder="Documento del Autor del Plan:" required pattern="[0-9]+"  >
@@ -108,8 +114,8 @@
                 </div>
             </div>
         <!-- fin -->
-        <footer class="footer text-center">
-      FACNET - 2023 &copy; 
+        <footer >
+      <?php  include_once("../footer.php"); ?>
     </footer>
   </div>
 </body>
