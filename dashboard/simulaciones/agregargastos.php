@@ -129,7 +129,7 @@
     <!-- Preloader -->
    
         <!-- /.sidebar-collapse -->
-      </div>
+    
       <!-- Page Content -->
       <div class="wrapper" style="background: white; width: 80%; margin: auto;">
         <div class="container-fluid">
@@ -137,7 +137,7 @@
             <div class="col-lg-12">
               <h4 class="page-title">Paso 5 Agregar Gastos</h4>
               <div style="float: right;  width: 200px; ">
-                             <a href="drop.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Sumulacion </a>
+                             <a href="drop1.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Sumulacion </a>
                             </div>
               <ol class="breadcrumb">
               </ol>

@@ -132,7 +132,7 @@
               Tercer Paso!
             </h4>
             <div style="float: right;  width: 200px; ">
-                             <a href="drop.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Sumulacion </a>
+                             <a href="drop1.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Sumulacion </a>
                             </div>
             <ol class="breadcrumb">
             </ol>

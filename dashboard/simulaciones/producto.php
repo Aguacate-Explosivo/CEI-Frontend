@@ -91,14 +91,25 @@
   <link href="../css/style.css" rel="stylesheet">
   <link href="../css/stylese.css" rel="stylesheet">
 </head>
-<body style="background: white;">
+<body style="background: green;">
   <?php
   include_once("menu1.php");
   ?>
   
-   
-<!-- inicio-->
-<hr>
+      <div class="wrapper" style="background: white; width: 80%; margin: auto;">
+        <div class="container-fluid">
+          <div class="row bg-title">
+            <div class="col-lg-12">
+              <h4 class="page-title">Paso 6</h4>
+              <div style="float: right;  width: 200px; ">
+                             <a href="drop1.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Sumulacion </a>
+                            </div>
+              <ol class="breadcrumb">
+              </ol>
+            </div>
+            <!-- /.col-lg-12 -->
+          </div>
+
     
 <form class="range-form" method="POST" action="producto.php" >
  <div class="inicio">
@@ -546,7 +557,11 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
   <script src="../js/slider.js"></script>
   <script src="js/myadmin.js"></script>
 </body>
-
+<footer>
+    <?php
+  include_once("../footer.php");
+  ?>
+</footer>
 </html>
 
 
