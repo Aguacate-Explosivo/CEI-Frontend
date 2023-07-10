@@ -102,9 +102,18 @@
        $ejecucion=mysqli_query($conexion,$insercion);
        if ($ejecucion) {
            echo "<script>
-           console.log('se insertaron los datos de forma correcta');
+           console.log('se insertaron los datos de forma correcta en marketing');
            </script>"; 
            }
+
+      $insercion2="INSERT INTO `categoriasemprendimiento` VALUES ('','$documento','$industria_plan','$cantidadMonetaria_interesados_plan');";
+       $ejecucion2=mysqli_query($conexion,$insercion2);
+       if ($ejecucion2) {
+           echo "<script>
+           console.log('se insertaron los datos de forma correcta para las estadisticas');
+           </script>"; 
+           }
+
        $tabla=$nombre_negocio_plan;
        $tabla1=$documento;
        
