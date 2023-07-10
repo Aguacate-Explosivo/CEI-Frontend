@@ -88,12 +88,29 @@
                             } else {
                                 echo "Error en la consulta: " . mysqli_error($conexion);
                             }
-                            // Calculando el promedio de edades
                             $totalDivisible = $cantidad_total_inscritos_eventos+$cantidad_total_inscritos_cursos;
                             $sumaEdades = $EdadesCursos+$EdadesEventos;
                             $EdadpromedioTotal = round($sumaEdades/$totalDivisible);
                           
+                            $consultaCategorias ="SELECT categoria, COUNT(*) AS cantidad_emprendedores FROM `categoriasemprendimiento` GROUP BY categoria HAVING cantidad_emprendedores = ( SELECT MAX(contador) FROM ( SELECT COUNT(*) AS contador FROM `categoriasemprendimiento` GROUP BY categoria ) AS subconsulta );";
+                            $busquedaCategorias=mysqli_query($conexion,$consultaCategorias);
+                            if ($busquedaCategorias) {
+                              $filaCategorias = mysqli_fetch_assoc($busquedaCategorias);
+                              $Categorias = $filaCategorias["categoria"];
+                              $CantidadEmprendedoresCategorias = $filaCategorias["cantidad_emprendedores"];
+                            } else {
+                                echo "Error en la consulta: " . mysqli_error($conexion);
+                            }
                             
+                            $consultaIngresosEmprendedores ="SELECT SUM(ingresos) FROM `categoriasemprendimiento`;";
+                            $busquedaIngresosEmprendedores=mysqli_query($conexion,$consultaIngresosEmprendedores);
+                            if ($busquedaIngresosEmprendedores) {
+                              $filaIngresosEmprendedores = mysqli_fetch_assoc($busquedaIngresosEmprendedores);
+                              $TotalIngresosEmprendedores = $filaIngresosEmprendedores["SUM(ingresos)"];
+                            } else {
+                                echo "Error en la consulta: " . mysqli_error($conexion);
+                            }
+                            $promedioIngresosEmprendedores = $TotalIngresosEmprendedores/$totalEmprendedores;
                             ?>
                         <!-- Contenido de la tabla -->
 
@@ -102,9 +119,9 @@
                             <td><?php echo $cantidad_total_inscritos_cursos; ?></td>
                             <td><?php echo $cantidad_total_inscritos_eventos; ?></td>
                             <td><?php echo $EdadpromedioTotal; ?></td>
-                            <td><?php echo $row["fecha_hora"]; ?></td>
-                            <td><?php echo $row["curso_inscrito"]; ?></td>
-                            <td><?php echo $row["evento_inscrito"]; ?></td>
+                            <td><?php echo $Categorias; ?></td>
+                            <td><?php echo $CantidadEmprendedoresCategorias; ?></td>
+                            <td><?php echo $promedioIngresosEmprendedores; ?></td>
                         </tr>
                     </table>                  
                     </div>  
