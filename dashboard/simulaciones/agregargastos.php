@@ -127,7 +127,24 @@
       include_once("menu1.php")
       ?>
     <!-- Preloader -->
+   <style>
+  .input-group {
+    display: flex;
+    align-items: center;
    
+  }
+
+  .input-group .form-control {
+    flex-grow: 1;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .input-group .input-group-append {
+    margin-left: -1px;
+    z-index: 10;
+  }
+</style>
         <!-- /.sidebar-collapse -->
     
       <!-- Page Content -->
@@ -152,17 +169,28 @@
     <div class="scroll">
       <br><br><br><br><br><br>
     <div class="col-md-9">
-    <input type="text" id="nombre" name="nombre" class="form-control"
+    <div class="input-group">
+    <input type="text" style="width: 1000px;"  id="nombre" name="nombre" class="form-control"
     placeholder="Nombre del gasto:" required=""  maxlength="16" minlength="1" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-,.]+"  >
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de cada GASTO">
+     <i class="fas fa-question"></i>
+      </button>
     <label for="nombre" class="form__label"></label>
     </div>
+      </div>
 <br>
 <br>
 <br>
   <div class="col-md-9">
-      <label for="Valor del gasto" class="form__label"></label>
-    <input type="text"  class="form-control" id="valor" name="valor"
+    <div class="input-group">
+    <input type="text" style="width: 1000px;" class="form-control" id="valor" name="valor"
     placeholder="Valor del gasto:" required="" pattern="[0-9]+" >
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el VALOR  de cada uno de los gastos ">
+     <i class="fas fa-question"></i>
+      </button>
+          <label for="Valor del gasto" class="form__label"></label>
+
+    </div>
     </div>
     <br>
 <br>

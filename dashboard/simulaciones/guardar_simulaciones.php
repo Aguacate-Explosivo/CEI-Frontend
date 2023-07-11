@@ -139,28 +139,24 @@
 
                                                     <form action="simulaciones_agregar.php" method="POST"   enctype="multipart/form-data">
                                                       <div class="input-group">
-                                                        <input type="text" id="documento" name="documento" value="<?php echo $documento?>" class="form-control" placeholder="Documento del Dueño del Negocio:" 
+                                                        <input type="text" readonly id="documento" name="documento" value="<?php echo $documento?>" class="form-control" placeholder="Documento del Dueño del Negocio:" 
                                                         required pattern="[0-9]+"  maxlength="10" minlength="7">
-                                                        <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE del quien va a realizar el plan de negocio">
-                                                            <i class="fas fa-question"></i>
-                                                            </button>
+                                                       
                                                         <label for="documento" class="form__label"></label>
                                                       </div>
                                                       <br>
 
                                                       <div class="input-group">
-                                                        <input type="text" id="nombre" name="nombre" class="form-control" value="<?php echo $nombre_negocio_plan?>" placeholder="Nombre del Negocio :" 
+                                                        <input type="text" readonly id="nombre" name="nombre" class="form-control" value="<?php echo $nombre_negocio_plan?>" placeholder="Nombre del Negocio :" 
                                                         required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+" >
-                                                        <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE del quien va a realizar el plan de negocio">
-                                                            <i class="fas fa-question"></i>
-                                                            </button>
+                                                       
                                                         <label for="nombre" class="form__label"></label>
                                                       </div>
                                                       <br>
                                                       <div class="input-group">                                                   
                                                         <input class="form-control" type="file" id="pdf" name ="pdf"
                                                          required=" " accept="application/pdf">
-                                                         <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE del quien va a realizar el plan de negocio">
+                                                         <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes CARGAR el pdf que se descargo anterior mente de tu simulacion, si no pudiste descargarlo haz CKICK  en el boton DESCARGAR PDF">
                                                             <i class="fas fa-question"></i>
                                                             </button> 
                                                         </div>
