@@ -27,7 +27,7 @@
    
 <!-- inicio-->
             <div class="boton">
-            <a type="button" href="simulaciones/overview.php" class="btny">Empieza a Simular</a>
+            <a type="button" href="simulaciones/simulaciones.php" class="btny">Empieza a Simular</a>
 
           </div>
   </div>

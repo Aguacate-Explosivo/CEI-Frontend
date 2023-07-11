@@ -49,18 +49,30 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">  
   </head>
 
-  <body>
+<body style="background-image: url(img/fondo.png);">
   <?php
-      include_once("../sesion_validacion.php")
+      include_once("menu1.php")
       ?>
-    
+        <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 7px;
+        }
+
+        .image-frame {
+            width: 9cm;
+            height: 9cm;
+        }
+    </style>
+
       </div>
       <!-- Page Content -->
       <div id="">
         <div class="container-fluid">
           <div class="row bg-title">
             <div class="col-lg-12">
-              <h4 class="page-title">Puedes gestionar tus eventos desde este modulo</h4>
+              <h4 class="page-title">Puedes seleccionar el tipo de simulacion que te corresponda</h4>
               <ol class="breadcrumb">
               </ol>
             </div>
@@ -70,85 +82,32 @@
           <div class="row">
             <div class="col-md-12">
               <div class="white-box">
-                <h3>Modulo - Eventos</h3>
-                <!-- Container de citas(Data Tables) -->
                 <div class="container-fluid">
                   <div class="jumbotron white-box">
                     <div class="container">
                         <div class="row">
                                 <div class="col-lg-12">
                                     <div class="table-responsive"> 
-                                    <nav aria-label="...">
-<ul class="pagination pagination-lg justify-content-center">
-                    <li class="page-item "><a class="page-link" href="../DashEventos.php">Añadir un nuevo Evento</a></li>
-                    <li class="page-item " aria-current="page"><a class="page-link" href="admineventos.php">Administrar Eventos </a></li>
-                    <li class="page-item active"><a class="page-link" href="inscritosevento.php">Registro de Eventos </a></li>
+            <br>    
+            <a style="width: 200px;" type="submit" id="atras" name="atras" href="../DashSimulaciones.php" class="btn btn-info btn-lg btn-rounded">Atras</a>   
+             <div class="grid">
+        <?php
+        $imagenes = [
+            ['ruta' => 'img/producto.png', 'enlace' => 'overview.php'],
+            ['ruta' => 'img/servicios.png', 'enlace' => '#'],
+            ['ruta' => 'img/produccion.png', 'enlace' => '#']
+        ];
 
-                </ul>
-            </nav>
-            
-            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                        <thead>
-                            <tr>
-                                <th>Tipo </th>
-                                <th>Documento </th>
-                                <th>Categoria </th>
-                                <th>Nombre  </th>
-                                <th>Telefono</th> 
-                                <th>Correo</th> 
-                                <th>Institucion</th> 
-                                <th>Programa</th>   
-                                <th>Direccion</th> 
-                                <th>Edad</th> 
-                                <th>Evento Inscrito</th> 
-                                <th>Acciones</th>                           
-                               
-                            </tr>
-                        </thead>
-                                <?php
-                                 require_once('../../conexion.php');
-                                 $conexion=conectar(); 
-                                 $consulta2 ="SELECT * FROM `inscritos_eventos` ";
-                                 $busqueda=mysqli_query($conexion,$consulta2);
+        foreach ($imagenes as $imagen) {
+            echo '<a href="' . $imagen['enlace'] . '">';
+            echo '<div class="image-frame">';
+            echo '<img src="' . $imagen['ruta'] . '" alt="Imagen" style="max-width: 100%; max-height: 100%;">';
+            echo '</div>';
+            echo '</a>';
+        }
+        ?>
+    </div>
                             
-                                
-                            foreach($busqueda as $elemento){ ?>
-                            <!-- Contenido de la tabla -->
-
-
-                       
-                            <tr>
-                            <td><?php echo $elemento["tipodocumento"]; ?></td>
-                            <td><?php echo $elemento["documento"]; ?></td>
-                            <td><?php echo $elemento["categoria"]; ?></td>
-                                <td><?php echo $elemento["nombre"]; ?></td>
-                                <td><?php echo $elemento["telefono"]; ?></td>
-                                <td><?php echo $elemento["correo"]; ?></td>
-                                <td><?php echo $elemento["institucion"]; ?></td>
-                                <td><?php echo $elemento["programa"]; ?></td>
-                                <td><?php echo $elemento["direccion"]; ?></td>
-                                <td><?php echo $elemento["edad"]; ?></td>
-                                <td><?php echo $elemento["evento_inscrito"]; ?></td>
-                                <td>
-                                <a style="margin: 2px; border-radius: 5px;"  type="submit" href="eliminareventos.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" id="eliminar" name="eliminar" > eliminar</a>
-                                </td>
-                            </tr>
-                                                      
-                        
-                                 <?php
-                                }
-                                ?>
-                       
-                         
-                                       
-                       </table> 
-                
-                                      </div>
-                                    </div>
-                                </div>
-                              </div>
-                        </div>  
-                    </div>  
                 <!-- Fin data Table -->
               </div>
             </div>
@@ -157,40 +116,13 @@
         </div>
         <!-- /.container-fluid -->
       </div>
+      <br>  
       <!-- /#page-wrapper -->
-      <footer class="footer text-center">
-        FACNET - 2023 &copy; 
+      <footer>
+        <?php
+      include_once("../footer.php")
+      ?>
       </footer>
     </div>
-    <!-- /#wrapper -->
-    <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- Menu Plugin JavaScript -->
-    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
-    <!--Nice scroll JavaScript -->
-    <script src="../js/jquery.nicescroll.js"></script>
-    <!--Wave Effects -->
-    <script src="../js/waves.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="../js/myadmin.js"></script>
-    <!-- jQuery, Popper.js, Bootstrap JS -->
-    <script src="../jquery/jquery-3.3.1.min.js"></script>
-    <script src="../popper/popper.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <!-- datatables JS -->
-    <script type="text/javascript" src="../datatables/datatables.min.js"></script>    
-    <!-- para usar botones en datatables JS -->  
-    <script src="../datatables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>  
-    <script src="../datatables/JSZip-2.5.0/jszip.min.js"></script>    
-    <script src="../datatables/pdfmake-0.1.36/pdfmake.min.js"></script>    
-    <script src="../datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
-    <script src="../datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
-    <!-- código JS propìo-->    
-    <script type="text/javascript" src="../js/main.js"></script>  
-    <script src="../../sweet/dist/sweetalert2.all.min.js"></script>
-    <script src="../../js/botones.js"></script>
-  </body>
-  <script src="../../sweet/dist/sweetalert2.all.min.js"></script>
+    
 </html>
