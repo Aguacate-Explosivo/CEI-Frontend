@@ -11,10 +11,27 @@
 
   <body>
   <?php require_once ("menu.php"); ?>
+          <style>
+  .input-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .input-group .form-control {
+    flex-grow: 1;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .input-group .input-group-append {
+    margin-left: -1px;
+    z-index: 10;
+  }
+</style>
     <!-- Preloader -->
     <div class="preloader">
       <div class="cssload-speeding-wheel"></div>
-    </div>
+    </div> 
            <!-- Page Content -->
            <div id="page-wrapper">
         <div class="container-fluid">
@@ -49,15 +66,18 @@
             </nav>
           <!-- Fin de navegacion -->
           <form action="administradores\registarcursos.php" required=" " method="POST" enctype="multipart/form-data" >
-                <div class="form-floating">
+                <div class="input-group">
                     <input type="text" id="nom_curso" name="nom_curso" class="form-control" placeholder="Nombre del curso: " 
                     required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+">
+                    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar un NOMBRE adecuado para el CURSO">
+                  <i class="fas fa-question"></i>
+                  </button>
                     <label for="nom_curso" class="form__label"></label>
                     </div>
                     <br>
-                    <div class="form-floating">
+                    <div class="input-group">
                    
-                    <select id="encargado" name="encargado" class="form-control" >
+                    <select id="encargado" name="encargado" class="form-control"  >
                                     <!-- Codigo de la base de datos -->
                                     <?php
                                 include("../conexion.php");
@@ -79,19 +99,28 @@
                                 ?>
                                 <option selected>Seleccione el encargado del curso :</option>
                                 </select>
+                                 <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes SELECCIONAR el nombre del encargado del curso ">
+                  <i class="fas fa-question"></i>
+                  </button>
                                 </div>
 
                     <br> 
-                    <div class="form-floating">
+                    <div class="input-group">
                     <input type="text" id="desc_curso" name="desc_curso" class="form-control" placeholder="Descripcion del Curso:" 
                     required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+">
+                     <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar una breve descripcion del cursos">
+                  <i class="fas fa-question"></i>
+                  </button>
                     <label for="desc_curso" class="form__label"></label>
                     </div>
                     <br>
                         <!-- Seccion para cargar la imagen -->
-                        <div class="form-floating">
+                        <div class="input-group">
                             <label for="formFile" class="form-contro">Cargar Imagen</label>
                             <input class="form-control" required=" " accept="image/*"  name="imagen" id="imagen" type="file" >
+                               <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar una IMAGEN referente al curso ">
+                  <i class="fas fa-question"></i>
+                  </button>
                         </div>
                     <br> 
                     <button type="submit" class="btn btn-success btn-large">Registrar un Nuevo Curso</button>
