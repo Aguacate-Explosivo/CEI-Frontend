@@ -402,9 +402,10 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
 
 <br><br><br>
 
+
+
+<div class="bajo">
 <h1 class="text-center">Productos Simulados  </h1>
-
-
 <table id="" class="table table-striped table-bordered" cellspacing="0" width="80%" >
                         <thead>
                             <tr>
@@ -486,12 +487,12 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
                                 ?>   
                                 
                        </table>
+                       </div>
+<br><br><br><br>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<h1 class="text-center">Gastos Simulados</h1>
 <div class="bajo">
   
-
+<h1 class="text-center">Gastos Simulados</h1>
 <table id="" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>

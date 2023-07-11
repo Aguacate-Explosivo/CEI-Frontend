@@ -59764,7 +59764,7 @@ this.pdfMake = this.pdfMake || {}; this.pdfMake.vfs = {
 		 *
 		 *  @example
 		 *    $(document).ready(function() {
-		 *      var oTable = $('#example').dataTable();
+		 *      var oTable = $('#').dataTable();
 		 *
 		 *      // Filter to rows with 'Webkit' in them, add a background colour and then
 		 *      // remove the filter, thus highlighting the 'Webkit' rows only.
@@ -69823,7 +69823,7 @@ this.pdfMake = this.pdfMake || {}; this.pdfMake.vfs = {
 		 * Note that the `pageLength` property will be automatically set to the
 		 * first value given in this array, unless `pageLength` is also provided.
 		 *  @type array
-		 *  @default [ 10, 25, 50, 100 ]
+		 *  @default [ 5,10, 25, 50, 100 ]
 		 *
 		 *  @dtopt Option
 		 *  @name DataTable.defaults.lengthMenu
@@ -69835,7 +69835,7 @@ this.pdfMake = this.pdfMake || {}; this.pdfMake.vfs = {
 		 *      } );
 		 *    } );
 		 */
-		"aLengthMenu": [ 10, 25, 50, 100 ],
+		"aLengthMenu": [ 5, 10, 25, 50, 100 ],
 	
 	
 		/**
@@ -70839,7 +70839,7 @@ this.pdfMake = this.pdfMake || {}; this.pdfMake.vfs = {
 		 *      } );
 		 *    } )
 		 */
-		"iDisplayLength": 10,
+		"iDisplayLength": 5,
 	
 	
 		/**
