@@ -228,8 +228,9 @@
                             </tr>
                                 </thead>
                        </table>
+                       </div></div>
                        <form  method="POST" enctype="multipart/form-data" >
-                       <button style="width: 250px;" value="Siguiente" name="Siguiente"  type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Siguiente</button>                  
+  <button style="width: 300px; left:40px; height: 50px; "  value="Siguiente" name="Siguiente"  type="submit" class="btn btn-warning btn-block btn-rounded waves-effect waves-light">Siguiente</button>  
                       
    <!-- Inputs para transferir informacion -->
    <div>

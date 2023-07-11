@@ -116,7 +116,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">  
   </head>
 
-  <body style="background-image: url(img/fondo.png);">
+  <body style="  background-image: url(img/fondo.png);">
   <?php
   include_once("menu1.php");
   ?>
@@ -124,6 +124,7 @@
   .input-group {
     display: flex;
     align-items: center;
+   
   }
 
   .input-group .form-control {
@@ -138,7 +139,7 @@
   }
 </style>
       <!-- Page Content -->
-      <div class="wrapper" style="background: white; width: 1200px; margin: auto;">
+      <div class="wrapper" style="background: white; width: 1200px;  max-height: 10000px; margin: auto;">
         <div class="">
           <div class="row bg-title">
             <div class="col-lg-12">
@@ -207,6 +208,11 @@
       <label for="precio_venta_producto1" class="form__label"></label>
     </div>
     </div>
+    <br>
+<br>
+<br>
+
+    <br>
 <br>
 <br>
 <input type="hidden" id="nombre_negocio_plan" name="nombre_negocio_plan" value="<?php  echo $nombre_negocio_plan; ?>">
@@ -217,6 +223,10 @@
 <br>
 <button type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Agregar Producto</button>
 </div>
+<br>
+<br> <br>
+
+
 <br>
 
 </form>
@@ -291,23 +301,28 @@
                             </tr>
                                 </thead>
                        </table>
+                       </div>
                       
-                                      
+                       </div>
+                       
+                                                     
                        <form  method="POST" enctype="multipart/form-data" >
-    <div class="col-md-6">
+                        <div class="table">
+                       <div class="col-md-9">
     <div class="input-group">
-    <label for="importe" class="form__label"> Importe de Productos:</label>
-    <input type="text"  maxlength="4" minlength="1" class="form-control" id="importe" value="19" name="importe"
+    <label for="importe" class="form__label">Porsentaje de Importe </label>
+    <input type="text"   maxlength="4" minlength="1" class="form-control" id="importe" value="19" name="importe"
     placeholder="Importe :" required pattern="[0-9 .]+" >
     <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el IMPORTE o IVA de los productos que agrego anteriormente, por defecto se seleccionara el 19% ">
      <i class="fas fa-question"></i>
       </button>
-   
+      
+
+</div>
     </div>
     </div>
-    <br>
-                       <button style="width: 250px;" value="Siguiente" name="Siguiente"  type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Siguiente</button>                  
-            
+                       <button style="width: 300px; left:100px; height: 50px; "  value="Siguiente" name="Siguiente"  type="submit" class="btn btn-warning btn-block btn-rounded waves-effect waves-light">Siguiente</button>  
+
                         <!-- Inputs para transferir informacion -->
                         <div>
                                                             <!-- Form 1 -->
@@ -358,14 +373,20 @@
                                                             <input type="hidden" id="coste_unidad_producto" name="coste_unidad_producto" value="<?php echo $coste_unidad_producto; ?>">
                                                             <label for="coste_unidad_producto" class="form__label"></label>
                                                           </div>
-                      </form>
+                                                          <br><br><br><br><br>
 
 
+    
+                                                        </form>
 
+                                                        <div>
+
+</div>
+                                                        <br><br><br><br><br>
                                            
 </div>
  </div>                     
-
+ 
 
 
 <!-- inicio -->
@@ -375,12 +396,12 @@
   
       <!-- /#page-wrapper -->
       
-    <footer>
+ 
+  </body>
+  <footer>
       <?php
   include_once("../footer.php");
   ?>
     </footer>
       
-  </body>
-  
 </html>

@@ -98,93 +98,28 @@
   <link href="../css/style.css" rel="stylesheet">
   <link href="../css/stylese.css" rel="stylesheet">
 </head>
-<body>
+<body style="background-image: url(img/fondo.png);">
   <?php
-  include_once("../administradores/sesion_validacion.php");
+  include_once("menu1.php");
   ?>
-  <div id="wrapper">
-    <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0">
-      <div class="navbar-header">
-        <a class="navbar-toggle hidden-sm hidden-md hidden-lg" href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse">
-          <i class="ti-menu"></i>
-        </a>
-        <div class="top-left-part">
-          <a class="logo" href="index.php">
-            <i class="glyphicon glyphicon-fire"></i>
-            <span class="hidden-xs">Simuladores</span>
-          </a>
-        </div>
-        <ul class="nav navbar-top-links navbar-left hidden-xs">
-          <li>
-            <a href="javascript:void(0)" class="open-close hidden-xs hidden-lg waves-effect waves-light">
-              <i class="ti-arrow-circle-left ti-menu"></i>
-            </a>
-          </li>
-        </ul>
-        <ul class="nav navbar-top-links navbar-right pull-right">
-          <li>
-            <a class="profile-pic" href="#">
-              <i class="ti-user"></i>
-              <b class="hidden-xs">Administrador</b>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="navbar-default sidebar nicescroll" role="navigation">
-      <div class="sidebar-nav navbar-collapse">
-        <ul class="nav" id="side-menu">
-          <li class="sidebar-search hidden-sm hidden-md hidden-lg">
-            <div class="input-group custom-search-form">
-              <input type="text" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
-                <button class="btn btn-success" type="button">
-                  <i class="ti-search"></i>
-                </button>
-              </span>
-            </div>
-          </li>
-          <li>
-            <a href="../index.php" class="waves-effect">
-              <i class="glyphicon glyphicon-fire fa-fw"></i>
-              Dashboard
-            </a>
-          </li>
-          <li>
-            <a href="../DashCitas.php" class="waves-effect">
-              <i class="ti-calendar fa-fw"></i>
-              Citas
-            </a>
-          </li>
-          <li>
-            <a href="../DashEventos.php" class="waves-effect">
-              <i class="ti-video-camera fa-fw"></i>
-              Eventos
-            </a>
-          </li>
-          <li>
-            <a href="../DashCursos.php" class="waves-effect">
-              <i class="ti-ink-pen fa-fw"></i>
-              Cursos
-            </a>
-          </li>
-          <li>
-            <a href="../DashSimulaciones.php" class="waves-effect active">
-              <i class="ti-stats-up fa-fw"></i>
-             Simulaciones
-            </a>
-          </li>
-        </ul>
-        <div class="center p-20">
-          <span class="hide-menu">
-            <a href="../../php/log_out.php" class="btn btn-success btn-block btn-rounded waves-effect waves-light">
-              Cerrar sesión
-            </a>
-          </span>
-        </div>
-      </div>
-    </div>
-    <div id="page-wrapper">
+         <style>
+  .input-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .input-group .form-control {
+    flex-grow: 1;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .input-group .input-group-append {
+    margin-left: -1px;
+    z-index: 10;
+  }
+</style>
+  <div class="wrapper" style="background: white;  width: 80%; margin: auto;">
       <div class="container-fluid">
         <div class="row bg-title">
           
@@ -197,35 +132,50 @@
                             <!-- Container de Formulario -->
                             <br><br>
                             <div class="container-fluid">
-                                    <div class="jumbotron white-box">
+                            <div class="jumbotron white-box" style="width: 800px; margin: auto; height: 380px;">
                                         <div class="container">
-                                            <div class="row">
+                                            <div class="row"  >
                                                 <main>
 
                                                     <form action="simulaciones_agregar.php" method="POST"   enctype="multipart/form-data">
-                                                      <div class="form-floating">
+                                                      <div class="input-group">
                                                         <input type="text" id="documento" name="documento" value="<?php echo $documento?>" class="form-control" placeholder="Documento del Dueño del Negocio:" 
                                                         required pattern="[0-9]+"  maxlength="10" minlength="7">
+                                                        <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE del quien va a realizar el plan de negocio">
+                                                            <i class="fas fa-question"></i>
+                                                            </button>
                                                         <label for="documento" class="form__label"></label>
                                                       </div>
                                                       <br>
 
-                                                      <div class="form-floating">
+                                                      <div class="input-group">
                                                         <input type="text" id="nombre" name="nombre" class="form-control" value="<?php echo $nombre_negocio_plan?>" placeholder="Nombre del Negocio :" 
                                                         required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+" >
+                                                        <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE del quien va a realizar el plan de negocio">
+                                                            <i class="fas fa-question"></i>
+                                                            </button>
                                                         <label for="nombre" class="form__label"></label>
                                                       </div>
                                                       <br>
-                                                      <div class="form-floating">                                                   
+                                                      <div class="input-group">                                                   
                                                         <input class="form-control" type="file" id="pdf" name ="pdf"
                                                          required=" " accept="application/pdf">
+                                                         <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE del quien va a realizar el plan de negocio">
+                                                            <i class="fas fa-question"></i>
+                                                            </button> 
                                                         </div>
                                                                                                                         
                                     
                                                         <br> <br>
-                                                        <div class="form-floating">
+                                                        <div style="float: right;  width: 150px; ">
+                                                      <a href="paso_final.php" target="_blank"  class="btn btn-warning btn-lg btn-rounded ">Descargar PDF</a>
+
+                                                      </div>
+                                                        <div style="float: right;  width: 130px;">
                                                         <button type="submit"  class="btn btn-success btn-lg btn-rounded">Siguiente</button>     
-                                                        </div>
+
+                                                      </div>
+                                                      
                                                         
                                                     </form>
                                                 </main>
@@ -238,15 +188,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        <!-- fin -->
-        <footer class="footer text-center">
-      FACNET - 2023 &copy; 
-    </footer>
-  </div>
-</body>
-</html>
-
+        
                    
 
 <form  method="POST" enctype="multipart/form-data" >
@@ -317,11 +259,13 @@
 
 
 <!-- inicio -->
-
-        <footer class="footer text-center">
-      FACNET - 2023 &copy; 
-    </footer>
-  </div>
+<br><br><br>
+<footer>
+      <?php
+      include_once("../footer.php")
+      ?>
+   </footer>
+  
   <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
