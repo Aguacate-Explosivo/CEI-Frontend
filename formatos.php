@@ -40,48 +40,48 @@
                 <div class="col-md-12 col-lg-12 wow fadeIn" data-wow-delay="0.1s">
                     <div class="feature-item border h-100 p-5">
                                                 <!-- Enlace 1 -->
-                        <a href="https://www.utch.edu.co/portal/images/acercade/cei/formatos/BASICO_EN_COSTOS_DE_PRODUCCION.pdf" class="d-flex align-items-center p-3">
-                            <img class="img-fluid d-block" src="img\icon\pdf.webp" alt="Logo de los pdf's" style="width:3.5em">
+                        <a href="https://www.utch.edu.co/portal/images/acercade/cei/formatos/BASICO_EN_COSTOS_DE_PRODUCCION.pdf" target="_blank" class="d-flex align-items-center p-3">
+                            <img class="img-fluid d-block" src="img\icon\pdf.png" target="_blank" alt="Logo de los pdf's" style="width:3.5em">
                             <span class="p-2">Básico en costo de producción</span>
                         </a>
                                                 <!-- Enlace 2 -->
-                        <a href="https://www.utch.edu.co/portal/images/acercade/cei/formatos/DERECHO_EMPRESARIAL.pdf" class="d-flex align-items-center p-3">
-                            <img class="img-fluid d-block" src="img\icon\pdf.webp" alt="Logo de los pdf's" style="width:3.5em">
+                        <a href="https://www.utch.edu.co/portal/images/acercade/cei/formatos/DERECHO_EMPRESARIAL.pdf" target="_blank" class="d-flex align-items-center p-3">
+                            <img class="img-fluid d-block" src="img\icon\pdf.png" alt="Logo de los pdf's" style="width:3.5em">
                             <span class="p-2">Derecho empresarial</span>
                         </a>
                                                 <!-- Enlace 3 -->
-                        <a href="https://www.utch.edu.co/portal/images/acercade/cei/formatos/DIRECCION_DE_MARKETING.pdf" class="d-flex align-items-center p-3">
-                            <img class="img-fluid d-block" src="img\icon\pdf.webp" alt="Logo de los pdf's" style="width:3.5em">
+                        <a href="https://www.utch.edu.co/portal/images/acercade/cei/formatos/DIRECCION_DE_MARKETING.pdf" target="_blank" class="d-flex align-items-center p-3">
+                            <img class="img-fluid d-block" src="img\icon\pdf.png" alt="Logo de los pdf's" style="width:3.5em">
                             <span class="p-2">Dirección de marketing</span>
                         </a>
                                                 <!-- Enlace 4 -->
-                        <a href="https://www.utch.edu.co/portal/images/acercade/cei/formatos/EVALUACION_DE_MODELOS_DE_NEGOCIOS_BASADAOS_EN_EL_LIENZO_CANVAS.pdf" class="d-flex align-items-center p-3">
-                            <img class="img-fluid d-block" src="img\icon\pdf.webp" alt="Logo de los pdf's" style="width:3.5em">
+                        <a href="https://www.utch.edu.co/portal/images/acercade/cei/formatos/EVALUACION_DE_MODELOS_DE_NEGOCIOS_BASADAOS_EN_EL_LIENZO_CANVAS.pdf" class="d-flex align-items-center p-3" target="_blank">
+                            <img class="img-fluid d-block" src="img\icon\pdf.png" alt="Logo de los pdf's" style="width:3.5em">
                             <span class="p-2">Evaluación de modelos de negocios basados en el lienzo Canvas</span>
                         </a>
                                                 <!-- Enlace 5 -->
-                        <a href="https://www.utch.edu.co/portal/images/acercade/cei/formatos/FUNDAMENTACION_PARA_EL_EMPRENDIMIENTO.pdf" class="d-flex align-items-center p-3">
-                            <img class="img-fluid d-block" src="img\icon\pdf.webp" alt="Logo de los pdf's" style="width:3.5em">
+                        <a href="https://www.utch.edu.co/portal/images/acercade/cei/formatos/FUNDAMENTACION_PARA_EL_EMPRENDIMIENTO.pdf" target="_blank" class="d-flex align-items-center p-3">
+                            <img class="img-fluid d-block" src="img\icon\pdf.png" alt="Logo de los pdf's" style="width:3.5em">
                             <span class="p-2">Fundamentación para el emprendimiento</span>
                         </a>
                                                 <!-- Enlace 6 -->
-                        <a href="https://www.utch.edu.co/portal/images/acercade/cei/formatos/IDENTIFICACION_Y_VALORACION_DE_INICIATIVAS_DE_NEGOCIOS.pdf" class="d-flex align-items-center p-3">
-                            <img class="img-fluid d-block" src="img\icon\pdf.webp" alt="Logo de los pdf's" style="width:3.5em">
+                        <a href="https://www.utch.edu.co/portal/images/acercade/cei/formatos/IDENTIFICACION_Y_VALORACION_DE_INICIATIVAS_DE_NEGOCIOS.pdf" target="_blank" class="d-flex align-items-center p-3">
+                            <img class="img-fluid d-block" src="img\icon\pdf.png" alt="Logo de los pdf's" style="width:3.5em">
                             <span class="p-2">Identificación y valoración de iniciativas de negocios</span>
                         </a>
                                                 <!-- Enlace 7 -->
-                        <a href="https://www.utch.edu.co/portal/images/acercade/cei/formatos/INDUCCION_Y_BASICO_DE_ECONOMIA_SOLIDARIA.pdf" class="d-flex align-items-center p-3">
-                            <img class="img-fluid d-block" src="img\icon\pdf.webp" alt="Logo de los pdf's" style="width:3.5em">
+                        <a href="https://www.utch.edu.co/portal/images/acercade/cei/formatos/INDUCCION_Y_BASICO_DE_ECONOMIA_SOLIDARIA.pdf" target="_blank" class="d-flex align-items-center p-3">
+                            <img class="img-fluid d-block" src="img\icon\pdf.png" alt="Logo de los pdf's" style="width:3.5em">
                             <span class="p-2"> Inducción y básico de económia solidaria</span>
                         </a>
                                                 <!-- Enlace 8 -->
-                        <a href="https://www.utch.edu.co/portal/images/acercade/cei/formatos/MANEJO_DE_SIMULADORES_FINANCIEROS.pdf" class="d-flex align-items-center p-3">
-                            <img class="img-fluid d-block" src="img\icon\pdf.webp" alt="Logo de los pdf's" style="width:3.5em">
+                        <a href="https://www.utch.edu.co/portal/images/acercade/cei/formatos/MANEJO_DE_SIMULADORES_FINANCIEROS.pdf" target="_blank" class="d-flex align-items-center p-3">
+                            <img class="img-fluid d-block" src="img\icon\pdf.png" alt="Logo de los pdf's" style="width:3.5em">
                             <span class="p-2">Manejo de simuladores financieros</span>
                         </a>
                                                 <!-- Enlace 9 -->
-                        <a href="https://www.utch.edu.co/portal/images/acercade/cei/formatos/TECNICAS_DE_MUESTREO_Y%20DISENO_DE_CUESTIONARIOS.pdf" class="d-flex align-items-center p-3">
-                            <img class="img-fluid d-block" src="img\icon\pdf.webp" alt="Logo de los pdf's" style="width:3.5em">
+                        <a href="https://www.utch.edu.co/portal/images/acercade/cei/formatos/TECNICAS_DE_MUESTREO_Y%20DISENO_DE_CUESTIONARIOS.pdf" target="_blank" class="d-flex align-items-center p-3">
+                            <img class="img-fluid d-block" src="img\icon\pdf.png" alt="Logo de los pdf's" style="width:3.5em">
                             <span class="p-2">Técnicas de muestreo y diselo de cuestionarios</span>
                         </a>
                     </div>
