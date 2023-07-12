@@ -107,6 +107,9 @@
   <?php
   include_once("menu1.php");
   ?>
+  <script>
+  window.alert = function() {};
+</script>
     <style>
   .input-group {
     display: flex;
