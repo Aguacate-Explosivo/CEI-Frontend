@@ -143,7 +143,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="waves-effect">
+            <a href="DashEncuentas.php" class="waves-effect">
               <i class="ti-comments fa-fw"></i>
              Encuestas de Planes de negocio
             </a>
