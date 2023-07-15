@@ -57,7 +57,7 @@
 
 <?php include_once("sesion_validacion.php"); ?>
 
-<nav class="navbar navbar-default navbar" style="margin-bottom: 0">
+<nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0">
       <div class="navbar-header">
         <a class="navbar-toggle hidden-sm hidden-md hidden-lg" href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse">
           <i class="ti-menu"></i>
@@ -84,17 +84,26 @@
           </li>
         </ul>
       </div>
+    </nav>
     
-
-    <div class="sidebar nicescroll" role="navigation">
-      <div class="sidebar-nav">
-        <ul class=" side-menu" id="side-menu">
-          
-          <li class="nav">
-            <a href="index.php" class="waves-effect nav-link">
+    
+    <div class="navbar-default sidebar nicescroll" role="navigation">
+      <div class="sidebar-nav navbar-collapse">
+        <ul class="nav" id="side-menu">
+          <li class="sidebar-search hidden-sm hidden-md hidden-lg">
+            <div class="input-group custom-search-form">
+              <input type="text" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button class="btn btn-success" type="button">
+                  <i class="ti-search"></i>
+                </button>
+              </span>
+            </div>
+          </li>
+          <li>
+            <a href="index.php" class="waves-effect">
               <i class="glyphicon glyphicon-fire fa-fw"></i>
               Dashboard
-              
             </a>
           </li>
           <li>
@@ -168,5 +177,4 @@
         </div>
       </div>
     </div>
-</nav>
-
+    </div>
