@@ -71,7 +71,7 @@
                         <br><br><br><br><br><br>
                         <div class="text-center">
                             <button style="margin: 2px; border-radius: 5px;" type="submit" class="btn btn-primary">Editar Encuesta</button>
-                            <a style="margin: 2px; border-radius: 5px;" href="../DashEncuentas.php" class="btn btn-info">Regresar</a>
+                            <a style="margin: 2px; border-radius: 5px;" href="../dashboard/DashEncuentas.php" class="btn btn-info">Regresar</a>
                         </div>
                     </form>
                 </div>
