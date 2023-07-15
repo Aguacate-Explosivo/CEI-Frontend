@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="img/logo.webp">
-    <title>CEI | Citas</title>
+    <title>CEI | Encuestas</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -34,7 +34,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-6 mx-auto wow fadeInUp" data-wow-delay="0.1s">
-                        <iframe src="<?php echo htmlspecialchars( $row[' url']); ?>" width="700" height="1635" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                        <iframe src="<?php echo $row["url"]; ?>" width="700" height="1635" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
                     </div>
                 </div>
             </div>
