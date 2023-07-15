@@ -61,8 +61,8 @@
   <div class="wrapper">
 
     <!-- Navbar -->
-    <!-- Main Sidebar Container 
-    <aside class="main-sidebar sidebar-dark-primary elevation-4"> -->
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Sidebar -->
       <div class="sidebar">
         <!-- Sidebar Menu -->
@@ -158,7 +158,7 @@
         <!-- /.sidebar-menu -->
       </div>
       <!-- /.sidebar -->
-  <!--  </aside>-->
+  </aside>
 
 </body>
 
