@@ -58,7 +58,7 @@
 
 <body class="hold-transition sidebar-mini">
 <?php include_once("sesion_validacion.php"); ?>
-  <div class="wrapper">
+  <div>
 
 <<<<<<< Updated upstream
 =======
