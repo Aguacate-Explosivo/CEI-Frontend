@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AdminLTE Example</title>
-  
+
   <!-- ESTILOS -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="bower_components/metisMenu/dist/metisMenu.min.css">
@@ -20,16 +14,15 @@
   <link rel="stylesheet" href="../plugins/jqvmap/jqvmap.min.css">
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
   <link rel="stylesheet" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-</head>
 
-<body class="hold-transition sidebar-mini">
+
   <?php include_once("sesion_validacion.php"); ?>
-  <div class="wrapper">
+  <div>
     <!-- Navbar -->
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Sidebar -->
-      <div class="sidebar">
+      <div>
         <!-- Sidebar Menu -->
         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -158,5 +151,4 @@
   <script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
   <script src="../plugins/summernote/summernote-bs4.min.js"></script>
   <script src="js/main.js"></script>
-</body>
-</html>
+
