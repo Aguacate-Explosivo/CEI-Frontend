@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,45 +20,11 @@
   <link rel="stylesheet" href="../plugins/jqvmap/jqvmap.min.css">
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
   <link rel="stylesheet" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-
-  <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
-  <!-- Scripts -->
-  <script src="../popper/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
-  <script src="js/jquery.nicescroll.js"></script>
-  <script src="js/waves.js"></script>
-  <script src="js/myadmin.js"></script>
-  <script src="datatables/datatables.min.js"></script>
-  <script src="datatables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>
-  <script src="datatables/JSZip-2.5.0/jszip.min.js"></script>
-  <script src="datatables/pdfmake-0.1.36/pdfmake.min.js"></script>
-  <script src="datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
-  <script src="datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
-  <script src="../lib/wow/wow.min.js"></script>
-  <script src="../lib/easing/easing.min.js"></script>
-  <script src="../lib/waypoints/waypoints.min.js"></script>
-  <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="../lib/lightbox/js/lightbox.min.js"></script>
-  <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-  <script src="../plugins/chart.js/Chart.min.js"></script>
-  <script src="../plugins/sparklines/sparkline.js"></script>
-  <script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
-  <script src="../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-  <script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
-  <script src="../plugins/moment/moment.min.js"></script>
-  <script src="../plugins/daterangepicker/daterangepicker.js"></script>
-  <script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-  <script src="../plugins/summernote/summernote-bs4.min.js"></script>
-  <script src="js/main.js"></script>
 </head>
 
 <body class="hold-transition sidebar-mini">
-<?php include_once("sesion_validacion.php"); ?>
+  <?php include_once("sesion_validacion.php"); ?>
   <div class="wrapper">
-
     <!-- Navbar -->
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -158,8 +123,40 @@
         <!-- /.sidebar-menu -->
       </div>
       <!-- /.sidebar -->
-  </aside>
+    </aside>
+  </div>
 
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="../popper/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+  <script src="js/jquery.nicescroll.js"></script>
+  <script src="js/waves.js"></script>
+  <script src="js/myadmin.js"></script>
+  <script src="datatables/datatables.min.js"></script>
+  <script src="datatables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>
+  <script src="datatables/JSZip-2.5.0/jszip.min.js"></script>
+  <script src="datatables/pdfmake-0.1.36/pdfmake.min.js"></script>
+  <script src="datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
+  <script src="datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
+  <script src="../lib/wow/wow.min.js"></script>
+  <script src="../lib/easing/easing.min.js"></script>
+  <script src="../lib/waypoints/waypoints.min.js"></script>
+  <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="../lib/lightbox/js/lightbox.min.js"></script>
+  <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script src="../plugins/chart.js/Chart.min.js"></script>
+  <script src="../plugins/sparklines/sparkline.js"></script>
+  <script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
+  <script src="../plugins/moment/moment.min.js"></script>
+  <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+  <script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <script src="../plugins/summernote/summernote-bs4.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
-
 </html>
