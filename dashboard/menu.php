@@ -61,12 +61,8 @@
   <div class="wrapper">
 
     <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-      <!-- Navbar content -->
-    </nav>
-
-    <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Main Sidebar Container 
+    <aside class="main-sidebar sidebar-dark-primary elevation-4"> -->
       <!-- Sidebar -->
       <div class="sidebar">
         <!-- Sidebar Menu -->
@@ -162,20 +158,8 @@
         <!-- /.sidebar-menu -->
       </div>
       <!-- /.sidebar -->
-    </aside>
+  <!--  </aside>-->
 
-    <!-- Contenido principal -->
-    <div class="content-wrapper">
-      <!-- Contenido de la página -->
-    </div>
-    <!-- /.content-wrapper -->
-
-    <!-- Footer -->
-    <footer class="main-footer">
-      <!-- Footer content -->
-    </footer>
-  </div>
-  <!-- /.wrapper -->
 </body>
 
 </html>
