@@ -28,7 +28,7 @@ if (!empty($id)) {
             // Obtener el contenido del archivo LONGBLOB
             $archivoLongblob = $row['pdf'];
             
-            // Limpiar el búfer de salida
+            // Limpiar el búfer de salida 
             ob_clean();
             
             // Configurar las cabeceras para la descarga del archivo
