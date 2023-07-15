@@ -44,28 +44,23 @@
                           <th>Acciones</th>
                         </tr>
                       </thead>
-                      <?php
-                      $conexion=conectar(); 
-                      $consulta2 ="SELECT * FROM `encuesta` ";
-                      $busqueda=mysqli_query($conexion,$consulta2);
+                      <tbody>
+                        <?php
+                        $conexion=conectar(); 
+                        $consulta2 ="SELECT * FROM `encuesta` ";
+                        $busqueda=mysqli_query($conexion,$consulta2);
 
-                foreach($busqueda as $row){ ?>
-                <!-- Contenido de la tabla -->
-
-                <tr>
-                <td><?php echo $row["url"]; ?></td>
-                    <?php } ?> 
-
-
-                          <td>
-                            <div class="btn-group">
-                            <button class="btn btn-warning btnEditar" onclick="editarEncuesta('<?php echo $url; ?>')">
-                              <i class="fas fa-edit"></i>
-                            </button>
-                            </div>
-                          </td>
-                        </tr>
-
+                        foreach($busqueda as $row) { ?>
+                          <tr>
+                            <td><?php echo $row["url"]; ?></td>
+                            <td>
+                              <div class="btn-group">
+                              <a style="margin: 2px; border-radius: 5px; position: relative;" href="editarencuesta.php?url=<?php echo $row["url"]?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                              </div>
+                            </td>
+                          </tr>
+                        <?php } ?> 
+                      </tbody>
                     </table>
                   </div>
                 </div>
