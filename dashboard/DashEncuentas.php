@@ -55,7 +55,7 @@
                             <td><?php echo $row["url"]; ?></td>
                             <td>
                               <div class="btn-group">
-                              <a style="margin: 2px; border-radius: 5px; position: relative;" href="editarencuesta.php?Id=<?php echo $row["Id"]?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                              <a style="margin: 2px; border-radius: 5px; position: relative;" href="encuesta.php?Id=<?php echo $row["Id"]?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
                               </div>
                             </td>
                           </tr>
