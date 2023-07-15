@@ -50,6 +50,7 @@
 <script src="../lib/owlcarousel/owl.carousel.min.js" defer></script>
 <script src="../lib/lightbox/js/lightbox.min.js" defer></script>
 <script src="js/main.js" defer></script>
+<script src="js/main.ajax" defer></script>
 <script src="../plugins/jquery/jquery.min.js"></script>
 <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="../dist/js/adminlte.min.js"></script>

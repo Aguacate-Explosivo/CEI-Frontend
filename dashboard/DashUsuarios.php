@@ -75,11 +75,12 @@
                           <td><?php echo $usuario; ?></td>
                           <td><?php echo $email; ?></td>
                           <td>
-                            <?php if ($estado != 0) { ?>
-                              <button class="btn btn-success btn-xs btnActivar" data-id="<?php echo $estaado; ?>" data-estado="0">Activado</button>
+                          <?php if ($estado != 0) { ?>
+                              <button class="btn btn-success btn-xs btnActivar" data-id="<?php echo $id; ?>" data-estado="0">Activado</button>
                             <?php } else { ?>
-                              <button class="btn btn-danger btn-xs btnActivar" data-id="<?php echo $estaado; ?>" data-estado="1">Desactivado</button>
+                              <button class="btn btn-danger btn-xs btnActivar" data-id="<?php echo $id; ?>" data-estado="1">Desactivado</button>
                             <?php } ?>
+
                           </td>
                           <td><?php echo $perfil; ?></td>
                           <td>
