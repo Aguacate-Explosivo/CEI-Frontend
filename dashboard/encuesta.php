@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="../../img/logo.webp">
-    <title>CEI | citas</title>
+    <title>CEI | Encuesta</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -63,7 +63,8 @@
                         <div class="row g-3">
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control text-center" id="url" value="<?php echo $urlBaseDatos ?>" name="url" placeholder="url" required style="width: 100%;">
+                                    <input type="url" class="form-control text-center" 
+                                     maxlength="200" minlength="20" id="url" value="<?php echo $urlBaseDatos ?>" name="url" placeholder="url" required style="width: 100%;">
                                     <label for="url">URL</label>
                                 </div>
                             </div>
