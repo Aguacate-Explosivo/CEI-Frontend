@@ -79,10 +79,7 @@
                             <?php } else { ?>
                               <button class="btn btn-danger btn-xs btnActivar" data-id="<?php echo $id; ?>" data-estado="1">Desactivado</button>
                             <?php } ?>
-
                           </td>
-
-
                           <td><?php echo $perfil; ?></td>
                           <td>
                             <div class="btn-group">
