@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Título de la página</title>
     <!-- Favicon -->
-<<<<<<< Updated upstream
     <link href="/img/favicon.webp" rel="icon">
 
     <!-- ESTILOS -->
@@ -34,9 +33,6 @@
 <script src="lib/lightbox/js/lightbox.min.js" defer></script>
 <script src="js/main.js" defer></script>
 
-=======
-    <link href="img/favicon.webp" rel="icon">
->>>>>>> Stashed changes
 </head>
 <body>
     <!-- Spinner Start -->
