@@ -7,10 +7,8 @@
   <title>Dashboard CEI</title>
   <link rel="icon" type="image/webp" sizes="16x16" href="../img/logo.webp">
 </head>
-<body class="hold-transition sidebar-mini">
 <?php require_once ("menu.php"); ?>
-<section class="content">
-  <div id="wrapper">
+<body>
     <div id="page-wrapper">
       <div class="container-fluid">
         <div class="row bg-title">
@@ -66,7 +64,5 @@
       </div>
     </div>
     <?php require_once ("footer.php"); ?>
-  </div>
-</section>
 </body>
 </html>

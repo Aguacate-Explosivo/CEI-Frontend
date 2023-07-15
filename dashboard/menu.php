@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AdminLTE Example</title>
-  
   <!-- ESTILOS -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="bower_components/metisMenu/dist/metisMenu.min.css">
@@ -54,32 +46,13 @@
   <script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
   <script src="../plugins/summernote/summernote-bs4.min.js"></script>
   <script src="js/main.js"></script>
-</head>
 
-<body class="hold-transition sidebar-mini">
 <?php include_once("sesion_validacion.php"); ?>
-  <div>
-
-<<<<<<< Updated upstream
-=======
-  <?php include_once("sesion_validacion.php"); ?>
-  <div lass="sidebar">
->>>>>>> Stashed changes
-    <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-      <!-- Navbar content -->
-    </nav>
-
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
       <!-- Sidebar -->
-<<<<<<< Updated upstream
       <div class="sidebar">
-=======
-      <div >
->>>>>>> Stashed changes
         <!-- Sidebar Menu -->
-        <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Menú lateral -->
             <li class="sidebar-search hidden-sm hidden-md hidden-lg">
@@ -167,24 +140,8 @@
               </a>
             </span>
           </div>
-        </nav>
         <!-- /.sidebar-menu -->
       </div>
       <!-- /.sidebar -->
-    </aside>
 
-    <!-- Contenido principal -->
-    <div class="content-wrapper">
-      <!-- Contenido de la página -->
-    </div>
-    <!-- /.content-wrapper -->
 
-    <!-- Footer -->
-    <footer class="main-footer">
-      <!-- Footer content -->
-    </footer>
-  </div>
-  <!-- /.wrapper -->
-</body>
-
-</html>
