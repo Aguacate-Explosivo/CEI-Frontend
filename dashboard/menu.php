@@ -29,7 +29,7 @@
 <link rel="preload" href="../lib/owlcarousel/owl.carousel.min.js" as="script">
 <link rel="preload" href="../lib/lightbox/js/lightbox.min.js" as="script">
 <link rel="preload" href="js/main.js" as="script">
-<link rel="stylesheet" href="../dist/css/adminlte.min.css">
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" defer></script>
@@ -50,6 +50,7 @@
 <script src="../lib/owlcarousel/owl.carousel.min.js" defer></script>
 <script src="../lib/lightbox/js/lightbox.min.js" defer></script>
 <script src="js/main.js" defer></script>
+<script src="js/main.ajax" defer></script>
 <script src="../plugins/jquery/jquery.min.js"></script>
 <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="../dist/js/adminlte.min.js"></script>
