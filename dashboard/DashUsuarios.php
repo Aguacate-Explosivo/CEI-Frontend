@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dashboard Admin</title>
   <link rel="icon" type="image/webp" sizes="16x16" href="../img/logo.webp">
-
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/main.ajax"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -75,12 +74,23 @@
                           <td><?php echo $usuario; ?></td>
                           <td><?php echo $email; ?></td>
                           <td>
+                            <!-- <?php if ($estado != 0) { ?> -->
+                              <!-- <button class="btn btn-success btn-xs btnActivar" data-id="<?php echo $estaado; ?>" data-estado="0">Activado</button> -->
+                            <!-- <?php } else { ?> -->
+                              <!-- <button class="btn btn-danger btn-xs btnActivar onclick="enviarID('ID_DEL_USUARIO')">Botón para activar usuario 2</button> -->
+                              <!-- <button class="btn btn-danger btn-xs btnActivar" data-id="<?php echo $estaado; ?>" data-estado="1">Desactivado</button> -->
+                            <?php } ?>
+                          <!-- </td> -->
+
+                          <td>
                             <?php if ($estado != 0) { ?>
-                              <button class="btn btn-success btn-xs btnActivar" data-id="<?php echo $estaado; ?>" data-estado="0">Activado</button>
+                              <button class="btn btn-success btn-xs btnActivar" data-id="<?php echo $id; ?>" data-estado="0">Activado</button>
                             <?php } else { ?>
-                              <button class="btn btn-danger btn-xs btnActivar" data-id="<?php echo $estaado; ?>" data-estado="1">Desactivado</button>
+                              <button class="btn btn-danger btn-xs btnActivar" data-id="<?php echo $id; ?>" data-estado="1">Desactivado</button>
                             <?php } ?>
                           </td>
+
+
                           <td><?php echo $perfil; ?></td>
                           <td>
                             <div class="btn-group">
@@ -104,5 +114,37 @@
     </div>
   </div>
   <?php require_once("footer.php"); ?>
+
+  <script>
+    $(document).ready(function() {
+      // Manejar clic en el botón de activación
+      $('.btnActivar').click(function() {
+        var id = $(this).data('id'); // Obtener el ID del usuario desde el atributo data-id
+        var estado = $(this).data('estado'); // Obtener el estado del usuario desde el atributo data-estado
+
+        // Realizar la petición AJAX
+        $.ajax({
+          type: 'POST',
+          url: 'actiUser.php', // Reemplaza con el nombre del archivo PHP que manejará la actualización del estado
+          data: {
+            id: id,
+            estado: estado
+          },
+          success: function(response) {
+            // Actualizar el estado del botón en la interfaz de usuario
+            if (estado == 0) {
+              $(this).removeClass('btn-success').addClass('btn-danger').text('Desactivado');
+            } else {
+              $(this).removeClass('btn-danger').addClass('btn-success').text('Activado');
+            }
+          },
+          error: function() {
+            alert('Error al actualizar el estado');
+          }
+        });
+      });
+    });
+</script>
+
 </body>
 </html>
