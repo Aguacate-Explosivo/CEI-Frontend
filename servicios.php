@@ -29,10 +29,6 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" async>
 <!-- Template Stylesheet -->
 <link href="css/style.css" rel="stylesheet" async>
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
 <body>
      <?php require("cabecera.php");  ?>

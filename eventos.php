@@ -10,28 +10,6 @@
     <meta content="" name="description">
 <!-- Favicon -->
 <link href="img/favicon.webp" rel="icon">
-<<<<<<< Updated upstream
-=======
-<!-- Google Web Fonts -->
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap">
-</noscript>
-<!-- Icon Font Stylesheet -->
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-</noscript>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" defer>
-<!-- Libraries Stylesheet -->
-<link href="lib/animate/animate.min.css" rel="stylesheet" async>
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" async>
-<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" async>
-<!-- Customized Bootstrap Stylesheet -->
-<link href="css/bootstrap.min.css" rel="stylesheet" async>
-<!-- Template Stylesheet -->
-<link href="css/style.css" rel="stylesheet" async>
->>>>>>> Stashed changes
 
 </head>
 
@@ -88,13 +66,8 @@
                                 <div class="card-body">
                                     <div class="project-item mb-5">
                                         <div class="position-relative">
-<<<<<<< Updated upstream
                                             <img class="img-fluid" src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>">
                                                 
-=======
-                                            <img src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>">
-                                                class="img-fluid">
->>>>>>> Stashed changes
                                             <div class="project-overlay">
                                                 <a class="btn btn-lg-square btn-light rounded-circle m-1"
                                                     href="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>"
