@@ -10,7 +10,30 @@
     <meta content="" name="description">
     <!-- Favicon -->
 <link href="img/favicon.webp" rel="icon">
+<<<<<<< Updated upstream
 
+=======
+<!-- Google Web Fonts -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap">
+</noscript>
+
+<!-- Icon Font Stylesheet -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" preload>
+</noscript>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" preload>
+<!-- Libraries Stylesheet -->
+<link href="lib/animate/animate.min.css" rel="stylesheet" async>
+<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" preload>
+<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" async>
+<!-- Customized Bootstrap Stylesheet -->
+<link href="css/bootstrap.min.css" rel="stylesheet" preload>
+<!-- Template Stylesheet -->
+<link href="css/style.css" rel="stylesheet" preload>
+>>>>>>> Stashed changes
 </head>
 
 <body  >  
@@ -276,7 +299,11 @@
             <!-- Estructura de Curso -->
                <div class="project-item mb-5">
                     <div class="position-relative">
+<<<<<<< Updated upstream
                         <img src="data:image/jgp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">            
+=======
+                        <img src="data:image/jgp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">               
+>>>>>>> Stashed changes
                         <div class="project-overlay">
                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jgp;base64,<?php echo base64_encode($row["imagen"]); ?>"
                                 data-lightbox="project"><i class="fa fa-eye"></i></a>
@@ -424,7 +451,14 @@
 
 <!-- Footer Start -->
 <?php require("footer.php"); ?>
+<<<<<<< Updated upstream
 
+=======
+<!-- Footer End -->
+<script src="lib/lightbox/js/lightbox.min.js" defer></script>
+<!-- Template Javascript -->
+<script src="js/main.js" defer></script>
+>>>>>>> Stashed changes
 </body>
 
 </html>

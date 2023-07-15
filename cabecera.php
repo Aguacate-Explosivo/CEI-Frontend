@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Título de la página</title>
     <!-- Favicon -->
+<<<<<<< Updated upstream
     <link href="/img/favicon.webp" rel="icon">
 
     <!-- ESTILOS -->
@@ -33,6 +34,9 @@
 <script src="lib/lightbox/js/lightbox.min.js" defer></script>
 <script src="js/main.js" defer></script>
 
+=======
+    <link href="img/favicon.webp" rel="icon">
+>>>>>>> Stashed changes
 </head>
 <body>
     <!-- Spinner Start -->
@@ -100,14 +104,5 @@
         </div>
     </div>
     <!-- Navbar End -->
-
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-<script src="js/botones.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" defer></script>
-<!-- Template Javascript -->
-<script src="js/main.js" defer></script>
-<script src="sweet/dist/sweetalert2.all.min.js" defer></script>
-<script src="js/lazysizes.min.js"></script>
 </body>
 </html>
