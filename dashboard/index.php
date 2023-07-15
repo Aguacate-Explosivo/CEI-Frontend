@@ -8,7 +8,7 @@
   <link rel="icon" type="image/webp" sizes="16x16" href="../img/logo.webp">
 </head>
 <?php require_once ("menu.php"); ?>
-<body>
+<body class="hold-transition sidebar-mini">
     <div id="page-wrapper">
       <div class="container-fluid">
         <div class="row bg-title">

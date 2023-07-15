@@ -4,11 +4,6 @@ $(document).ready(function() {
 		// Redirigir a la página de edición del usuario con los parámetros en la URL
 		window.location.href = 'editar_usuario.php?id=' + id + '&usuario=' + usuario + '&correo=' + correo + '&estado=' + estado + '&perfil=' + perfil;
 	  }
-
-	  function editarEncuesta(url) {
-		// Redirigir a la página de edición del usuario con los parámetros en la URL
-		window.location.href = 'editarencuesta.php?url=' + url ;
-	  }
 	
 	$('#noexportar').DataTable({
 		language: {
