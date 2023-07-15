@@ -60,6 +60,11 @@
 <?php include_once("sesion_validacion.php"); ?>
   <div class="wrapper">
 
+<<<<<<< Updated upstream
+=======
+  <?php include_once("sesion_validacion.php"); ?>
+  <div lass="sidebar">
+>>>>>>> Stashed changes
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
       <!-- Navbar content -->
@@ -68,7 +73,11 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Sidebar -->
+<<<<<<< Updated upstream
       <div class="sidebar">
+=======
+      <div >
+>>>>>>> Stashed changes
         <!-- Sidebar Menu -->
         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
