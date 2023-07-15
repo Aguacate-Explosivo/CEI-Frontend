@@ -20,11 +20,10 @@
     require_once("conexion.php");
     $conexion = conectar();
 
-    $consulta = "SELECT * FROM encuesta";
+    $consulta = "SELECT * FROM  encuesta";
     $resultado = mysqli_query($conexion, $consulta);
+    foreach ($resultado as $row) {
 
-    while ($row = mysqli_fetch_assoc($resultado)) {
-        $url = $row["url"];
         ?>
 
         <!-- Contact Start -->
@@ -35,7 +34,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-6 mx-auto wow fadeInUp" data-wow-delay="0.1s">
-                        <iframe src="<?php echo htmlspecialchars($url); ?>" width="700" height="1635" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                        <iframe src="<?php echo htmlspecialchars( $row[' url']); ?>" width="700" height="1635" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
                     </div>
                 </div>
             </div>
