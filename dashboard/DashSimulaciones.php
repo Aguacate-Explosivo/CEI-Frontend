@@ -4,8 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dashboard Admin</title>
-  <title>Dashboard CEI</title>
+  <title>Dashboard Simulaciones</title>
   <link rel="icon" type="image/webp" sizes="16x16" href="../img/logo.webp">
   <link rel="stylesheet" href="css/stylese.css">
 </head>
