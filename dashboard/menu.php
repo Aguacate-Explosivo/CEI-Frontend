@@ -156,7 +156,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="waves-effect">
+            <a href="DashSeguimiento.php" class="waves-effect">
               <i class="ti-eye fa-fw"></i>
              Seguimientos a emprendedores
             </a>
