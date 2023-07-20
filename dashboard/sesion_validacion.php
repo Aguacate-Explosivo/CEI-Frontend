@@ -8,6 +8,7 @@
             function iniciarTemporizador() {
             inactividad = setTimeout(function() {
                 localStorage.removeItem('auth_token');
+                localStorage.removeItem('auth_perfil');
                 window.location.href = '../login.php';
                 console.log('Redireccionando al usuario');
             }, tiempoInactividad);
