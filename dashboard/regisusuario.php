@@ -74,6 +74,7 @@
                                                 <select class="form-control select2bs4" id="rolu" name="rolu"
                                                     style="width: 100%;">
                                                     <option selected="selected">Administrador</option>
+                                                    <option>Moderador</option>
                                                     <option>Docente</option>
                                                     <option>Estudiante</option>
                                                 </select>

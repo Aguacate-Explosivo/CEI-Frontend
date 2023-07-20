@@ -12,7 +12,7 @@
 <!--SCRIPTS-->
 <link rel="preload" href="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" as="script">
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" as="script">
-<link rel="preload" href="bower_components/metisMenu/dist/metisMenu.min.js" as="script">
+<link rel="preload" href="../bower_components/metisMenu/dist/metisMenu.min.js" as="script">
 <link rel="preload" href="../js/jquery.nicescroll.js" as="script">
 <link rel="preload" href="../js/waves.js" as="script">
 <link rel="preload" href="../js/myadmin.js" as="script">
@@ -37,7 +37,7 @@
 <script src="../js/jquery.nicescroll.js" defer></script>
 <script src="../js/waves.js" defer></script>
 <script src="../js/myadmin.js" defer></script>
-<script src="../popper/popper.min.js" defer></script>
+<script src="../../popper/popper.min.js" defer></script>
 <script type="text/javascript" src="../datatables/datatables.min.js" defer></script>
 <script src="../datatables/Buttons-1.5.6/js/dataTables.buttons.min.js" defer></script>
 <script src="../datatables/JSZip-2.5.0/jszip.min.js" defer></script>
