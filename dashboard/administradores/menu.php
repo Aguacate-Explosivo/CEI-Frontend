@@ -170,7 +170,7 @@
         </ul>
         <div class="center p-20">
           <span class="hide-menu">
-            <a href="../php/log_out.php" class="btn btn-success btn-block btn-rounded waves-effect waves-light">
+            <a href="../../php/log_out.php" class="btn btn-success btn-block btn-rounded waves-effect waves-light">
               <i class="ti-shift-right fa-fw"> </i>
               Cerrar sesión
             </a>

@@ -275,11 +275,7 @@
             <!-- Estructura de Curso -->
                <div class="project-item mb-5">
                     <div class="position-relative">
-<<<<<<< Updated upstream
                         <img src="data:image/jgp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">            
-=======
-                        <img src="data:image/jgp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">               
->>>>>>> Stashed changes
                         <div class="project-overlay">
                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jgp;base64,<?php echo base64_encode($row["imagen"]); ?>"
                                 data-lightbox="project"><i class="fa fa-eye"></i></a>
@@ -427,14 +423,6 @@
 
 <!-- Footer Start -->
 <?php require("footer.php"); ?>
-<<<<<<< Updated upstream
-
-=======
-<!-- Footer End -->
-<script src="lib/lightbox/js/lightbox.min.js" defer></script>
-<!-- Template Javascript -->
-<script src="js/main.js" defer></script>
->>>>>>> Stashed changes
 </body>
 
 </html>
