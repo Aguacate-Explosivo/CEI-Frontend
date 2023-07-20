@@ -39,8 +39,8 @@
                                     <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th>Nombre del evento </th>
-                                <th>descripcion del evento</th>    
+                                <th>Documento </th>
+                                <th>Nombre simulacion</th>    
                                 <th>Descargar</th> 
                                                            
                                

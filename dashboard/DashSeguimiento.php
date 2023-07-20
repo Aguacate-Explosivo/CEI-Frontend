@@ -26,10 +26,64 @@
       <div class="row">
           <div class="col-md-12">
             <div class="white-box">
-              <h3 class="text-center">Fichas de Seguimiento</h3>
+              <h3 >Fichas de Seguimiento</h3>
+
+              <div class="container-fluid">
+                  <div class="jumbotron white-box">
+                    <div class="container">
+                        <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="table-responsive"> 
+            
+                                    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Documento</th>    
+                                <th>Descargar</th> 
+                                                           
+                               
+                            </tr>
+                        </thead>
+                                <?php
+                                 require_once('../conexion.php');
+                                 $conexion=conectar(); 
+                                 $consulta2 ="SELECT * FROM `formatos` ";
+                                 $busqueda=mysqli_query($conexion,$consulta2);
+                                    
+                            foreach($busqueda as $elemento){ ?>
+                            <!-- Contenido de la tabla -->
+                             
+
+
+                       
+                            <tr>
+                                <td><?php echo $elemento["nombre"]; ?></td>
+                                <td><?php echo $elemento["cedula"]; ?></td>
+                                <td>  <a style="margin: 2px; border-radius: 5px;" href="descargar.php?id=<?php echo $elemento["id"]; ?>" class="btn btn-warning" > Descargar</a>
+    </td>
+                            
+
+                            </tr>
+                                                      
+                        
+                                 <?php
+                                }
+                                ?>
+                       
+                         
+                                       
+                       </table>
+                
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
             </div>
           </div>
         </div>
+
+
       </div>
     </div>
     <!--  -->

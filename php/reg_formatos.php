@@ -5,18 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <title>Procesando simulacion</title>
+  <title>Procesando Formatos</title>
 </head>
 <body>  
 <?php
 // Conexion con la base de datos
-require_once('../../conexion.php');
+require_once('../conexion.php');
 $conexion = conectar();
 
 // Verificar si la conexión se realizó correctamente
 if ($conexion) {
   // Valores del formulario
-  $documento = $_POST['documento'];
+  $cedula = $_POST['cedula'];
   $nombre = $_POST['nombre'];
 
   // Obtener el contenido del archivo PDF
@@ -25,13 +25,13 @@ if ($conexion) {
   $pdf_size = $_FILES['pdf']['size'];
 
   // Verificar que se haya seleccionado un archivo PDF y que los campos estén presentes
-  if ($pdf_size > 0 && !empty($documento) && !empty($nombre)) {
+  if ($pdf_size > 0 && !empty($cedula) && !empty($nombre)) {
     // Preparar la consulta SQL utilizando una sentencia preparada
-    $consulta = "INSERT INTO simulaciones (cc, nombre, pdf) VALUES (?, ?, ?)";
+    $consulta = "INSERT INTO formatos (nombre, cedula, pdf) VALUES (?, ?, ?)";
     $stmt = mysqli_prepare($conexion, $consulta);
 
-    // Vincular los parámetros con los valores
-    mysqli_stmt_bind_param($stmt, "sss", $documento, $nombre, $pdf_content);
+    // Vincular los parámetros con los valores, utilizando "b" para datos binarios
+    mysqli_stmt_bind_param($stmt, "sss", $nombre, $cedula, $pdf_content);
 
     // Ejecutar la consulta
     $resultado = mysqli_stmt_execute($stmt);
@@ -45,7 +45,7 @@ if ($conexion) {
           showConfirmButton: false,
         });
         setInterval(() => {
-          location.assign('estudios.php');
+          location.assign('../subida.php');
         }, 3000);
       </script>";
     } else {
@@ -64,6 +64,5 @@ if ($conexion) {
   echo "Error de conexión a la base de datos.";
 }
 ?>
-
 </body>
 </html>

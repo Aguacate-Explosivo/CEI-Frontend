@@ -86,6 +86,7 @@
                                 <a href="servicios.php" class="dropdown-item" alt="BOTON ENCUESTA">Servicios</a>
                                 <a href="encuesta.php" class="dropdown-item" alt="BOTON SERVICIOS">Encuesta</a>
                                 <a href="formatos.php" class="dropdown-item" alt="BOTON DESCARGA FORMULARIOS">Descargar Formatos</a>
+                                <a href="subida.php" class="dropdown-item" alt="BOTON SUBIDA FORMULARIOS">Subir Formatos</a>
                                 <a href="contacto.php" class="dropdown-item" alt = "Botón de Formulario de Contacto Via Correo">Contacto</a>
                                 <a href="actividades.php" class="dropdown-item" alt="BOTON De actividades Realizadas">Actividades Realizadas</a>
                                 <a href="estructura_logo.php" class="dropdown-item" alt="BOTON De logo y estructura organizacional">Estructura y Logo</a>
