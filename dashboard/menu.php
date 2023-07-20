@@ -80,7 +80,25 @@
           <li>
             <a class="profile-pic" href="#">
               <i class="ti-user"></i>
-              <b class="hidden-xs">Administrador</b>
+              <b class="hidden-xs">
+                <?php echo "            
+                    <script>
+                      var Role = localStorage.getItem('auth_perfil');                   
+                        if (Role === 'Administrador') { 
+                          document.write('Administrador')
+                          }
+                        if (Role === 'Moderador') { 
+                          document.write('Moderador')
+                        }
+                        if (Role === 'Docente') {
+                          document.write('Docente')
+                          } 
+                        if (Role === 'Estudiante'){
+                          document.write('Estudiante')
+                        }
+                      </script>";
+                  ?>
+              </b>
             </a>
           </li>
         </ul>
@@ -107,61 +125,61 @@
               Dashboard
             </a>
           </li>
-          <li>
+          <li id="usuariosModulo">
             <a href="DashUsuarios.php" class="waves-effect">
             <i class="fa fa-user fa-fw" aria-hidden="true"></i>
                Usuarios
             </a>
           </li>
-          <li>
+          <li id="citaModulo">
             <a href="DashCitas.php" class="waves-effect">
               <i class="ti-calendar fa-fw"></i>
               Citas
             </a>
           </li>
-          <li>
+          <li id="eventosModulo">
             <a href="DashEventos.php" class="waves-effect">
               <i class="ti-video-camera fa-fw"></i>
               Eventos
             </a>
           </li>
-          <li>
+          <li id="cursosModulo">
             <a href="DashCursos.php" class="waves-effect">
               <i class="ti-ink-pen fa-fw"></i>
               Cursos
             </a>
           </li>
-          <li>
+          <li id="simulacionModulo">
             <a href="DashSimulaciones.php" class="waves-effect">
               <i class="ti-stats-up fa-fw"></i>
              Simulaciones
             </a>
           </li>
-          <li>
+          <li id="buscarSimulacionModulo">
             <a href="consult_simulaciones.php" class="waves-effect">
               <i class="ti-search fa-fw"></i>
              Buscar Simulaciones
             </a>
           </li>
-          <li>
+          <li id="marketingModulo">
             <a href="DashMarketing.php" class="waves-effect">
               <i class="ti-clipboard fa-fw"></i>
              Estrategias de Marketing
             </a>
           </li>
-          <li>
+          <li id="encuestaModulo">
             <a href="DashEncuentas.php" class="waves-effect">
               <i class="ti-comments fa-fw"></i>
              Encuestas de Planes de negocio
             </a>
           </li>
-          <li>
+          <li id="seguimientoModulo">
             <a href="DashSeguimiento.php" class="waves-effect">
               <i class="ti-eye fa-fw"></i>
              Seguimientos a emprendedores
             </a>
           </li>
-          <li>
+          <li id="estadisticasModulo">
             <a href="DashEstadisticas.php" class="waves-effect">
               <i class="ti-receipt fa-fw"></i>
               Estadísticas de los emprendedores
@@ -179,3 +197,30 @@
       </div>
     </div>
     </div>
+    <script>
+      var Role = localStorage.getItem('auth_perfil');
+      if (Role === "Moderador") {
+            var moduloUsuarios = document.getElementById('usuariosModulo').style.display = "none";
+          } 
+          if (Role === "Docente") {
+            var moduloUsuarios = document.getElementById('usuariosModulo').style.display = "none";
+            var moduloCita = document.getElementById('citaModulo').style.display = "none";
+            var moduloEventos = document.getElementById('eventosModulo').style.display = "none";
+            var moduloCursos = document.getElementById('cursosModulo').style.display = "none";
+            var moduloMarketing = document.getElementById('marketingModulo').style.display = "none";
+            var moduloEncuestas = document.getElementById('encuestaModulo').style.display = "none";
+            var moduloSeguimiento = document.getElementById('seguimientoModulo').style.display = "none";
+            var moduloEstadisticas = document.getElementById('estadisticasModulo').style.display = "none";
+          } 
+          if (Role === "Estudiante") {
+            var moduloUsuarios = document.getElementById('usuariosModulo').style.display = "none";
+            var moduloCita = document.getElementById('citaModulo').style.display = "none";
+            var moduloEventos = document.getElementById('eventosModulo').style.display = "none";
+            var moduloCursos = document.getElementById('cursosModulo').style.display = "none";
+            var moduloBuscarSimulacion = document.getElementById('buscarSimulacionModulo').style.display = "none";
+            var moduloMarketing = document.getElementById('marketingModulo').style.display = "none";
+            var moduloEncuestas = document.getElementById('encuestaModulo').style.display = "none";
+            var moduloSeguimiento = document.getElementById('seguimientoModulo').style.display = "none";
+            var moduloEstadisticas = document.getElementById('estadisticasModulo').style.display = "none";
+          } 
+    </script>
