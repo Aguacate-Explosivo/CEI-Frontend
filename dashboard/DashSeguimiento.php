@@ -38,10 +38,13 @@
                                     <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th>Nombre</th>
                                 <th>Documento</th>    
-                                <th>Descargar</th> 
-                                                           
+                                <th>Nombre</th>
+                                <th>Ficha De seguimiento</th> 
+                                <th>Citas Separadas</th>
+                                <th>Cursos inscritos</th>
+                                <th>Eventos Inscritos</th>                 
+                                <th>Simulaciones</th> 
                                
                             </tr>
                         </thead>
@@ -53,32 +56,83 @@
                                     
                             foreach($busqueda as $elemento){ ?>
                             <!-- Contenido de la tabla -->
-                             
 
-
-                       
                             <tr>
+                              <td><?php echo $elemento["cedula"]; ?></td>
                                 <td><?php echo $elemento["nombre"]; ?></td>
-                                <td><?php echo $elemento["cedula"]; ?></td>
                                 <td>  <a style="margin: 2px; border-radius: 5px;" href="descargar.php?id=<?php echo $elemento["id"]; ?>" class="btn btn-warning" > Descargar</a>
-    </td>
                             
 
+
+                            <!-- Consulta de Simulaciones hechas -->
+                            <?php
+                            $documento = $elemento["cedula"];
+
+                            $consultaCitas ="SELECT COUNT(*) AS cantidad_total_citas FROM (SELECT DISTINCT documento FROM `citas`) AS subconsultacitas WHERE documento = $documento;";
+                            $busquedaCitas=mysqli_query($conexion,$consultaCitas);
+                            if ($busquedaCitas) {
+                              $filaCitas = mysqli_fetch_assoc($busquedaCitas);
+                              $totalCitas = $filaCitas['cantidad_total_citas'];
+                              ?>
+                              <td><?php echo $totalCitas; ?></td>
+                            <?php
+                            } else {
+                                echo "Error en la consulta: " . mysqli_error($conexion);
+                            } 
+                            ?>
+
+                            <?php
+                            $consultaTotalCursos ="SELECT COUNT(*) AS cantidad_total_inscritos_cursos FROM (SELECT DISTINCT documento FROM `inscritos_cursos`) AS subconsultaCursos WHERE documento = $documento;";
+                            $busquedaTotalCurso=mysqli_query($conexion,$consultaTotalCursos);
+                            if ($busquedaTotalCurso) {
+                              $filaTotalCurso = mysqli_fetch_assoc($busquedaTotalCurso);
+                              $cantidad_total_inscritos_cursos = $filaTotalCurso['cantidad_total_inscritos_cursos'];
+                              ?>
+                              <td><?php echo $cantidad_total_inscritos_cursos; ?></td>
+                            <?php
+                            } else {
+                                echo "Error en la consulta: " . mysqli_error($conexion);
+                            } 
+                            ?>
+
+                            <?php
+                            $consultaTotalEventos ="SELECT COUNT(*) AS cantidad_total_inscritos_eventos FROM (SELECT DISTINCT documento FROM `inscritos_eventos`) AS subconsultaEventos WHERE documento = $documento;";
+                            $busquedaTotalEventos=mysqli_query($conexion,$consultaTotalEventos);
+                            if ($busquedaTotalEventos) {
+                              $filaTotalEventos = mysqli_fetch_assoc($busquedaTotalEventos);
+                              $cantidad_total_inscritos_eventos = $filaTotalEventos['cantidad_total_inscritos_eventos'];
+                              ?>
+                              <td><?php echo $cantidad_total_inscritos_eventos; ?></td>
+                            <?php
+                            } else {
+                                echo "Error en la consulta: " . mysqli_error($conexion);
+                            } 
+                            ?>
+
+                            <?php
+                            $consultaSimulaciones ="SELECT COUNT(*) AS cantidad_total_simulaciones FROM (SELECT DISTINCT cc FROM `simulaciones`) AS subconsulta WHERE cc = $documento;";
+                            $busquedaSimulaciones=mysqli_query($conexion,$consultaSimulaciones);
+                            if ($busquedaSimulaciones) {
+                              $fila = mysqli_fetch_assoc($busquedaSimulaciones);
+                              $totalSimulaciones = $fila['cantidad_total_simulaciones'];
+                              ?>
+                              <td><?php echo $totalSimulaciones; ?></td>
+                            <?php
+                            } else {
+                                echo "Error en la consulta: " . mysqli_error($conexion);
+                            } 
+                            ?>
+
+
+                            </td>
+
                             </tr>
-                                                      
-                        
-                                 <?php
-                                }
-                                ?>
-                       
-                         
-                                       
-                       </table>
-                
-                                      </div>
-                                    </div>
-                                </div>
-                              </div>
+                                  <?php  } ?>  
+                              </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
