@@ -3,6 +3,7 @@
     function logout() {
       // Eliminar el token del Local Storage
       localStorage.removeItem('auth_token');
+      localStorage.removeItem('auth_perfil');
       
       // Redireccionar al formulario de inicio de sesión
       window.location.href = '../login.php';
