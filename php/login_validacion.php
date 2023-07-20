@@ -25,12 +25,16 @@
         $fila = mysqli_fetch_assoc($resultado);
         
         if ($fila) {
+
+            // Depurar el perfil del usuario
+            $auth_perfil = $fila['perfil'];
             // Generar un token único
             $token = uniqid();
             
             // Almacenar el token en el Local Storage del navegador
             echo "<script>
             localStorage.setItem('auth_token', '$token');
+            localStorage.setItem('auth_perfil', '$auth_perfil');
             Swal.fire({
                 icon: 'success',
                 title: 'Datos Validos',
