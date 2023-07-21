@@ -128,8 +128,8 @@
               Dashboard
             </a>
           </li>
-          <li id="../usuariosModulo">
-            <a href="DashUsuarios.php" class="waves-effect">
+          <li id="usuariosModulo">
+            <a href="../DashUsuarios.php" class="waves-effect">
             <i class="fa fa-user fa-fw" aria-hidden="true"></i>
                Usuarios
             </a>
@@ -230,5 +230,7 @@
             var moduloUsuarios = document.getElementById('usuariosModulo').style.display = "none";
             var moduloBuscarSimulacion = document.getElementById('buscarSimulacionModulo').style.display = "none";
             var moduloSimulacion= document.getElementById('simulacionModulo').style.dysplay = "none";
+            var moduloMarketing = document.getElementById('marketingModulo').style.display = "none";
+            var moduloSimular = document.getElementById('simulacionModulo').style.display = "none";
           }
     </script>
