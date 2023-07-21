@@ -74,8 +74,9 @@
                 <tr>
                 <td><?php echo $row["tipodocumento"]; ?></td>
                     <td><?php echo $row["documento"]; ?></td>
-                    <td><?php echo $row["categoria"]; ?></td>
+                    
                     <td><?php echo $row["nombre"]; ?></td>
+                    <td><?php echo $row["categoria"]; ?></td>
                     <td><?php echo $row["telefono"]; ?></td>
                     <td><?php echo $row["correo"]; ?></td>
                     <td><?php echo $row["institucion"]; ?></td>
