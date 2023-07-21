@@ -41,7 +41,7 @@
                                 <div class="input-group mb-auto">
                                     <span class="input-group-text"><i class="fa fa-user"
                                             aria-hidden="false"></i></span>
-                                    <input type="text" id="nombreu" name="nombreu" required
+                                    <input type="text" id="nombrel" name="nombrel" required
                                         pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+" class="form-control" placeholder="Username">
                                 </div>
 
@@ -51,7 +51,7 @@
                                     <label>Seleccione Correo</label>
                                     <div class="input-group mb-auto">
                                         <span class="input-group-text"><i class="far fa-envelope"></i></span>
-                                        <input type="text" id="correou" name="correou" required class="form-control"
+                                        <input type="text" id="correol" name="correol" required class="form-control"
                                             placeholder="correo">
                                     </div>
 
@@ -61,7 +61,7 @@
                                         <label>Seleccione Contraseña</label>
                                         <div class="input-group mb-auto">
                                             <span class="input-group-text"><i class="fas fa-unlock"></i></span>
-                                            <input type="password" id="psswd" name="psswd" required
+                                            <input type="password" id="psswdl" name="psswdl" required
                                                 pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+" class="form-control"
                                                 placeholder="Contraseña">
                                         </div>
@@ -71,7 +71,7 @@
                                         <div class="row">
                                             <div class="form-group">
                                                 <label>Seleccione Rol</label>
-                                                <select class="form-control select2bs4" id="rolu" name="rolu"
+                                                <select class="form-control select2bs4" id="roll" name="roll"
                                                     style="width: 100%;">
                                                     <option selected="selected">Administrador</option>
                                                     <option>Moderador</option>

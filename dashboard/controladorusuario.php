@@ -63,6 +63,76 @@ if (isset($_POST['id'])) {
   }
 
   //================= AGREGAR USUARIO
+} elseif (isset($_POST['nombrel'])) {
+  // Operación de inserción
+  $nombre = $_POST['nombrel'];
+  $correo = $_POST['correol'];
+  $psswwd = $_POST['psswdl'];
+  $rol = $_POST['roll'];
+
+  $consulta = "INSERT INTO datos VALUES (NULL, ?, ?, ?, ?, 0)";
+
+  if ($stmt = mysqli_prepare($conexion, $consulta)) {
+    mysqli_stmt_bind_param($stmt, "ssss", $nombre, $correo, $psswwd, $rol);
+
+    if (mysqli_stmt_execute($stmt)) {
+      echo "<script>
+        console.log('se envió');
+        Swal.fire({
+          icon: 'success',
+          title: 'Nuevo usuario registrado',
+          text: 'Se ha agregado de forma correcta',
+          showConfirmButton: false,
+        });
+        setTimeout(() => {
+          location.assign('DashUsuarios.php');
+        }, 1000);
+      </script>";
+    } else {
+      echo "Error al ejecutar la consulta: " . mysqli_stmt_error($stmt);
+    }
+
+    mysqli_stmt_close($stmt);
+  } else {
+    echo "Error al preparar la consulta: " . mysqli_error($conexion);
+  }
+
+  //============================EDITAR (aun no funciona)
+}elseif (isset($_POST['nombreu'])) {
+  // Operación de inserción
+  $nombre = $_POST['nombreu'];
+  $correo = $_POST['correou'];
+  $psswwd = $_POST['psswd'];
+  $rol = $_POST['rolu'];
+
+  $consulta = "INSERT INTO datos VALUES (NULL, ?, ?, ?, ?, 0)";
+
+  if ($stmt = mysqli_prepare($conexion, $consulta)) {
+    mysqli_stmt_bind_param($stmt, "ssss", $nombre, $correo, $psswwd, $rol);
+
+    if (mysqli_stmt_execute($stmt)) {
+      echo "<script>
+        console.log('se envió');
+        Swal.fire({
+          icon: 'success',
+          title: 'Nuevo usuario registrado',
+          text: 'Se ha agregado de forma correcta',
+          showConfirmButton: false,
+        });
+        setTimeout(() => {
+          location.assign('../login.php');
+        }, 1000);
+      </script>";
+    } else {
+      echo "Error al ejecutar la consulta: " . mysqli_stmt_error($stmt);
+    }
+
+    mysqli_stmt_close($stmt);
+  } else {
+    echo "Error al preparar la consulta: " . mysqli_error($conexion);
+  }
+
+  //============================EDITAR (aun no funciona)
 } elseif (isset($_POST['nombreu'])) {
   // Operación de inserción
   $nombre = $_POST['nombreu'];
@@ -98,7 +168,7 @@ if (isset($_POST['id'])) {
   }
 
   //============================EDITAR (aun no funciona)
-} elseif (isset($_POST['ideditar'])) {
+}  elseif (isset($_POST['ideditar'])) {
   // Operación de actualización
   $id = $_POST['ideditar'];
   $nombre = $_POST['nombre'];
