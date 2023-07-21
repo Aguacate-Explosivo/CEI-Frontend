@@ -59,6 +59,12 @@
                         <?php
                         }
                         ?>
+<style>
+    .course-image {
+        height: 200px; 
+        object-fit: cover; 
+    }
+</style>
 
                         <!-- Estructura de eventos -->
                         <div class="col">
@@ -66,7 +72,7 @@
                                 <div class="card-body h-100 d-flex flex-column justify-content-between">
                                     <div class="project-item mb-5">
                                         <div class="position-relative">
-                                            <img class="card-img-top img-fluid" src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>">
+                                            <img class="card-img-top img-fluid course-image" src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>">
                                                 
                                             <div class="project-overlay">
                                                 <a class="btn btn-lg-square btn-light rounded-circle m-1"

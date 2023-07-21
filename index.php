@@ -253,31 +253,55 @@
         </div>
     </div>
     <!-- Service End -->
-    <!-- Project Start -->
-    <div class="container-xxl pt-5">
-        <div class="container">
-            <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
-                style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-success">Cursos Ofrecidos </p>
-                <h1 class="display-5 mb-5">Curso Que Ofrece El CEI</h1>
-            </div>
-            <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
-               
-              <?php
-                include("conexion.php");
-                $conexion=conectar();
+    <style>
+    .custom-container {
+        width: 100%; 
+        padding-top: 50px; 
+        padding-bottom: 70px; 
+    }
 
-                $consulta ="SELECT *FROM `cursos`;";
-                $resultado=mysqli_query($conexion,$consulta);
-                                
-                foreach($resultado as $row){ $id = $row["Id_Curso"]; ?>
-          <!-- Fin bd -->
-            <!-- Estructura de Curso -->
-               <div class="project-item mb-5">
+    .course-image {
+        width: 100%;
+        height: 200px; 
+        object-fit: cover; 
+    }
+
+    .project-item {
+        width: 300px; 
+        margin: 0 auto; 
+        min-height: 10%;
+        max-height: 20% ;
+    }
+</style>
+
+
+ <!-- Project Start -->
+<div class="custom-container pt-5">
+    <div class="container">
+        <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
+            style="max-width: 500px;">
+            <p class="fs-5 fw-medium text-success">Cursos Ofrecidos </p>
+            <h1 class="display-5 mb-5">Curso Que Ofrece El CEI</h1>
+        </div>
+        <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
+
+            <?php
+            include("conexion.php");
+            $conexion = conectar();
+
+            $consulta = "SELECT * FROM `cursos`;";
+            $resultado = mysqli_query($conexion, $consulta);
+
+            foreach ($resultado as $row) {
+                $id = $row["Id_Curso"];
+            ?>
+                <!-- Fin bd -->
+                <!-- Estructura de Curso -->
+                <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img src="data:image/jgp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">            
+                        <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid course-image">
                         <div class="project-overlay">
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jgp;base64,<?php echo base64_encode($row["imagen"]); ?>"
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>"
                                 data-lightbox="project"><i class="fa fa-eye"></i></a>
                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="cursos.php"><i class="fa fa-link"></i></a>
                         </div>
@@ -288,9 +312,8 @@
                         <br>
                         <span>Descripcion: <?php echo $row["DescripcionCurso"]; ?></span>
                     </div>
-                    <div style="margin-left:20px; margin-bottom:20px;">
-
-                    <a style="margin: 2px; border-radius: 5px;" href="inscripcursos.php?Id_Curso=<?php echo $row["Id_Curso"]?>" class="btn btn-primary" > Unirse a Curso</a>
+                    <div style="margin-left: 20px; margin-bottom: 20px;">
+                        <a style="margin: 2px; border-radius: 5px;" href="inscripcursos.php?Id_Curso=<?php echo $row["Id_Curso"]?>" class="btn btn-primary"> Unirse a Curso</a>
                         <br>
                         <a href=""></a>
                     </div>
@@ -298,11 +321,12 @@
 
             <?php } ?>
 
-                
-            </div>
         </div>
     </div>
-    <!-- Project End -->
+</div>
+<!-- Project End -->
+
+
     <!-- Team Start -->
     <div class="container-xxl py-5">
         <div class="container">
