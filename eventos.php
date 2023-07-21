@@ -31,7 +31,7 @@
     <div>
         <div class="container-fluid">
             <!-- Seccion de cursos -->
-            <div class="jumbotron">
+            <div class="container">
                 <h1 class="display-6 mb-4">Eventos Disponibles</h1>
                 <br>
                 <br>
@@ -67,6 +67,7 @@
 </style>
 
                         <!-- Estructura de eventos -->
+                        
                         <div class="col">
                             <div class="card h-100">
                                 <div class="card-body h-100 d-flex flex-column justify-content-between">

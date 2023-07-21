@@ -27,10 +27,10 @@
     </div>
     <!-- Page Header End -->
 
-    <div>
+    <div class="container-xxl py-5">
         <div class="container-fluid">
             <!-- Seccion de cursos -->
-            <div class="jumbotron">
+            <div class="container">
                 <p class="fs-5 fw-medium text-success">Cursos</p>
                 <h1 class="display-6 mb-4">Cursos Que Ofrece el Centro de Emprendimiento e Innovación</h1>
                 <br>
