@@ -94,17 +94,17 @@
                         <thead>
                             <tr>
                             <th>Tipo</th>
-                                <th>Documento</th>
-                                <th>Categoria</th>
-                                <th>Nombre</th>
-                                <th>Telefono</th>     
-                                <th>Correo</th>
-                                <th>Institucion</th>
-                                <th>Programa</th>                        
-                                <th>Direccion</th>
-                                <th>Edad</th>
-                                <th>Curso inscrito</th>
-                                <th>Acciones</th>
+                                <th style="text-align: center; vertical-align: middle;">Documento</th>
+                                <th style="text-align: center; vertical-align: middle;">Categoria</th>
+                                <th style="text-align: center; vertical-align: middle;">Nombre</th>
+                                <th style="text-align: center; vertical-align: middle;">Telefono</th>     
+                                <th style="text-align: center; vertical-align: middle;">Correo</th>
+                                <th style="text-align: center; vertical-align: middle;">Institucion</th>
+                                <th style="text-align: center; vertical-align: middle;">Programa</th>                        
+                                <th style="text-align: center; vertical-align: middle;">Direccion</th>
+                                <th style="text-align: center; vertical-align: middle;">Edad</th>
+                                <th style="text-align: center; vertical-align: middle;">Curso inscrito</th>
+                                <th style="text-align: center; vertical-align: middle;">Acciones</th>
 
                                 
                             </tr>
@@ -132,7 +132,7 @@
                                 <td><?php echo $elemento["edad"]; ?></td>
                                 <td><?php echo $elemento["curso_inscrito"]; ?></td>
                                 <td>
-                                   <a href="eliminarinscrito.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" > eliminar</a>
+                                   <a style="margin: 2px; border-radius: 5px;"  href="eliminarinscrito.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" > <i class="fas fa-trash-alt fa-flip-horizontal"></i></a>
                                 </td>
                             </tr>
                                                       

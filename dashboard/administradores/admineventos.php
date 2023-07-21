@@ -89,18 +89,28 @@
 
                 </ul>
             </nav>
-            
+            <style>
+  
+  .course-image {
+    border-radius: 10px;
+      width: 100%;
+      height: 100px; 
+      object-fit: cover; 
+  }
+
+
+</style>
                                     <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th>Nombre del evento </th>
-                                <th>descripcion del evento</th>    
-                                <th>Lugar</th> 
-                                <th>Fecha</th> 
-                                <th>Hora</th> 
-                                <th>Estado</th>
-                                <th>Imagen</th> 
-                                <th>Acciones</th>                           
+                                <th style="text-align: center; vertical-align: middle;">Nombre del evento </th>
+                                <th style="text-align: center; vertical-align: middle;">descripcion del evento</th>    
+                                <th style="text-align: center; vertical-align: middle;">Lugar</th> 
+                                <th style="text-align: center; vertical-align: middle;">Fecha</th> 
+                                <th style="text-align: center; vertical-align: middle;">Hora</th> 
+                                <th style="text-align: center; vertical-align: middle;">Estado</th>
+                                <th style="text-align: center; vertical-align: middle;">Imagen</th> 
+                                <th style="text-align: center; vertical-align: middle;">Acciones</th>                           
                                
                             </tr>
                         </thead>
@@ -116,16 +126,16 @@
 
                        
                             <tr>
-                                <td><?php echo $elemento["nombreEven"]; ?></td>
-                                <td><?php echo $elemento["descripcionEven"]; ?></td>
-                                <td><?php echo $elemento["lugar"]; ?></td>
-                                <td><?php echo $elemento["fecha"]; ?></td>
-                                <td><?php echo $elemento["hora"]; ?></td>
-                                <td><?php echo $elemento["estado"]; ?></td>
-                                <td><img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($elemento["imagen"]); ?>" class="card-img-top"></td>
-                                <td>
-                                <a style="margin: 2px; border-radius: 5px;" href="evento.php?id_evento=<?php echo $elemento["id_evento"]?>" class="btn btn-warning" > galeria</a>
-                                <a style="margin: 2px; border-radius: 5px;" href="eliminarevento.php?id_evento=<?php echo $elemento["id_evento"]?>" class="btn btn-danger" > eliminar</a>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["nombreEven"]; ?></td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["descripcionEven"]; ?></td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["lugar"]; ?></td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["fecha"]; ?></td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["hora"]; ?></td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["estado"]; ?></td>
+                                <td style="text-align: center; vertical-align: middle;"><img src="data:image/jpg;base64,<?php echo base64_encode($elemento["imagen"]); ?>" class="card-img-top course-image"></td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                <a style="margin: 2px; border-radius: 5px;" href="evento.php?id_evento=<?php echo $elemento["id_evento"]?>" class="btn btn-warning" > <i class="fas fa-edit"></i></a>
+                                <a style="margin: 2px; border-radius: 5px;" href="eliminarevento.php?id_evento=<?php echo $elemento["id_evento"]?>" class="btn btn-danger" > <i class="fas fa-trash-alt fa-flip-horizontal"></i></a>
                                  </td>
                             </tr>
                                                       

@@ -86,16 +86,26 @@
 
                 </ul>
             </nav>
-            
+            <style>
+  
+    .course-image {
+      border-radius: 10px;
+        width: 100%;
+        height: 100px; 
+        object-fit: cover; 
+    }
+
+
+</style>
             <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>
                                
-                                <th>Nombre Curso</th>
-                                <th>Descripcion curso</th>                             
-                                <th>Encargado</th>
-                                <th>Imagen</th>
-                                <th>Acciones</th>
+                                <th style="text-align: center; vertical-align: middle;">Nombre Curso</th>
+                                <th style="text-align: center; vertical-align: middle;">Descripcion curso</th>                             
+                                <th style="text-align: center; vertical-align: middle;">Encargado</th>
+                                <th style="text-align: center; vertical-align: middle;">Imagen</th>
+                                <th style="text-align: center; vertical-align: middle;">Acciones</th>
                                 
                             </tr>
                         </thead>
@@ -109,13 +119,13 @@
                             <!-- Contenido de la tabla -->
 
                             <tr>
-                                <td><?php echo $elemento["NombreCurso"]; ?></td>
-                                <td><?php echo $elemento["DescripcionCurso"]; ?></td>
-                                <td><?php echo $elemento["EncargadoCurso"]; ?></td>
-                                <td><img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($elemento["imagen"]); ?>" class="card-img-top"></td>
-                                <td>
-                                   <a href="editarcurso.php?Id_Curso=<?php echo $elemento["Id_Curso"]?>" class="btn btn-warning" > editar</a>
-                                   <a href="eliminarcurso.php?Id_Curso=<?php echo $elemento["Id_Curso"]?>" class="btn btn-danger" > eliminar</a>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["NombreCurso"]; ?></td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["DescripcionCurso"]; ?></td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["EncargadoCurso"]; ?></td>
+                                <td style="text-align: center; vertical-align: middle;"><img src="data:image/jpg;base64,<?php echo base64_encode($elemento["imagen"]); ?>" class="card-img-top course-image"></td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                   <a style="margin: 2px; border-radius: 5px;" href="editarcurso.php?Id_Curso=<?php echo $elemento["Id_Curso"]?>" class="btn btn-warning" ><i class="fas fa-edit"></i></a>
+                                   <a style="margin: 2px; border-radius: 5px;" href="eliminarcurso.php?Id_Curso=<?php echo $elemento["Id_Curso"]?>" class="btn btn-danger" > <i class="fas fa-trash-alt fa-flip-horizontal"></i></a>
                                 </td>
                             </tr>                  
                         

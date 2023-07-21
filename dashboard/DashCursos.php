@@ -123,7 +123,7 @@
                   </button>
                         </div>
                     <br> 
-                    <button type="submit" class="btn btn-success btn-large">Registrar un Nuevo Curso</button>
+                    <button style="margin: 2px; border-radius: 5px;"  type="submit" class="btn btn-success btn-large">Registrar un Nuevo Curso</button>
                 </div>
             </form>
          

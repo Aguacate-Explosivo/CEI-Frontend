@@ -38,7 +38,7 @@
                   <div>
                     <nav aria-label="...">
                       <ul class="pagination pagination-lg justify-content-center">
-                        <li class="page-item active rounded"><a class="nav-link" href="regisusuario.php"><i class="fa fa-edit fa-fw"></i> Registrar usuario</a></li>
+                        <li class="page-item active rounded"><a style="margin: 2px; border-radius: 5px;"  class="nav-link" href="regisusuario.php"><i class="fa fa-edit fa-fw"></i> Registrar usuario</a></li>
                       </ul>
                       <br>
                     </nav>
@@ -75,19 +75,19 @@
                           <td><?php echo $email; ?></td>
                           <td>
                             <?php if ($estado != 0) { ?>
-                              <button class="btn btn-success btn-xs btnActivar" data-id="<?php echo $id; ?>" data-estado="0">Activado</button>
+                              <button style="margin: 2px; border-radius: 5px;"  class="btn btn-success btn-xs btnActivar" data-id="<?php echo $id; ?>" data-estado="0">Activado</button>
                             <?php } else { ?>
-                              <button class="btn btn-danger btn-xs btnActivar" data-id="<?php echo $id; ?>" data-estado="1">Desactivado</button>
+                              <button style="margin: 2px; border-radius: 5px;"  class="btn btn-danger btn-xs btnActivar" data-id="<?php echo $id; ?>" data-estado="1">Desactivado</button>
                             <?php } ?>
                           </td>
                           <td><?php echo $perfil; ?></td>
                           <td>
                             <div class="btn-group">
-                            <button class="btn btn-warning btnEditar" onclick="editarUsuario('<?php echo $id; ?>', '<?php echo $usuario; ?>', '<?php echo $correo; ?>', '<?php echo $estado; ?>', '<?php echo $perfil; ?>')">
+                            <button style="margin: 2px; border-radius: 5px;"  class="btn btn-warning btnEditar" onclick="editarUsuario('<?php echo $id; ?>', '<?php echo $usuario; ?>', '<?php echo $correo; ?>', '<?php echo $estado; ?>', '<?php echo $perfil; ?>')">
                               <i class="fas fa-edit"></i>
                             </button>
 
-                              <button class="btn btn-danger btnEliminar" data-id="<?php echo $id; ?>"><i class="fas fa-trash-alt fa-flip-horizontal"></i></button>
+                              <button style="margin: 2px; border-radius: 5px;"  class="btn btn-danger btnEliminar" data-id="<?php echo $id; ?>"><i class="fas fa-trash-alt fa-flip-horizontal"></i></button>
                             </div>
                           </td>
                         </tr>

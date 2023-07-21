@@ -59,17 +59,27 @@
 
                 </ul>
             </nav>
-            
-            <a href="agregarencargado.php" class="btn btn-success" > Agregar Encargado</a>
+            <style>
+  
+  .course-image {
+    border-radius: 50%;
+      width: 30%;
+      height: 100px; 
+      object-fit: cover; 
+  }
+
+
+</style>
+            <a style="border-radius: 5px;" href="agregarencargado.php" class="btn btn-success" > Agregar Encargado</a>
 
                       
                         <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>
                                 
-                                <th>Encargado Del Curso </th>
-                                <th>Perfil Del Encargado</th>    
-                                <th>Acciones</th>                           
+                                <th style="text-align: center; vertical-align: middle;">Encargado Del Curso </th>
+                                <th style="text-align: center; vertical-align: middle;">Perfil Del Encargado</th>    
+                                <th style="text-align: center; vertical-align: middle;">Acciones</th>                           
                                 
                                 
                             </tr>
@@ -87,10 +97,10 @@
                        
                             <tr>
                               
-                                <td><?php echo $elemento["encargados"]; ?></td>
-                                <td><img style="width: 100px; border-radius:50%;" src="data:image/jpg;base64,<?php echo base64_encode($elemento["imagen"]); ?>" class="card-img-top"></td>
-                                <td>
-                                   <a href="eliminarencargado.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" > Eliminar</a>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["encargados"]; ?></td>
+                                <td style="text-align: center; vertical-align: middle;"><img  src="data:image/jpg;base64,<?php echo base64_encode($elemento["imagen"]); ?>" class="card-img-top course-image"></td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                   <a  href="eliminarencargado.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" > <i class="fas fa-trash-alt fa-flip-horizontal"></i></a>
                                 </td>
                             </tr>
                                                       

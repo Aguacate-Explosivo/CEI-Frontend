@@ -40,8 +40,8 @@
                     <table id="noexportar" class="table table-striped table-bordered" cellspacing="0" style="width: 100%;">
                       <thead>
                         <tr>
-                          <th>URL</th>
-                          <th>Acciones</th>
+                          <th style="text-align: center; vertical-align: middle;">URL</th>
+                          <th style="text-align: center; vertical-align: middle;"> Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -52,8 +52,8 @@
 
                         foreach($busqueda as $row) { ?>
                           <tr>
-                            <td><?php echo $row["url"]; ?></td>
-                            <td>
+                            <td style="text-align: center; vertical-align: middle;"><?php echo $row["url"]; ?></td>
+                            <td style="text-align: center; vertical-align: middle;">
                               <div class="btn-group">
                               <a style="margin: 2px; border-radius: 5px; position: relative;" href="encuesta.php?Id=<?php echo $row["Id"]?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
                               </div>

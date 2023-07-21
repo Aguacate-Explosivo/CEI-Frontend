@@ -39,9 +39,9 @@
                                     <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th>Documento </th>
-                                <th>Nombre simulacion</th>    
-                                <th>Descargar</th> 
+                                <th style="text-align: center; vertical-align: middle;">Documento </th>
+                                <th style="text-align: center; vertical-align: middle;">Nombre simulacion</th>    
+                                <th style="text-align: center; vertical-align: middle;">Descargar</th> 
                                                            
                                
                             </tr>
@@ -59,9 +59,11 @@
 
                        
                             <tr>
-                                <td><?php echo $elemento["cc"]; ?></td>
-                                <td><?php echo $elemento["nombre"]; ?></td>
-                                <td>  <a style="margin: 2px; border-radius: 5px;" href="simulaciones/descargar.php?id=<?php echo $elemento["id"]; ?>" class="btn btn-warning" > Descargar</a>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["cc"]; ?></td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["nombre"]; ?></td>
+                                <td style="text-align: center; vertical-align: middle;">  
+                                  <a style="margin: 2px; border-radius: 5px;" href="simulaciones/descargar.php?id=<?php echo $elemento["id"]; ?>" class="btn btn-danger" > <i class="fas fa-download"></i>
+</a>
     </td>
                             
 
