@@ -33,7 +33,7 @@
                             <div class="form-floating">
                             <select  class="form-control" name="tipodocumento" id="tipodocumento">
                                 <option value="Cedula de ciudadania">Cedula de ciudadania</option>
-                                <option value="Targeta de identidad">Targeta de identidad </option>
+                                <option value="Targeta de identidad">Tarjeta de identidad </option>
                                 <option value="Contraseña">Contraseña</option>
                                 <option value="Documento extranjero">Documento extranjero</option>
                                 <option value="Pasaporte">Pasaporte </option>
