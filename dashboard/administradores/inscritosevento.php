@@ -62,18 +62,18 @@
             <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th>Tipo </th>
-                                <th>Documento </th>
-                                <th>Categoria </th>
-                                <th>Nombre  </th>
-                                <th>Telefono</th> 
-                                <th>Correo</th> 
-                                <th>Institucion</th> 
-                                <th>Programa</th>   
-                                <th>Direccion</th> 
-                                <th>Edad</th> 
-                                <th>Evento Inscrito</th> 
-                                <th>Acciones</th>                           
+                                <th style="text-align: center; vertical-align: middle;">Tipo </th>
+                                <th style="text-align: center; vertical-align: middle;">Documento </th>
+                                <th style="text-align: center; vertical-align: middle;">Categoria </th>
+                                <th style="text-align: center; vertical-align: middle;">Nombre  </th>
+                                <th style="text-align: center; vertical-align: middle;">Telefono</th> 
+                                <th style="text-align: center; vertical-align: middle;">Correo</th> 
+                                <th style="text-align: center; vertical-align: middle;">Institucion</th> 
+                                <th style="text-align: center; vertical-align: middle;">Programa</th>   
+                                <th style="text-align: center; vertical-align: middle;">Direccion</th> 
+                                <th style="text-align: center; vertical-align: middle;">Edad</th> 
+                                <th style="text-align: center; vertical-align: middle;">Evento Inscrito</th> 
+                                <th style="text-align: center; vertical-align: middle;">Acciones</th>                           
                                
                             </tr>
                         </thead>
@@ -102,7 +102,7 @@
                                 <td><?php echo $elemento["edad"]; ?></td>
                                 <td><?php echo $elemento["evento_inscrito"]; ?></td>
                                 <td>
-                                <a style="margin: 2px; border-radius: 5px;"  type="submit" href="eliminareventos.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" id="eliminar" name="eliminar" > eliminar</a>
+                                <a style="margin: 2px; border-radius: 5px;"  type="submit" href="eliminareventos.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" id="eliminar" name="eliminar" > <i class="fas fa-trash-alt fa-flip-horizontal"></i></a>
                                 </td>
                             </tr>
                                                       

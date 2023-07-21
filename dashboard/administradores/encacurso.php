@@ -59,17 +59,27 @@
 
                 </ul>
             </nav>
-            
-            <a href="agregarencargado.php" class="btn btn-success" > Agregar Encargado</a>
+            <style>
+  
+  .course-image {
+    border-radius: 50%;
+      width: 30%;
+      height: 100px; 
+      object-fit: cover; 
+  }
+
+
+</style>
+            <a style="border-radius: 5px;" href="agregarencargado.php" class="btn btn-success" > Agregar Encargado</a>
 
                       
                         <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>
                                 
-                                <th>Encargado Del Curso </th>
-                                <th>Perfil Del Encargado</th>    
-                                <th>Acciones</th>                           
+                                <th style="text-align: center; vertical-align: middle;">Encargado Del Curso </th>
+                                <th style="text-align: center; vertical-align: middle;">Perfil Del Encargado</th>    
+                                <th style="text-align: center; vertical-align: middle;">Acciones</th>                           
                                 
                                 
                             </tr>
@@ -87,10 +97,10 @@
                        
                             <tr>
                               
-                                <td><?php echo $elemento["encargados"]; ?></td>
-                                <td><img style="width: 100px; border-radius:50%;" src="data:image/jpg;base64,<?php echo base64_encode($elemento["imagen"]); ?>" class="card-img-top"></td>
-                                <td>
-                                   <a href="eliminarencargado.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" > Eliminar</a>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["encargados"]; ?></td>
+                                <td style="text-align: center; vertical-align: middle;"><img  src="data:image/jpg;base64,<?php echo base64_encode($elemento["imagen"]); ?>" class="card-img-top course-image"></td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                   <a  href="eliminarencargado.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" > <i class="fas fa-trash-alt fa-flip-horizontal"></i></a>
                                 </td>
                             </tr>
                                                       
@@ -121,32 +131,6 @@
         FACNET - 2023 &copy; 
       </footer>
     </div>
-    <!-- /#wrapper -->
-    <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- Menu Plugin JavaScript -->
-    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
-    <!--Nice scroll JavaScript -->
-    <script src="../js/jquery.nicescroll.js"></script>
-    <!--Wave Effects -->
-    <script src="../js/waves.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="../js/myadmin.js"></script>
-    <!-- jQuery, Popper.js, Bootstrap JS -->
-    <script src="../jquery/jquery-3.3.1.min.js"></script>
-    <script src="../popper/popper.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <!-- datatables JS -->
-    <script type="text/javascript" src="../datatables/datatables.min.js"></script>    
-    <!-- para usar botones en datatables JS -->  
-    <script src="../datatables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>  
-    <script src="../datatables/JSZip-2.5.0/jszip.min.js"></script>    
-    <script src="../datatables/pdfmake-0.1.36/pdfmake.min.js"></script>    
-    <script src="../datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
-    <script src="../datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
-    <!-- código JS propìo-->    
-    <script type="text/javascript" src="../js/main.js"></script>  
+   
   </body>
 </html>

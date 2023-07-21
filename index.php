@@ -126,13 +126,13 @@
     </div>
     <!-- Features End -->
     <!-- About Start -->
-    <div class="container-xxl about my-5">
+    <div class="container-xxl about py-5">
         <div class="container">
             <div class="row g-0">
                 <div class="col-lg-6">
                     <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 300px;">
                         <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                            data-src="" data-bs-target="#videoModal">
                             <span></span>
                         </button>
                     </div>
@@ -158,39 +158,47 @@
                                 <span>Clita erat ipsum et lorem et sit sed stet lorem</span>
                             </div>
                         </div>
-                        <a class="btn btn-primary rounded-pill py-3 px-5" href="nosotros.php">Conoce Mas</a>
+                        <a class="btn btn-primary" href="nosotros.php">Conoce Mas</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- About End -->
-    <!-- Video Modal Start -->
-    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- 16:9 aspect ratio -->
-                    <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
-                            allowscriptaccess="always" allow="autoplay"></iframe>
-                    </div>
+ <!-- Video Modal Start -->
+<div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- El contenedor para el reproductor Plyr -->
+                <div id="plyr-video-player">
+                    <!-- La URL de incrustación del video de YouTube -->
+                    <iframe style="width: 100%;  height: 400px;  " src="https://www.youtube.com/embed/K5_1I5dB-K8" allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Video Modal End -->
+</div>
+<!-- Video Modal End -->
+
+<!-- Script para inicializar el reproductor Plyr después de cargar el modal -->
+<script>
+    // Cuando el modal se muestra, inicializa el reproductor Plyr
+    $('#videoModal').on('shown.bs.modal', function () {
+        const player = new Plyr('#plyr-video-player iframe');
+    });
+</script>
+
     <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s">
                 <p class="fs-5 fw-medium text-success">Nuestros Servicios</p>
-                <h1 class="display-5 mb-5">Centro De Emprendimiento e Innovacion</h1>
+                <h1 class="display-6 mb-4">Centro De Emprendimiento e Innovacion</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -221,7 +229,7 @@
                             <h5 class="mb-3">Programas de capacitación en los niveles de cursos y Diplomados.</h4>
                                 <p class="mb-0">La capacitación es muy importante para el desarrollo de 
                                     su crecimiento como persona y a nivel profesional, por eso el CEI 
-                                    está especializado en brindarle un apoyo en su educación </p>
+                                    está especializado en brindarle un apoyo en su educación.ㅤㅤㅤㅤㅤㅤㅤㅤ</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
                             <a class="text-success fw-medium" href="nosotros.php">Ver Mas<i
@@ -253,31 +261,55 @@
         </div>
     </div>
     <!-- Service End -->
-    <!-- Project Start -->
-    <div class="container-xxl pt-5">
-        <div class="container">
-            <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
-                style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-success">Cursos Ofrecidos </p>
-                <h1 class="display-5 mb-5">Curso Que Ofrece El CEI</h1>
-            </div>
-            <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
-               
-              <?php
-                include("conexion.php");
-                $conexion=conectar();
+    <style>
+    .custom-container {
+        width: 100%; 
+        padding-top: 50px; 
+        padding-bottom: 70px; 
+    }
 
-                $consulta ="SELECT *FROM `cursos`;";
-                $resultado=mysqli_query($conexion,$consulta);
-                                
-                foreach($resultado as $row){ $id = $row["Id_Curso"]; ?>
-          <!-- Fin bd -->
-            <!-- Estructura de Curso -->
-               <div class="project-item mb-5">
+    .course-image {
+        width: 100%;
+        height: 200px; 
+        object-fit: cover; 
+    }
+
+    .project-item {
+        width: 300px; 
+        margin: 0 auto; 
+        min-height: 10%;
+        max-height: 20% ;
+    }
+</style>
+
+
+ <!-- Project Start -->
+<div class="custom-container pt-5">
+    <div class="container">
+        <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
+            style="max-width: 500px;">
+            <p class="fs-5 fw-medium text-success">Cursos Ofrecidos </p>
+            <h1 class="display-6 mb-4">Curso Que Ofrece El CEI</h1>
+        </div>
+        <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
+
+            <?php
+            include("conexion.php");
+            $conexion = conectar();
+
+            $consulta = "SELECT * FROM `cursos`;";
+            $resultado = mysqli_query($conexion, $consulta);
+
+            foreach ($resultado as $row) {
+                $id = $row["Id_Curso"];
+            ?>
+                <!-- Fin bd -->
+                <!-- Estructura de Curso -->
+                <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img src="data:image/jgp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">            
+                        <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid course-image">
                         <div class="project-overlay">
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jgp;base64,<?php echo base64_encode($row["imagen"]); ?>"
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>"
                                 data-lightbox="project"><i class="fa fa-eye"></i></a>
                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="cursos.php"><i class="fa fa-link"></i></a>
                         </div>
@@ -288,9 +320,8 @@
                         <br>
                         <span>Descripcion: <?php echo $row["DescripcionCurso"]; ?></span>
                     </div>
-                    <div style="margin-left:20px; margin-bottom:20px;">
-
-                    <a style="margin: 2px; border-radius: 5px;" href="inscripcursos.php?Id_Curso=<?php echo $row["Id_Curso"]?>" class="btn btn-primary" > Unirse a Curso</a>
+                    <div style="margin-left: 20px; margin-bottom: 20px;">
+                        <a style="margin: 2px; border-radius: 5px;" href="inscripcursos.php?Id_Curso=<?php echo $row["Id_Curso"]?>" class="btn btn-primary"> Unirse a Curso</a>
                         <br>
                         <a href=""></a>
                     </div>
@@ -298,22 +329,23 @@
 
             <?php } ?>
 
-                
-            </div>
         </div>
     </div>
-    <!-- Project End -->
+</div>
+<!-- Project End -->
+
+
     <!-- Team Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" >
                 <p class="fs-5 fw-medium text-success">Estudiantes Destacados</p>
-                <h1 class="display-5 mb-5">Aqui elogiamos a nuestros mejores Estudiantes</h1>
+                <h1 class="display-6 mb-4">Aqui elogiamos a nuestros mejores Estudiantes</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-1.webp" alt="">
+                        <img class="img-fluid mb-4 " src="img/team-1.webp" alt="">
                         <h5>Alex Robin</h5>
                         <span class="text-success">Estudiante ING. Agroforestal</span>
                         <ul class="team-social">
@@ -369,11 +401,11 @@
     <!-- Team End -->
  <!-- Testimonial Start -->
  <div class="container-xxl pt-5">
-        <div class="container-xxl pt-5">
+        <div class="container">
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
-                style="max-width: 500px;">
+                >
                 <p class="fs-5 fw-medium text-success">Talento Humano</p>
-                <h1 class="display-5 mb-5">Conoce a algunos integrantes del CEI</h1>
+                <h1 class="display-6 mb-4">Conoce a algunos integrantes del CEI</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
@@ -389,7 +421,7 @@
                     <img class="mb-4" src="img/jesus_cuesta_copete.webp" alt="Profesor Jesus">
                     <p class="mb-4">Es administrador de empresas, Magister en desarrollo 
                         empresarial e innovación, Especialista en formación y capacitación 
-                        en emprendimiento y Especialista en control organizacional</p>
+                        en emprendimiento y Especialista en control organizacional ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
                     <h5>Jesús Antonio Cuesta Copete</h5>
                     <span class="text-success">Docente Asesor.</span>
                 </div>
@@ -397,15 +429,15 @@
                     <img class="mb-4" src="img/sebastian_murillo_barahona.webp" alt="Profesor Sebastian">
                     <p class="mb-4">Es administrador de empresas, Especialista en gerencia 
                         estratégica de mercados Magister en administración de negocios 
-                        y estudiante de Doctorado en proyecto.</p>
+                        y estudiante de Doctorado en proyecto.ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
                     <h5>Sebastián Murillo Barahona</h5>
                     <span class="text-success">Asesor interno.</span>
                 </div>
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
                     <img class="mb-4" src="img/fadilio_fines_conto_garcia.webp" alt="Profesor Fadilio">
                     <p class="mb-4">Es economista especializado en finanzas públicas. 
-                        Actualmente brinda capacitaciones de proyectos productivos
-                         en el CEI.</p>
+                        Actualmente brinda capacitaciones de proyectos productivos 
+                         en el CEI. ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
                     <h5>Fadilo Fines Conto García</h5>
                     <span class="text-success">Docente.</span>
                 </div>

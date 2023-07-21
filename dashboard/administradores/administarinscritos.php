@@ -94,17 +94,17 @@
                         <thead>
                             <tr>
                             <th>Tipo</th>
-                                <th>Documento</th>
-                                <th>Categoria</th>
-                                <th>Nombre</th>
-                                <th>Telefono</th>     
-                                <th>Correo</th>
-                                <th>Institucion</th>
-                                <th>Programa</th>                        
-                                <th>Direccion</th>
-                                <th>Edad</th>
-                                <th>Curso inscrito</th>
-                                <th>Acciones</th>
+                                <th style="text-align: center; vertical-align: middle;">Documento</th>
+                                <th style="text-align: center; vertical-align: middle;">Categoria</th>
+                                <th style="text-align: center; vertical-align: middle;">Nombre</th>
+                                <th style="text-align: center; vertical-align: middle;">Telefono</th>     
+                                <th style="text-align: center; vertical-align: middle;">Correo</th>
+                                <th style="text-align: center; vertical-align: middle;">Institucion</th>
+                                <th style="text-align: center; vertical-align: middle;">Programa</th>                        
+                                <th style="text-align: center; vertical-align: middle;">Direccion</th>
+                                <th style="text-align: center; vertical-align: middle;">Edad</th>
+                                <th style="text-align: center; vertical-align: middle;">Curso inscrito</th>
+                                <th style="text-align: center; vertical-align: middle;">Acciones</th>
 
                                 
                             </tr>
@@ -132,7 +132,7 @@
                                 <td><?php echo $elemento["edad"]; ?></td>
                                 <td><?php echo $elemento["curso_inscrito"]; ?></td>
                                 <td>
-                                   <a href="eliminarinscrito.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" > eliminar</a>
+                                   <a style="margin: 2px; border-radius: 5px;"  href="eliminarinscrito.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" > <i class="fas fa-trash-alt fa-flip-horizontal"></i></a>
                                 </td>
                             </tr>
                                                       
@@ -163,32 +163,6 @@
         FACNET - 2023 &copy; 
       </footer>
     </div>
-    <!-- /#wrapper -->
-    <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- Menu Plugin JavaScript -->
-    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
-    <!--Nice scroll JavaScript -->
-    <script src="../js/jquery.nicescroll.js"></script>
-    <!--Wave Effects -->
-    <script src="../js/waves.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="../js/myadmin.js"></script>
-    <!-- jQuery, Popper.js, Bootstrap JS -->
-    <script src="../jquery/jquery-3.3.1.min.js"></script>
-    <script src="../popper/popper.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <!-- datatables JS -->
-    <script type="text/javascript" src="../datatables/datatables.min.js"></script>    
-    <!-- para usar botones en datatables JS -->  
-    <script src="../datatables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>  
-    <script src="../datatables/JSZip-2.5.0/jszip.min.js"></script>    
-    <script src="../datatables/pdfmake-0.1.36/pdfmake.min.js"></script>    
-    <script src="../datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
-    <script src="../datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
-    <!-- código JS propìo-->    
-    <script type="text/javascript" src="../js/main.js"></script>  
+    
   </body>
 </html>

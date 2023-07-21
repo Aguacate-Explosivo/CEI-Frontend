@@ -38,12 +38,12 @@
                                     <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th>Documento</th>    
-                                <th>Nombre</th>
-                                <th>Ficha De seguimiento</th> 
-                                <th>Citas Separadas</th>
-                                <th>Cursos inscritos</th>
-                                <th>Eventos Inscritos</th>                 
+                                <th style="text-align: center; vertical-align: middle;">Documento</th>    
+                                <th style="text-align: center; vertical-align: middle;">Nombre</th>
+                                <th style="text-align: center; vertical-align: middle;">Ficha De seguimiento</th> 
+                                <th style="text-align: center; vertical-align: middle;">Citas Separadas</th>
+                                <th style="text-align: center; vertical-align: middle;">Cursos inscritos</th>
+                                <th >Eventos Inscritos</th>                 
                                 <th>Simulaciones</th> 
                                
                             </tr>
@@ -58,9 +58,10 @@
                             <!-- Contenido de la tabla -->
 
                             <tr>
-                              <td><?php echo $elemento["cedula"]; ?></td>
-                                <td><?php echo $elemento["nombre"]; ?></td>
-                                <td>  <a style="margin: 2px; border-radius: 5px;" href="descargar.php?id=<?php echo $elemento["id"]; ?>" class="btn btn-warning" > Descargar</a>
+                              <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["cedula"]; ?></td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["nombre"]; ?></td>
+                                <td style="text-align: center; vertical-align: middle;">  <a style="margin: 2px; border-radius: 5px;" href="descargar.php?id=<?php echo $elemento["id"]; ?>" class="btn btn-danger" ><i class="fas fa-download"></i>
+</a>
                             
 
 
@@ -74,7 +75,7 @@
                               $filaCitas = mysqli_fetch_assoc($busquedaCitas);
                               $totalCitas = $filaCitas['cantidad_total_citas'];
                               ?>
-                              <td><?php echo $totalCitas; ?></td>
+                              <td style="text-align: center; vertical-align: middle;"><?php echo $totalCitas; ?></td>
                             <?php
                             } else {
                                 echo "Error en la consulta: " . mysqli_error($conexion);
@@ -88,7 +89,7 @@
                               $filaTotalCurso = mysqli_fetch_assoc($busquedaTotalCurso);
                               $cantidad_total_inscritos_cursos = $filaTotalCurso['cantidad_total_inscritos_cursos'];
                               ?>
-                              <td><?php echo $cantidad_total_inscritos_cursos; ?></td>
+                              <td style="text-align: center; vertical-align: middle;"><?php echo $cantidad_total_inscritos_cursos; ?></td>
                             <?php
                             } else {
                                 echo "Error en la consulta: " . mysqli_error($conexion);
@@ -102,7 +103,7 @@
                               $filaTotalEventos = mysqli_fetch_assoc($busquedaTotalEventos);
                               $cantidad_total_inscritos_eventos = $filaTotalEventos['cantidad_total_inscritos_eventos'];
                               ?>
-                              <td><?php echo $cantidad_total_inscritos_eventos; ?></td>
+                              <td style="text-align: center; vertical-align: middle;"><?php echo $cantidad_total_inscritos_eventos; ?></td>
                             <?php
                             } else {
                                 echo "Error en la consulta: " . mysqli_error($conexion);
@@ -116,7 +117,7 @@
                               $fila = mysqli_fetch_assoc($busquedaSimulaciones);
                               $totalSimulaciones = $fila['cantidad_total_simulaciones'];
                               ?>
-                              <td><?php echo $totalSimulaciones; ?></td>
+                              <td style="text-align: center; vertical-align: middle;"><?php echo $totalSimulaciones; ?></td>
                             <?php
                             } else {
                                 echo "Error en la consulta: " . mysqli_error($conexion);
