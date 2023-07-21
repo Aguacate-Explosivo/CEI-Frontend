@@ -27,7 +27,7 @@
     </div>
     <!-- Page Header End -->
 
-    <div style="margin-left:100px; margin-right:100px; ">
+    <div>
         <div class="container-fluid">
             <!-- Seccion de cursos -->
             <div class="jumbotron">
@@ -53,7 +53,7 @@
                             <div class="card h-100">
                                 <div class="project-item mb-5">
                                     <div class="position-relative">
-                                        <img src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="img-fluid">
+                                        <img src="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>" class="card-img-top img-fluid">
                                         <div class="project-overlay">
                                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image.webp;base64,<?php echo base64_encode($row["imagen"]); ?>" data-lightbox="project"><i class="fa fa-eye"></i></a>
                                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="cursos.php"><i class="fa fa-link"></i></a>
