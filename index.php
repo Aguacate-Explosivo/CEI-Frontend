@@ -229,7 +229,7 @@
                             <h5 class="mb-3">Programas de capacitación en los niveles de cursos y Diplomados.</h4>
                                 <p class="mb-0">La capacitación es muy importante para el desarrollo de 
                                     su crecimiento como persona y a nivel profesional, por eso el CEI 
-                                    está especializado en brindarle un apoyo en su educación </p>
+                                    está especializado en brindarle un apoyo en su educación.ㅤㅤㅤㅤㅤㅤㅤㅤ</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
                             <a class="text-success fw-medium" href="nosotros.php">Ver Mas<i
