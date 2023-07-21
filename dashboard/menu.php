@@ -230,5 +230,7 @@
             var moduloUsuarios = document.getElementById('usuariosModulo').style.display = "none";
             var moduloBuscarSimulacion = document.getElementById('buscarSimulacionModulo').style.display = "none";
             var moduloSimulacion= document.getElementById('simulacionModulo').style.dysplay = "none";
+            var moduloMarketing = document.getElementById('marketingModulo').style.display = "none";
+            var moduloSimular = document.getElementById('simulacionModulo').style.display = "none";
           }
     </script>
