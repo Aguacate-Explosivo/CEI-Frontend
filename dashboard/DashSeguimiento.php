@@ -69,7 +69,7 @@
                             <?php
                             $documento = $elemento["cedula"];
 
-                            $consultaCitas ="SELECT COUNT(*) AS cantidad_total_citas FROM (SELECT DISTINCT documento FROM `citas`) AS subconsultacitas WHERE documento = $documento;";
+                            $consultaCitas ="SELECT COUNT(*) AS cantidad_total_citas FROM (SELECT documento FROM `citas`) AS subconsultacitas WHERE documento = $documento;";
                             $busquedaCitas=mysqli_query($conexion,$consultaCitas);
                             if ($busquedaCitas) {
                               $filaCitas = mysqli_fetch_assoc($busquedaCitas);
@@ -83,7 +83,7 @@
                             ?>
 
                             <?php
-                            $consultaTotalCursos ="SELECT COUNT(*) AS cantidad_total_inscritos_cursos FROM (SELECT DISTINCT documento FROM `inscritos_cursos`) AS subconsultaCursos WHERE documento = $documento;";
+                            $consultaTotalCursos ="SELECT COUNT(*) AS cantidad_total_inscritos_cursos FROM (SELECT documento FROM `inscritos_cursos`) AS subconsultaCursos WHERE documento = $documento;";
                             $busquedaTotalCurso=mysqli_query($conexion,$consultaTotalCursos);
                             if ($busquedaTotalCurso) {
                               $filaTotalCurso = mysqli_fetch_assoc($busquedaTotalCurso);
@@ -97,7 +97,7 @@
                             ?>
 
                             <?php
-                            $consultaTotalEventos ="SELECT COUNT(*) AS cantidad_total_inscritos_eventos FROM (SELECT DISTINCT documento FROM `inscritos_eventos`) AS subconsultaEventos WHERE documento = $documento;";
+                            $consultaTotalEventos ="SELECT COUNT(*) AS cantidad_total_inscritos_eventos FROM (SELECT documento FROM `inscritos_eventos`) AS subconsultaEventos WHERE documento = $documento;";
                             $busquedaTotalEventos=mysqli_query($conexion,$consultaTotalEventos);
                             if ($busquedaTotalEventos) {
                               $filaTotalEventos = mysqli_fetch_assoc($busquedaTotalEventos);
@@ -111,7 +111,7 @@
                             ?>
 
                             <?php
-                            $consultaSimulaciones ="SELECT COUNT(*) AS cantidad_total_simulaciones FROM (SELECT DISTINCT cc FROM `simulaciones`) AS subconsulta WHERE cc = $documento;";
+                            $consultaSimulaciones ="SELECT COUNT(*) AS cantidad_total_simulaciones FROM (SELECT cc FROM `simulaciones`) AS subconsulta WHERE cc = $documento;";
                             $busquedaSimulaciones=mysqli_query($conexion,$consultaSimulaciones);
                             if ($busquedaSimulaciones) {
                               $fila = mysqli_fetch_assoc($busquedaSimulaciones);
