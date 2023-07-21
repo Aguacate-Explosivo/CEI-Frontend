@@ -75,6 +75,7 @@
                                                     style="width: 100%;">
                                                     <option selected="selected">Administrador</option>
                                                     <option>Moderador</option>
+                                                    <option>Funcionario</option>
                                                     <option>Docente</option>
                                                     <option>Estudiante</option>
                                                 </select>

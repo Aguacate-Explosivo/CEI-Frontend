@@ -90,6 +90,9 @@
                         if (Role === 'Moderador') { 
                           document.write('Moderador')
                         }
+                        if (Role === 'Funcionario') { 
+                          document.write('Funcionario')
+                        }
                         if (Role === 'Docente') {
                           document.write('Docente')
                           } 
@@ -222,5 +225,10 @@
             var moduloEncuestas = document.getElementById('encuestaModulo').style.display = "none";
             var moduloSeguimiento = document.getElementById('seguimientoModulo').style.display = "none";
             var moduloEstadisticas = document.getElementById('estadisticasModulo').style.display = "none";
-          } 
+          }
+          if (Role === "Funcionario") {
+            var moduloUsuarios = document.getElementById('usuariosModulo').style.display = "none";
+            var moduloBuscarSimulacion = document.getElementById('buscarSimulacionModulo').style.display = "none";
+            var moduloSimulacion= document.getElementById('simulacionModulo').style.dysplay = "none";
+          }
     </script>
