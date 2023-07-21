@@ -87,6 +87,9 @@
                         if (Role === 'Administrador') { 
                           document.write('Administrador')
                           }
+                        if (Role === 'Funcionario') { 
+                          document.write('Funcionario')
+                        }
                         if (Role === 'Moderador') { 
                           document.write('Moderador')
                         }
