@@ -101,8 +101,8 @@
         </div>
       </div>
     </div>
+    <?php require_once("footer.php"); ?>
   </div>
-  <?php require_once("footer.php"); ?>
   <script>
       $(document).ready(function() {
         $('.btnActivar').click(function() {
