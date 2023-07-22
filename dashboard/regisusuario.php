@@ -98,9 +98,10 @@
                 </div>
             </div>
         </div>
+        <?php require_once("footer.php"); ?>
     </div>
     <!-- Fin formulario -->
-    <?php require_once("footer.php"); ?>
+    
     <!-- JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
