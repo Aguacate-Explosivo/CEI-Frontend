@@ -10,6 +10,7 @@
 <?php
 require_once('../conexion.php');
 $conexion = conectar();
+include("../log.php");
 
   //================= eliminar USUARIO
 
@@ -76,6 +77,7 @@ if (isset($_POST['id'])) {
     mysqli_stmt_bind_param($stmt, "ssss", $nombre, $correo, $psswwd, $rol);
 
     if (mysqli_stmt_execute($stmt)) {
+      logAction("Creacion de Usuario","Se ha creado un nuevo usuario: '$nombre'");
       echo "<script>
         console.log('se envió');
         Swal.fire({
@@ -90,6 +92,7 @@ if (isset($_POST['id'])) {
       </script>";
     } else {
       echo "Error al ejecutar la consulta: " . mysqli_stmt_error($stmt);
+      logAction("Fallo al crear Usuario","Se ha intentado crear un nuevo usuario: '$nombre' pero algo falló");
     }
 
     mysqli_stmt_close($stmt);
