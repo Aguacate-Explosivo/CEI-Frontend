@@ -46,69 +46,56 @@
             
             <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
-                            <tr>
-                               
+                            <tr>  
                             <th>Tipo</th>
-                    <th>Numero de Documento</th>
-                    <th>Nombre Completo</th>     
-                    <th>Categria</th>                        
-                    <th>Telefono</th>
-                    <th>Correo</th>
-                    <th>Institucion</th>
-                    <th>Barrio</th>
-                    <th>Fecha Hora</th>
-                    <th>Tema</th>
-                    <th>Descripcion</th>
-                                <th>Acciones</th>
-                                
+                            <th>Numero de Documento</th>
+                            <th>Nombre Completo</th>     
+                            <th>Categria</th>                        
+                            <th>Telefono</th>
+                            <th>Correo</th>
+                            <th>Institucion</th>
+                            <th>Barrio</th>
+                            <th>Fecha Hora</th>
+                            <th>Tema</th>
+                            <th>Descripcion</th>
+                            <th>Acciones</th>
                             </tr>
                         </thead>
                                 <?php
                                  include("../conexion.php");
-                                 $conexion=conectar(); 
+                                 $conexion=conectar();
                                  $consulta2 ="SELECT * FROM `citas` ";
                                  $busqueda=mysqli_query($conexion,$consulta2);
                                     
-                            foreach($busqueda as $row){ ?>
-                            <!-- Contenido de la tabla -->
-
-                       
-                            <tr>
-                              
-                            <td><?php echo $row["tipodocumento"]; ?></td>
-                    <td><?php echo $row["documento"]; ?></td>
-                    <td><?php echo $row["nombre"]; ?></td>
-                    <td><?php echo $row["categoria"]; ?></td>
-                  
-                    <td><?php echo $row["telefono"]; ?></td>
-                    <td><?php echo $row["correo"]; ?></td>
-                    <td><?php echo $row["institucion"]; ?></td>
-                    <td><?php echo $row["direccion"]; ?></td>
-                    <td><?php echo $row["fecha_hora"]; ?></td>
-                    <td><?php echo $row["tema"]; ?></td>
-                    <td><?php echo $row["descripcion"]; ?></td>
-                                <td>
-                                <div class="btn-group">
-                                <a style="margin: 2px; border-radius: 5px; position: relative;" href="administradores/cita.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
-                                <a style="margin: 2px; border-radius: 5px;"  href="administradores/eliminarcitas.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-danger" > <i class="fas fa-trash-alt fa-flip-horizontal"></i></a>
-                                </div>
-                              </td>
-                            </tr>
-                        
-                                 <?php
-                                }
-                                ?>
-                       
-                         
-                                       
-                       </table>       
-                
-                                      </div>
+                                  foreach($busqueda as $row){ ?>
+                                  <!-- Contenido de la tabla -->
+                                  <tr>
+                                    <td><?php echo $row["tipodocumento"]; ?></td>
+                                    <td><?php echo $row["documento"]; ?></td>
+                                    <td><?php echo $row["nombre"]; ?></td>
+                                    <td><?php echo $row["categoria"]; ?></td>
+                                    <td><?php echo $row["telefono"]; ?></td>
+                                    <td><?php echo $row["correo"]; ?></td>
+                                    <td><?php echo $row["institucion"]; ?></td>
+                                    <td><?php echo $row["direccion"]; ?></td>
+                                    <td><?php echo $row["fecha_hora"]; ?></td>
+                                    <td><?php echo $row["tema"]; ?></td>
+                                    <td><?php echo $row["descripcion"]; ?></td>
+                                    <td>
+                                      <div class="btn-group">
+                                      <a style="margin: 2px; border-radius: 5px; position: relative;" href="administradores/cita.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                                      <a style="margin: 2px; border-radius: 5px;"  href="administradores/eliminarcitas.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-danger" > <i class="fas fa-trash-alt fa-flip-horizontal"></i></a>
                                     </div>
-                                </div>
-                              </div>
-                        </div>  
+                                    </td>
+                                  </tr>
+                                  <?php } ?>          
+                                </table>       
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>  
+                  </div>  
                 <!-- Fin data Table -->
               </div>
             </div>

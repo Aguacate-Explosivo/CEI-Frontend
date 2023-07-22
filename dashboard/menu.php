@@ -65,8 +65,8 @@
         </a>
         <div class="top-left-part">
           <a class="logo" href="index.php">
-            <i class="glyphicon glyphicon-fire"></i>
-            <span class="hidden-xs">Dashboard</span>
+            <i class="glyphicon glyphicon-globe"></i>
+            <span class="hidden-xs"> CEI | PANEL</span>
           </a>
         </div>
         <ul class="nav navbar-top-links navbar-left hidden-xs">
@@ -125,7 +125,7 @@
           <li>
             <a href="index.php" class="waves-effect">
               <i class="glyphicon glyphicon-fire fa-fw"></i>
-              Dashboard
+              Inicio
             </a>
           </li>
           <li id="usuariosModulo">
