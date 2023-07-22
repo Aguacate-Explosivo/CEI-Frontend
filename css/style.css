@@ -603,3 +603,23 @@ element.style {
 .copyright a:hover {
     color: var(--primary) !important;
 }
+
+ /* Estilos CSS personalizados para el login alineado a la derecha */
+ .login-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Ajustar el ancho del formulario para dispositivos más pequeños */
+@media (max-width: 576px) {
+    .login-box {
+        width: 100%;
+    }
+}

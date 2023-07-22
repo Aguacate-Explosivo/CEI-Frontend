@@ -29,62 +29,42 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" async>
 <!-- Template Stylesheet -->
 <link href="css/style.css" rel="stylesheet" async>
+<link href="css/stylelog.css" rel="stylesheet" async>
 </head>
 
 <body>
-    <!-- Login Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-5 mb-5">Iniciar Sesión</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-6 mx-auto wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="login-box">
-                        <!-- /.login-logo -->
-                        <div class="card">
-                            <div class="card-body login-card-body">
-                                <p>Ingrese sus datos para iniciar sesión</p>
+<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
 
-                                <form action="php/login_validacion.php" method="POST" enctype="multipart/form-data">
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Email" id="user" name="user" required>
-                                        
-                                            <div class="input-group-text">
-                                                <span class="fas fa-envelope"></span>
-                                            </div>
-                                        
-                                    </div>
-                                    <div class="input-group mb-3">
-                                        <input type="password" class="form-control" placeholder="Password" id="password" name="password" required>
-                                        
-                                            <div class="input-group-text">
-                                                <span class="fas fa-lock"></span>
-                                            </div>
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12 text-center">
-
-                                            <button type="submit" class="btn btn-primary btn-block" id="asistir">Iniciar Sesion</button>
-
-                                        </div>
-
-                                <div class="social-auth-links text-center mb-3">
-                                    <p>- O -</p>
-                                    <a href="registrousuario.php" class="btn btn-block btn-primary">Registrarse</a>
-                                    <a href="index.php" class="btn btn-block btn-danger">Volver</a>
-                                </div>
-                            </div>
-                            <!-- /.login-card-body -->
-                        </div>
+			<div class="signup">
+				<form action="php/login_validacion.php" method="POST" enctype="multipart/form-data">
+					<label for="chk" aria-hidden="true">Sign up</label>
+                    <div class="align-items-center">
+                        <a href="index.php">
+                            <img src="img/logo.webp" class="img-fluid" alt="#" width="120px" height="56px">
+                        </a>
                     </div>
-                    <!-- /.login-box -->
+					<input type="text" placeholder="Email" id="user" name="user" required>
+					<input type="password" placeholder="Password" id="password" name="password" required>
 
-                </div>
-            </div>
-        </div>
-    </div>
+					<button>Iniciar Sesión</button>
+                    <div class="social-auth-links text-center mb-3">
+                    <a href="index.php" class="btn btn-danger">Volver</a>
+                    </div>
+                    <br>	
+				</form>
+			</div>
+
+			<div class="login">
+            	
+				<form action="registrousuario.php" enctype="multipart/form-data">
+				<br>
+                <button>Login</button>
+				</form>
+			</div>
+	</div>
+    <!-- Login Start -->
+    
     <!-- Login End -->
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
