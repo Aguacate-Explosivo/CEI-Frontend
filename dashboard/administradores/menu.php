@@ -125,7 +125,7 @@
           <li>
             <a href="../index.php" class="waves-effect">
               <i class="glyphicon glyphicon-fire fa-fw"></i>
-              Dashboard
+              Inicio
             </a>
           </li>
           <li id="usuariosModulo">
