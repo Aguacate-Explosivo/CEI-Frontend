@@ -54,7 +54,7 @@
                       </thead>
                       <?php
                       $conexion = conectar();
-                      $consulta2 = "SELECT * FROM `datos` ";
+                      $consulta2 = "SELECT * FROM `datos` WHERE usuario <> 'admin'";
                       $busqueda = mysqli_query($conexion, $consulta2);
 
                       while ($row = mysqli_fetch_assoc($busqueda)) {
