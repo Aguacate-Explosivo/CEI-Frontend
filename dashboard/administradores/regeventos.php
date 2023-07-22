@@ -10,8 +10,9 @@
 <body>  
 <?php
     //Conexion con la base de datos
-    require_once('../../conexion.php');
+  require_once('../../conexion.php');
 	$conexion=conectar();
+  include("../../log.php");
 
     //Valores del formulario
     $nombre=$_POST['nom_even'];
@@ -36,10 +37,11 @@
           text: 'El dato se ha agregado de forma correcta',
           showConfirmButton: false,
         });
-     setInterval(()=>{
-     location.assign('../DashEventos.php');
-     },3000);
+        setInterval(()=>{
+        location.assign('../DashEventos.php');
+        },3000);
         </script>"; 
+        logAction("Creación de Evento","el usuario ha creado un nuevo evento: '$nombre'");
         }
 ?>
 </body>

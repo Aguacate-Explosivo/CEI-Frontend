@@ -11,6 +11,7 @@
 <?php
  require_once('../../conexion.php'); 
  $conexion=conectar(); 
+ include("../../log.php");
     $idcita=$_GET['idcita'];
  
     $sql="delete from citas where idcita='".$idcita."'";
@@ -28,7 +29,7 @@
          location.assign('../reprocitas.php');
          },1000);
             </script>"; 
-        // logAction("Eliminar Cita","el administrador ha eliminado la cita con el id='$idcita' de forma correcta");
+        logAction("Eliminar Cita","el administrador ha eliminado la cita con el id='$idcita' de forma correcta");
      }
 ?>
 </body>
