@@ -13,6 +13,7 @@
 include_once("sesion_validacion.php");
 require_once('../conexion.php');
 $conexion = conectar();
+include("../log.php");
 
 $id = $_POST['Id'];
 $urlBaseDatos = $_POST['url'];
@@ -30,17 +31,15 @@ if ($resultado) {
      text: 'El dato se ha actualizado de forma correcta',
      showConfirmButton: false,
    });
-setInterval(()=>{
-location.assign('DashEncuentas.php');
-},1000);
-   </script>"; 
+    setInterval(()=>{
+    location.assign('DashEncuentas.php');
+    },1000);
+   </script>";
+   logAction("Actualizacion de Encuesta","El usuario ha actualizado la encuesta con el id: '$id', url: '$urlBaseDatos'"); 
 } else {
     echo "Error al actualizar la encuesta.";
-}
-
-             
-          
-     
+    logAction("Error al Actualizar la Encuesta","El usuario ha intentado actualizar la encuesta con el id: '$id', url: '$urlBaseDatos'"); 
+}    
 ?>
 </body>
 </html>
