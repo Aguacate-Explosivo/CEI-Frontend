@@ -38,7 +38,7 @@
 
 			<div class="signup">
 				<form action="php/login_validacion.php" method="POST" enctype="multipart/form-data">
-					<label for="chk" aria-hidden="true">Sign up</label>
+					<label for="chk" aria-hidden="true">Iniciar sesión</label>
                     <div class="align-items-center">
                         <a href="index.php">
                             <img src="img/logo.webp" class="img-fluid" alt="#" width="120px" height="56px">
