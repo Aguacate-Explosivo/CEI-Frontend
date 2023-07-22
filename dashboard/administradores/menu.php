@@ -64,7 +64,7 @@
           <i class="ti-menu"></i>
         </a>
         <div class="top-left-part">
-          <a class="logo" href="index.php">
+          <a class="logo" href="../index.php">
             <i class="glyphicon glyphicon-globe"></i>
             <span class="hidden-xs"> CEI | PANEL</span>
           </a>

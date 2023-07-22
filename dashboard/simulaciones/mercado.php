@@ -169,19 +169,21 @@
                                                                 <option value="Idioma">Idioma</option>
                                                                 <option value="Otro">Otro</option>
                                                               </select>
-                                                              <br>
-                                                            </div>
+                                                              <br> 
+                                                            <div class="input-group">
+                                                        <input type="text" id="innovacion_negocio_plan" name="innovacion_negocio_plan" class="form-control" placeholder="Zona de aplicacion:"
+                                                        required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+"  >
+                                                        <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar la zona geografica donde estara ubicado tu negocio">
+                                                          <i class="fas fa-question"></i>
+                                                            </button>
+                                                            <label for="innovacion_negocio_plan" class="form__label"></label>
+                                                      </div>
+                                                      
                                                             <hr/>
                                                               <div class="form-floating">
                                                               <button type="submit" name="Siguiente" value = "Siguiente" class="btn btn-success btn-lg btn-rounded">Siguiente</button>        <a type="submit" id="atras" name="atras" href="overview.php" class="btn btn-info btn-lg btn-rounded">Atras</a>  
                                                               </div>
-                                                                  <select required name ="innovacion_negocio_plan"  id="innovacion_negocio_plan" class="form-control" style="visibility:hidden">
-                                                                      <option value="Muy alta" >Muy Alta</option>
-                                                                      <option value="Alta" >Alta</option>
-                                                                      <option value="Media">Media</option>
-                                                                      <option value="Baja" >Baja</option>
-                                                                      <option value="Muy Baja">Muy Baja</option>
-                                                                  </select>
+                                                                 
                                                                   <select required name ="Precio_negocio_plan"  id="Precio_negocio_plan" class="form-control" style="visibility:hidden">
                                                                       <option value="Muy alta" >Muy Alta</option>
                                                                       <option value="Alta" >Alta</option>
