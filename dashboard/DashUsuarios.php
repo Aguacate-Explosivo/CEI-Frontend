@@ -87,7 +87,7 @@
                               <i class="fas fa-edit"></i>
                             </button>
 
-                              <button style="margin: 2px; border-radius: 5px;"  class="btn btn-danger btnEliminar" data-id="<?php echo $id; ?>"><i class="fas fa-trash-alt fa-flip-horizontal"></i></button>
+                              <!-- <button style="margin: 2px; border-radius: 5px;"  class="btn btn-danger btnEliminar" data-id="<?php echo $id; ?>"><i class="fas fa-trash-alt fa-flip-horizontal"></i></button> -->
                             </div>
                           </td>
                         </tr>
