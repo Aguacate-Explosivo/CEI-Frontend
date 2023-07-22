@@ -69,7 +69,7 @@
     z-index: 10;
   }
 </style>
-    <div id="">
+    <div>
       <div class="container-fluid">
         <div class="row bg-title">
           <div class="col-lg-12">
@@ -77,7 +77,6 @@
               Segundo Paso!
             </h4>
             
-            <ol class="breadcrumb"
             <ol class="breadcrumb">
             </ol>
           </div>
@@ -136,9 +135,10 @@
                                                             <br>
                                                         </div>
                                                         <div class="input-group">
-                                                          <label for="negocio_nuevo" class="form__label">El estado del negocio es:</label>
-                                                          <label><input type="checkbox" name="negocio_nuevo" value="negocio_nuevo"> Nuevo</label>
-                                                          <label><input type="checkbox" name="negocio_existente" value="negocio_existente"> Existe</label><br>
+                                                          <label for="negocio_nuevo" class="form__label">El estado del negocio es: </label>
+                                                          <label style="padding: 5px;"><input type="checkbox" name="negocio_nuevo" value="negocio_nuevo" >  Nuevo </label>
+                                                          
+                                                          <label style="padding: 5px;"><input type="checkbox" name="negocio_existente" value="negocio_existente"> Existe </label><br>
                                                           <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes seleccionar si tu negocio es nuevo o existente">
                                                             <i class="fas fa-question"></i>
                                                             </button>

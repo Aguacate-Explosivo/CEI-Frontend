@@ -62,7 +62,7 @@
                     <div class="col-md-12">
                         <div class="white-box">
                               <br>  
-                        <h3 class="text-center">Overview</h3>
+                        <h3 class="text-center">Datos de la empresa</h3>
                             <!-- Container de Formulario -->
 
                             <div class="container-fluid">
