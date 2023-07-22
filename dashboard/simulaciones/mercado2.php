@@ -127,10 +127,10 @@
     z-index: 10;
   }
 </style>
-    <div>
+    <div id="">
       <div class="container-fluid">
         <div class="row bg-title">
-          <div class="col-ms-12">
+          <div class="col-lg-12">
             <h4 class="page-title">
               Tercer Paso!
             </h4>
