@@ -81,9 +81,9 @@
           <!-- /.row -->
         </div>
         <!-- /.container-fluid -->
+        <?php require_once ("footer.php"); ?>
       </div>
       <!-- /#page-wrapper -->
-      <?php require_once ("footer.php"); ?>
     </div>
     <!-- /#wrapper --> 
   </body>
