@@ -12,6 +12,7 @@
 <?php
 require_once('../../conexion.php');
 $conexion=conectar(); 
+include("../../log.php");
    $Id_Curso=$_GET['Id_Curso'];
 
    $sql="delete from cursos where Id_Curso='".$Id_Curso."'";
@@ -29,7 +30,7 @@ $conexion=conectar();
          location.assign('admincursos.php');
          },1000);
             </script>"; 
-          
+            logAction("Eliminar Curso","el usuario ha eliminado el curso con el id:'$Id_Curso'");
      }
 ?>
 </body>

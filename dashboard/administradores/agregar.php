@@ -13,7 +13,7 @@
 //Conexion con la base de datos
 require_once('../../conexion.php');
 $conexion=conectar();
-
+include("../../log.php");
 //Valores del formulario
 $nombre=$_POST['nombre'];  
 $imagen= addslashes(file_get_contents($_FILES['imagen']['tmp_name']));          
@@ -36,7 +36,7 @@ $resultado=mysqli_query($conexion,$consulta);
          location.assign('encacurso.php');
          },1000);
             </script>"; 
-          
+          logAction("Agregar Encargado de Cursos","El usuario ha agregado de forma manual un encargado para los cursos llamado: '$nombre'");
      }
 ?>
 </body>

@@ -14,6 +14,7 @@
    //Conexion con la base de datos
    require_once('../../conexion.php');
    $conexion=conectar();
+   include("../../log.php");
    $Id_Curso=$_REQUEST['Id_Curso'];
 
    //Valores del formulario
@@ -40,7 +41,7 @@
          location.assign('admincursos.php');
          },1000);
             </script>"; 
-          
+            logAction("Actualizacion de Curso","El usuario ha editado el curso : '$nombre'");
      }
 ?>
 </body>

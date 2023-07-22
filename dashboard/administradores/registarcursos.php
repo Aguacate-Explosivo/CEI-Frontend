@@ -11,8 +11,9 @@
 <body>  
 <?php
       //Conexion con la base de datos
-      require_once('../../conexion.php');
-	$conexion=conectar();
+    require_once('../../conexion.php');
+	  $conexion=conectar();
+    include("../../log.php");
  
     //Valores del formulario
     $nombre=$_POST['nom_curso'];
@@ -36,6 +37,7 @@
      location.assign('../DashCursos.php');
      },1000);
         </script>"; 
+        logAction("Agregar Nuevo Curso","El usuario ha creado un nuevo curso llamado: '$nombre'");
         }
 ?>
 </body>

@@ -12,6 +12,7 @@
 <?php
 require_once('../../conexion.php'); 
 $conexion=conectar(); 
+include("../../log.php");
    $id=$_GET['id'];
 
    $sql="delete from encargado where id='".$id."'";
@@ -29,7 +30,7 @@ $conexion=conectar();
          location.assign('encacurso.php');
          },1000);
             </script>"; 
-          
+          logAction("Eliminar Encargado de los Cursos","El usuario ha eliminado al encargado con indentificacion: '$id'");
      }
 ?>
 </body>

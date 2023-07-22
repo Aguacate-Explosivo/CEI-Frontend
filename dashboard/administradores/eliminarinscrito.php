@@ -12,6 +12,7 @@
 <?php
 require_once('../../conexion.php');
 $conexion=conectar(); 
+include("../../log.php");
    $id=$_GET['id'];
 
    $sql="delete from inscritos_cursos where id='".$id."'";
@@ -29,7 +30,7 @@ $conexion=conectar();
          location.assign('administarinscritos.php');
          },1000);
             </script>"; 
-          
+            logAction("Eliminar Usuario inscrito a Curso","Se ha eliminado a un usuario inscrito en cursos con el id: '$id'");
      }
 ?>
 </body>
