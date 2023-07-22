@@ -11,6 +11,7 @@
 <?php
 require_once('../../conexion.php');
 $conexion=conectar(); 
+include("../../log.php");
    $id=$_GET['id'];
 
    $sql="delete from inscritos_eventos where id='".$id."'"; 
@@ -18,18 +19,18 @@ $conexion=conectar();
  
     if ($resultado) {
 
-                echo "<script>
+        echo "<script>
             Swal.fire({
               icon: 'success',
               title: 'Dato eliminado...',
               text: 'El dato se ha eliminado de forma correcta',
               showConfirmButton: false,
             });
-         setInterval(()=>{
-         location.assign('inscritosevento.php');
-         },1000);
+            setInterval(()=>{
+            location.assign('inscritosevento.php');
+            },1000);
             </script>"; 
-          
+            logAction("Eliminar Usuario inscrito a Evento","Se ha eliminado a un usuario inscrito en los Eventos con el id: '$id'");
      }
 ?>
 </body>

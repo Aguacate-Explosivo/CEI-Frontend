@@ -11,6 +11,7 @@
 <?php
 require_once('../../conexion.php');
  $conexion=conectar(); 
+ include("../../log.php");
 
  $id_evento=$_GET['id_evento'];
 
@@ -19,18 +20,18 @@ require_once('../../conexion.php');
  
     if ($resultado) {
 
-                echo "<script>
+        echo "<script>
             Swal.fire({
               icon: 'success',
               title: 'Dato eliminado...',
               text: 'El dato se ha eliminado de forma correcta',
               showConfirmButton: false,
             });
-         setInterval(()=>{
-         location.assign('admineventos.php');
-         },1000);
+            setInterval(()=>{
+            location.assign('admineventos.php');
+            },1000);
             </script>"; 
-          
+            logAction("Eliminar Evento","el usuario ha eliminado el evento con el id:'$id_evento'");
      }
 ?>
 </body>

@@ -11,7 +11,8 @@
 <?php
     //Conexion con la base de datos
     require_once('../../conexion.php');
-	$conexion=conectar();
+    $conexion=conectar();
+    include("../../log.php");
     $id_evento=$_REQUEST['id_evento'];
 
     //Valores del formulario
@@ -32,25 +33,25 @@
     
     //igresar la informacion a la tabla de datos
     
-    $consulta="UPDATE `eventos` SET `nombreEven`='$nombre',`descripcionEven`='$descrip',`lugar`='$lugar',`fecha`='$fecha',`hora`='$hora',`imagen`='$imagen',`estado`='$estado',
-    `imagen1`='$imagen1',`imagen2`='$imagen2',`imagen3`='$imagen3',
-    `imagen4`='$imagen4',`imagen5`='$imagen5',`imagen6`='$imagen6' WHERE id_evento=$id_evento";
+    $consulta="UPDATE eventos SET nombreEven='$nombre',descripcionEven='$descrip',lugar='$lugar',fecha='$fecha',hora='$hora',imagen='$imagen',estado='$estado',
+    imagen1='$imagen1',imagen2='$imagen2',imagen3='$imagen3',
+    imagen4='$imagen4',imagen5='$imagen5',imagen6='$imagen6' WHERE id_evento=$id_evento";
     $resultado=mysqli_query($conexion,$consulta);
  
     if ($resultado) {
 
-                echo "<script>
+          echo "<script>
             Swal.fire({
               icon: 'success',
               title: 'Dato actualizado...',
               text: 'El dato se ha actualizado de forma correcta',
               showConfirmButton: false,
             });
-         setInterval(()=>{
-         location.assign('admineventos.php');
-         },3000);
+            setInterval(()=>{
+            location.assign('admineventos.php');
+            },3000);
             </script>"; 
-          
+            logAction("Edicion de Evento","El usuario ha editado el evento : '$nombre'");
      }
 ?>
 </body>
