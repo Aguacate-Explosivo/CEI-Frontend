@@ -255,7 +255,7 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
 <?php 
 
 
-if($margenes>$valor_total_gasto_simuladoss){
+if($resultado_Total_simulados>0){
   echo "<h2>Tu plan de negocios si es viable tiene ingresos totales simulados de </h2>";
   echo '<h1 style="color: green; ">' . $resultado_Total_simulados .  ' Pesos</h1>';
 
