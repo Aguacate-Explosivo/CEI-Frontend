@@ -135,19 +135,21 @@
               Tercer Paso!
             </h4>
             <div style="float: right;  width: 200px; ">
-              <a href="drop1.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Simulacion </a>
-            </div>
+                             <a href="drop1.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Sumulacion </a>
+                            </div>
+            <ol class="breadcrumb">
+            </ol>
           </div>
         </div>
         <!-- inicio-->
             <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-md-12">
                         <div class="white-box">
                         <h3 class="text-center">Tamaño del Mercado Relevante</h3>
                         <!-- Container de Formulario -->
                         <div class="container-fluid">
                             <div class="jumbotron white-box" style="width: 800px; margin: auto; height: 550px;">
-                                        <p>El ingreso anual que su empresa podría obtener si poseyera el 100% de la cuota de mercado. Responda las preguntas a continuación y lo calcularemos por usted.</p>    
+                                        <p>es el ingreso anual que su empresa podría obtener si poseyera el 100% de la cuota de mercado. Responda las preguntas a continuación y lo calcularemos por usted.</p>    
                                         <div class="container">
                                             <div class="row">
                                                 <main>
