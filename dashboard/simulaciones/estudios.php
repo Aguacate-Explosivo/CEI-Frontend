@@ -247,12 +247,25 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
                     
 </form>
 
-<br><br><br>
+
 <div>
   <h1>FELICIDADES Haz  </h1>
   <h2>llegado al final de tu simulacion, </h2>
-  <h2>Recuerda que antes de cerrar </h2>
-  <h2>tu simulacion debes descargarla</h2>
+
+<?php 
+$viabilidad=$ingresos_totales_simulado - $importe_simulados;
+$viabilidade = number_format($viabilidad, 2 ,',', '.');
+
+if($viabilidad>0){
+  echo "<h2>Tu simulacion si es viable tiene ingresos totales simulados de </h2>";
+  echo '<h1 style="color: green; ">' . $viabilidade .  ' Pesos</h1>';
+}else{
+  echo "<h2>Tu simulacion no es viable tiene ingresos totales simulados de </h2>";
+  echo '<h1 style="color: red; ">' . $viabilidade .  ' Pesos</h1>';
+}
+?>
+ 
+  <h2>Tu simulacion debes descargarla</h2>
   <h2>y luego debes guardarla</h2>
   <a href="paso_final.php">CLICK AQUI PARA DESCARGAR</a><br>
   <a href="guardar_simulaciones.php">CLICK AQUI PARA GUARDAR</a>
@@ -260,7 +273,7 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
 
 
 </div>
-<br><br><br>
+
 <form  method="POST" enctype="multipart/form-data" >
                       
    <!-- Inputs para transferir informacion -->
