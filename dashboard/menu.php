@@ -66,7 +66,7 @@
         <div class="top-left-part">
           <a class="logo" href="index.php">
             <i class="glyphicon glyphicon-fire"></i>
-            <span class="hidden-xs">Dashboard</span>
+            <span class="hidden-xs">CEI | PANEL</span>
           </a>
         </div>
         <ul class="nav navbar-top-links navbar-left hidden-xs">
