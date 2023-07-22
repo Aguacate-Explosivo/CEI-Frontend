@@ -253,15 +253,19 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
   <h2>llegado al final de tu simulacion, </h2>
 
 <?php 
-$viabilidad=$ingresos_totales_simulado - $importe_simulados;
-$viabilidade = number_format($viabilidad, 2 ,',', '.');
+$margen=(($ingresos_totales_simulado - $valor_total_gasto_simuladoss )/$ingresos_totales_simulado ) ;
+$margenes = number_format($margen, 2 );
 
-if($viabilidad>0){
+if($margenes>0.20){
   echo "<h2>Tu simulacion si es viable tiene ingresos totales simulados de </h2>";
-  echo '<h1 style="color: green; ">' . $viabilidade .  ' Pesos</h1>';
+  echo '<h1 style="color: green; ">' . $resultado_Total_simulados .  ' Pesos</h1>';
+  echo '<h1 style="color: green; ">Con un margen total de ganancia de ' . $margenes .  '%</h1>';
+
 }else{
   echo "<h2>Tu simulacion no es viable tiene ingresos totales simulados de </h2>";
-  echo '<h1 style="color: red; ">' . $viabilidade .  ' Pesos</h1>';
+  echo '<h1 style="color: red; ">' . $resultado_Total_simulados .  ' Pesos</h1>';  
+  echo '<h1 style="color: red; ">Con un margen total de perdida de ' . $margenes .  '%</h1>';
+
 }
 ?>
  
