@@ -148,11 +148,11 @@
             </div>
           </div>
           <!-- /.row -->
+          <?php require_once ("footer.php"); ?>
         </div>
         <!-- /.container-fluid -->
       </div>
       <!-- /#page-wrapper -->
-      <?php require_once ("footer.php"); ?>
       
     </div>
   </body>

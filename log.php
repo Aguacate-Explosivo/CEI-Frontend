@@ -1,6 +1,6 @@
 <?php
-    include_once("conexion.php");
-    $conexion = conectar();
+    // include_once("conexion.php");
+    // $conexion = conectar();
     function logAction($action, $description) {
         global $conexion;
         $action = mysqli_real_escape_string($conexion, $action);

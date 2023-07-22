@@ -83,13 +83,13 @@
       <!-- Fin data Table -->
     </div>
 
+    <?php require_once ("footer.php"); ?>
   </div>
   <!-- /.row -->
   </div>
   <!-- /.container-fluid -->
   </div>
   <!-- /#page-wrapper -->
-  <?php require_once ("footer.php"); ?>
   </div>
   <!-- /#wrapper -->
 </body>

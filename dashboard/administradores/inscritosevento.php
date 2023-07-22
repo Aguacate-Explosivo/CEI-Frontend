@@ -128,11 +128,9 @@
           <!-- /.row -->
         </div>
         <!-- /.container-fluid -->
+        <?php require_once ("../footer.php"); ?>  
       </div>
       <!-- /#page-wrapper -->
-      <footer class="footer text-center">
-        FACNET - 2023 &copy; 
-      </footer>
     </div>
     
 

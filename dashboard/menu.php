@@ -188,6 +188,12 @@
               Estadísticas de los emprendedores
             </a>
           </li>
+          <li id="logsModulo">
+            <a href="DashLogs.php" class="waves-effect">
+              <i class="ti-time fa-fw"></i>
+              Logs
+            </a>
+          </li>
         </ul>
         <div class="center p-20">
           <span class="hide-menu">
@@ -204,6 +210,7 @@
       var Role = localStorage.getItem('auth_perfil');
       if (Role === "Moderador") {
             var moduloUsuarios = document.getElementById('usuariosModulo').style.display = "none";
+            var modulologs = document.getElementById('logsModulo').style.display = "none";
           } 
           if (Role === "Docente") {
             var moduloUsuarios = document.getElementById('usuariosModulo').style.display = "none";
@@ -214,6 +221,7 @@
             var moduloEncuestas = document.getElementById('encuestaModulo').style.display = "none";
             var moduloSeguimiento = document.getElementById('seguimientoModulo').style.display = "none";
             var moduloEstadisticas = document.getElementById('estadisticasModulo').style.display = "none";
+            var modulologs = document.getElementById('logsModulo').style.display = "none";
           } 
           if (Role === "Estudiante") {
             var moduloUsuarios = document.getElementById('usuariosModulo').style.display = "none";
@@ -225,6 +233,7 @@
             var moduloEncuestas = document.getElementById('encuestaModulo').style.display = "none";
             var moduloSeguimiento = document.getElementById('seguimientoModulo').style.display = "none";
             var moduloEstadisticas = document.getElementById('estadisticasModulo').style.display = "none";
+            var modulologs = document.getElementById('logsModulo').style.display = "none";
           } 
           if (Role === "Funcionario") {
             var moduloUsuarios = document.getElementById('usuariosModulo').style.display = "none";
@@ -232,5 +241,6 @@
             var moduloSimulacion= document.getElementById('simulacionModulo').style.dysplay = "none";
             var moduloMarketing = document.getElementById('marketingModulo').style.display = "none";
             var moduloSimular = document.getElementById('simulacionModulo').style.display = "none";
+            var modulologs = document.getElementById('logsModulo').style.display = "none";
           }
     </script>

@@ -144,9 +144,9 @@
 
         </div>
         <!-- /.container-fluid -->
+        <?php require_once ("footer.php"); ?>
       </div>
       <!-- /#page-wrapper -->
-      <?php require_once ("footer.php"); ?>
     </div>
     <!-- /#wrapper -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
