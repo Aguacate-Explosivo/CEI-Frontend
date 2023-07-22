@@ -36,7 +36,7 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-5 mb-5">Iniciar Tu Sesion</h1>
+                <h1 class="display-5 mb-5">Iniciar Sesión</h1>
             </div>
             <div class="row g-5">
                 <div class="col-lg-6 mx-auto wow fadeInUp" data-wow-delay="0.1s">
@@ -44,7 +44,7 @@
                         <!-- /.login-logo -->
                         <div class="card">
                             <div class="card-body login-card-body">
-                                <p>Ingrese sus datos para iniciar sesion</p>
+                                <p>Ingrese sus datos para iniciar sesión</p>
 
                                 <form action="php/login_validacion.php" method="POST" enctype="multipart/form-data">
                                     <div class="input-group mb-3">
