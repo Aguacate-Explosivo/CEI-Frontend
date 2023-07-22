@@ -44,8 +44,8 @@
                             <img src="img/logo.webp" class="img-fluid" alt="#" width="120px" height="56px">
                         </a>
                     </div>
-					<input type="text" placeholder="Email" id="user" name="user" required>
-					<input type="password" placeholder="Password" id="password" name="password" required>
+					<input type="text" placeholder="Usuario" id="user" name="user" required>
+					<input type="password" placeholder="Contraseña" id="password" name="password" required>
 
 					<button>Iniciar Sesión</button>
                     <div class="social-auth-links text-center mb-3">
@@ -59,7 +59,7 @@
             	
 				<form action="registrousuario.php" enctype="multipart/form-data">
 				<br>
-                <button>Login</button>
+                <button>REGISTRO</button>
 				</form>
 			</div>
 	</div>
