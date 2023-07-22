@@ -6,7 +6,7 @@
                 &copy; <a class="fw-medium text-light" href="#">Universidad Tecnologica del Chocó</a> - Todos Los Derechos Reservados.
             </div>
             <div class="col-md-6 text-center text-md-end">
-                Diseñado y Distribuido por <a class="fw-medium text-light" href="">FACNET </a>
+                Diseñado y Desarrollado por <a class="fw-medium text-light" href="">FACNET </a>
             </div>
         </div>
     <!-- </div>
