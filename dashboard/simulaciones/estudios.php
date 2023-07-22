@@ -108,7 +108,7 @@
 
 <div style="float: right;  width: 200px;">
 
- <a href="drop.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Sumulacion </a>
+ <a href="drop.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Simulación </a>
 </div>
 <div style="float: right;  width: 200px;">
 
@@ -120,7 +120,7 @@
 </div>
 <div style="float: right;  width: 200px;">
 
- <a href="producto.php" class="btn btn-info btn-block btn-rounded waves-effect waves-light">Continua Simulando</a>
+ <a href="producto.php" class="btn btn-info btn-block btn-rounded waves-effect waves-light">Continuar Simulando</a>
 </div>
 
 <?php
@@ -249,20 +249,20 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
 
 
 <div>
-  <h1>FELICIDADES Haz  </h1>
-  <h2>llegado al final de tu simulacion, </h2>
+  <h1>Felicidades has  </h1>
+  <h2>llegado al final de tu simulación, </h2>
 
 <?php 
 $margen=(($ingresos_totales_simulado - $valor_total_gasto_simuladoss )/$ingresos_totales_simulado ) ;
 $margenes = number_format($margen, 2 );
 
 if($margenes>0.50){
-  echo "<h2>Tu simulacion si es viable tiene ingresos totales simulados de </h2>";
+  echo "<h2>Tu plan de negocios si es viable tiene ingresos totales simulados de </h2>";
   echo '<h1 style="color: green; ">' . $resultado_Total_simulados .  ' Pesos</h1>';
   echo '<h1 style="color: green; ">Con un margen total de ganancia de ' . $margenes .  '%</h1>';
 
 }else{
-  echo "<h2>Tu simulacion no es viable tiene ingresos totales simulados de </h2>";
+  echo "<h2>Tu plan de negocios no es viable tiene ingresos totales simulados de </h2>";
   echo '<h1 style="color: red; ">' . $resultado_Total_simulados .  ' Pesos</h1>';  
   echo '<h1 style="color: red; ">Con un margen total de perdida de ' . $margenes .  '%</h1>';
 
