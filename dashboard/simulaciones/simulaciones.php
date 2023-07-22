@@ -69,6 +69,12 @@
       </div>
       <!-- Page Content -->
       <div id="">
+        <?php
+          include("../../conexion.php");
+          $conexion = conectar();
+          include("../../log.php");
+          logAction("inicio de simulación","El usuario ha iniciado una nueva simulación");
+        ?>
         <div class="container-fluid">
           <div class="row bg-title">
             <div class="col-lg-12">
