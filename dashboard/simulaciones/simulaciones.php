@@ -89,13 +89,15 @@
                                 <div class="col-lg-12">
                                     <div class="table-responsive"> 
             <br>    
-            <a style="width: 200px;" type="submit" id="atras" name="atras" href="../DashSimulaciones.php" class="btn btn-info btn-lg btn-rounded">Atras</a>   
-             <div class="grid">
+            <a style="width: 200px; padding: 10px;" type="submit" id="atras" name="atras" href="../DashSimulaciones.php" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Atras</a>
+   
+             <div style="padding: 10px;"class="grid">
+              
         <?php
         $imagenes = [
-            ['ruta' => 'img/producto.png', 'enlace' => 'overview.php'],
-            ['ruta' => 'img/servicios.png', 'enlace' => '#'],
-            ['ruta' => 'img/produccion.png', 'enlace' => '#']
+            ['ruta' => 'img/plannegocios.svg', 'enlace' => 'overview.php'],
+            ['ruta' => 'img/servicios.svg', 'enlace' => '#'],
+            ['ruta' => 'img/produccion.svg', 'enlace' => '#']
         ];
 
         foreach ($imagenes as $imagen) {
