@@ -247,24 +247,21 @@ $resultado_Total_simulados = number_format($resultado_Total_simulados, 2 ,',', '
                     
 </form>
 
-
+ 
 <div>
   <h1>Felicidades has  </h1>
   <h2>llegado al final de tu simulación, </h2>
 
 <?php 
-$margen=(($ingresos_totales_simulado - $valor_total_gasto_simuladoss )/$ingresos_totales_simulado ) ;
-$margenes = number_format($margen, 2 );
 
-if($margenes>0.50){
+
+if($margenes>$valor_total_gasto_simuladoss){
   echo "<h2>Tu plan de negocios si es viable tiene ingresos totales simulados de </h2>";
   echo '<h1 style="color: green; ">' . $resultado_Total_simulados .  ' Pesos</h1>';
-  echo '<h1 style="color: green; ">Con un margen total de ganancia de ' . $margenes .  '%</h1>';
 
 }else{
   echo "<h2>Tu plan de negocios no es viable tiene ingresos totales simulados de </h2>";
   echo '<h1 style="color: red; ">' . $resultado_Total_simulados .  ' Pesos</h1>';  
-  echo '<h1 style="color: red; ">Con un margen total de perdida de ' . $margenes .  '%</h1>';
 
 }
 ?>
