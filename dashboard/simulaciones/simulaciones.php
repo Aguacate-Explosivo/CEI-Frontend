@@ -103,7 +103,7 @@
         $imagenes = [
             ['ruta' => 'img/plannegocios.svg', 'enlace' => 'overview.php'],
             ['ruta' => 'img/servicios.svg', 'enlace' => '#'],
-            ['ruta' => 'img/produccion.svg', 'enlace' => '#']
+            ['ruta' => 'img/produccion.svg', 'enlace' => '../simulaciones_produccion/inicio.php']
         ];
 
         foreach ($imagenes as $imagen) {
