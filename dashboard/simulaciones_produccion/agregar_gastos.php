@@ -242,7 +242,7 @@
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["valor"]; ?></td>
                                 
                                 <td style="text-align: center; vertical-align: middle;">
-                                <a style="margin: 2px; border-radius: 5px;" href="eliminarg.php?id=<?php echo $elemento["id"]; ?>&documento=<?php echo $documento; ?>" class="btn btn-danger" > Eliminar</a>
+                                <a style="margin: 2px; border-radius: 5px;" href="eliminar_gastos.php?id=<?php echo $elemento["id"]; ?>&documento=<?php echo $documento; ?>" class="btn btn-danger" > Eliminar</a>
                                  </td>
                             </tr>
                            

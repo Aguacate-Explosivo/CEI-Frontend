@@ -16,10 +16,9 @@
     //Valores del formulario
     $nombre=$_POST['nombre'];
     $valor=$_POST['valor'];
-    $nombre=$_POST['nombre'];
-
+    $nombres=$_POST['nombres'];
     //igresar la informacion a la tabla de datos
-    $consulta="INSERT INTO  ` $nombre` VALUES ('','$nombre','$valor')";
+    $consulta="INSERT INTO  ` $nombre` VALUES ('','$nombres','$valor')";
     $resultado=mysqli_query($conexion,$consulta);
     if ($resultado) {
         echo "<script>

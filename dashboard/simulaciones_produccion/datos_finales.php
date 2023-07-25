@@ -83,7 +83,7 @@
     
     $creartablag3 ="CREATE TABLE ` $nombre` (
       `id` int(11) NOT NULL, 
-      `nombre` text NOT NULL,
+      `nombres` text NOT NULL,
       `valor` int(11) NOT NULL
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci; ";
      $creartabla2g=mysqli_query($conexion,$creartablag3);

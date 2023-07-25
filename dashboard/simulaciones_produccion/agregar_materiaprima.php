@@ -237,7 +237,7 @@
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["cantidad"]; ?></td> 
                          
                                 <td style="text-align: center; vertical-align: middle;">
-                                <a style="margin: 2px; border-radius: 5px;" href="eliminar.php?id=<?php echo $elemento["id"]; ?>&nombre_negocio_plan=<?php echo $nombre_negocio_plan; ?>" class="btn btn-danger" > Eliminar</a>
+                                <a style="margin: 2px; border-radius: 5px;" href="eliminar_materia.php?id=<?php echo $elemento["id"]; ?>&nombre_negocio_plan=<?php echo $nombre_negocio_plan; ?>" class="btn btn-danger" > Eliminar</a>
                                  </td>
                             </tr>
                            

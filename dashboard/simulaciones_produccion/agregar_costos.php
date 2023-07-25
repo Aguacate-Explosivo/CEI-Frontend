@@ -174,7 +174,7 @@
       <br><br><br><br><br><br>
     <div class="col-md-16">
     <div class="input-group">
-    <input type="text" style="width: 1000px;"  id="nombre" name="nombre" class="form-control"
+    <input type="text" style="width: 1000px;"  id="nombres" name="nombres" class="form-control"
     placeholder="Nombre del Costos:" required=""  maxlength="16" minlength="1" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-,.]+"  >
     <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de cada GASTO">
      <i class="fas fa-question"></i>
@@ -240,11 +240,11 @@
                               ?>
                             <!-- Contenido de la tabla -->
                             <tr>
-                                <td style="text-align: center;  vertical-align: middle;"><?php echo $elemento["nombre"]; ?></td>
+                                <td style="text-align: center;  vertical-align: middle;"><?php echo $elemento["nombres"]; ?></td>
                                 <td style="text-align: center;  vertical-align: middle;"><?php echo $elemento["valor"]; ?></td>
                                 
                                 <td style="text-align: center;  vertical-align: middle;">
-                                <a style="margin: 2px; border-radius: 5px;" href="eliminarg.php?id=<?php echo $elemento["id"]; ?>&documento=<?php echo $documento; ?>" class="btn btn-danger" > Eliminar</a>
+                                <a style="margin: 2px; border-radius: 5px;" href="eliminar_costos.php?id=<?php echo $elemento["id"]; ?>&nombre=<?php echo $nombre; ?>" class="btn btn-danger" > Eliminar</a>
                                  </td>
                             </tr>
                            
