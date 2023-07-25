@@ -276,6 +276,12 @@ $cantidad_producire =$_SESSION['cantidad_producire'];
                                 <td style="text-align: center; vertical-align: middle;">Total en Materia Prima</td>
                                 <td style="text-align: center; vertical-align: middle;"> <?php echo $materiaprima_simulados; ?></td>
                             </tr> 
+                              <tr>
+                                <td style="text-align: center; vertical-align: middle;">Invercion Total</td>
+                                <td style="text-align: center; vertical-align: middle;"> <?php echo $precio_unidad; ?> Pesos Und </td>
+                                <td style="text-align: center; vertical-align: middle;">Invercion Total</td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $precio_unidad_simulados; ?> Pesos Und</td>
+                            </tr> 
                             <tr>
                                 <td style="text-align: center; vertical-align: middle;">Precio de Venta Unidad</td>
                                 <td style="text-align: center; vertical-align: middle;"> <?php echo $precio_unidad; ?> Pesos Und </td>
@@ -283,12 +289,20 @@ $cantidad_producire =$_SESSION['cantidad_producire'];
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $precio_unidad_simulados; ?> Pesos Und</td>
                             </tr> 
                           
+                                <tr>
+                                <td style="text-align: center; vertical-align: middle;">Precio de Venta Unidad + Porcentaje</td>
+                                <td style="text-align: center; vertical-align: middle;"> <?php echo $precio_unidad; ?> Pesos Und </td>
+                                <td style="text-align: center; vertical-align: middle;">Precio de Venta Unidad  + Porcentaje</td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $precio_unidad_simulados; ?> Pesos Und</td>
+                            </tr> 
                                    
                        </table>
 </div>
  </div>                     
 </form>
- 
+ <br>
+ <br>
+ <br>
 <hr>
 <form  method="POST" enctype="multipart/form-data" >
 <button style="width: 250px; left:300px;" value="Siguiente" name="Siguiente"  type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Siguiente</button>                  
@@ -398,8 +412,8 @@ $cantidad_producire =$_SESSION['cantidad_producire'];
                             <tr>
                            
                                 
-                                <td style="text-align: center; vertical-align: middle;"><?php echo $nombreproducto ; ?>Und</td>
-                                <td style="text-align: center; vertical-align: middle;"> <?php echo $cantidad_aproducir;?></td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $nombreproducto ; ?> </td>
+                                <td style="text-align: center; vertical-align: middle;"> <?php echo $cantidad_aproducir;?> Und</td>
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $cantidad_productos;?></td>
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $valor_total_gastos; ?></td>
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $valor_total_costos; ?> </td>

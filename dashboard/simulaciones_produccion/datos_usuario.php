@@ -172,7 +172,7 @@
                                                             <div class="input-group">
                                                         <input type="text" id="innovacion_negocio_plan" name="innovacion_negocio_plan" class="form-control" placeholder="Zona de aplicacion:"
                                                         required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+"  >
-                                                        <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar la zona geografica donde estara ubicado tu negocio">
+                                                        <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar la zona geografica donde se EJECUTARA tu negocio">
                                                           <i class="fas fa-question"></i>
                                                             </button>
                                                             <label for="innovacion_negocio_plan" class="form__label"></label>

@@ -183,6 +183,10 @@
                                                         <label for="nombreproducto" class="form__label"> Nombre del Producto Final</label>
                                                         <div class="input-group">
                                                             <input type="text" id="nombreproducto" placeholder="Nombre del Producto Final" name="nombreproducto" class="form-control"  required pattern="[a-zA-ZÁÉÍÓUáéíóú 0-9]+"  >
+                                                            <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE del producto que quieres producir">
+                                                            <i class="fas fa-question"></i>
+                                                            </button>
+                                                            
                                                             
                                                         </div>
                                                        

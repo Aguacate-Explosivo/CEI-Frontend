@@ -173,7 +173,7 @@
     <div class="input-group">
     <input type="text" style="width: 1000px;"  id="nombre" name="nombre" class="form-control"
     placeholder="Nombre del gasto:" required=""  maxlength="16" minlength="1" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-,.]+"  >
-    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de cada GASTO">
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de cada GASTO, son cada cosa que se usara en la produccion ">
      <i class="fas fa-question"></i>
       </button>
     <label for="nombre" class="form__label"></label>

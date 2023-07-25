@@ -167,16 +167,16 @@
                                                     <form required method="POST" enctype="multipart/form-data">
                                                         <br>
                                                         <div class="input-group">
-                                                            <input type="number" id="clientes_interesados_plan" name="clientes_interesados_plan" class="form-control" placeholder="Ingrese el número de clientes que podrían estar interesados en comprar sus productos y / o servicios:" required pattern="[0-9]+"  >
-                                                            <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de el plan de negocio, recuerda que no debe incluir espacios al final">
+                                                            <input type="number" id="clientes_interesados_plan" name="clientes_interesados_plan" class="form-control" placeholder="Ingrese el número de clientes " required pattern="[0-9]+"  >
+                                                            <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debe Ingresar el número de clientes que podrían estar interesados en comprar sus productos ">
                                                             <i class="fas fa-question"></i>
                                                             </button>
                                                             <label for="clientes_interesados_plan" class="form__label"></label>
                                                         </div>
                                                         <br>
                                                         <div class="input-group">
-                                                            <input type="number" id="cantidadMonetaria_interesados_plan" name="cantidadMonetaria_interesados_plan" class="form-control" placeholder="Introducir la cantidad monetaria que estos clientes podrían estar dispuestos a gastar, en sus productos y / o servicios:" required pattern="[0-9]+"  >
-                                                            <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de el plan de negocio, recuerda que no debe incluir espacios al final">
+                                                            <input type="number" id="cantidadMonetaria_interesados_plan" name="cantidadMonetaria_interesados_plan" class="form-control" placeholder="Introducir la cantidad monetaria " required pattern="[0-9]+"  >
+                                                            <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debe introducir la cantidad monetaria que estos clientes podrían estar dispuestos a gastar, en sus productos ">
                                                             <i class="fas fa-question"></i>
                                                             </button>
                                                             <label for="cantidadMonetaria_interesados_plan" class="form__label"></label>
@@ -184,7 +184,7 @@
                                                         <br>
                                                         <div class="input-group">
                                                             <input type="number" id="socios_productores" name="socios_productores" class="form-control" placeholder="Socios / Productores:" required pattern="[0-9]+"  >
-                                                            <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de el plan de negocio, recuerda que no debe incluir espacios al final">
+                                                            <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debe introducir la cantidad exacta de socios que estan saldran veneficiados de este negocio">
                                                             <i class="fas fa-question"></i>
                                                             </button>
                                                             <label for="socios_productores" class="form__label"></label>
@@ -212,8 +212,8 @@
                                                             </select>
                                                             <br>
                                                             <div class="input-group">
-                                                                <input type="number" id="inversion_publicidad" name="inversion_publicidad" class="form-control" placeholder="Cantidad de $ a Invertir en Publicidad:" required pattern="[0-9]+"  >
-                                                                <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de el plan de negocio, recuerda que no debe incluir espacios al final">
+                                                                <input type="number" id="inversion_publicidad" name="inversion_publicidad" class="form-control" placeholder="Cantidad de pesos a Invertir en Publicidad:" required pattern="[0-9]+"  >
+                                                                <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar la cantidad en pesos que usted va a invertir en publicidad ">
                                                             <i class="fas fa-question"></i>
                                                             </button>
                                                                 <label for="inversion_publicidad" class="form__label"></label>
@@ -239,7 +239,7 @@
                                                             <label for="nombre_negocio_plan" class="form__label"></label>
                                                             <input type="hidden" id="industria_plan" name="industria_plan" value="<?php echo $industria_plan; ?>">
                                                             <label for="industria_plan" class="form__label"></label>
-                                                            <input type="hidden" id="negocio_nuevo" name="negocio_nuevo" value="<?php echo $negocio_nuevo ?> - <?php echo $negocio_existente ?>"">
+                                                            <input type="hidden" id="negocio_nuevo" name="negocio_nuevo" value="<?php echo $negocio_nuevo ?> - <?php echo $negocio_existente ?>">
                                                             <label for="negocio_nuevo" class="form__label"></label>
                                                             <input type="hidden" id="zona_geografica_plan" name="zona_geografica_plan" value="<?php  echo $zona_geografica_plan; ?>">
                                                             <label for="zona_geografica_plan" class="form__label"></label>

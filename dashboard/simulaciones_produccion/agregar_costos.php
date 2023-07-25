@@ -175,7 +175,7 @@
     <div class="input-group">
     <input type="text" style="width: 1000px;"  id="nombres" name="nombres" class="form-control"
     placeholder="Nombre del Costos:" required=""  maxlength="16" minlength="1" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-,.]+"  >
-    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de cada GASTO">
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de cada COSTO, los costos son gastos fijos">
      <i class="fas fa-question"></i>
       </button>
     <label for="nombre" class="form__label"></label>
@@ -188,7 +188,7 @@
     <div class="input-group">
     <input type="text" style="width: 1000px;" class="form-control" id="valor" name="valor"
     placeholder="Valor del Costos:" required="" pattern="[0-9]+" >
-    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el VALOR  de cada uno de los gastos ">
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el VALOR  de cada uno de los costos ">
      <i class="fas fa-question"></i>
       </button>
           <label for="Valor del gasto" class="form__label"></label>
