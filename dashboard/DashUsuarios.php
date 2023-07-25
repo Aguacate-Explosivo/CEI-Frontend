@@ -83,10 +83,13 @@
                           <td><?php echo $perfil; ?></td>
                           <td>
                             <div class="btn-group">
-                            <button style="margin: 2px; border-radius: 5px;"  class="btn btn-warning btnEditar" onclick="editarUsuario('<?php echo $id; ?>', '<?php echo $usuario; ?>', '<?php echo $correo; ?>', '<?php echo $estado; ?>', '<?php echo $perfil; ?>')">
+                            <!-- <button style="margin: 2px; border-radius: 5px;"  class="btn btn-warning btnEditar" onclick="editarUsuario('<?php echo $id; ?>', '<?php echo $usuario; ?>', '<?php echo $correo; ?>', '<?php echo $estado; ?>', '<?php echo $perfil; ?>')">
                               <i class="fas fa-edit"></i>
-                            </button>
+                            </button> -->
 
+                            <div class="btn-group">
+                              <a style="margin: 2px; border-radius: 5px; position: relative;" href="editarUsuarioForm.php?Id=<?php echo $id?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                              </div>
                               <!-- <button style="margin: 2px; border-radius: 5px;"  class="btn btn-danger btnEliminar" data-id="<?php echo $id; ?>"><i class="fas fa-trash-alt fa-flip-horizontal"></i></button> -->
                             </div>
                           </td>
