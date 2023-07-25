@@ -31,9 +31,9 @@
       // datos formulario 5
     
       $_SESSION['cantidad_producir'] = htmlentities($_POST["cantidad_producir"]);
+      $_SESSION['nombreproducto'] = htmlentities($_POST["nombreproducto"]);
 
-      $_SESSION['importe'] = htmlentities($_POST["importe"]);
-
+      
 
   
       // Redirecion a la siguiente pagina
@@ -60,8 +60,7 @@
   $tipo_marketing_plan =  $_SESSION['tipo_marketing_plan'];
   $inversion_publicidad =  $_SESSION['inversion_publicidad'];
 
-  $importe =  $_SESSION['importe'];
-
+  
   //agregar tabla a base de datos
 ?>
 <!DOCTYPE html>
@@ -125,7 +124,7 @@
         <div class="row bg-title">
           <div class="col-lg-12">
             <h4 class="page-title">
-              Primer Paso!
+              Cuarto  Paso!
             </h4>
             <ol class="breadcrumb">
             </ol>
@@ -169,17 +168,24 @@
                                                             
                                                         </div>
                                                             <br>
-                                                            <label for="nombrenegocio" class="form__label"> Nombre del Negocio</label>
+                                                         <label for="nombrenegocio" class="form__label"> Nombre del Negocio</label>
                                                         <div class="input-group">
                                                             <input type="text" id="nombrenegocio" name="nombrenegocio" class="form-control" readonly  value="<?php echo $nombre_negocio_plan; ?>">
                                                             
                                                         </div>
-                                                        <br>
+                                                        <br>   
                                                         <label for="zona" class="form__label">Zona de Ejecucion</label>
                                                         <div class="input-group">
                                                             <input type="text" id="zona" name="zona" class="form-control" readonly  value="<?php echo $innovacion_negocio_plan; ?>">
                                                             
                                                         </div>
+                                                        <br>
+                                                        <label for="nombreproducto" class="form__label"> Nombre del Producto Final</label>
+                                                        <div class="input-group">
+                                                            <input type="text" id="nombreproducto" placeholder="Nombre del Producto Final" name="nombreproducto" class="form-control"  required pattern="[a-zA-ZÁÉÍÓUáéíóú 0-9]+"  >
+                                                            
+                                                        </div>
+                                                       
                                                             <br>
                                                             <label for="cantidad_producir" class="form__label">Cantidad de productos a Producir</label>
                                                             <div class="input-group">
@@ -248,8 +254,7 @@
                                                             <input type="hidden" id="valor_total_costo" name="valor_total_costo" value="<?php echo $valor_total_costo; ?>">
                                                             <label for="valor_total_costo" class="form__label"></label>
                                                             
-                                                            <input type="hidden" id="importe" name="importe" value="<?php echo $importe; ?>">
-                                                            <label for="importe" class="form__label"></label>
+                                                            
                                                         </div>
                                                         </form> 
                                                 </main>

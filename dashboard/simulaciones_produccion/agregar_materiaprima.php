@@ -34,6 +34,7 @@
       $_SESSION['precio_venta_producto'] = htmlentities($_POST["precio_venta_producto"]);
       $_SESSION['importe'] = htmlentities($_POST["importe"]);
       $_SESSION['cantidad_producir'] = htmlentities($_POST["cantidad_producir"]);
+      $_SESSION['nombreproducto'] = htmlentities($_POST["nombreproducto"]);
 
   
       // Redirecion a la siguiente pagina
@@ -61,6 +62,7 @@
   $inversion_publicidad =  $_SESSION['inversion_publicidad'];
   $cantidad_producto =  $_SESSION['cantidad_producto'];
   $cantidad_producir =  $_SESSION['cantidad_producir'];
+  $nombreproducto =  $_SESSION['nombreproducto'];
 
   $importe =  $_SESSION['importe'];
 
@@ -144,7 +146,7 @@
         <div class="">
           <div class="row bg-title">
             <div class="col-lg-12">
-              <h4 class="page-title">Paso 4 Agregar Productos</h4>
+              <h4 class="page-title">Quinto Paso Agregar Productos</h4>
                <div style="float: right;  width: 200px; ">
                              <a href="drop1.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Sumulacion </a>
                             </div>
@@ -162,11 +164,11 @@
 <br>
  <br>
 <br>
-    <div class="col-md-9">
+    <div class="col-md-16">
     <div class="input-group">
-    <input style="width: 1000px;" type="text" id="nombre_producto1" name="nombre_producto1" class="form-control"
-    placeholder="Nombre Producto:" required=""  maxlength="16" minlength="1" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-,.]+"  >
-    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de cada producto que se operara">
+    <input style="width: 1400px;" type="text" id="nombre_producto1" name="nombre_producto1" class="form-control"
+    placeholder="Nombre de Materia Prima:" required=""  maxlength="16" minlength="1" pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-,.]+"  >
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el NOMBRE de cada Materia prima que se usara en la produccion ">
      <i class="fas fa-question"></i>
       </button>
     <label for="producto" class="form__label"></label>
@@ -175,12 +177,12 @@
 <br>
 <br> 
 <br>
-  <div class="col-md-9">
+  <div class="col-md-16">
   <div class="input-group">
     
-      <input type="text" style="width: 1000px;"  class="form-control" id="cantidad_producto1" name="cantidad_producto1"
-    placeholder="Coste Mensual:" required pattern="[0-9]+" >
-    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar la CANTIDAD de productos que se van a vender ">
+      <input type="text" style="width: 1400px;"  class="form-control" id="cantidad_producto1" name="cantidad_producto1"
+    placeholder="Coste Mensual de Materia prima:" required pattern="[0-9]+" >
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el VALOR MENSUAL DE CADA UNA DE TUS MATERIAS PRIMAS  ">
      <i class="fas fa-question"></i>
       </button>
     <label for="cantidad" class="form__label"></label>
@@ -205,9 +207,9 @@
 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th>Producto </th>
-                                <th>Costo Mensual </th>    
-                                <th>Acciones</th>                     
+                                <th style="text-align: center; height: 40px; vertical-align: middle;" >Producto </th>
+                                <th style="text-align: center; height: 40px; vertical-align: middle;">Costo Mensual </th>    
+                                <th style="text-align: center; height: 40px; vertical-align: middle;">Acciones</th>                     
                             </tr>
                         </thead>
                                 <?php
@@ -231,10 +233,10 @@
                               ?>
                             <!-- Contenido de la tabla -->
                             <tr>
-                                <td><?php echo $elemento["nombre"]; ?></td>
-                                <td><?php echo $elemento["cantidad"]; ?></td> 
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["nombre"]; ?></td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["cantidad"]; ?></td> 
                          
-                                <td>
+                                <td style="text-align: center; vertical-align: middle;">
                                 <a style="margin: 2px; border-radius: 5px;" href="eliminar.php?id=<?php echo $elemento["id"]; ?>&nombre_negocio_plan=<?php echo $nombre_negocio_plan; ?>" class="btn btn-danger" > Eliminar</a>
                                  </td>
                             </tr>
@@ -246,10 +248,10 @@
                                 <thead>
                                 <tr>
                                 <th ></th>
-                                <th ><?php echo $cantidad_productos; ?></th>
+                                <th style="text-align: center; vertical-align: middle;" ><?php echo $cantidad_productos; ?></th>
                                
                                 
-                                <th>PORCENTAJES</th>
+                                <th style="text-align: center; vertical-align: middle;">PORCENTAJES</th>
                             </tr>
                                 </thead>
                        </table>
@@ -266,7 +268,7 @@
     <div class="input-group">
     <input type="text"   maxlength="4" minlength="1" class="form-control" id="importe" value="19" name="importe"
     placeholder="Importe :" required pattern="[0-9 .]+" >
-    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el IMPORTE o IVA de los productos que agrego anteriormente, por defecto se seleccionara el 19% ">
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes proporcionar el IMPORTE o IVA de la materia prima que agrego anteriormente, por defecto se seleccionara el 19% ">
      <i class="fas fa-question"></i>
       </button>
       
@@ -324,8 +326,9 @@
                                                     
                                                             <input type="hidden" id="cantidad_producir" name="cantidad_producir" value="<?php echo $cantidad_producir; ?>">
                                                             <label for="cantidad_producir" class="form__label"></label>
-  
-
+                                                            <input type="hidden" id="nombreproducto" name="nombreproducto" value="<?php echo $nombreproducto; ?>">
+                                                            <label for="nombreproducto" class="form__label"></label>
+                                                            
                                                             </div>  
     
                                                         </form>

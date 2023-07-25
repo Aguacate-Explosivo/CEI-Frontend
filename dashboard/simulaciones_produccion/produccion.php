@@ -28,13 +28,11 @@
 
      
       // datos formulario 5
-      $_SESSION['cantidad_producto'] = htmlentities($_POST["cantidad_producto"]);
-      $_SESSION['coste_unidad_producto'] = htmlentities($_POST["coste_unidad_producto"]);
-      $_SESSION['precio_venta_producto'] = htmlentities($_POST["precio_venta_producto"]);
+      
       // nuevos datos de formulario
       $_SESSION['valor_total_gasto'] = htmlentities($_POST["valor_total_gasto"]);
       $_SESSION['precio_unitario'] = htmlentities($_POST["precio_unitario"]);
-      $_SESSION['cantidad_productos'] = htmlentities($_POST["cantidad_productos"]);
+      $_SESSION['cantidad_producto'] = htmlentities($_POST["cantidad_producto"]);
       $_SESSION['valor_total_gasto'] = htmlentities($_POST["valor_total_gasto"]);
       $_SESSION['valor_total_costo'] = htmlentities($_POST["valor_total_costo"]);
       $_SESSION['cantidad_producir'] = htmlentities($_POST["cantidad_producir"]);
@@ -44,6 +42,7 @@
       $_SESSION['valor_total_costoe'] = htmlentities($_POST["valor_total_costoe"]);
       $_SESSION['cantidad_producire'] = htmlentities($_POST["cantidad_producire"]);
       $_SESSION['importe'] = htmlentities($_POST["importe"]);
+      $_SESSION['nombreproducto'] = htmlentities($_POST["nombreproducto"]);
 
   
       // Redirecion a la siguiente pagina
@@ -72,11 +71,7 @@
 
   $nombre_producto =  $_SESSION['nombre_producto'];
   $cantidad_producto =  $_SESSION['cantidad_producto'];
-  $coste_unidad_producto =  $_SESSION['coste_unidad_producto'];
-  $precio_venta_producto =  $_SESSION['precio_venta_producto'];
   $valor_total_gasto =  $_SESSION['valor_total_gasto'];
-  $precio_unitario =  $_SESSION['precio_unitario'];
-  $cantidad_productos =  $_SESSION['cantidad_productos'];
   $valor_total_costo =  $_SESSION['valor_total_costo'];
   $valor_total_gasto =  $_SESSION['valor_total_gasto'];
   $cantidad_producir =$_SESSION['cantidad_producir'];
@@ -85,6 +80,8 @@
   $valor_total_costoe =  $_SESSION['valor_total_costoe'];
   $valor_total_gastoe =  $_SESSION['valor_total_gastoe'];
   $cantidad_producire =$_SESSION['cantidad_producire'];
+  $nombreproducto =  $_SESSION['nombreproducto'];
+
   $importe =  $_SESSION['importe'];
 
   //agregar tabla a base de datos
@@ -111,7 +108,7 @@
         <div class="container-fluid">
           <div class="row bg-title">
             <div class="col-lg-12">
-              <h4 class="page-title">Paso 6</h4>
+              <h4 class="page-title">Octavo Paso </h4>
               <div style="float: right;  width: 200px; ">
                              <a href="drop.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Sumulacion </a>
                             </div>
@@ -129,33 +126,26 @@
 <br><br>
 <div style="float: right;  width: 200px;">
 
- <a href="agregar_cantidad.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Agregar Materia Prima</a>
+ <a href="agregar_materiaprima.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Agregar Materia Prima</a>
 </div>
 <div style="float: right;  width: 200px;">
 
- <a href="agregargastos.php" class="btn btn-warning btn-block btn-rounded waves-effect waves-light">Agregar Gastos</a>
+ <a href="agregar_gastos.php" class="btn btn-warning btn-block btn-rounded waves-effect waves-light">Agregar Gastos</a>
 </div>
 <div style="float: right;  width: 200px;">
 
- <a href="agregar_costos.php" class="btn btn-warning btn-block btn-rounded waves-effect waves-light">Agregar Costos</a>
+ <a href="agregar_costos.php" class="btn btn-info btn-block btn-rounded waves-effect waves-light">Agregar Costos</a>
 </div>
-<div style="float: right;  width: 200px;">
 
- <a href="productos_reales.php" class="btn btn-info btn-block btn-rounded waves-effect waves-light">Productos</a>
-</div>
-<div style="float: right;  width: 200px;">
-
- <a href="gastos_reales.php" class="btn btn-info btn-block btn-rounded waves-effect waves-light">Gastos</a>
-</div>
 <br><br>
 <?php
 
 
 
-$_SESSION['cantidad_productose'] = isset($_POST["cantidad_productose"]) ? htmlentities($_POST["cantidad_productose"]) : 20;
-$_SESSION['valor_total_gastoe'] = isset($_POST["valor_total_gastoe"]) ? htmlentities($_POST["valor_total_gastoe"]) :20;
-$_SESSION['valor_total_costoe'] = isset($_POST["valor_total_costoe"]) ? htmlentities($_POST["valor_total_costoe"]) : 20;
-$_SESSION['cantidad_producire'] = isset($_POST["cantidad_producire"]) ? htmlentities($_POST["cantidad_producire"]) : 20;
+$_SESSION['cantidad_productose'] = isset($_POST["cantidad_productose"]) ? htmlentities($_POST["cantidad_productose"]) : 10;
+$_SESSION['valor_total_gastoe'] = isset($_POST["valor_total_gastoe"]) ? htmlentities($_POST["valor_total_gastoe"]) : 10;
+$_SESSION['valor_total_costoe'] = isset($_POST["valor_total_costoe"]) ? htmlentities($_POST["valor_total_costoe"]) : 10;
+$_SESSION['cantidad_producire'] = isset($_POST["cantidad_producire"]) ? htmlentities($_POST["cantidad_producire"]) : 10;
 
 $cantidad_productose =  $_SESSION['cantidad_productose'];
 $valor_total_costoe =  $_SESSION['valor_total_costoe'];
@@ -244,42 +234,56 @@ $cantidad_producire =$_SESSION['cantidad_producire'];
  $materiaprima_simuladoss = ($cantidad_producto * $materiaprima_porcentaje) + $cantidad_producto ;
  $materiaprima_simulados = number_format($materiaprima_simuladoss, 2 ,',', '.');
 
+ $valor_total_costos = number_format($valor_total_costo, 2 ,',', '.');
+ $valor_total_gastos = number_format($valor_total_gasto, 2 ,',', '.');
+ $cantidad_productos = number_format($cantidad_producto, 2 ,',', '.');
+ 
+ $precio_unidade = $valor_total_costo + $valor_total_gasto + $cantidad_producto;
+ $precio_unidades=$precio_unidade/$cantidad_producir;
+ $precio_unidad = number_format($precio_unidades, 0 ,',', '.');
+
+ $precio_unidade_simulados = $costos_simuladoss + $gastos_simuladoss + $materiaprima_simuladoss;
+ $cantida =($cantidad_producir * $producir_porcentaje);
+ $precio_unidades_simulados = ($cantidad_producir + $cantida);
+ $precio_unidade_simuladoss= $precio_unidade_simulados /  $precio_unidades_simulados ;
+ $precio_unidad_simulados = number_format($precio_unidade_simuladoss, 0 ,',', '.');
 
 ?>
   
 <table id="" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th>Datos Reales  </th>
-                                <th>TOTALES  </th>
-                                <th>Datos Simulados</th> 
-                                <th>TOTALES  </th>
+                           
+                                <th style="text-align: center; vertical-align: middle;">Datos Reales  </th>
+                                <th style="text-align: center; vertical-align: middle;">TOTALES  </th>
+                                <th style="text-align: center; vertical-align: middle;">Datos Simulados</th> 
+                                <th style="text-align: center; vertical-align: middle;">TOTALES  </th>
                             </tr>
                         </thead>
                             <!-- Contenido de la tabla -->
                             <tr>
-                                <td>Total de Costos</td>
-                                <td> <?php echo $valor_total_costo; ?></td>
-                                <td>Total de Costos</td>
-                                <td><?php echo $costos_simulados; ?></td>
+                                <td style="text-align: center; vertical-align: middle;">Total de Costos</td>
+                                <td style="text-align: center; vertical-align: middle;"> <?php echo $valor_total_costos; ?></td>
+                                <td style="text-align: center; vertical-align: middle;">Total de Costos</td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $costos_simulados; ?></td>
                             </tr>
                             <tr>
-                                <td>Total de Gastos</td>
-                                <td> <?php echo $valor_total_gasto; ?></td>
-                                <td>Total de Gastos</td>
-                                <td> <?php echo $gastos_simulados; ?></td>
+                                <td style="text-align: center; vertical-align: middle;">Total de Gastos</td>
+                                <td style="text-align: center; vertical-align: middle;"> <?php echo $valor_total_gastos; ?></td>
+                                <td style="text-align: center; vertical-align: middle;">Total de Gastos</td>
+                                <td style="text-align: center; vertical-align: middle;"> <?php echo $gastos_simulados; ?></td>
                             </tr>
                             <tr>
-                                <td>Total en Materia Prima</td>
-                                <td> <?php echo $cantidad_producto; ?> </td>
-                                <td>Total en Materia Prima</td>
-                                <td> <?php echo $materiaprima_simulados; ?></td>
+                                <td style="text-align: center; vertical-align: middle;">Total en Materia Prima</td>
+                                <td style="text-align: center; vertical-align: middle;"> <?php echo $cantidad_productos; ?> </td>
+                                <td style="text-align: center; vertical-align: middle;">Total en Materia Prima</td>
+                                <td style="text-align: center; vertical-align: middle;"> <?php echo $materiaprima_simulados; ?></td>
                             </tr> 
                             <tr>
-                                <td>Precio de Venta</td>
-                                <td>  </td>
-                                <td>Precio de Venta</td>
-                                <td></td>
+                                <td style="text-align: center; vertical-align: middle;">Precio de Venta Unidad</td>
+                                <td style="text-align: center; vertical-align: middle;"> <?php echo $precio_unidad; ?> Pesos Und </td>
+                                <td style="text-align: center; vertical-align: middle;">Precio de Venta Unidad</td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $precio_unidad_simulados; ?> Pesos Und</td>
                             </tr> 
                           
                                    
@@ -358,6 +362,8 @@ $cantidad_producire =$_SESSION['cantidad_producire'];
                                                             <input type="text" id="cantidad_producire" name="cantidad_producire" value="<?php echo $cantidad_producire; ?>">
                                                             <label for="cantidad_producire" class="form__label"></label>
                                                             
+                                                            <input type="text" id="nombreproducto" name="nombreproducto" value="<?php echo $nombreproducto; ?>">
+                                                            <label for="nombreproducto" class="form__label"></label>
                                                             <input type="text" id="importe" name="importe" value="<?php echo $importe; ?>">
                                                             <label for="importe" class="form__label"></label>
                                                             
@@ -369,6 +375,50 @@ $cantidad_producire =$_SESSION['cantidad_producire'];
 <br><br><br>
 
 
+<div class="bajo">
+<h1 class="text-center">Producto  </h1>
+<table id="" class="table table-striped table-bordered" cellspacing="0" width="80%" >
+                        <thead>
+                            <tr>
+                              
+                                <th style="text-align: center; vertical-align: middle;">Nombre Producto </th>    
+                                <th style="text-align: center; vertical-align: middle;">Cantidad</th> 
+                                <th style="text-align: center; vertical-align: middle;">Gasto de Materia prima Totales</th> 
+                                <th style="text-align: center; vertical-align: middle;">Otros Gastos Totales</th> 
+                                <th style="text-align: center; vertical-align: middle;">Costos Totales</th> 
+                                <th style="text-align: center; vertical-align: middle;">Valor por Unidad</th> 
+                                
+                                
+                            </tr>
+                        </thead>
+                           
+                            <!-- Contenido de la tabla -->
+                            <?php 
+
+                             $cantidad_aproducir = number_format($cantidad_producir, 0 ,',', '.');
+
+                            ?>
+                            <tr>
+                           
+                                
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $nombreproducto ; ?>Und</td>
+                                <td style="text-align: center; vertical-align: middle;"> <?php echo $cantidad_aproducir;?></td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $cantidad_productos;?></td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $valor_total_gastos; ?></td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $valor_total_costos; ?> </td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $precio_unidad; ?> </td>
+
+                     
+                            </tr>
+                           
+                                 <?php
+                            
+                        
+                                ?>   
+                                
+                       </table>
+                       </div>
+<br><br><br><br>
 
 
 
