@@ -116,7 +116,7 @@
 
 <div style="float: right;  width: 200px;">
 
- <a href="drop.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Simulación </a>
+ <a href="drop1.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Simulación </a>
 </div>
 <div style="float: right;  width: 200px;">
 
