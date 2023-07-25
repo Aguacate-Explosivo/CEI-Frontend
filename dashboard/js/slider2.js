@@ -32,3 +32,13 @@ outputeee.innerHTML = slidereee.value + "%" ; // Display the default slider valu
 slidereee.oninput = function() {
     outputeee.innerHTML = this.value + "%";
 }
+
+
+var slidereeee = document.getElementById("porcentaje_ganancia");
+var outputeeee = document.getElementById("porcentaje_ganancia_barra");
+outputeeee.innerHTML = slidereeee.value + "%" ; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slidereeee.oninput = function() {
+    outputeeee.innerHTML = this.value + "%";
+}

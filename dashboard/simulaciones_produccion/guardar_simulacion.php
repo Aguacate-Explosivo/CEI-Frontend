@@ -81,11 +81,11 @@
   $valor_total_gastoe =  $_SESSION['valor_total_gastoe'];
   $cantidad_producire =$_SESSION['cantidad_producire'];
   $nombreproducto =  $_SESSION['nombreproducto'];
-
+  $porcentaje_ganancia =  $_SESSION['porcentaje_ganancia'];
   $importe =  $_SESSION['importe'];
 
   //agregar tabla a base de datos
-?>                     
+?>                    
              
 <!DOCTYPE html>
 <html lang="es">
@@ -258,6 +258,9 @@
                                                             <input type="text" id="cantidad_producire" name="cantidad_producire" value="<?php echo $cantidad_producire; ?>">
                                                             <label for="cantidad_producire" class="form__label"></label>
                                                             
+                                                             <input type="text" id="porcentaje_ganancia" name="porcentaje_ganancia" value="<?php echo $porcentaje_ganancia; ?>">
+                                                            <label for="porcentaje_ganancia" class="form__label"></label>
+
                                                             <input type="text" id="nombreproducto" name="nombreproducto" value="<?php echo $nombreproducto; ?>">
                                                             <label for="nombreproducto" class="form__label"></label>
                                                             <input type="text" id="importe" name="importe" value="<?php echo $importe; ?>">

@@ -41,6 +41,9 @@
       $_SESSION['valor_total_gastoe'] = htmlentities($_POST["valor_total_gastoe"]);
       $_SESSION['valor_total_costoe'] = htmlentities($_POST["valor_total_costoe"]);
       $_SESSION['cantidad_producire'] = htmlentities($_POST["cantidad_producire"]);
+      $_SESSION['porcentaje_ganancia'] = htmlentities($_POST["porcentaje_ganancia"]);
+
+      
       $_SESSION['importe'] = htmlentities($_POST["importe"]);
       $_SESSION['nombreproducto'] = htmlentities($_POST["nombreproducto"]);
 
@@ -142,19 +145,21 @@
 $_SESSION['cantidad_productose'] = isset($_POST["cantidad_productose"]) ? htmlentities($_POST["cantidad_productose"]) : 10;
 $_SESSION['valor_total_gastoe'] = isset($_POST["valor_total_gastoe"]) ? htmlentities($_POST["valor_total_gastoe"]) : 10;
 $_SESSION['valor_total_costoe'] = isset($_POST["valor_total_costoe"]) ? htmlentities($_POST["valor_total_costoe"]) : 10;
-$_SESSION['cantidad_producire'] = isset($_POST["cantidad_producire"]) ? htmlentities($_POST["cantidad_producire"]) : 10;
+$_SESSION['cantidad_producire'] = isset($_POST["cantidad_producire"]) ? htmlentities($_POST["cantidad_producire"]) : 0;
+$_SESSION['porcentaje_ganancia'] = isset($_POST["porcentaje_ganancia"]) ? htmlentities($_POST["porcentaje_ganancia"]) : 20;
 
 $cantidad_productose =  $_SESSION['cantidad_productose'];
 $valor_total_costoe =  $_SESSION['valor_total_costoe'];
 $valor_total_gastoe =  $_SESSION['valor_total_gastoe'];
 $cantidad_producire =$_SESSION['cantidad_producire'];
+$porcentaje_ganancia =$_SESSION['porcentaje_ganancia'];
 
 
 ?>   
     <div class="scroll">
     <div class="col-md-9">
       <label for="formControlRange">Cantidad Productos</label>
-    <input type="range" min="1" max="100"  step="1"
+    <input type="range" min="0" max="100"  step="1"
      class="form-control-range range-slider" value="<?php echo $cantidad_producire; ?>"  id="cantidad_producire" 
      name="cantidad_producire">
     </div>
@@ -204,7 +209,20 @@ $cantidad_producire =$_SESSION['cantidad_producire'];
   </div>
   <br>
 <br><br>
-
+ 
+<br>
+<br>
+  <div class="col-md-9">
+      <label for="formControlRange">Porcentaje de Ganancias</label>
+    <input type="range" min="1" max="100" value="<?php echo $porcentaje_ganancia; ?>"  step="1"
+     class="form-control-range range-slider" id="porcentaje_ganancia" name="porcentaje_ganancia">
+    </div>
+    <div class="col-md-3">
+      <span id="porcentaje_ganancia_barra">0</span>
+  </div>
+  <br>
+<br><br>
+<br><br>
   <br>
  <div>
  <button type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Calcular Datos</button>     
@@ -220,6 +238,7 @@ $cantidad_producire =$_SESSION['cantidad_producire'];
  $costos_porcentaje= $valor_total_costoe/100 ;
  $gastos_porcentaje= $valor_total_gastoe /100;
  $materiaprima_porcentaje= $cantidad_productose /100;
+ $porcentaje_ganancias= $porcentaje_ganancia /100;
  $importe_porcentaje= $importe /100;
 
  $costos_simuladoss = ($valor_total_costo * $costos_porcentaje) + $valor_total_costo ;
@@ -240,15 +259,30 @@ $cantidad_producire =$_SESSION['cantidad_producire'];
  $precio_unidad = number_format($precio_unidades, 0 ,',', '.');
 
  $precio_unidade_simulados = $costos_simuladoss + $gastos_simuladoss + $materiaprima_simuladoss;
- $cantida =($cantidad_producir * $producir_porcentaje);
+ $cantida =($cantidad_producir * $producir_porcentaje)+ $cantidad_producir ;
  $precio_unidades_simulados = ($cantidad_producir + $cantida);
- $precio_unidade_simuladoss= $precio_unidade_simulados /  $precio_unidades_simulados ;
+ $precio_unidade_simuladoss= $precio_unidade_simulados /  $cantida ;
  $precio_unidad_simulados = number_format($precio_unidade_simuladoss, 0 ,',', '.');
+
+ $precio_unidade_simuladosss = number_format($precio_unidade_simulados, 2 ,',', '.');
+ $precio_unida = number_format($precio_unidade, 2 ,',', '.');
+
+ $porcentaje= ($precio_unidade_simuladoss * $porcentaje_ganancias) + $precio_unidade_simuladoss ;
+$porcentajes = number_format($porcentaje, 0 ,',', '.');
+
+$total_ganancia=($cantida*$porcentaje_ganancias) + $cantida;
+$total_ganancias=$total_ganancia*$porcentaje;
+$total_gananciass = number_format($total_ganancias, 2 ,',', '.');
+
+$ganancia_neta=$total_ganancias-$precio_unidade_simulados;
+$ganancias_neta = number_format($ganancia_neta, 2 ,',', '.');
 
 ?>
   
 <table id="" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
+
+                       
                             <tr>
                            
                                 <th style="text-align: center; vertical-align: middle;">Datos Reales  </th>
@@ -278,9 +312,9 @@ $cantidad_producire =$_SESSION['cantidad_producire'];
                             </tr> 
                               <tr>
                                 <td style="text-align: center; vertical-align: middle;">Invercion Total</td>
-                                <td style="text-align: center; vertical-align: middle;"> <?php echo $precio_unidad; ?> Pesos Und </td>
+                                <td style="text-align: center; vertical-align: middle;"> <?php echo $precio_unida; ?> </td>
                                 <td style="text-align: center; vertical-align: middle;">Invercion Total</td>
-                                <td style="text-align: center; vertical-align: middle;"><?php echo $precio_unidad_simulados; ?> Pesos Und</td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $precio_unidade_simuladosss; ?> </td>
                             </tr> 
                             <tr>
                                 <td style="text-align: center; vertical-align: middle;">Precio de Venta Unidad</td>
@@ -291,21 +325,41 @@ $cantidad_producire =$_SESSION['cantidad_producire'];
                           
                                 <tr>
                                 <td style="text-align: center; vertical-align: middle;">Precio de Venta Unidad + Porcentaje</td>
-                                <td style="text-align: center; vertical-align: middle;"> <?php echo $precio_unidad; ?> Pesos Und </td>
+                                <td style="text-align: center; vertical-align: middle;"> 0 Pesos </td>
                                 <td style="text-align: center; vertical-align: middle;">Precio de Venta Unidad  + Porcentaje</td>
-                                <td style="text-align: center; vertical-align: middle;"><?php echo $precio_unidad_simulados; ?> Pesos Und</td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $porcentajes; ?> Pesos Und</td>
+                            </tr> 
+                                 <tr>
+                                <td style="text-align: center; vertical-align: middle;">Total Ganancias</td>
+                                <td style="text-align: center; vertical-align: middle;"> 0 Pesos </td>
+                                <td style="text-align: center; vertical-align: middle;">Total Ganancias</td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $total_gananciass; ?> </td>
+                            </tr> 
+
+                             <tr>
+                                <td style="text-align: center; vertical-align: middle;">Ganancia Neta</td>
+                                <td style="text-align: center; vertical-align: middle;"> 0 Pesos </td>
+                                <td style="text-align: center; vertical-align: middle;">Ganancia Neta</td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $ganancias_neta; ?> </td>
                             </tr> 
                                    
                        </table>
 </div>
  </div>                     
 </form>
- <br>
- <br>
- <br>
-<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 <form  method="POST" enctype="multipart/form-data" >
-<button style="width: 250px; left:300px;" value="Siguiente" name="Siguiente"  type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Siguiente</button>                  
+<button style="width: 250px; left:750px;" value="Siguiente" name="Siguiente"  type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Siguiente</button>                  
                       
    <!-- Inputs para transferir informacion -->
    <div>
@@ -373,6 +427,9 @@ $cantidad_producire =$_SESSION['cantidad_producire'];
                                                             <input type="text" id="cantidad_producire" name="cantidad_producire" value="<?php echo $cantidad_producire; ?>">
                                                             <label for="cantidad_producire" class="form__label"></label>
                                                             
+                                                             <input type="text" id="porcentaje_ganancia" name="porcentaje_ganancia" value="<?php echo $porcentaje_ganancia; ?>">
+                                                            <label for="porcentaje_ganancia" class="form__label"></label>
+
                                                             <input type="text" id="nombreproducto" name="nombreproducto" value="<?php echo $nombreproducto; ?>">
                                                             <label for="nombreproducto" class="form__label"></label>
                                                             <input type="text" id="importe" name="importe" value="<?php echo $importe; ?>">

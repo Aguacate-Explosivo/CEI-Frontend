@@ -81,7 +81,7 @@
   $valor_total_gastoe =  $_SESSION['valor_total_gastoe'];
   $cantidad_producire =$_SESSION['cantidad_producire'];
   $nombreproducto =  $_SESSION['nombreproducto'];
-
+  $porcentaje_ganancia =  $_SESSION['porcentaje_ganancia'];
   $importe =  $_SESSION['importe'];
 
   //agregar tabla a base de datos
@@ -142,6 +142,7 @@
  $costos_porcentaje= $valor_total_costoe/100 ;
  $gastos_porcentaje= $valor_total_gastoe /100;
  $materiaprima_porcentaje= $cantidad_productose /100;
+ $porcentaje_ganancias= $porcentaje_ganancia /100;
  $importe_porcentaje= $importe /100;
 
  $costos_simuladoss = ($valor_total_costo * $costos_porcentaje) + $valor_total_costo ;
@@ -162,15 +163,29 @@
  $precio_unidad = number_format($precio_unidades, 0 ,',', '.');
 
  $precio_unidade_simulados = $costos_simuladoss + $gastos_simuladoss + $materiaprima_simuladoss;
- $cantida =($cantidad_producir * $producir_porcentaje);
+ $cantida =($cantidad_producir * $producir_porcentaje)+ $cantidad_producir ;
  $precio_unidades_simulados = ($cantidad_producir + $cantida);
- $precio_unidade_simuladoss= $precio_unidade_simulados /  $precio_unidades_simulados ;
+ $precio_unidade_simuladoss= $precio_unidade_simulados /  $cantida ;
  $precio_unidad_simulados = number_format($precio_unidade_simuladoss, 0 ,',', '.');
+
+ $precio_unidade_simuladosss = number_format($precio_unidade_simulados, 2 ,',', '.');
+ $precio_unida = number_format($precio_unidade, 2 ,',', '.');
+
+ $porcentaje= ($precio_unidade_simuladoss * $porcentaje_ganancias) + $precio_unidade_simuladoss ;
+$porcentajes = number_format($porcentaje, 0 ,',', '.');
+
+$total_ganancia=($cantida*$porcentaje_ganancias) + $cantida;
+$total_ganancias=$total_ganancia*$porcentaje;
+$total_gananciass = number_format($total_ganancias, 2 ,',', '.');
+
+$ganancia_neta=$total_ganancias-$precio_unidade_simulados;
+$ganancias_neta = number_format($ganancia_neta, 2 ,',', '.');
 
 ?>
   
 <table id="" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
+
                             <tr>
                            
                                 <th style="text-align: center; vertical-align: middle;">Datos Reales  </th>
@@ -198,6 +213,12 @@
                                 <td style="text-align: center; vertical-align: middle;">Total en Materia Prima</td>
                                 <td style="text-align: center; vertical-align: middle;"> <?php echo $materiaprima_simulados; ?></td>
                             </tr> 
+                              <tr>
+                                <td style="text-align: center; vertical-align: middle;">Invercion Total</td>
+                                <td style="text-align: center; vertical-align: middle;"> <?php echo $precio_unida; ?> </td>
+                                <td style="text-align: center; vertical-align: middle;">Invercion Total</td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $precio_unidade_simuladosss; ?> </td>
+                            </tr> 
                             <tr>
                                 <td style="text-align: center; vertical-align: middle;">Precio de Venta Unidad</td>
                                 <td style="text-align: center; vertical-align: middle;"> <?php echo $precio_unidad; ?> Pesos Und </td>
@@ -205,15 +226,43 @@
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $precio_unidad_simulados; ?> Pesos Und</td>
                             </tr> 
                           
+                                <tr>
+                                <td style="text-align: center; vertical-align: middle;">Precio de Venta Unidad + Porcentaje</td>
+                                <td style="text-align: center; vertical-align: middle;"> 0 Pesos </td>
+                                <td style="text-align: center; vertical-align: middle;">Precio de Venta Unidad  + Porcentaje</td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $porcentajes; ?> Pesos Und</td>
+                            </tr> 
+                                 <tr>
+                                <td style="text-align: center; vertical-align: middle;">Total Ganancias</td>
+                                <td style="text-align: center; vertical-align: middle;"> 0 Pesos </td>
+                                <td style="text-align: center; vertical-align: middle;">Total Ganancias</td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $total_gananciass; ?> </td>
+                            </tr> 
+
+                             <tr>
+                                <td style="text-align: center; vertical-align: middle;">Ganancia Neta</td>
+                                <td style="text-align: center; vertical-align: middle;"> 0 Pesos </td>
+                                <td style="text-align: center; vertical-align: middle;">Ganancia Neta</td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $ganancias_neta; ?> </td>
+                            </tr> 
                                    
                        </table>
 </div>
 </div>
 
 <form  method="POST" enctype="multipart/form-data" >
-                      
+         <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+             
    <!-- Inputs para transferir informacion -->
-   <div>
+  <div>
                                                             <!-- Form 1 -->
                                                             <input type="hidden" id="doc_autor_plan" name="doc_autor_plan" value="<?php  echo $documento; ?>">
                                                             <label for="doc_autor_plan" class="form__label"></label>
@@ -278,6 +327,9 @@
                                                             <input type="text" id="cantidad_producire" name="cantidad_producire" value="<?php echo $cantidad_producire; ?>">
                                                             <label for="cantidad_producire" class="form__label"></label>
                                                             
+                                                             <input type="text" id="porcentaje_ganancia" name="porcentaje_ganancia" value="<?php echo $porcentaje_ganancia; ?>">
+                                                            <label for="porcentaje_ganancia" class="form__label"></label>
+
                                                             <input type="text" id="nombreproducto" name="nombreproducto" value="<?php echo $nombreproducto; ?>">
                                                             <label for="nombreproducto" class="form__label"></label>
                                                             <input type="text" id="importe" name="importe" value="<?php echo $importe; ?>">

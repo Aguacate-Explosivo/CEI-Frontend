@@ -84,7 +84,7 @@ ob_start();
   $valor_total_gastoe =  $_SESSION['valor_total_gastoe'];
   $cantidad_producire =$_SESSION['cantidad_producire'];
   $nombreproducto =  $_SESSION['nombreproducto'];
-
+  $porcentaje_ganancia =  $_SESSION['porcentaje_ganancia'];
   $importe =  $_SESSION['importe'];
 
   //agregar tabla a base de datos
@@ -133,7 +133,7 @@ ob_start();
   <h2 class="text">E-mail del autor del plan : <span><?php echo  $autor_email ?>.</span> </h2>
 <form  method="POST" enctype="multipart/form-data" >
                       
-<div>
+ <div>
                                                             <!-- Form 1 -->
                                                             <input type="hidden" id="doc_autor_plan" name="doc_autor_plan" value="<?php  echo $documento; ?>">
                                                             <label for="doc_autor_plan" class="form__label"></label>
@@ -198,6 +198,9 @@ ob_start();
                                                             <input type="text" id="cantidad_producire" name="cantidad_producire" value="<?php echo $cantidad_producire; ?>">
                                                             <label for="cantidad_producire" class="form__label"></label>
                                                             
+                                                             <input type="text" id="porcentaje_ganancia" name="porcentaje_ganancia" value="<?php echo $porcentaje_ganancia; ?>">
+                                                            <label for="porcentaje_ganancia" class="form__label"></label>
+
                                                             <input type="text" id="nombreproducto" name="nombreproducto" value="<?php echo $nombreproducto; ?>">
                                                             <label for="nombreproducto" class="form__label"></label>
                                                             <input type="text" id="importe" name="importe" value="<?php echo $importe; ?>">
