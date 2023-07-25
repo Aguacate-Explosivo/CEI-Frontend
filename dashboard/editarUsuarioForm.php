@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="../img/logo.webp">
-    <title>CEI | Registrar Usuario</title>
+    <title>CEI | Editar Usuario</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -21,56 +21,66 @@
 </head>
 
 <body>
+    <?php
+    require_once('../conexion.php');
+    $conexion = conectar();
+
+    $id = $_GET['Id'];
+    $consulta ="SELECT * FROM `datos` WHERE id = $id ";
+    $busqueda=mysqli_query($conexion,$consulta);
+
+    foreach($busqueda as $row) {
+    ?>
     <!-- Formulario -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-5 mb-5">Registrar Usuario</h1>
+                <h1 class="display-5 mb-5">Editar Usuario</h1>
             </div>
             <div class="row g-5">
                 <div class="col-lg-6 mx-auto wow fadeInUp" data-wow-delay="0.1s">
 
-                    <form action="controladorusuario.php" required method="POST" enctype="multipart/form-data">
+                    <form action="editarUsuario.php?Id=<?php echo $row['id']?>" required method="POST" enctype="multipart/form-data">
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">REGISTRO DE USUARIO</h3>
+                                <h3 class="card-title">EDICIÓN DE USUARIO</h3>
                             </div>
 
                             <div class="card-body">
-                                <label>Seleccione Nombre de Usuario</label>
+                                <label>Digite el nuevo Nombre de Usuario</label>
                                 <div class="input-group mb-auto">
                                     <span class="input-group-text"><i class="fa fa-user"
                                             aria-hidden="false"></i></span>
                                     <input type="text" id="nombrel" name="nombrel" required
-                                        pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+" class="form-control" placeholder="Username">
+                                        pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+" class="form-control" placeholder="Username" value="<?php echo $row["usuario"]; ?>">
                                 </div>
 
                                 <br>
 
                                 <div>
-                                    <label>Seleccione Correo</label>
+                                    <label>Digite el nuevo Correo</label>
                                     <div class="input-group mb-auto">
                                         <span class="input-group-text"><i class="far fa-envelope"></i></span>
                                         <input type="text" id="correol" name="correol" required class="form-control"
-                                            placeholder="correo">
+                                            placeholder="correo" value="<?php echo $row["email"]; ?>">
                                     </div>
 
                                     <br>
 
                                     <div>
-                                        <label>Seleccione Contraseña</label>
+                                        <label>Digite la Nueva Contraseña</label>
                                         <div class="input-group mb-auto">
                                             <span class="input-group-text"><i class="fas fa-unlock"></i></span>
                                             <input type="password" id="psswdl" name="psswdl" required
                                                 pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+" class="form-control"
-                                                placeholder="Contraseña">
+                                                placeholder="Contraseña" value="<?php echo $row["contrasena"]; } ?>">
                                         </div>
 
                                         <br>
 
                                         <div class="row">
                                             <div class="form-group">
-                                                <label>Seleccione Rol</label>
+                                                <label>Seleccione el nuevo Rol</label>
                                                 <select class="form-control select2bs4" id="roll" name="roll"
                                                     style="width: 100%;">
                                                     <option selected="selected">Administrador</option>
@@ -85,7 +95,7 @@
                                         <br>
                                         <br>
                                         <div class="card-footer">
-                                            <button type="submit" class="btn btn-primary">Registrar</button>
+                                            <button type="submit" class="btn btn-primary">Completar Edición</button>
 
                                             <a style="margin: 2px; border-radius: 5px;" href="DashUsuarios.php"
                                                 class="btn btn-info"> Regresar</a>
