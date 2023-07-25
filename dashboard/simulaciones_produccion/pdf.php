@@ -1,3 +1,6 @@
+<?php 
+ob_start();
+?>
 <?php
   session_start();
   if(isset($_POST["Siguiente"])){
@@ -92,212 +95,45 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dashboard Admin</title>
+  <title>Resultado Simulacion CEI</title>
   <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.png">
   <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
   <link href="../css/stylese.css" rel="stylesheet">
 </head>
-<body style="background-image: url(img/fondo.png);">
-  <?php
-  include_once("../simulaciones/menu1.php");
-  ?>
-  
-      <div class="wrapper" style="background: white; width: 80%; margin: auto;">
-        <div class="container-fluid">
-          <div class="row bg-title">
-            <div class="col-lg-12">
-              <h4 class="page-title">Octavo Paso </h4>
-              <div style="float: right;  width: 200px; ">
-                             <a href="drop.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Sumulacion </a>
-                            </div>
-              <ol class="breadcrumb">
-              </ol>
-            </div>
-            <!-- /.col-lg-12 -->
-          </div>
+<style>
+    table {
+      border-collapse: collapse;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 12px; 
+      }
+    td {
+      padding: 10px;
+      border: 0.5px solid black;
+      text-align: center;
+    }
+    h2 {
+      text-align: left;
+      font-size: 20px; 
+      font-family: "Times New Roman", Times, serif;    }
+    span {
+      font-weight: normal;
+      font-size: 18px; 
 
-    
-<form class="range-form" method="POST" action="produccion.php" >
- <div class="inicio">
-  <h1 class="text-center">Simulaciones Resultados Empresa</h1>
- <h3 class="text-center"><?php echo $nombre_negocio_plan ; ?></h3>
-<br><br>
-<div style="float: right;  width: 200px;">
-
- <a href="agregar_materiaprima.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Agregar Materia Prima</a>
-</div>
-<div style="float: right;  width: 200px;">
-
- <a href="agregar_gastos.php" class="btn btn-warning btn-block btn-rounded waves-effect waves-light">Agregar Gastos</a>
-</div>
-<div style="float: right;  width: 200px;">
-
- <a href="agregar_costos.php" class="btn btn-info btn-block btn-rounded waves-effect waves-light">Agregar Costos</a>
-</div>
-
-<br><br>
-<?php
-
-
-
-$_SESSION['cantidad_productose'] = isset($_POST["cantidad_productose"]) ? htmlentities($_POST["cantidad_productose"]) : 10;
-$_SESSION['valor_total_gastoe'] = isset($_POST["valor_total_gastoe"]) ? htmlentities($_POST["valor_total_gastoe"]) : 10;
-$_SESSION['valor_total_costoe'] = isset($_POST["valor_total_costoe"]) ? htmlentities($_POST["valor_total_costoe"]) : 10;
-$_SESSION['cantidad_producire'] = isset($_POST["cantidad_producire"]) ? htmlentities($_POST["cantidad_producire"]) : 10;
-
-$cantidad_productose =  $_SESSION['cantidad_productose'];
-$valor_total_costoe =  $_SESSION['valor_total_costoe'];
-$valor_total_gastoe =  $_SESSION['valor_total_gastoe'];
-$cantidad_producire =$_SESSION['cantidad_producire'];
-
-
-?>   
-    <div class="scroll">
-    <div class="col-md-9">
-      <label for="formControlRange">Cantidad Productos</label>
-    <input type="range" min="1" max="100"  step="1"
-     class="form-control-range range-slider" value="<?php echo $cantidad_producire; ?>"  id="cantidad_producire" 
-     name="cantidad_producire">
-    </div>
-    <div class="col-md-3">
-      <span id="cantidad_producire_barra">0</span>
-  </div>
-  <br>
-<br><br>
-<br>
-<br>
-
-  <div class="col-md-9">
-      <label for="formControlRange">Catidad de Materia Prima</label>
-    <input type="range" min="1" max="100"  step="1"
-     class="form-control-range range-slider" value="<?php echo $cantidad_productose; ?>" 
-     id="cantidad_productose" name="cantidad_productose">
-    </div>
-    <div class="col-md-3">
-      <span id="cantidad_productose_barra">0</span>
-  </div>
-  <br>
-<br><br>
-<br>
-<br>
-
-  <div class="col-md-9">
-      <label for="formControlRange">Gastos Generales</label>
-    <input type="range" min="1" max="100" value="<?php echo $valor_total_gastoe; ?>"  step="1"
-     class="form-control-range range-slider" id="valor_total_gastoe"  name="valor_total_gastoe">
-    </div>
-    <div class="col-md-3">
-      <span id="valor_total_gastoe_barra">0</span>
-  </div>
-  <br>
-<br><br>
- 
-<br>
-<br>
- 
-  <div class="col-md-9">
-      <label for="formControlRange">Costos Generales</label>
-    <input type="range" min="1" max="100" value="<?php echo $valor_total_costoe; ?>"  step="1"
-     class="form-control-range range-slider" id="valor_total_costoe" name="valor_total_costoe">
-    </div>
-    <div class="col-md-3">
-      <span id="valor_total_costoe_barra">0</span>
-  </div>
-  <br>
-<br><br>
-
-  <br>
- <div>
- <button type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Calcular Datos</button>     
-
-</div>
-</div>
-<div class="table">
-<?php
- require_once('../../conexion.php');
- $conexion=conectar();
-
- $producir_porcentaje= $cantidad_producire/100;
- $costos_porcentaje= $valor_total_costoe/100 ;
- $gastos_porcentaje= $valor_total_gastoe /100;
- $materiaprima_porcentaje= $cantidad_productose /100;
- $importe_porcentaje= $importe /100;
-
- $costos_simuladoss = ($valor_total_costo * $costos_porcentaje) + $valor_total_costo ;
- $costos_simulados = number_format($costos_simuladoss, 2 ,',', '.');
-
- $gastos_simuladoss = ($valor_total_gasto * $gastos_porcentaje) + $valor_total_gasto ;
- $gastos_simulados = number_format($gastos_simuladoss, 2 ,',', '.');
-
- $materiaprima_simuladoss = ($cantidad_producto * $materiaprima_porcentaje) + $cantidad_producto ;
- $materiaprima_simulados = number_format($materiaprima_simuladoss, 2 ,',', '.');
-
- $valor_total_costos = number_format($valor_total_costo, 2 ,',', '.');
- $valor_total_gastos = number_format($valor_total_gasto, 2 ,',', '.');
- $cantidad_productos = number_format($cantidad_producto, 2 ,',', '.');
- 
- $precio_unidade = $valor_total_costo + $valor_total_gasto + $cantidad_producto;
- $precio_unidades=$precio_unidade/$cantidad_producir;
- $precio_unidad = number_format($precio_unidades, 0 ,',', '.');
-
- $precio_unidade_simulados = $costos_simuladoss + $gastos_simuladoss + $materiaprima_simuladoss;
- $cantida =($cantidad_producir * $producir_porcentaje);
- $precio_unidades_simulados = ($cantidad_producir + $cantida);
- $precio_unidade_simuladoss= $precio_unidade_simulados /  $precio_unidades_simulados ;
- $precio_unidad_simulados = number_format($precio_unidade_simuladoss, 0 ,',', '.');
-
-?>
-  
-<table id="" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                        <thead>
-                            <tr>
-                           
-                                <th style="text-align: center; vertical-align: middle;">Datos Reales  </th>
-                                <th style="text-align: center; vertical-align: middle;">TOTALES  </th>
-                                <th style="text-align: center; vertical-align: middle;">Datos Simulados</th> 
-                                <th style="text-align: center; vertical-align: middle;">TOTALES  </th>
-                            </tr>
-                        </thead>
-                            <!-- Contenido de la tabla -->
-                            <tr>
-                                <td style="text-align: center; vertical-align: middle;">Total de Costos</td>
-                                <td style="text-align: center; vertical-align: middle;"> <?php echo $valor_total_costos; ?></td>
-                                <td style="text-align: center; vertical-align: middle;">Total de Costos</td>
-                                <td style="text-align: center; vertical-align: middle;"><?php echo $costos_simulados; ?></td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: center; vertical-align: middle;">Total de Gastos</td>
-                                <td style="text-align: center; vertical-align: middle;"> <?php echo $valor_total_gastos; ?></td>
-                                <td style="text-align: center; vertical-align: middle;">Total de Gastos</td>
-                                <td style="text-align: center; vertical-align: middle;"> <?php echo $gastos_simulados; ?></td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: center; vertical-align: middle;">Total en Materia Prima</td>
-                                <td style="text-align: center; vertical-align: middle;"> <?php echo $cantidad_productos; ?> </td>
-                                <td style="text-align: center; vertical-align: middle;">Total en Materia Prima</td>
-                                <td style="text-align: center; vertical-align: middle;"> <?php echo $materiaprima_simulados; ?></td>
-                            </tr> 
-                            <tr>
-                                <td style="text-align: center; vertical-align: middle;">Precio de Venta Unidad</td>
-                                <td style="text-align: center; vertical-align: middle;"> <?php echo $precio_unidad; ?> Pesos Und </td>
-                                <td style="text-align: center; vertical-align: middle;">Precio de Venta Unidad</td>
-                                <td style="text-align: center; vertical-align: middle;"><?php echo $precio_unidad_simulados; ?> Pesos Und</td>
-                            </tr> 
-                          
-                                   
-                       </table>
-</div>
- </div>                     
-</form>
- 
-<hr>
+    }
+  </style>
+   <h1 class="text-center" style="text-align: center;">Reporte de Simulacion  </h1>
+  <br><br>
+  <h1 class="text-center" style="text-align: center;">Datos del Autor    </h1>
+  <h2 class="text">Documento del autor del plan : <span><?php echo  $documento ?>.</span> </h2>
+  <h2 class="text">Nombre del autor del plan : <span><?php echo  $nombre ?>.</span> </h2>
+  <h2 class="text">E-mail del autor del plan : <span><?php echo  $autor_email ?>.</span> </h2>
 <form  method="POST" enctype="multipart/form-data" >
-<button style="width: 250px; left:300px;" value="Siguiente" name="Siguiente"  type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Siguiente</button>                  
                       
-   <!-- Inputs para transferir informacion -->
-   <div>
+<div>
                                                             <!-- Form 1 -->
                                                             <input type="hidden" id="doc_autor_plan" name="doc_autor_plan" value="<?php  echo $documento; ?>">
                                                             <label for="doc_autor_plan" class="form__label"></label>
@@ -370,89 +206,42 @@ $cantidad_producire =$_SESSION['cantidad_producire'];
 
                                                             
                                                         </div>
-                                                        </form>       
-
-<br><br><br>
-
-
-<div class="bajo">
-<h1 class="text-center">Producto  </h1>
-<table id="" class="table table-striped table-bordered" cellspacing="0" width="80%" >
-                        <thead>
-                            <tr>
-                              
-                                <th style="text-align: center; vertical-align: middle;">Nombre Producto </th>    
-                                <th style="text-align: center; vertical-align: middle;">Cantidad</th> 
-                                <th style="text-align: center; vertical-align: middle;">Gasto de Materia prima Totales</th> 
-                                <th style="text-align: center; vertical-align: middle;">Otros Gastos Totales</th> 
-                                <th style="text-align: center; vertical-align: middle;">Costos Totales</th> 
-                                <th style="text-align: center; vertical-align: middle;">Valor por Unidad</th> 
-                                
-                                
-                            </tr>
-                        </thead>
-                           
-                            <!-- Contenido de la tabla -->
-                            <?php 
-
-                             $cantidad_aproducir = number_format($cantidad_producir, 0 ,',', '.');
-
-                            ?>
-                            <tr>
-                           
-                                
-                                <td style="text-align: center; vertical-align: middle;"><?php echo $nombreproducto ; ?>Und</td>
-                                <td style="text-align: center; vertical-align: middle;"> <?php echo $cantidad_aproducir;?></td>
-                                <td style="text-align: center; vertical-align: middle;"><?php echo $cantidad_productos;?></td>
-                                <td style="text-align: center; vertical-align: middle;"><?php echo $valor_total_gastos; ?></td>
-                                <td style="text-align: center; vertical-align: middle;"><?php echo $valor_total_costos; ?> </td>
-                                <td style="text-align: center; vertical-align: middle;"><?php echo $precio_unidad; ?> </td>
-
-                     
-                            </tr>
-                           
-                                 <?php
-                            
-                        
-                                ?>   
-                                
-                       </table>
-                       </div>
-<br><br><br><br>
-
-
-
+                                                             </form>       
 
 
 <!-- inicio -->
-
+<br><br><br>
+        <footer class="footer text-center" style="text-align: center;"> 
+      FACNET - 2023 &copy; 
+    </footer>
+  </div>
   <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
   <script src="js/jquery.nicescroll.js"></script>
   <script src="js/waves.js"></script>
-  <script src="../js/slider2.js"></script>
+  <script src="../js/slider.js"></script>
   <script src="js/myadmin.js"></script>
 </body>
-<footer>
-    <?php
-  include_once("../footer.php");
-  ?>
-</footer>
+
 </html>
 
+<?php 
+$html=ob_get_clean();
 
 
+require_once '../../dompdf/autoload.inc.php';
 
+use Dompdf\Dompdf;
 
+$dompdf = new Dompdf();
 
+$dompdf->loadHtml("$html");
+$dompdf->setPaper('letter');
 
+$dompdf->render();
 
+$dompdf->stream("document.pdf", array("Attachment" => false));
 
-
-
-
-
-
-
+?>
