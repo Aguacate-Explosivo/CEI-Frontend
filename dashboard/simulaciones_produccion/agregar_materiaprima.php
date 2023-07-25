@@ -60,11 +60,11 @@
   $socios_productores =  $_SESSION['socios_productores'];
   $tipo_marketing_plan =  $_SESSION['tipo_marketing_plan'];
   $inversion_publicidad =  $_SESSION['inversion_publicidad'];
-  $cantidad_producto =  $_SESSION['cantidad_producto'];
+
   $cantidad_producir =  $_SESSION['cantidad_producir'];
   $nombreproducto =  $_SESSION['nombreproducto'];
 
-  $importe =  $_SESSION['importe'];
+
 
 ?>
 

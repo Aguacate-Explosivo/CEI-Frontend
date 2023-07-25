@@ -68,7 +68,6 @@
   $nombreproducto =  $_SESSION['nombreproducto'];
 
 
-  $valor_total_gasto =  $_SESSION['valor_total_gasto'];
   $importe =  $_SESSION['importe'];
 
   //agregar tabla a base de datos

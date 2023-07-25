@@ -44,12 +44,7 @@
   $Precio_negocio_plan = $_SESSION['Precio_negocio_plan'];
   $Calidad_negocio_plan = $_SESSION['Calidad_negocio_plan'];
   $Rapidez_negocio_plan =  $_SESSION['Rapidez_negocio_plan'];
-  $clientes_interesados_plan =  $_SESSION['clientes_interesados_plan'];
-  $cantidadMonetaria_interesados_plan =  $_SESSION['cantidadMonetaria_interesados_plan'];
-  $socios_productores =  $_SESSION['socios_productores'];
-  $tipo_marketing_plan =  $_SESSION['tipo_marketing_plan'];
-  $inversion_publicidad =  $_SESSION['inversion_publicidad'];
- 
+
   require_once('../../conexion.php');
   $conexion=conectar(); 
   $creartabla ="CREATE TABLE ` $nombre_negocio_plan` (

@@ -76,10 +76,7 @@
   $valor_total_gasto =  $_SESSION['valor_total_gasto'];
   $cantidad_producir =$_SESSION['cantidad_producir'];
 
-  $cantidad_productose =  $_SESSION['cantidad_productose'];
-  $valor_total_costoe =  $_SESSION['valor_total_costoe'];
-  $valor_total_gastoe =  $_SESSION['valor_total_gastoe'];
-  $cantidad_producire =$_SESSION['cantidad_producire'];
+  
   $nombreproducto =  $_SESSION['nombreproducto'];
 
   $importe =  $_SESSION['importe'];

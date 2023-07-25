@@ -66,7 +66,6 @@
   $inversion_publicidad =  $_SESSION['inversion_publicidad'];
 
   $cantidad_producto =  $_SESSION['cantidad_producto'];
-  $valor_total_costo =  $_SESSION['valor_total_costo'];
   $valor_total_gasto =  $_SESSION['valor_total_gasto'];
   $cantidad_producir =  $_SESSION['cantidad_producir'];
   $nombreproducto =  $_SESSION['nombreproducto'];

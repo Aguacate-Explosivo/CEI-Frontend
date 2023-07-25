@@ -106,12 +106,16 @@
 
        $tabla=$nombre_negocio_plan;
        $tabla1=$documento;
-       
+       $tabla2=$nombre;
+
        $consulta1 = "DROP TABLE  ` $tabla`";
        $resultado1 = mysqli_query($conexion, $consulta1);
        
        $consulta = "DROP TABLE  ` $tabla1`";
        $resultado = mysqli_query($conexion, $consulta);
+       
+        $consulta2 = "DROP TABLE  ` $tabla2`";
+       $resultado2 = mysqli_query($conexion, $consulta2);
 
             if ($resultado) {
               echo "<script>

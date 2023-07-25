@@ -65,15 +65,11 @@
   $tipo_marketing_plan =  $_SESSION['tipo_marketing_plan'];
   $inversion_publicidad =  $_SESSION['inversion_publicidad'];
 
-  $nombre_producto =  $_SESSION['nombre_producto'];
   $cantidad_producto =  $_SESSION['cantidad_producto'];
   $coste_unidad_producto =  $_SESSION['coste_unidad_producto'];
   $precio_venta_producto =  $_SESSION['precio_venta_producto'];
   $valor_total_gasto =  $_SESSION['valor_total_gasto'];
-  $precio_unitario =  $_SESSION['precio_unitario'];
-  $cantidad_productos =  $_SESSION['cantidad_productos'];
-  $precio_venta =  $_SESSION['precio_venta'];
-  $gastos_generales =  $_SESSION['gastos_generales'];
+
   $importe =  $_SESSION['importe'];
 
   //agregar tabla a base de datos

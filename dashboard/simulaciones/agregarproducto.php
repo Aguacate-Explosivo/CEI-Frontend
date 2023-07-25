@@ -58,10 +58,7 @@
   $socios_productores =  $_SESSION['socios_productores'];
   $tipo_marketing_plan =  $_SESSION['tipo_marketing_plan'];
   $inversion_publicidad =  $_SESSION['inversion_publicidad'];
-  $cantidad_producto =  $_SESSION['cantidad_producto'];
-  $coste_unidad_producto =  $_SESSION['coste_unidad_producto'];
-  $precio_venta_producto =  $_SESSION['precio_venta_producto'];
-  $importe =  $_SESSION['importe'];
+  
 
 ?>
 
