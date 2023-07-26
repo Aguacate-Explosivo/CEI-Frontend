@@ -41,6 +41,7 @@
                       <thead>
                         <tr>
                           <th style="text-align: center; vertical-align: middle;">URL</th>
+                          <th style="text-align: center; vertical-align: middle;">Fecha de Creacion</th>
                           <th style="text-align: center; vertical-align: middle;"> Acciones</th>
                         </tr>
                       </thead>
@@ -53,6 +54,7 @@
                         foreach($busqueda as $row) { ?>
                           <tr>
                             <td style="text-align: center; vertical-align: middle;"><?php echo $row["url"]; ?></td>
+                            <td style="text-align: center; vertical-align: middle;"><?php echo $row["timestamp"]; ?></td>
                             <td style="text-align: center; vertical-align: middle;">
                               <div class="btn-group">
                               <a style="margin: 2px; border-radius: 5px; position: relative;" href="encuesta.php?Id=<?php echo $row["Id"]?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>

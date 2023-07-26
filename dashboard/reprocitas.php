@@ -55,9 +55,11 @@
                             <th>Correo</th>
                             <th>Institucion</th>
                             <th>Barrio</th>
-                            <th>Fecha Hora</th>
+                            <th>Fecha Hora de Cita</th>
                             <th>Tema</th>
                             <th>Descripcion</th>
+                            <th>Fecha de Creacion</th>
+
                             <th>Acciones</th>
                             </tr>
                         </thead>
@@ -81,6 +83,7 @@
                                     <td><?php echo $row["fecha_hora"]; ?></td>
                                     <td><?php echo $row["tema"]; ?></td>
                                     <td><?php echo $row["descripcion"]; ?></td>
+                                    <td><?php echo $row["timestamp"]; ?></td>
                                     <td>
                                       <div class="btn-group">
                                       <a style="margin: 2px; border-radius: 5px; position: relative;" href="administradores/cita.php?idcita=<?php echo $row["idcita"]?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>

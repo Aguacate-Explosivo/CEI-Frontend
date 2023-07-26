@@ -57,9 +57,10 @@
                     <th>Correo</th>
                     <th>Institucion</th>
                     <th>Barrio</th>
-                    <th>Fecha Hora</th>
+                    <th>Fecha Hora de Cita</th>
                     <th>Tema</th>
                     <th>Descripcion</th>
+                    <th>Fecha de Creacion</th>
                 </tr>
             </thead>
                     <?php
@@ -84,6 +85,8 @@
                     <td><?php echo $row["fecha_hora"]; ?></td>
                     <td><?php echo $row["tema"]; ?></td>
                     <td><?php echo $row["descripcion"]; ?></td>
+                    <td><?php echo $row["timestamp"]; ?></td>
+
                 </tr>
                     <?php } ?> 
                     

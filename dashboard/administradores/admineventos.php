@@ -110,6 +110,7 @@
                                 <th style="text-align: center; vertical-align: middle;">Hora</th> 
                                 <th style="text-align: center; vertical-align: middle;">Estado</th>
                                 <th style="text-align: center; vertical-align: middle;">Imagen</th> 
+                                <th style="text-align: center; vertical-align: middle;">Fecha de Creacion</th> 
                                 <th style="text-align: center; vertical-align: middle;">Acciones</th>                           
                                
                             </tr>
@@ -133,6 +134,7 @@
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["hora"]; ?></td>
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["estado"]; ?></td>
                                 <td style="text-align: center; vertical-align: middle;"><img src="data:image/jpg;base64,<?php echo base64_encode($elemento["imagen"]); ?>" class="card-img-top course-image"></td>
+                                 <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["timestamp"]; ?></td>
                                 <td style="text-align: center; vertical-align: middle;">
                                 <a style="margin: 2px; border-radius: 5px;" href="evento.php?id_evento=<?php echo $elemento["id_evento"]?>" class="btn btn-warning" > <i class="fas fa-edit"></i></a>
                                 <a style="margin: 2px; border-radius: 5px;" href="eliminarevento.php?id_evento=<?php echo $elemento["id_evento"]?>" class="btn btn-danger" > <i class="fas fa-trash-alt fa-flip-horizontal"></i></a>

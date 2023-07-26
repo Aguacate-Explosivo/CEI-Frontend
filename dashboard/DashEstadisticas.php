@@ -120,7 +120,9 @@
                             } else {
                                 echo "Error en la consulta: " . mysqli_error($conexion);
                             }
-                            $promedioIngresosEmprendedores = $TotalIngresosEmprendedores/$totalEmprendedores;
+                            $promedioIngresosEmprendedore = $TotalIngresosEmprendedores/$totalEmprendedores;
+                            $promedioIngresosEmprendedores = number_format($promedioIngresosEmprendedore, 2 ,',', '.');
+
                             ?>
                         <!-- Contenido de la tabla -->
 

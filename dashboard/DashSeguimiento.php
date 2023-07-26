@@ -45,6 +45,8 @@
                                 <th style="text-align: center; vertical-align: middle;">Cursos inscritos</th>
                                 <th >Eventos Inscritos</th>                 
                                 <th>Simulaciones</th> 
+                                <th>Fecha de Creacion</th> 
+
                                
                             </tr>
                         </thead>
@@ -126,6 +128,7 @@
 
 
                             </td>
+                             <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["timestamp"]; ?></td>
 
                             </tr>
                                   <?php  } ?>  

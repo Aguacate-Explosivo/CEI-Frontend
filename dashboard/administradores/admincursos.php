@@ -105,6 +105,7 @@
                                 <th style="text-align: center; vertical-align: middle;">Descripcion curso</th>                             
                                 <th style="text-align: center; vertical-align: middle;">Encargado</th>
                                 <th style="text-align: center; vertical-align: middle;">Imagen</th>
+                                 <th style="text-align: center; vertical-align: middle;">Fecha De Creacion</th>
                                 <th style="text-align: center; vertical-align: middle;">Acciones</th>
                                 
                             </tr>
@@ -123,6 +124,7 @@
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["DescripcionCurso"]; ?></td>
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["EncargadoCurso"]; ?></td>
                                 <td style="text-align: center; vertical-align: middle;"><img src="data:image/jpg;base64,<?php echo base64_encode($elemento["imagen"]); ?>" class="card-img-top course-image"></td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["timestamp"]; ?></td>
                                 <td style="text-align: center; vertical-align: middle;">
                                    <a style="margin: 2px; border-radius: 5px;" href="editarcurso.php?Id_Curso=<?php echo $elemento["Id_Curso"]?>" class="btn btn-warning" ><i class="fas fa-edit"></i></a>
                                    <a style="margin: 2px; border-radius: 5px;" href="eliminarcurso.php?Id_Curso=<?php echo $elemento["Id_Curso"]?>" class="btn btn-danger" > <i class="fas fa-trash-alt fa-flip-horizontal"></i></a>

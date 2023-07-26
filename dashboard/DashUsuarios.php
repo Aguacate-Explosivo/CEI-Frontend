@@ -49,6 +49,7 @@
                           <th>Correo</th>
                           <th>Estado</th>
                           <th>Perfil</th>
+                          <th>Fecha de Creacion</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
@@ -81,6 +82,7 @@
                             <?php } ?>
                           </td>
                           <td><?php echo $perfil; ?></td>
+                          <td><?php echo $row["timestamp"]; ?></td>
                           <td>
                             <div class="btn-group">
                             <!-- <button style="margin: 2px; border-radius: 5px;"  class="btn btn-warning btnEditar" onclick="editarUsuario('<?php echo $id; ?>', '<?php echo $usuario; ?>', '<?php echo $correo; ?>', '<?php echo $estado; ?>', '<?php echo $perfil; ?>')">

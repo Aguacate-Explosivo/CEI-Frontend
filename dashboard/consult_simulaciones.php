@@ -41,8 +41,10 @@
                             <tr>
                                 <th style="text-align: center; vertical-align: middle;">Documento </th>
                                 <th style="text-align: center; vertical-align: middle;">Nombre simulacion</th>    
+                                 <th style="text-align: center; vertical-align: middle;">Fecha de Creacion</th>
                                 <th style="text-align: center; vertical-align: middle;">Descargar</th> 
-                                                           
+                                
+                      
                                
                             </tr>
                         </thead>
@@ -61,6 +63,7 @@
                             <tr>
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["cc"]; ?></td>
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["nombre"]; ?></td>
+                                <td style="text-align: center; vertical-align: middle;"><?php echo $elemento["timestamp"]; ?></td>
                                 <td style="text-align: center; vertical-align: middle;">  
                                   <a style="margin: 2px; border-radius: 5px;" href="simulaciones/descargar.php?id=<?php echo $elemento["id"]; ?>" class="btn btn-danger" > <i class="fas fa-download"></i>
 </a>
