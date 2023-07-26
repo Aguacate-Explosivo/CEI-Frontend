@@ -21,7 +21,7 @@ $imagen= addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 
 
 //igresar la informacion a la tabla de datos
-$consulta="INSERT INTO encargado VALUES ('','$nombre','$imagen')";
+$consulta="INSERT INTO encargado VALUES ('','$nombre','$imagen', CURRENT_TIMESTAMP)";
 $resultado=mysqli_query($conexion,$consulta);
     if ($resultado) {
 

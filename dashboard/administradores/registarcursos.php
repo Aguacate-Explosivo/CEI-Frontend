@@ -23,7 +23,7 @@
 
     
     //igresar la informacion a la tabla de datos
-    $consulta="INSERT INTO cursos VALUES ('','$nombre','$descrip','$enc','$imagen')";
+    $consulta="INSERT INTO cursos VALUES ('','$nombre','$descrip','$enc',CURRENT_TIMESTAMP,'$imagen')";
     $resultado=mysqli_query($conexion,$consulta);
     if ($resultado) {
         echo "<script>

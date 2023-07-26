@@ -19,7 +19,7 @@ $id = $_POST['Id'];
 $urlBaseDatos = $_POST['url'];
 
 // Realizar el procesamiento o actualización en la base de datos según sea necesario
-$consulta = "UPDATE encuesta SET url = '$urlBaseDatos' WHERE Id = $id";
+$consulta = "UPDATE encuesta SET url = '$urlBaseDatos', timestamp = CURRENT_TIMESTAMP WHERE Id = $id";
 $resultado = mysqli_query($conexion, $consulta);
 
 if ($resultado) {

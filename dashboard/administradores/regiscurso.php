@@ -29,7 +29,7 @@
     
     //igresar la informacion a la tabla de datos
     $consulta ="INSERT INTO inscritos_cursos VALUES ('','$tipodocumento','$documento','$categoria','$nombre','$tel',
-    '$correo','$institucion','$programa','$direccion','$edad','$curso');";
+    '$correo','$institucion','$programa','$direccion','$edad','$curso', CURRENT_TIMESTAMP);";
     $busqueda=mysqli_query($conexion,$consulta);
     if ($busqueda) {
         echo "<script>

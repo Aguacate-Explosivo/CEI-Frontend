@@ -30,7 +30,7 @@
     
     //igresar la informacion a la tabla de datos
     $consulta="INSERT INTO inscritos_eventos VALUES ('','$tipodocumento','$documento','$categoria','$nombre','$tel',
-    '$correo','$institucion','$programa','$direccion','$edad','$evento');";
+    '$correo','$institucion','$programa','$direccion','$edad','$evento', CURRENT_TIMESTAMP);";
     $resultado=mysqli_query($conexion,$consulta);{
         echo "<script>
         Swal.fire({

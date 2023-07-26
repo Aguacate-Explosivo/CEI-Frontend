@@ -88,7 +88,7 @@
         
        require_once('../../conexion.php');
        $conexion=conectar();
-       $insercion="INSERT INTO `Marketing` VALUES ('','$documento','$nombre','$autor_email ','$nombre_negocio_plan','$tipo_marketing_plan');";
+       $insercion="INSERT INTO `Marketing` VALUES ('','$documento','$nombre','$autor_email ','$nombre_negocio_plan','$tipo_marketing_plan', CURRENT_TIMESTAMP);";
        $ejecucion=mysqli_query($conexion,$insercion);
        if ($ejecucion) {
            echo "<script>
@@ -96,7 +96,7 @@
            </script>"; 
            }
 
-      $insercion2="INSERT INTO `categoriasemprendimiento` VALUES ('','$documento','$industria_plan','$cantidadMonetaria_interesados_plan');";
+      $insercion2="INSERT INTO `categoriasemprendimiento` VALUES ('','$documento','$industria_plan','$cantidadMonetaria_interesados_plan', CURRENT_TIMESTAMP);";
        $ejecucion2=mysqli_query($conexion,$insercion2);
        if ($ejecucion2) {
            echo "<script>

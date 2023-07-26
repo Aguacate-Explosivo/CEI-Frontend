@@ -27,7 +27,7 @@ if ($conexion) {
   // Verificar que se haya seleccionado un archivo PDF y que los campos estén presentes
   if ($pdf_size > 0 && !empty($cedula) && !empty($nombre)) {
     // Preparar la consulta SQL utilizando una sentencia preparada
-    $consulta = "INSERT INTO formatos (nombre, cedula, pdf) VALUES (?, ?, ?)";
+    $consulta = "INSERT INTO formatos (nombre, cedula, pdf, timestamp) VALUES (?, ?, ?, CURRENT_TIMESTAMP)";
     $stmt = mysqli_prepare($conexion, $consulta);
 
     // Vincular los parámetros con los valores, utilizando "b" para datos binarios

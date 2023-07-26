@@ -12,7 +12,7 @@
     //Conexion con la base de datos
     include_once("../conexion.php");
     $conexion = conectar();
-    // include_once("../log.php");
+    include_once("../log.php");
 
     //Valores del formulario
     $tipodocumento = $_POST['tipodocumento'];
@@ -43,11 +43,11 @@
         location.assign('../citas.php');
       },2500)
   </script>";
-  // logAction("Agendado de Cita","El usuario intentó agendar una cita pero ya se encontraba un registro");
+  logAction("Agendado de Cita","El cliente intentó agendar una cita pero ya se encontraba un registro");
     } else {
         // Insertar la información en la tabla de datos
         $consulta = "INSERT INTO citas VALUES ('', '$tipodocumento','$documento','$categoria', '$nombre', '$tel',
-        '$correo','$institucion', '$direccion', '$fecha','$tema','$descripcion')";
+        '$correo','$institucion', '$direccion', '$fecha','$tema','$descripcion', CURRENT_TIMESTAMP)";
         $resultado = mysqli_query($conexion, $consulta);
 
         if ($resultado) {
@@ -62,7 +62,7 @@
                           location.assign('../citas.php');
                         },2500)
                   </script>";
-                  // logAction("Agendado de Cita","El usuario agendó una cita");
+                  logAction("Agendado de Cita","El usuario agendó una cita");
         } else {
             echo "<script language='JavaScript'>
                       Swal.fire({
@@ -75,7 +75,7 @@
                         location.assign('../citas.php');
                       },2500)
                   </script>";
-                  // logAction("Agendado de Cita","El usuario intentó agendar una cita pero ya se encontraba un registro");
+                  logAction("Agendado de Cita","El usuario intentó agendar una cita pero ya se encontraba un registro");
               }
           }
 ?>

@@ -27,7 +27,7 @@ if ($conexion) {
   // Verificar que se haya seleccionado un archivo PDF y que los campos estén presentes
   if ($pdf_size > 0 && !empty($documento) && !empty($nombre)) {
     // Preparar la consulta SQL utilizando una sentencia preparada
-    $consulta = "INSERT INTO simulaciones (cc, nombre, pdf) VALUES (?, ?, ?)";
+    $consulta = "INSERT INTO simulaciones (cc, nombre, pdf, timestamp) VALUES (?, ?, ?, CURRENT_TIMESTAMP)";
     $stmt = mysqli_prepare($conexion, $consulta);
 
     // Vincular los parámetros con los valores

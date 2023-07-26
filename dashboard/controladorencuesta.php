@@ -21,7 +21,7 @@
       $conexion = conectar();
 
       // Preparar la consulta con sentencias preparadas para mayor seguridad
-      $consulta = "INSERT INTO encuesta (url) VALUES (?)";
+      $consulta = "INSERT INTO encuesta (url,timestamp) VALUES (?,CURRENT_TIMESTAMP)";
       $stmt = mysqli_prepare($conexion, $consulta);
       mysqli_stmt_bind_param($stmt, 's', $url);
 
