@@ -41,8 +41,9 @@
 					<label for="chk" aria-hidden="true">Iniciar sesión</label>
                     <div class="align-items-center">
                         <a href="index.php">
-                            <img src="img/logo.webp" class="img-fluid mx-auto d-block" alt="#" width="120px" height="56px">
+                            <img src="img/logo.webp" class="img-fluid mx-auto d-block" alt="#" width="230px" height="auto">
                         </a>
+                        <br>
                     </div>
 					<input type="text" placeholder="Usuario" id="user" name="user" required>
 					<input type="password" placeholder="Contraseña" id="password" name="password" required>
