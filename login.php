@@ -43,7 +43,6 @@
                         <a href="index.php">
                             <img src="img/logo.webp" class="img-fluid mx-auto d-block" alt="#" width="230px" height="auto">
                         </a>
-                        <br>
                     </div>
 					<input type="text" placeholder="Usuario" id="user" name="user" required>
 					<input type="password" placeholder="Contraseña" id="password" name="password" required>
