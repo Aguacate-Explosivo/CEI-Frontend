@@ -19,11 +19,13 @@
     $nombre=$_POST['nom_curso'];
     $enc=$_POST['encargado'];
     $descrip=$_POST['desc_curso'];
+    $fecha_inicio=$_POST['fecha_inicio'];
+    $fecha_final=$_POST['fecha_final'];
     $imagen= addslashes(file_get_contents($_FILES['imagen']['tmp_name']));          
 
     
     //igresar la informacion a la tabla de datos
-    $consulta="INSERT INTO cursos VALUES ('','$nombre','$descrip','$enc',CURRENT_TIMESTAMP,'$imagen')";
+    $consulta="INSERT INTO cursos VALUES ('','$nombre','$descrip','$enc',CURRENT_TIMESTAMP,'$imagen', '$fecha_inicio','$fecha_final')";
     $resultado=mysqli_query($conexion,$consulta);
     if ($resultado) {
         echo "<script>

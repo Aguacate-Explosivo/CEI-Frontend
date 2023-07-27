@@ -65,7 +65,7 @@
             <!-- Fin de navegacion -->
             <form action="actualizarcurso.php?Id_Curso=<?php echo $fila["Id_Curso"]?>" method="POST" enctype="multipart/form-data" >
             <div class="row g-3">
-             <div class="col-md-6">
+             <div class="col-md-12">
                <div class="form-floating">
                     <input type="text" id="nom_curso" name="nom_curso" class="form-control" placeholder=" "
                     value="<?php echo $fila['NombreCurso']?>" required=" " pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9 !¡?¿.-,]+">
@@ -109,7 +109,20 @@
                     <label for="desc_curso" class="form__label">Descripcion del Curso:</label>
                     </div>
                     </div>
+
                     
+                    <br>
+                    <label for="fecha_inicio" class="fecha_inicio">Fecha de Inicio de las Inscripciones</label>
+                    <div class="input-group">
+                    <input type="date" id="fecha_inicio" name="fecha_inicio" class="form-control" placeholder="Fecha de Inicio de Inscripciones:" required step="1" min="2023-01-01" max="2055-12-31" value="<?php  echo $fila["fecha_inicio"]; ?>">
+                    </div>
+                    <br>
+                    <label for="fecha_final" class="fecha_final">Fecha de cierre de las Inscripciones</label>
+                    <div class="input-group">
+                    <input type="date" id="fecha_final" name="fecha_final" class="form-control" placeholder="Fecha de cierre de Inscripciones:" required step="1" min="2023-01-01" max="2055-12-31" value="<?php  echo $fila["fecha_final"]; ?>">
+                    </div>
+
+
                      <div class="form-floating">
                         <!-- Seccion para cargar la imagen -->
                         <img style="width: 100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila["imagen"]); ?>" class="card-img-top">
@@ -125,6 +138,8 @@
                     <button type="submit" class="btn btn-success btn-large">Editar informacion del Curso</button>
                     <a href="admincursos.php" class="btn btn-info" > Regresar</a>
                 </div>
+
+                <!-- </div>     -->
             </form>            
                         
                         
@@ -140,7 +155,7 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a> -->
 
 
     <!-- JavaScript Libraries -->
