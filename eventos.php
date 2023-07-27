@@ -46,6 +46,9 @@
 
                     foreach ($resultado as $row) {
                         $id = $row["id_evento"];
+                        $fecha_inicio = $row["fecha_inicio"];
+                        $fecha_final = $row["fecha_final"];
+                        $fecha_actual = date("Y-m-d");
                         ?>
                         <!-- Fin bd -->
 
@@ -59,13 +62,12 @@
                         <?php
                         }
                         ?>
-<style>
-    .course-image {
-        height: 200px; 
-        object-fit: cover; 
-    }
-</style>
-
+                            <style>
+                                .course-image {
+                                    height: 200px; 
+                                    object-fit: cover; 
+                                }
+                            </style>
                         <!-- Estructura de eventos -->
                         
                         <div class="col">
@@ -94,9 +96,13 @@
                                             <?php echo htmlspecialchars($row["hora"]); ?></small></p>
                                    
                                 </div>
-                                <a style="margin: 2px; border-radius: 5px;"
-                                    href="inceventos.php?id_evento=<?php echo htmlspecialchars($row["id_evento"]); ?>"
-                                    class="btn btn-primary" id="asistir"> Asistir A Evento</a>
+                                    <?php 
+                                    if ($fecha_actual<=$fecha_final) {
+                                        echo '<a style="margin: 2px; border-radius: 5px;" href="inceventos.php?id_evento=' . htmlspecialchars($row["id_evento"]) . '" class="btn btn-primary" id="asistir">Asistir A Evento</a>';
+                                    } else {
+                                        echo '<p style="color:red; padding-left:1rem;" >Evento Culminado</p>';
+                                        }
+                                    ?>
                                 <a style="margin: 2px; border-radius: 5px;"
                                     href="galeriaeventos.php?id_evento=<?php echo htmlspecialchars($row["id_evento"]); ?>"
                                     class="btn btn-info"> Ver Mas</a>
