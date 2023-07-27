@@ -133,13 +133,13 @@ ob_start();
   <h2 class="text">E-mail del autor del plan : <span><?php echo  $autor_email ?>.</span> </h2>
 <form  method="POST" enctype="multipart/form-data" >
                       
- <div>
+<div>
                                                             <!-- Form 1 -->
-                                                            <input type="hidden" id="doc_autor_plan" name="doc_autor_plan" value="<?php  echo $documento; ?>">
+                                                            <input type="text" id="doc_autor_plan" name="doc_autor_plan" value="<?php  echo $documento; ?>">
                                                             <label for="doc_autor_plan" class="form__label"></label>
-                                                            <input type="hidden" id="autor_plan" name="autor_plan" value="<?php echo $nombre; ?>">
+                                                            <input type="text" id="autor_plan" name="autor_plan" value="<?php echo $nombre; ?>">
                                                             <label for="autor_plan" class="form__label"></label>
-                                                            <input type="hidden" id="autor_email" name="autor_email" value="<?php echo $autor_email; ?>">
+                                                            <input type="text" id="autor_email" name="autor_email" value="<?php echo $autor_email; ?>">
                                                             <label for="autor_email" class="form__label"></label>
 
                                                             <!-- Form 2 -->
@@ -167,7 +167,7 @@ ob_start();
                                                             <label for="cantidadMonetaria_interesados_plan " class="form__label"></label>
                                                             <input type="text" id="socios_productores" name="socios_productores" value="<?php echo $socios_productores; ?>">
                                                             <label for="socios_productores" class="form__label"></label>
-                                                            <input type="text" id="tipo_marketing_plan" name="tipo_marketing_plan" value="<?php echo $tipo_marketing_plan; ?>">
+                                                            <input type="hidden" id="tipo_marketing_plan" name="tipo_marketing_plan" value="<?php echo $tipo_marketing_plan; ?>">
                                                             <label for="tipo_marketing_plan" class="form__label"></label>
                                                             <input type="text" id="inversion_publicidad" name="inversion_publicidad" value="<?php echo $inversion_publicidad; ?>">
                                                             <label for="inversion_publicidad" class="form__label"></label>
