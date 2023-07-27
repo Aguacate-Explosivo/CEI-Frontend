@@ -114,7 +114,7 @@
  <h3 class="text-center"><?php echo $nombre_negocio_plan ; ?></h3>
 
 
-<div style="float: right;  width: 200px;">
+<div style="float:right;   width: 200px;">
 
  <a href="drop1.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Simulación </a>
 </div>
@@ -248,8 +248,35 @@ $ganancias_neta = number_format($ganancia_neta, 2 ,',', '.');
                                    
                        </table>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div>
+  <h1 style="font-size: 30px;">Felicidades has Terminado </h1>
+  <h2>Si vendes a <span style="color: green; font-size: 34px; "><?php  echo $porcentajes; ?></span> pesos cada unidad obtendras</h2>
+  <h2>una Ganancia neta equivalente a </h2>
+  <h2 style="color: green; font-size: 34px; "   > <?php  echo $ganancias_neta; ?> pesos </h2>
+  <h2>Tu simulacion debes descargarla</h2>
+  <h2>y luego debes guardarla</h2>
+  <br>
+  <div style="float:left;  width: 180px;">
+
+  <a style="color: white;  border-radius:10px; " target="_blank" class="btn btn-danger btn-block btn-rounded waves-effect waves-light" href="pdf.php"> DESCARGAR</a><br>
 </div>
 
+  <div style=" float:left; width: 180px;">
+
+  <a style="color: white;    border-radius:10px;"  class="btn btn-success btn-block btn-rounded waves-effect waves-light" href="guardar_simulacion.php">GUARDAR</a>
+</div>
+  
+
+
+</div>
+</div>
 <form  method="POST" enctype="multipart/form-data" >
          <br>
 <br>
