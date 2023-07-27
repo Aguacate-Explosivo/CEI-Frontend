@@ -97,6 +97,7 @@
                                 <th style="text-align: center; vertical-align: middle;">Documento</th>
                                 <th style="text-align: center; vertical-align: middle;">Categoria</th>
                                 <th style="text-align: center; vertical-align: middle;">Nombre</th>
+                                <th style="text-align: center; vertical-align: middle;">Sexo</th>
                                 <th style="text-align: center; vertical-align: middle;">Telefono</th>     
                                 <th style="text-align: center; vertical-align: middle;">Correo</th>
                                 <th style="text-align: center; vertical-align: middle;">Institucion</th>
@@ -124,6 +125,7 @@
                                <td><?php echo $elemento["documento"]; ?></td>
                                <td><?php echo $elemento["categoria"]; ?></td>
                                 <td><?php echo $elemento["nombre"]; ?></td>
+                                <td><?php echo $elemento["sexo"]; ?></td>
                                 <td><?php echo $elemento["telefono"]; ?></td>
                                 <td><?php echo $elemento["correo"]; ?></td>
                                 <td><?php echo $elemento["institucion"]; ?></td>

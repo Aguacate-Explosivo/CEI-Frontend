@@ -18,6 +18,7 @@
     $documento=$_POST['documento'];
     $categoria=$_POST['categoria'];
     $nombre=$_POST['nombre'];
+    $sexo=$_POST['sexo'];
     $tel=$_POST['tel'];
     $correo=$_POST['correo'];
     $institucion=$_POST['institucion'];
@@ -29,7 +30,7 @@
     
     
     //igresar la informacion a la tabla de datos
-    $consulta="INSERT INTO inscritos_eventos VALUES ('','$tipodocumento','$documento','$categoria','$nombre','$tel',
+    $consulta="INSERT INTO inscritos_eventos VALUES ('','$tipodocumento','$documento','$categoria','$nombre', '$sexo','$tel',
     '$correo','$institucion','$programa','$direccion','$edad','$evento', CURRENT_TIMESTAMP);";
     $resultado=mysqli_query($conexion,$consulta);{
         echo "<script>
