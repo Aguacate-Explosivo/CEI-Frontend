@@ -289,7 +289,7 @@ $ganancias_neta = number_format($ganancia_neta, 2 ,',', '.');
 <table id="" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
 
-                        <?php echo $precio_importe; ?>
+                        
                             <tr>
                            
                                 <th style="text-align: center; vertical-align: middle;">Datos Reales  </th>
