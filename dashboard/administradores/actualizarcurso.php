@@ -22,11 +22,12 @@
    $enc=$_POST['encargado'];
    $descrip=$_POST['desc_curso'];
    $imagen= addslashes(file_get_contents($_FILES['imagen']['tmp_name']));          
-
+   $fecha_inicio = $_POST["fecha_inicio"];
+   $fecha_final = $_POST["fecha_final"];
    
    //igresar la informacion a la tabla de datos
    
-   $consulta="UPDATE `cursos` SET `NombreCurso`='$nombre',`DescripcionCurso`='$descrip',`EncargadoCurso`='$enc',`imagen`='$imagen' WHERE Id_Curso=$Id_Curso";
+   $consulta="UPDATE `cursos` SET `NombreCurso`='$nombre',`DescripcionCurso`='$descrip',`EncargadoCurso`='$enc',`imagen`='$imagen', `fecha_inicio`='$fecha_inicio',`fecha_final`='$fecha_final' WHERE Id_Curso=$Id_Curso";
    $resultado=mysqli_query($conexion,$consulta);
     if ($resultado) {
 

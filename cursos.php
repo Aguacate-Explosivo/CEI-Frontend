@@ -36,45 +36,57 @@
                 <br>
                 <br>
                 <style>
-    .course-image {
-        height: 200px; 
-        object-fit: cover; 
-    }
-</style>
+                    .course-image {
+                        height: 200px; 
+                        object-fit: cover; 
+                    }
+                </style>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <?php
+                    require_once("conexion.php");
+                    $conexion = conectar();
 
-<div class="row row-cols-1 row-cols-md-3 g-4">
-    <?php
-    require_once("conexion.php");
-    $conexion = conectar();
+                    $consulta = "SELECT Id_Curso, NombreCurso, DescripcionCurso, EncargadoCurso, imagen, fecha_final,fecha_inicio FROM cursos";
+                    $resultado = mysqli_query($conexion, $consulta);
 
-    $consulta = "SELECT Id_Curso, NombreCurso, DescripcionCurso, EncargadoCurso, imagen FROM cursos";
-    $resultado = mysqli_query($conexion, $consulta);
+                    foreach ($resultado as $row) {
+                        $id = $row["Id_Curso"];
+                        $fecha_inicio = $row["fecha_inicio"];
+                        $fecha_final = $row["fecha_final"];
+                        $fecha_actual = date("Y-m-d");
+                    ?>
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="project-item mb-5">
+                                    <div class="position-relative">
+                                        <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="card-img-top img-fluid course-image">
+                                        <div class="project-overlay">
+                                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" data-lightbox="project"><i class="fa fa-eye"></i></a>
+                                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="cursos.php"><i class="fa fa-link"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?php echo htmlspecialchars($row["NombreCurso"]); ?></h5>
+                                        <p class="card-text">Encargado: <?php echo htmlspecialchars($row["EncargadoCurso"]); ?></p>
+                                        <p class="card-text">Descripcion: <?php echo htmlspecialchars($row["DescripcionCurso"]); ?></p>
 
-    foreach ($resultado as $row) {
-        $id = $row["Id_Curso"];
-    ?>
-        <div class="col">
-            <div class="card h-100">
-                <div class="project-item mb-5">
-                    <div class="position-relative">
-                        <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" class="card-img-top img-fluid course-image">
-                        <div class="project-overlay">
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="data:image/jpg;base64,<?php echo base64_encode($row["imagen"]); ?>" data-lightbox="project"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="cursos.php"><i class="fa fa-link"></i></a>
+                                        <span>Fecha de Cierre: 
+                                            <?php 
+                                            if ($fecha_actual<=$fecha_final) {
+                                                echo $fecha_final.'</span>';
+                                                echo '<a style="margin: 2px; border-radius: 5px;" href="inscripcursos.php?Id_Curso=' . htmlspecialchars($row["Id_Curso"]) . '" class="btn btn-primary">Unirse a Curso</a>';
+                                            } else {
+                                                echo '<p style=color:red;>Curso No Disponible</p> </span>';
+                                            }
+                                        ?>
+
+                                        <!-- </span> -->
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo htmlspecialchars($row["NombreCurso"]); ?></h5>
-                        <p class="card-text">Encargado: <?php echo htmlspecialchars($row["EncargadoCurso"]); ?></p>
-                        <p class="card-text">Descripcion: <?php echo htmlspecialchars($row["DescripcionCurso"]); ?></p>
-                        <a style="margin: 2px; border-radius: 5px;" href="inscripcursos.php?Id_Curso=<?php echo htmlspecialchars($row["Id_Curso"]) ?>" class="btn btn-primary">Unirse a Curso</a>
-                    </div>
+                    <?php } ?>
                 </div>
-            </div>
-        </div>
-    <?php } ?>
-</div>
-
             </div>
         </div>
     </div>

@@ -29,13 +29,14 @@
     $imagen4= addslashes(file_get_contents($_FILES['imagen4']['tmp_name']));          
     $imagen5= addslashes(file_get_contents($_FILES['imagen5']['tmp_name']));          
     $imagen6= addslashes(file_get_contents($_FILES['imagen6']['tmp_name']));          
-
+    $fecha_inicio = $_POST["fecha_inicio"];
+    $fecha_final = $_POST["fecha_final"];
     
     //igresar la informacion a la tabla de datos
     
     $consulta="UPDATE eventos SET nombreEven='$nombre',descripcionEven='$descrip',lugar='$lugar',fecha='$fecha',hora='$hora',imagen='$imagen',estado='$estado',
     imagen1='$imagen1',imagen2='$imagen2',imagen3='$imagen3',
-    imagen4='$imagen4',imagen5='$imagen5',imagen6='$imagen6' WHERE id_evento=$id_evento";
+    imagen4='$imagen4',imagen5='$imagen5',imagen6='$imagen6', fecha_inicio='$fecha_inicio', fecha_final='$fecha_final' WHERE id_evento=$id_evento";
     $resultado=mysqli_query($conexion,$consulta);
  
     if ($resultado) {

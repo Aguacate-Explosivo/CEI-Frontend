@@ -123,6 +123,16 @@
                   </button>
                       </div>
                       <br>
+                    <div class="input-group">
+                    <label for="fecha_inicio" class="fecha_inicio">Fecha de Inicio de las Inscripciones</label>
+                    <input type="date" id="fecha_inicio" name="fecha_inicio" class="form-control" placeholder="Fecha de Inicio de Inscripciones:" required step="1" min="2023-01-01" max="2055-12-31">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                    <label for="fecha_final" class="fecha_final">Fecha de cierre de las Inscripciones</label>
+                    <input type="date" id="fecha_final" name="fecha_final" class="form-control" placeholder="Fecha de cierre de Inscripciones:" required step="1" min="2023-01-01" max="2055-12-31">
+                    </div>
+                      <br>
                   <div class="input-group">
                   <label for="estado" style="width: 170px;" class="form-label">Estado del Evento:</label>
                   <select required=" " name ="estado"  id="estado" class="form-control"  >

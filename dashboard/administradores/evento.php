@@ -117,6 +117,18 @@
 
                   </div>
                     </div>
+
+                    <br>
+                    <label for="fecha_inicio" class="fecha_inicio">Fecha de Inicio de las Inscripciones</label>
+                    <div class="input-group">
+                    <input type="date" id="fecha_inicio" name="fecha_inicio" class="form-control" placeholder="Fecha de Inicio de Inscripciones:" required step="1" min="2023-01-01" max="2055-12-31" value="<?php  echo $fila["fecha_inicio"]; ?>">
+                    </div>
+                    <br>
+                    <label for="fecha_final" class="fecha_final">Fecha de cierre de las Inscripciones</label>
+                    <div class="input-group">
+                    <input type="date" id="fecha_final" name="fecha_final" class="form-control" placeholder="Fecha de cierre de Inscripciones:" required step="1" min="2023-01-01" max="2055-12-31" value="<?php  echo $fila["fecha_final"]; ?>">
+                    </div>
+
                     <div class="col-md-12">
                   <div class="form-floating">
                         <!-- Seccion para cargar la imagen -->

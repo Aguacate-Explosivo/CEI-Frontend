@@ -264,15 +264,22 @@ $porcentaje_ganancia =$_SESSION['porcentaje_ganancia'];
  $precio_unidade_simuladoss= $precio_unidade_simulados /  $cantida ;
  $precio_unidad_simulados = number_format($precio_unidade_simuladoss, 0 ,',', '.');
 
- $precio_unidade_simuladosss = number_format($precio_unidade_simulados, 2 ,',', '.');
- $precio_unida = number_format($precio_unidade, 2 ,',', '.');
+$precio_unidade_simulados_porcentaje=($precio_unidade_simulados*$importe_porcentaje) + $precio_unidade_simulados  ; 
+$precio_unidade_simuladosss = number_format($precio_unidade_simulados_porcentaje, 2 ,',', '.');
+
+$precio_unidaxx=($precio_unidade*$importe_porcentaje)   ; 
+$precio_importe = number_format($precio_unidaxx, 2 ,',', '.');
+
+
+$precio_unidax=($precio_unidade*$importe_porcentaje) + $precio_unidade  ; 
+$precio_unida = number_format($precio_unidax, 2 ,',', '.');
 
  $porcentaje= ($precio_unidade_simuladoss * $porcentaje_ganancias) + $precio_unidade_simuladoss ;
 $porcentajes = number_format($porcentaje, 0 ,',', '.');
 
 $total_ganancia=($cantida*$porcentaje_ganancias) + $cantida;
 $total_ganancias=$total_ganancia*$porcentaje;
-$total_gananciass = number_format($total_ganancias, 2 ,',', '.');
+$total_gananciass = number_format($total_ganancias, 2 ,',', '.'); 
 
 $ganancia_neta=$total_ganancias-$precio_unidade_simulados;
 $ganancias_neta = number_format($ganancia_neta, 2 ,',', '.');
@@ -282,7 +289,7 @@ $ganancias_neta = number_format($ganancia_neta, 2 ,',', '.');
 <table id="" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
 
-                       
+                        
                             <tr>
                            
                                 <th style="text-align: center; vertical-align: middle;">Datos Reales  </th>

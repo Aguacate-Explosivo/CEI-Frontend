@@ -10,8 +10,8 @@ body{
 	background-image: url(../img/fondo.png);
 }
 .main{
-	width: 350px;
-	height: 530px;
+	width: 400px;
+	height: 600px;
 	background: red;
 	overflow: hidden;
 	background: #0c610c no-repeat center/ cover;

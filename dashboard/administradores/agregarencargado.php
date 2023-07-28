@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="../../img/logo.webp">
-    <title>CEI | citas</title>
+    <title>CEI | Encargado</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -46,7 +46,7 @@
     <div class="container-xxl py-5">
         <div class="container" >
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <h1 class="display-5 mb-5">Reprogramar Cita
+            <h1 class="display-5 mb-5">Agregar Encargado
             </div>
             <div class="row g-5">
                 <div class="col-lg-6 mx-auto wow fadeInUp" data-wow-delay="0.1s">
@@ -65,9 +65,11 @@
                           <br>
                           <div class="form-floating">
                             
-                            <label style=" margin-left: 150px; " for="formFile" class="form-label">Cargar Imagen</label>
-                            <input class="form-control" name="imagen" id="imagen" type="file" 
+              
+                            <input class="form-control" name="imagen" id="imagen"  type="file" 
                            required=" " accept="image/*">
+                           <label for="formFile" class="form-label">Cargar Imagen</label>
+
 
                         </div>
                         

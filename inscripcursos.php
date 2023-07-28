@@ -87,7 +87,14 @@
    
   </div>
 </div>
-
+<br>
+                        <div class="col-md-12">
+                            <div class="form-floating">
+                                <input id="nombre" name="nombre" type="text" class="form-control" placeholder="ff"
+                                    required=" "  pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+">
+                                <label for="nombre" class="form__label">Nombre Completo</label>
+                            </div>
+                        </div>
                         <br>
                         
                         <div class="col-md-6">
@@ -104,11 +111,17 @@
                             </div>
                         </div>
                         <br>
+                        
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input id="nombre" name="nombre" type="text" class="form-control" placeholder="ff"
-                                    required=" "  pattern="[a-zA-ZÁÉÍÓÚáéíóúñ ]+">
-                                <label for="nombre" class="form__label">Nombre Completo</label>
+                            <select  class="form-control" name="sexo" id="sexo">
+                                <option value="Hombre">Hombre </option>
+                                <option value="Mujer">Mujer </option>
+                                <option value="Otro">Otro</option>
+                                
+                                </select>
+                                <label  for="Sexo" class="form__label">Sexo : </label>
+
                             </div>
                         </div>
                         <br>
@@ -165,10 +178,11 @@
                                 <label for="edad" class="form__label">Edad:</label>
                             </div>
                         </div>
-                        
-                        <div class="row g-3">
+                        <br>
+                        <br>
+                        <div class="col-md-12">
                             <div class="form-floating">
-                                <select style="width: 535px;" name="curso_elegido" class="form-control">
+                                <select  name="curso_elegido" class="form-control">
                                     <!-- Codigo de la base de datos -->
                                     <?php
                                         require 'conexion.php';

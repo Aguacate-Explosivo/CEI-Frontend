@@ -22,12 +22,13 @@
     $hora=$_POST['hora'];
     $imagen= addslashes(file_get_contents($_FILES['imagen']['tmp_name']));          
     $estado=$_POST['estado'];
-   
+    $fecha_inicio=$_POST['fecha_inicio'];
+    $fecha_final=$_POST['fecha_final'];
 
 
     //igresar la informacion a la tabla de datos
     $consulta="INSERT INTO eventos VALUES ('','$nombre','$descrip','$lugar','$fecha','$hora',
-    '$imagen','$estado','','','','','','', CURRENT_TIMESTAMP)";
+    '$imagen','$estado','','','','','','', CURRENT_TIMESTAMP, '$fecha_inicio','$fecha_final')";
     $resultado=mysqli_query($conexion,$consulta);
     if ($resultado) {
         echo "<script>

@@ -18,6 +18,7 @@
     $documento=$_POST['documento'];
     $categoria=$_POST['categoria'];
     $nombre=$_POST['nombre'];
+    $sexo=$_POST['sexo'];
     $tel=$_POST['tel'];
     $correo=$_POST['correo'];
     $institucion=$_POST['institucion'];
@@ -28,7 +29,7 @@
     //se Obtiene la longitud del string
     
     //igresar la informacion a la tabla de datos
-    $consulta ="INSERT INTO inscritos_cursos VALUES ('','$tipodocumento','$documento','$categoria','$nombre','$tel',
+    $consulta ="INSERT INTO inscritos_cursos VALUES ('','$tipodocumento','$documento','$categoria','$nombre','$sexo','$tel',
     '$correo','$institucion','$programa','$direccion','$edad','$curso', CURRENT_TIMESTAMP);";
     $busqueda=mysqli_query($conexion,$consulta);
     if ($busqueda) {

@@ -113,6 +113,18 @@
                   </button>
                     <label for="desc_curso" class="form__label"></label>
                     </div>
+
+                    <br>
+                    <div class="input-group">
+                    <label for="fecha_inicio" class="fecha_inicio">Fecha de Inicio de las Inscripciones</label>
+                    <input type="date" id="fecha_inicio" name="fecha_inicio" class="form-control" placeholder="Fecha de Inicio de Inscripciones:" required step="1" min="2023-01-01" max="2055-12-31">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                    <label for="fecha_final" class="fecha_final">Fecha de cierre de las Inscripciones</label>
+                    <input type="date" id="fecha_final" name="fecha_final" class="form-control" placeholder="Fecha de cierre de Inscripciones:" required step="1" min="2023-01-01" max="2055-12-31">
+                    </div>
+
                     <br>
                         <!-- Seccion para cargar la imagen -->
                         <div class="input-group">
