@@ -63,6 +63,13 @@
         .image-frame {
             width: 9cm;
             height: 9cm;
+            transition: all .3s;
+        }
+
+        .image-frame:hover {
+          border-radius: 2rem;
+          transform: scale(1.05);
+          background-color: #D4F1D0;
         }
     </style>
 
