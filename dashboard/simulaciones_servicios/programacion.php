@@ -191,7 +191,7 @@
 </div>
 <div style="margin-left:300px; display: flex; align-items: center;">
     <h1 style="margin-right: 10px ; font-size: 30px; font-weight: bold;">5. Materia de Servicio</h1>
-    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui Se Agregan todas las materia de servio que necesitaras para poder ofrecer un buen servicio ">
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui Se Agregan todas las materia de servicio que necesitaras para poder ofrecer un buen servicio ">
         <i class="fas fa-question"></i>
     </button>
 </div>

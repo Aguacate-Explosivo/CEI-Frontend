@@ -155,7 +155,7 @@
         <div class="container-fluid">
           <div class="row bg-title">
             <div class="col-lg-12">
-              <h4 class="page-title">Programacion de Simulacion De Servicios </h4>
+              <h4 class="page-title">Programacion de Simulacion De Productos </h4>
               
               <ol class="breadcrumb">
               </ol>
@@ -183,38 +183,28 @@
         <i class="fas fa-question"></i>
     </button>
 </div>
+
 <div style="margin-left:300px; display: flex; align-items: center;">
-    <h1 style="margin-right: 10px; font-size: 30px; font-weight: bold;">4. Nombre del Servicio</h1>
-    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui Debes poner el nombre del servicio que ofreceras y asi mismo la cantidad de personas que tienes para ofrecer dicho servicio" >
+    <h1 style="margin-right: 10px ; font-size: 30px; font-weight: bold;">4. Informacion sobre Los Productos</h1>
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui Se Agregan todos los productos con sus respectivos precios y catidades para ser operados correctamente ">
         <i class="fas fa-question"></i>
     </button>
 </div>
 <div style="margin-left:300px; display: flex; align-items: center;">
-    <h1 style="margin-right: 10px ; font-size: 30px; font-weight: bold;">5. Materia de Servicio</h1>
-    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui Se Agregan todas las materia de servio que necesitaras para poder ofrecer un buen servicio ">
+    <h1 style="margin-right: 10px; font-size: 30px; font-weight: bold;">5. Informacion sobre Los Gastos</h1>
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui Se Agregan los Gastos que implican los productos y todo lo que se va a gastar para producirlos ">
         <i class="fas fa-question"></i>
     </button>
 </div>
+
 <div style="margin-left:300px; display: flex; align-items: center;">
-    <h1 style="margin-right: 10px; font-size: 30px; font-weight: bold;">6. Gastos Fijos Mensuales</h1>
-    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui Se Agregan los gastos fijos mensuales que son los que cada mens debes pagar ">
-        <i class="fas fa-question"></i>
-    </button>
-</div>
-<div style="margin-left:300px; display: flex; align-items: center;">
-    <h1 style="margin-right: 10px; font-size: 30px; font-weight: bold;">7. Costos de Utilidad</h1>
-    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes ingresar los Costos de utilidades son cosas necesarias, pero que no tienen un gasto mensual ">
-        <i class="fas fa-question"></i>
-    </button>
-</div>
-<div style="margin-left:300px; display: flex; align-items: center;">
-    <h1 style="margin-right: 10px; font-size: 30px; font-weight: bold;">8. Simular Datos</h1>
+    <h1 style="margin-right: 10px; font-size: 30px; font-weight: bold;">6. Simular Datos</h1>
     <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui se mostraran los resultados de la simulacion y podras jugar con los datos de entrada para lograr tu valor de ganancia estimado">
         <i class="fas fa-question"></i>
     </button>
 </div>
 <div style="margin-left:300px; display: flex; align-items: center;">
-    <h1 style="margin-right: 10px; font-size: 30px; font-weight: bold;">9. Fin de simulcion</h1>
+    <h1 style="margin-right: 10px; font-size: 30px; font-weight: bold;">7. Fin de simulcion</h1>
     <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="aqui ya se termina la travecia, recomendamos descargar y guardar la simulacion">
         <i class="fas fa-question"></i>
     </button>

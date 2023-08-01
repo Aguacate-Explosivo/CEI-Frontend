@@ -51,4 +51,3 @@
 <script src="../js/main.js" defer></script>
 </head>
 
-<?php include_once("../sesion_validacion.php"); ?>

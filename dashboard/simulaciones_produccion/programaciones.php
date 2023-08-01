@@ -155,7 +155,7 @@
         <div class="container-fluid">
           <div class="row bg-title">
             <div class="col-lg-12">
-              <h4 class="page-title">Programacion de Simulacion De Servicios </h4>
+              <h4 class="page-title">Programacion de Simulacion De Produccion </h4>
               
               <ol class="breadcrumb">
               </ol>
@@ -190,19 +190,19 @@
     </button>
 </div>
 <div style="margin-left:300px; display: flex; align-items: center;">
-    <h1 style="margin-right: 10px ; font-size: 30px; font-weight: bold;">5. Materia de Servicio</h1>
-    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui Se Agregan todas las materia de servio que necesitaras para poder ofrecer un buen servicio ">
+    <h1 style="margin-right: 10px ; font-size: 30px; font-weight: bold;">5. Datos de Materia Prima</h1>
+    <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui Se Agregan todas las materias primas que se usaran para la produccion ">
         <i class="fas fa-question"></i>
     </button>
 </div>
 <div style="margin-left:300px; display: flex; align-items: center;">
-    <h1 style="margin-right: 10px; font-size: 30px; font-weight: bold;">6. Gastos Fijos Mensuales</h1>
+    <h1 style="margin-right: 10px; font-size: 30px; font-weight: bold;">6.  Datos de Gastos</h1>
     <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui Se Agregan los gastos fijos mensuales que son los que cada mens debes pagar ">
         <i class="fas fa-question"></i>
     </button>
-</div>
+</div>   
 <div style="margin-left:300px; display: flex; align-items: center;">
-    <h1 style="margin-right: 10px; font-size: 30px; font-weight: bold;">7. Costos de Utilidad</h1>
+    <h1 style="margin-right: 10px; font-size: 30px; font-weight: bold;">7.  Datos de Costos</h1>
     <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Aqui debes ingresar los Costos de utilidades son cosas necesarias, pero que no tienen un gasto mensual ">
         <i class="fas fa-question"></i>
     </button>
