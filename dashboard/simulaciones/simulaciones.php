@@ -108,9 +108,9 @@
               
         <?php
         $imagenes = [
-            ['ruta' => 'img/plannegocios.svg', 'enlace' => 'overview.php'],
-            ['ruta' => 'img/servicios.svg', 'enlace' => '#'],
-            ['ruta' => 'img/produccion.svg', 'enlace' => '../simulaciones_produccion/inicio.php']
+            ['ruta' => 'img/plannegocios.svg', 'enlace' => 'programacio.php'],
+            ['ruta' => 'img/servicios.svg', 'enlace' => '../simulaciones_servicios/programacion.php'],  
+            ['ruta' => 'img/produccion.svg', 'enlace' => '../simulaciones_produccion/programaciones.php']
         ];
 
         foreach ($imagenes as $imagen) {

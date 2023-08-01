@@ -41,9 +41,6 @@
       $_SESSION['valor_total_gastoe'] = htmlentities($_POST["valor_total_gastoe"]);
       $_SESSION['valor_total_costoe'] = htmlentities($_POST["valor_total_costoe"]);
       $_SESSION['cantidad_producire'] = htmlentities($_POST["cantidad_producire"]);
-      $_SESSION['porcentaje_ganancia'] = htmlentities($_POST["porcentaje_ganancia"]);
-
-      
       $_SESSION['importe'] = htmlentities($_POST["importe"]);
       $_SESSION['nombreproducto'] = htmlentities($_POST["nombreproducto"]);
 
@@ -79,9 +76,12 @@
   $valor_total_gasto =  $_SESSION['valor_total_gasto'];
   $cantidad_producir =$_SESSION['cantidad_producir'];
 
-  
+  $cantidad_productose =  $_SESSION['cantidad_productose'];
+  $valor_total_costoe =  $_SESSION['valor_total_costoe'];
+  $valor_total_gastoe =  $_SESSION['valor_total_gastoe'];
+  $cantidad_producire =$_SESSION['cantidad_producire'];
   $nombreproducto =  $_SESSION['nombreproducto'];
-
+  $porcentaje_ganancia =  $_SESSION['porcentaje_ganancia'];
   $importe =  $_SESSION['importe'];
 
   //agregar tabla a base de datos
@@ -103,132 +103,36 @@
   <?php
   include_once("../simulaciones/menu1.php");
   ?>
-  
-      <div class="wrapper" style="background: white; width: 80%; margin: auto;">
-        <div class="container-fluid">
-          <div class="row bg-title">
-            <div class="col-lg-12">
-              <h4 class="page-title">Octavo Paso </h4>
-              <div style="float: right;  width: 200px; ">
-                             <a href="drop.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Sumulacion </a>
-                            </div>
-              <ol class="breadcrumb">
-              </ol>
-            </div>
-            <!-- /.col-lg-12 -->
-          </div>
-
+ 
+ <div class="wrapper" style="background: white; width: 80%; margin: auto;">
+      <div class="container-fluid">
+       
     
-<form class="range-form" method="POST" action="produccion.php" >
+<form class="range-form" method="POST" action="producto.php" >
  <div class="inicio">
   <h1 class="text-center">Simulaciones Resultados Empresa</h1>
  <h3 class="text-center"><?php echo $nombre_negocio_plan ; ?></h3>
-<br><br>
-<div style="float: right;  width: 200px;">
 
- <a href="agregar_materiaprima.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Agregar Materia Prima</a>
+
+<div style="float:right;   width: 200px;">
+
+ <a href="drop1.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Cerrar Simulación </a>
 </div>
 <div style="float: right;  width: 200px;">
 
- <a href="agregar_gastos.php" class="btn btn-warning btn-block btn-rounded waves-effect waves-light">Agregar Gastos</a>
+ <a href="pdf.php" target="_blank"  class="btn btn-warning btn-block btn-rounded waves-effect waves-light">Descargar PDF</a>
 </div>
 <div style="float: right;  width: 200px;">
 
- <a href="agregar_costos.php" class="btn btn-info btn-block btn-rounded waves-effect waves-light">Agregar Costos</a>
+ <a href="guardar_simulacion.php" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Guarda Tus Simulaciones </a>
+</div>
+<div style="float: right;  width: 200px;">
+
+ <a href="produccion.php" class="btn btn-info btn-block btn-rounded waves-effect waves-light">Continuar Simulando</a>
 </div>
 
-<br><br>
-<?php
+</form>
 
-
-
-$_SESSION['cantidad_productose'] = isset($_POST["cantidad_productose"]) ? htmlentities($_POST["cantidad_productose"]) : 10;
-$_SESSION['valor_total_gastoe'] = isset($_POST["valor_total_gastoe"]) ? htmlentities($_POST["valor_total_gastoe"]) : 10;
-$_SESSION['valor_total_costoe'] = isset($_POST["valor_total_costoe"]) ? htmlentities($_POST["valor_total_costoe"]) : 10;
-$_SESSION['cantidad_producire'] = isset($_POST["cantidad_producire"]) ? htmlentities($_POST["cantidad_producire"]) : 0;
-$_SESSION['porcentaje_ganancia'] = isset($_POST["porcentaje_ganancia"]) ? htmlentities($_POST["porcentaje_ganancia"]) : 20;
-
-$cantidad_productose =  $_SESSION['cantidad_productose'];
-$valor_total_costoe =  $_SESSION['valor_total_costoe'];
-$valor_total_gastoe =  $_SESSION['valor_total_gastoe'];
-$cantidad_producire =$_SESSION['cantidad_producire'];
-$porcentaje_ganancia =$_SESSION['porcentaje_ganancia'];
-
-
-?>   
-    <div class="scroll">
-    <div class="col-md-9">
-      <label for="formControlRange">Cantidad Productos</label>
-    <input type="range" min="0" max="100"  step="1"
-     class="form-control-range range-slider" value="<?php echo $cantidad_producire; ?>"  id="cantidad_producire" 
-     name="cantidad_producire">
-    </div>
-    <div class="col-md-3">
-      <span id="cantidad_producire_barra">0</span>
-  </div>
-  <br>
-<br><br>
-<br>
-<br>
-
-  <div class="col-md-9">
-      <label for="formControlRange">Catidad de Materia Prima</label>
-    <input type="range" min="1" max="100"  step="1"
-     class="form-control-range range-slider" value="<?php echo $cantidad_productose; ?>" 
-     id="cantidad_productose" name="cantidad_productose">
-    </div>
-    <div class="col-md-3">
-      <span id="cantidad_productose_barra">0</span>
-  </div>
-  <br>
-<br><br>
-<br>
-<br>
-
-  <div class="col-md-9">
-      <label for="formControlRange">Gastos Generales</label>
-    <input type="range" min="1" max="100" value="<?php echo $valor_total_gastoe; ?>"  step="1"
-     class="form-control-range range-slider" id="valor_total_gastoe"  name="valor_total_gastoe">
-    </div>
-    <div class="col-md-3">
-      <span id="valor_total_gastoe_barra">0</span>
-  </div>
-  <br>
-<br><br>
- 
-<br>
-<br>
- 
-  <div class="col-md-9">
-      <label for="formControlRange">Costos Generales</label>
-    <input type="range" min="1" max="100" value="<?php echo $valor_total_costoe; ?>"  step="1"
-     class="form-control-range range-slider" id="valor_total_costoe" name="valor_total_costoe">
-    </div>
-    <div class="col-md-3">
-      <span id="valor_total_costoe_barra">0</span>
-  </div>
-  <br>
-<br><br>
- 
-<br>
-<br>
-  <div class="col-md-9">
-      <label for="formControlRange">Porcentaje de Ganancias</label>
-    <input type="range" min="1" max="100" value="<?php echo $porcentaje_ganancia; ?>"  step="1"
-     class="form-control-range range-slider" id="porcentaje_ganancia" name="porcentaje_ganancia">
-    </div>
-    <div class="col-md-3">
-      <span id="porcentaje_ganancia_barra">0</span>
-  </div>
-  <br>
-<br><br>
-<br><br>
-  <br>
- <div>
- <button type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Calcular Datos</button>     
-
-</div>
-</div>
 <div class="table">
 <?php
  require_once('../../conexion.php');
@@ -264,22 +168,15 @@ $porcentaje_ganancia =$_SESSION['porcentaje_ganancia'];
  $precio_unidade_simuladoss= $precio_unidade_simulados /  $cantida ;
  $precio_unidad_simulados = number_format($precio_unidade_simuladoss, 0 ,',', '.');
 
-$precio_unidade_simulados_porcentaje=($precio_unidade_simulados*$importe_porcentaje) + $precio_unidade_simulados  ; 
-$precio_unidade_simuladosss = number_format($precio_unidade_simulados_porcentaje, 2 ,',', '.');
-
-$precio_unidaxx=($precio_unidade*$importe_porcentaje)   ; 
-$precio_importe = number_format($precio_unidaxx, 2 ,',', '.');
-
-
-$precio_unidax=($precio_unidade*$importe_porcentaje) + $precio_unidade  ; 
-$precio_unida = number_format($precio_unidax, 2 ,',', '.');
+ $precio_unidade_simuladosss = number_format($precio_unidade_simulados, 2 ,',', '.');
+ $precio_unida = number_format($precio_unidade, 2 ,',', '.');
 
  $porcentaje= ($precio_unidade_simuladoss * $porcentaje_ganancias) + $precio_unidade_simuladoss ;
 $porcentajes = number_format($porcentaje, 0 ,',', '.');
 
 $total_ganancia=($cantida*$porcentaje_ganancias) + $cantida;
 $total_ganancias=$total_ganancia*$porcentaje;
-$total_gananciass = number_format($total_ganancias, 2 ,',', '.'); 
+$total_gananciass = number_format($total_ganancias, 2 ,',', '.');
 
 $ganancia_neta=$total_ganancias-$precio_unidade_simulados;
 $ganancias_neta = number_format($ganancia_neta, 2 ,',', '.');
@@ -289,7 +186,6 @@ $ganancias_neta = number_format($ganancia_neta, 2 ,',', '.');
 <table id="" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
 
-                        
                             <tr>
                            
                                 <th style="text-align: center; vertical-align: middle;">Datos Reales  </th>
@@ -352,12 +248,6 @@ $ganancias_neta = number_format($ganancia_neta, 2 ,',', '.');
                                    
                        </table>
 </div>
- </div>                     
-</form>
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 <br>
@@ -365,81 +255,111 @@ $ganancias_neta = number_format($ganancia_neta, 2 ,',', '.');
 <br>
 
 
+<div>
+  <h1 style="font-size: 30px;">Felicidades has Terminado </h1>
+  <h2>Si vendes a <span style="color: green; font-size: 34px; "><?php  echo $porcentajes; ?></span> pesos cada unidad obtendras</h2>
+  <h2>una Ganancia neta equivalente a </h2>
+  <h2 style="color: green; font-size: 34px; "   > <?php  echo $ganancias_neta; ?> pesos </h2>
+  <h2>Tu simulacion debes descargarla</h2>
+  <h2>y luego debes guardarla</h2>
+  <br>
+  <div style="float:left;  width: 180px;">
+
+  <a style="color: white;  border-radius:10px; " target="_blank" class="btn btn-danger btn-block btn-rounded waves-effect waves-light" href="pdf.php"> DESCARGAR</a><br>
+</div>
+
+  <div style=" float:left; width: 180px;">
+
+  <a style="color: white;    border-radius:10px;"  class="btn btn-success btn-block btn-rounded waves-effect waves-light" href="guardar_simulacion.php">GUARDAR</a>
+</div>
+  
+
+
+</div>
+</div>
 <form  method="POST" enctype="multipart/form-data" >
-<button style="width: 250px; left:750px;" value="Siguiente" name="Siguiente"  type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Siguiente</button>                  
-                      
+         <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+             
    <!-- Inputs para transferir informacion -->
-   <div>
+  <div>
                                                             <!-- Form 1 -->
-                                                            <input type="text" id="doc_autor_plan" name="doc_autor_plan" value="<?php  echo $documento; ?>">
+                                                            <input type="hidden" id="doc_autor_plan" name="doc_autor_plan" value="<?php  echo $documento; ?>">
                                                             <label for="doc_autor_plan" class="form__label"></label>
-                                                            <input type="text" id="autor_plan" name="autor_plan" value="<?php echo $nombre; ?>">
+                                                            <input type="hidden" id="autor_plan" name="autor_plan" value="<?php echo $nombre; ?>">
                                                             <label for="autor_plan" class="form__label"></label>
-                                                            <input type="text" id="autor_email" name="autor_email" value="<?php echo $autor_email; ?>">
+                                                            <input type="hidden" id="autor_email" name="autor_email" value="<?php echo $autor_email; ?>">
                                                             <label for="autor_email" class="form__label"></label>
 
                                                             <!-- Form 2 -->
-                                                            <input type="text" id="nombre_negocio_plan" name="nombre_negocio_plan" value="<?php  echo $nombre_negocio_plan; ?>">
+                                                            <input type="hidden" id="nombre_negocio_plan" name="nombre_negocio_plan" value="<?php  echo $nombre_negocio_plan; ?>">
                                                             <label for="nombre_negocio_plan" class="form__label"></label>
-                                                            <input type="text" id="industria_plan" name="industria_plan" value="<?php echo $industria_plan; ?>">
+                                                            <input type="hidden" id="industria_plan" name="industria_plan" value="<?php echo $industria_plan; ?>">
                                                             <label for="industria_plan" class="form__label"></label>
-                                                            <input type="text" id="negocio_nuevo" name="negocio_nuevo" value="<?php echo $negocio_nuevo ?> - <?php echo $negocio_existente ?>">
+                                                            <input type="hidden" id="negocio_nuevo" name="negocio_nuevo" value="<?php echo $negocio_nuevo ?> - <?php echo $negocio_existente ?>">
                                                             <label for="negocio_nuevo" class="form__label"></label>
-                                                            <input type="text" id="zona_geografica_plan" name="zona_geografica_plan" value="<?php  echo $zona_geografica_plan; ?>">
+                                                            <input type="hidden" id="zona_geografica_plan" name="zona_geografica_plan" value="<?php  echo $zona_geografica_plan; ?>">
                                                             <label for="zona_geografica_plan" class="form__label"></label>
-                                                            <input type="text" id="publico_objetivo_plan" name="publico_objetivo_plan" value="<?php echo $publico_objetivo_plan; ?>">
+                                                            <input type="hidden" id="publico_objetivo_plan" name="publico_objetivo_plan" value="<?php echo $publico_objetivo_plan; ?>">
                                                             <label for="publico_objetivo_plan" class="form__label"></label>
-                                                            <input type="text" id="innovacion_negocio_plan" name="innovacion_negocio_plan" value="<?php echo $innovacion_negocio_plan ?>">
+                                                            <input type="hidden" id="innovacion_negocio_plan" name="innovacion_negocio_plan" value="<?php echo $innovacion_negocio_plan ?>">
                                                             <label for="innovacion_negocio_plan" class="form__label"></label>
-                                                            <input type="text" id="Precio_negocio_plan" name="Precio_negocio_plan" value="<?php  echo $Precio_negocio_plan; ?>">
+                                                            <input type="hidden" id="Precio_negocio_plan" name="Precio_negocio_plan" value="<?php  echo $Precio_negocio_plan; ?>">
                                                             <label for="Precio_negocio_plan" class="form__label"></label>
-                                                            <input type="text" id="Calidad_negocio_plan" name="Calidad_negocio_plan" value="<?php echo $Calidad_negocio_plan; ?>">
+                                                            <input type="hidden" id="Calidad_negocio_plan" name="Calidad_negocio_plan" value="<?php echo $Calidad_negocio_plan; ?>">
                                                             <label for="Calidad_negocio_plan" class="form__label"></label>
-                                                            <input type="text" id="Rapidez_negocio_plan" name="Rapidez_negocio_plan" value="<?php echo $Rapidez_negocio_plan; ?>">
+                                                            <input type="hidden" id="Rapidez_negocio_plan" name="Rapidez_negocio_plan" value="<?php echo $Rapidez_negocio_plan; ?>">
                                                             <label for="Rapidez_negocio_plan" class="form__label"></label>
-                                                            <input type="text" id="clientes_interesados_plan" name="clientes_interesados_plan" value="<?php echo $clientes_interesados_plan; ?>">
+                                                            <input type="hidden" id="clientes_interesados_plan" name="clientes_interesados_plan" value="<?php echo $clientes_interesados_plan; ?>">
                                                             <label for="clientes_interesados_plan" class="form__label"></label>
-                                                            <input type="text" id="cantidadMonetaria_interesados_plan" name="cantidadMonetaria_interesados_plan" value="<?php echo $cantidadMonetaria_interesados_plan; ?>">
+                                                            <input type="hidden" id="cantidadMonetaria_interesados_plan" name="cantidadMonetaria_interesados_plan" value="<?php echo $cantidadMonetaria_interesados_plan; ?>">
                                                             <label for="cantidadMonetaria_interesados_plan " class="form__label"></label>
-                                                            <input type="text" id="socios_productores" name="socios_productores" value="<?php echo $socios_productores; ?>">
+                                                            <input type="hidden" id="socios_productores" name="socios_productores" value="<?php echo $socios_productores; ?>">
                                                             <label for="socios_productores" class="form__label"></label>
-                                                            <input type="text" id="tipo_marketing_plan" name="tipo_marketing_plan" value="<?php echo $tipo_marketing_plan; ?>">
+                                                            <input type="hidden" id="tipo_marketing_plan" name="tipo_marketing_plan" value="<?php echo $tipo_marketing_plan; ?>">
                                                             <label for="tipo_marketing_plan" class="form__label"></label>
-                                                            <input type="text" id="inversion_publicidad" name="inversion_publicidad" value="<?php echo $inversion_publicidad; ?>">
+                                                            <input type="hidden" id="inversion_publicidad" name="inversion_publicidad" value="<?php echo $inversion_publicidad; ?>">
                                                             <label for="inversion_publicidad" class="form__label"></label>
 
-                                                            <input type="text" id="cantidad_producto" name="cantidad_producto" value="<?php echo $cantidad_producto; ?>">
+                                                            <input type="hidden" id="cantidad_producto" name="cantidad_producto" value="<?php echo $cantidad_producto; ?>">
                                                             <label for="cantidad_producto" class="form__label"></label>
-                                                            <input type="text" id="valor_total_gasto" name="valor_total_gasto" value="<?php echo $valor_total_gasto; ?>">
+                                                            <input type="hidden" id="valor_total_gasto" name="valor_total_gasto" value="<?php echo $valor_total_gasto; ?>">
                                                             <label for="valor_total_gasto" class="form__label"></label>
-                                                            <input type="text" id="valor_total_costo" name="valor_total_costo" value="<?php echo $valor_total_costo; ?>">
+                                                            <input type="hidden" id="valor_total_costo" name="valor_total_costo" value="<?php echo $valor_total_costo; ?>">
                                                             <label for="valor_total_costo" class="form__label"></label>
-                                                            <input type="text" id="cantidad_producir" name="cantidad_producir" value="<?php echo $cantidad_producir; ?>">
+                                                            <input type="hidden" id="cantidad_producir" name="cantidad_producir" value="<?php echo $cantidad_producir; ?>">
                                                             <label for="cantidad_producir" class="form__label"></label>
 
 
 
 
-                                                            <input type="text" id="cantidad_productose" name="cantidad_productose" value="<?php echo $cantidad_productose; ?>">
+                                                            <input type="hidden" id="cantidad_productose" name="cantidad_productose" value="<?php echo $cantidad_productose; ?>">
                                                             <label for="cantidad_productose" class="form__label"></label>
                                                             
 
-                                                            <input type="text" id="valor_total_gastoe" name="valor_total_gastoe" value="<?php echo $valor_total_gastoe; ?>">
+                                                            <input type="hidden" id="valor_total_gastoe" name="valor_total_gastoe" value="<?php echo $valor_total_gastoe; ?>">
                                                             <label for="valor_total_gastoe" class="form__label"></label>
                                                             
                                                             
-                                                            <input type="text" id="valor_total_costoe" name="valor_total_costoe" value="<?php echo $valor_total_costoe; ?>">
+                                                            <input type="hidden" id="valor_total_costoe" name="valor_total_costoe" value="<?php echo $valor_total_costoe; ?>">
                                                             <label for="valor_total_costoe" class="form__label"></label>
                                                             
-                                                            <input type="text" id="cantidad_producire" name="cantidad_producire" value="<?php echo $cantidad_producire; ?>">
+                                                            <input type="hidden" id="cantidad_producire" name="cantidad_producire" value="<?php echo $cantidad_producire; ?>">
                                                             <label for="cantidad_producire" class="form__label"></label>
                                                             
-                                                             <input type="text" id="porcentaje_ganancia" name="porcentaje_ganancia" value="<?php echo $porcentaje_ganancia; ?>">
+                                                             <input type="hidden" id="porcentaje_ganancia" name="porcentaje_ganancia" value="<?php echo $porcentaje_ganancia; ?>">
                                                             <label for="porcentaje_ganancia" class="form__label"></label>
 
-                                                            <input type="text" id="nombreproducto" name="nombreproducto" value="<?php echo $nombreproducto; ?>">
+                                                            <input type="hidden" id="nombreproducto" name="nombreproducto" value="<?php echo $nombreproducto; ?>">
                                                             <label for="nombreproducto" class="form__label"></label>
-                                                            <input type="text" id="importe" name="importe" value="<?php echo $importe; ?>">
+                                                            <input type="hidden" id="importe" name="importe" value="<?php echo $importe; ?>">
                                                             <label for="importe" class="form__label"></label>
                                                             
 
@@ -447,87 +367,14 @@ $ganancias_neta = number_format($ganancia_neta, 2 ,',', '.');
                                                         </div>
                                                         </form>       
 
-<br><br><br>
-
-
-<div class="bajo">
-<h1 class="text-center">Producto  </h1>
-<table id="" class="table table-striped table-bordered" cellspacing="0" width="80%" >
-                        <thead>
-                            <tr>
-                              
-                                <th style="text-align: center; vertical-align: middle;">Nombre Producto </th>    
-                                <th style="text-align: center; vertical-align: middle;">Cantidad</th> 
-                                <th style="text-align: center; vertical-align: middle;">Gasto de Materia prima Totales</th> 
-                                <th style="text-align: center; vertical-align: middle;">Otros Gastos Totales</th> 
-                                <th style="text-align: center; vertical-align: middle;">Costos Totales</th> 
-                                <th style="text-align: center; vertical-align: middle;">Valor por Unidad</th> 
-                                
-                                
-                            </tr>
-                        </thead>
-                           
-                            <!-- Contenido de la tabla -->
-                            <?php 
-
-                             $cantidad_aproducir = number_format($cantidad_producir, 0 ,',', '.');
-
-                            ?>
-                            <tr>
-                           
-                                
-                                <td style="text-align: center; vertical-align: middle;"><?php echo $nombreproducto ; ?> </td>
-                                <td style="text-align: center; vertical-align: middle;"> <?php echo $cantidad_aproducir;?> Und</td>
-                                <td style="text-align: center; vertical-align: middle;"><?php echo $cantidad_productos;?></td>
-                                <td style="text-align: center; vertical-align: middle;"><?php echo $valor_total_gastos; ?></td>
-                                <td style="text-align: center; vertical-align: middle;"><?php echo $valor_total_costos; ?> </td>
-                                <td style="text-align: center; vertical-align: middle;"><?php echo $precio_unidad; ?> </td>
-
-                     
-                            </tr>
-                           
-                                 <?php
-                            
-                        
-                                ?>   
-                                
-                       </table>
-                       </div>
-<br><br><br><br>
-
-
-
-
 
 <!-- inicio -->
 
-  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
-  <script src="js/jquery.nicescroll.js"></script>
-  <script src="js/waves.js"></script>
-  <script src="../js/slider2.js"></script>
-  <script src="js/myadmin.js"></script>
+
 </body>
 <footer>
-    <?php
-  include_once("../footer.php");
-  ?>
-</footer>
+      <?php
+      include_once("../footer.php")
+      ?>
+   </footer>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

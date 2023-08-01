@@ -126,15 +126,15 @@
 <br><br>
 <div style="float: right;  width: 200px;">
 
- <a href="agregar_materiaprima.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Agregar Materia Prima</a>
+ <a href="agregar_materiaprima.php" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Agregar Materia De Servicio</a>
 </div>
 <div style="float: right;  width: 200px;">
 
- <a href="agregar_gastos.php" class="btn btn-warning btn-block btn-rounded waves-effect waves-light">Agregar Gastos</a>
+ <a href="agregar_gastos.php" class="btn btn-warning btn-block btn-rounded waves-effect waves-light">Agregar Gastos Fijos</a>
 </div>
 <div style="float: right;  width: 200px;">
 
- <a href="agregar_costos.php" class="btn btn-info btn-block btn-rounded waves-effect waves-light">Agregar Costos</a>
+ <a href="agregar_costos.php" class="btn btn-info btn-block btn-rounded waves-effect waves-light">Agregar Costos de Utilidad</a>
 </div>
 
 <br><br>
@@ -142,11 +142,11 @@
 
 
 
-$_SESSION['cantidad_productose'] = isset($_POST["cantidad_productose"]) ? htmlentities($_POST["cantidad_productose"]) : 10;
-$_SESSION['valor_total_gastoe'] = isset($_POST["valor_total_gastoe"]) ? htmlentities($_POST["valor_total_gastoe"]) : 10;
-$_SESSION['valor_total_costoe'] = isset($_POST["valor_total_costoe"]) ? htmlentities($_POST["valor_total_costoe"]) : 10;
+$_SESSION['cantidad_productose'] = isset($_POST["cantidad_productose"]) ? htmlentities($_POST["cantidad_productose"]) : 5;
+$_SESSION['valor_total_gastoe'] = isset($_POST["valor_total_gastoe"]) ? htmlentities($_POST["valor_total_gastoe"]) : 5;
+$_SESSION['valor_total_costoe'] = isset($_POST["valor_total_costoe"]) ? htmlentities($_POST["valor_total_costoe"]) : 5;
 $_SESSION['cantidad_producire'] = isset($_POST["cantidad_producire"]) ? htmlentities($_POST["cantidad_producire"]) : 0;
-$_SESSION['porcentaje_ganancia'] = isset($_POST["porcentaje_ganancia"]) ? htmlentities($_POST["porcentaje_ganancia"]) : 20;
+$_SESSION['porcentaje_ganancia'] = isset($_POST["porcentaje_ganancia"]) ? htmlentities($_POST["porcentaje_ganancia"]) : 10;
 
 $cantidad_productose =  $_SESSION['cantidad_productose'];
 $valor_total_costoe =  $_SESSION['valor_total_costoe'];
@@ -158,7 +158,7 @@ $porcentaje_ganancia =$_SESSION['porcentaje_ganancia'];
 ?>   
     <div class="scroll">
     <div class="col-md-9">
-      <label for="formControlRange">Cantidad Productos</label>
+      <label for="formControlRange">Usuarios</label>
     <input type="range" min="0" max="100"  step="1"
      class="form-control-range range-slider" value="<?php echo $cantidad_producire; ?>"  id="cantidad_producire" 
      name="cantidad_producire">
@@ -172,7 +172,7 @@ $porcentaje_ganancia =$_SESSION['porcentaje_ganancia'];
 <br>
 
   <div class="col-md-9">
-      <label for="formControlRange">Catidad de Materia Prima</label>
+      <label for="formControlRange">Catidad de Materia De Servicio</label>
     <input type="range" min="1" max="100"  step="1"
      class="form-control-range range-slider" value="<?php echo $cantidad_productose; ?>" 
      id="cantidad_productose" name="cantidad_productose">
@@ -186,7 +186,7 @@ $porcentaje_ganancia =$_SESSION['porcentaje_ganancia'];
 <br>
 
   <div class="col-md-9">
-      <label for="formControlRange">Gastos Generales</label>
+      <label for="formControlRange">Gastos Fijos Mensuales</label>
     <input type="range" min="1" max="100" value="<?php echo $valor_total_gastoe; ?>"  step="1"
      class="form-control-range range-slider" id="valor_total_gastoe"  name="valor_total_gastoe">
     </div>
@@ -200,7 +200,7 @@ $porcentaje_ganancia =$_SESSION['porcentaje_ganancia'];
 <br>
  
   <div class="col-md-9">
-      <label for="formControlRange">Costos Generales</label>
+      <label for="formControlRange">Costos De utilidades</label>
     <input type="range" min="1" max="100" value="<?php echo $valor_total_costoe; ?>"  step="1"
      class="form-control-range range-slider" id="valor_total_costoe" name="valor_total_costoe">
     </div>
@@ -223,7 +223,7 @@ $porcentaje_ganancia =$_SESSION['porcentaje_ganancia'];
   <br>
 <br><br>
 <br><br>
-  <br>
+  <br><br><br>
  <div>
  <button type="submit" class="btn btn-success btn-block btn-rounded waves-effect waves-light">Calcular Datos</button>     
 
@@ -240,6 +240,9 @@ $porcentaje_ganancia =$_SESSION['porcentaje_ganancia'];
  $materiaprima_porcentaje= $cantidad_productose /100;
  $porcentaje_ganancias= $porcentaje_ganancia /100;
  $importe_porcentaje= $importe /100;
+
+ $suarios_servicios = ($cantidad_producir * $producir_porcentaje) + $cantidad_producir ;
+ $suarios_servicio = number_format($suarios_servicios, 0 ,',', '.');
 
  $costos_simuladoss = ($valor_total_costo * $costos_porcentaje) + $valor_total_costo ;
  $costos_simulados = number_format($costos_simuladoss, 2 ,',', '.');
@@ -284,6 +287,8 @@ $total_gananciass = number_format($total_ganancias, 2 ,',', '.');
 $ganancia_neta=$total_ganancias-$precio_unidade_simulados;
 $ganancias_neta = number_format($ganancia_neta, 2 ,',', '.');
 
+
+
 ?>
   
 <table id="" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -300,53 +305,60 @@ $ganancias_neta = number_format($ganancia_neta, 2 ,',', '.');
                         </thead>
                             <!-- Contenido de la tabla -->
                             <tr>
-                                <td style="text-align: center; vertical-align: middle;">Total de Costos</td>
+                                <td style="text-align: center; vertical-align: middle;">Costos Utilidades</td>
                                 <td style="text-align: center; vertical-align: middle;"> <?php echo $valor_total_costos; ?></td>
-                                <td style="text-align: center; vertical-align: middle;">Total de Costos</td>
+                                <td style="text-align: center; vertical-align: middle;">Costos Utilidades</td>
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $costos_simulados; ?></td>
                             </tr>
                             <tr>
-                                <td style="text-align: center; vertical-align: middle;">Total de Gastos</td>
+                                <td style="text-align: center; vertical-align: middle;">Gastos Fijos Mensuales</td>
                                 <td style="text-align: center; vertical-align: middle;"> <?php echo $valor_total_gastos; ?></td>
-                                <td style="text-align: center; vertical-align: middle;">Total de Gastos</td>
+                                <td style="text-align: center; vertical-align: middle;">Gastos Fijos Mensuales</td>
                                 <td style="text-align: center; vertical-align: middle;"> <?php echo $gastos_simulados; ?></td>
                             </tr>
                             <tr>
-                                <td style="text-align: center; vertical-align: middle;">Total en Materia Prima</td>
+                                <td style="text-align: center; vertical-align: middle;">Materia De Servicio</td>
                                 <td style="text-align: center; vertical-align: middle;"> <?php echo $cantidad_productos; ?> </td>
-                                <td style="text-align: center; vertical-align: middle;">Total en Materia Prima</td>
+                                <td style="text-align: center; vertical-align: middle;">Materia De Servicio</td>
                                 <td style="text-align: center; vertical-align: middle;"> <?php echo $materiaprima_simulados; ?></td>
                             </tr> 
+
+                            <tr>
+                                <td style="text-align: center; vertical-align: middle;">Usuarios Del Servicio</td>
+                                <td style="text-align: center; vertical-align: middle;"> <?php echo $cantidad_producir; ?> </td>
+                                <td style="text-align: center; vertical-align: middle;">Usuarios Del Servicio</td>
+                                <td style="text-align: center; vertical-align: middle;"> <?php echo $suarios_servicio; ?></td>
+                            </tr> 
                               <tr>
-                                <td style="text-align: center; vertical-align: middle;">Invercion Total</td>
+                                <td style="text-align: center; vertical-align: middle;">Invercion Inicial</td>
                                 <td style="text-align: center; vertical-align: middle;"> <?php echo $precio_unida; ?> </td>
-                                <td style="text-align: center; vertical-align: middle;">Invercion Total</td>
+                                <td style="text-align: center; vertical-align: middle;">Invercion Inicial</td>
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $precio_unidade_simuladosss; ?> </td>
                             </tr> 
                             <tr>
-                                <td style="text-align: center; vertical-align: middle;">Precio de Venta Unidad</td>
+                                <td style="text-align: center; vertical-align: middle;">Precio Mensual del servicio</td>
                                 <td style="text-align: center; vertical-align: middle;"> <?php echo $precio_unidad; ?> Pesos Und </td>
-                                <td style="text-align: center; vertical-align: middle;">Precio de Venta Unidad</td>
+                                <td style="text-align: center; vertical-align: middle;">Precio Mensual del servicio</td>
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $precio_unidad_simulados; ?> Pesos Und</td>
                             </tr> 
                           
                                 <tr>
-                                <td style="text-align: center; vertical-align: middle;">Precio de Venta Unidad + Porcentaje</td>
+                                <td style="text-align: center; vertical-align: middle;">PrecioMensual del servicio + Porcentaje De Ganancias</td>
                                 <td style="text-align: center; vertical-align: middle;"> 0 Pesos </td>
-                                <td style="text-align: center; vertical-align: middle;">Precio de Venta Unidad  + Porcentaje</td>
+                                <td style="text-align: center; vertical-align: middle;">PrecioMensual del servicio + Porcentaje De Ganancias</td>
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $porcentajes; ?> Pesos Und</td>
                             </tr> 
                                  <tr>
-                                <td style="text-align: center; vertical-align: middle;">Total Ganancias</td>
+                                <td style="text-align: center; vertical-align: middle;">Total Ganancias Mensuales</td>
                                 <td style="text-align: center; vertical-align: middle;"> 0 Pesos </td>
-                                <td style="text-align: center; vertical-align: middle;">Total Ganancias</td>
+                                <td style="text-align: center; vertical-align: middle;">Total Ganancias Mensuales</td>
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $total_gananciass; ?> </td>
                             </tr> 
 
                              <tr>
-                                <td style="text-align: center; vertical-align: middle;">Ganancia Neta</td>
+                                <td style="text-align: center; vertical-align: middle;">Ganancia Neta Mensual</td>
                                 <td style="text-align: center; vertical-align: middle;"> 0 Pesos </td>
-                                <td style="text-align: center; vertical-align: middle;">Ganancia Neta</td>
+                                <td style="text-align: center; vertical-align: middle;">Ganancia Neta Mensual</td>
                                 <td style="text-align: center; vertical-align: middle;"><?php echo $ganancias_neta; ?> </td>
                             </tr> 
                                    
@@ -362,7 +374,7 @@ $ganancias_neta = number_format($ganancia_neta, 2 ,',', '.');
 <br>
 <br>
 <br>
-<br>
+<br><br><br>
 
 
 <form  method="POST" enctype="multipart/form-data" >
