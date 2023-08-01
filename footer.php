@@ -51,6 +51,7 @@
             </div>
             <div class="col-md-6 text-center text-md-end">
                 Diseñado y Desarrollado por <a class="fw-medium text-light" href="">FACNET</a>
+                <span> - Version 0.9</span>
             </div>
         </div>
     </div>
