@@ -62,9 +62,64 @@
                             if ($busqueda) {
                               $fila = mysqli_fetch_assoc($busqueda);
                               $totalEmprendedores = $fila['cantidad_total_emprendedores'];
-                            } else {
+                              } else {
                                 echo "Error en la consulta: " . mysqli_error($conexion);
-                            } 
+                              } 
+
+                              $consultaTotalHombresCursos ="SELECT COUNT(*) AS genero_masculino_inscritos_cursos FROM (SELECT DISTINCT sexo FROM `inscritos_cursos`) AS subconsultaCursosGeneroHombre WHERE sexo = 'Hombre';";
+                              $busquedaTotalHombresCurso=mysqli_query($conexion,$consultaTotalHombresCursos);
+                              if ($busquedaTotalHombresCurso) {
+                                $filaTotalHombresCurso = mysqli_fetch_assoc($busquedaTotalHombresCurso);
+                                $cantidad_total_hombres_inscritos_cursos = $filaTotalHombresCurso['genero_masculino_inscritos_cursos'];
+                              } else {
+                                  echo "Error en la consulta: " . mysqli_error($conexion);
+                              }
+
+                              $consultaTotalMujeresCursos ="SELECT COUNT(*) AS genero_femenino_inscritos_cursos FROM (SELECT DISTINCT sexo FROM `inscritos_cursos`) AS subconsultaCursosGeneroMujer WHERE sexo = 'Mujer';";
+                              $busquedaTotalMujeresCurso=mysqli_query($conexion,$consultaTotalMujeresCursos);
+                              if ($busquedaTotalMujeresCurso) {
+                                $filaTotalMujeresCurso = mysqli_fetch_assoc($busquedaTotalMujeresCurso);
+                                $cantidad_total_mujeres_inscritos_cursos = $filaTotalMujeresCurso['genero_femenino_inscritos_cursos'];
+                              } else {
+                                  echo "Error en la consulta: " . mysqli_error($conexion);
+                              }
+
+                              $consultaTotalOtrosCursos ="SELECT COUNT(*) AS genero_otros_inscritos_cursos FROM (SELECT DISTINCT sexo FROM `inscritos_cursos`) AS subconsultaCursosGeneroOtro WHERE sexo = 'Otro';";
+                              $busquedaTotalOtrosCurso=mysqli_query($conexion,$consultaTotalOtrosCursos);
+                              if ($busquedaTotalOtrosCurso) {
+                                $filaTotalOtrosCurso = mysqli_fetch_assoc($busquedaTotalOtrosCurso);
+                                $cantidad_total_otros_inscritos_cursos = $filaTotalOtrosCurso['genero_otros_inscritos_cursos'];
+                              } else {
+                                  echo "Error en la consulta: " . mysqli_error($conexion);
+                              }
+
+                              $consultaTotalHombresEventos ="SELECT COUNT(*) AS genero_masculino_inscritos_eventos FROM (SELECT DISTINCT sexo FROM `inscritos_eventos`) AS subconsultaEventosGenero WHERE sexo = 'Hombre';";
+                              $busquedaTotalHombresEventos=mysqli_query($conexion,$consultaTotalHombresEventos);
+                              if ($busquedaTotalHombresEventos) {
+                                $filaTotalHombresEventos = mysqli_fetch_assoc($busquedaTotalHombresEventos);
+                                $cantidad_total_hombres_inscritos_Eventos = $filaTotalHombresEventos['genero_masculino_inscritos_eventos'];  
+                                } else {
+                                    echo "Error en la consulta: " . mysqli_error($conexion);
+                                }
+                              
+                                $consultaTotalMujeresEventos ="SELECT COUNT(*) AS genero_femenino_inscritos_eventos FROM (SELECT DISTINCT sexo FROM `inscritos_eventos`) AS subconsultaEventosGeneroMujer WHERE sexo = 'Mujer';";
+                                $busquedaTotalMujeresEventos=mysqli_query($conexion,$consultaTotalMujeresEventos);
+                                if ($busquedaTotalMujeresEventos) {
+                                  $filaTotalMujeresEventos = mysqli_fetch_assoc($busquedaTotalMujeresEventos);
+                                  $cantidad_total_mujeres_inscritos_eventos = $filaTotalMujeresEventos['genero_femenino_inscritos_eventos'];
+                                } else {
+                                    echo "Error en la consulta: " . mysqli_error($conexion);
+                                }
+  
+                                $consultaTotalOtrosEventos ="SELECT COUNT(*) AS genero_otros_inscritos_eventos FROM (SELECT DISTINCT sexo FROM `inscritos_eventos`) AS subconsultaEventosGeneroOtro WHERE sexo = 'Otro';";
+                                $busquedaTotalOtrosEventos=mysqli_query($conexion,$consultaTotalOtrosEventos);
+                                if ($busquedaTotalOtrosEventos) {
+                                  $filaTotalOtrosEvento = mysqli_fetch_assoc($busquedaTotalOtrosEventos);
+                                  $cantidad_total_otros_inscritos_eventos = $filaTotalOtrosEvento['genero_otros_inscritos_eventos'];
+                                } else {
+                                    echo "Error en la consulta: " . mysqli_error($conexion);
+                                }
+                              
                             $consultaTotalCursos ="SELECT COUNT(*) AS cantidad_total_inscritos_cursos FROM (SELECT DISTINCT documento FROM `inscritos_cursos`) AS subconsultaCursos;";
                             $busquedaTotalCurso=mysqli_query($conexion,$consultaTotalCursos);
                             if ($busquedaTotalCurso) {
@@ -73,7 +128,7 @@
                             } else {
                                 echo "Error en la consulta: " . mysqli_error($conexion);
                             }
-                            
+
                             $consultaTotalEventos ="SELECT COUNT(*) AS cantidad_total_inscritos_eventos FROM (SELECT DISTINCT documento FROM `inscritos_eventos`) AS subconsultaEventos;";
                             $busquedaTotalEventos=mysqli_query($conexion,$consultaTotalEventos);
                             if ($busquedaTotalEventos) {
@@ -157,10 +212,10 @@
           new Chart(ctx, {
             type: 'bar',
             data: {
-              labels: ['Total de Emprendedores', 'Total de Inscritos a Cursos', 'Total de Inscritos a Eventos', 'Promedio de Edad de emprendedores', 'Categorias de Plan mas Frecuentes: <?php echo $Categorias; ?>'],
+              labels: ['Total de Emprendedores' , 'Total de Inscritos a Cursos', 'Total de Hombres en Cursos', 'Total de Mujeres en Cursos' ,'Total de LGBTIQ+ en Cursos' , 'Total de Inscritos a Eventos', 'Total de Hombres en Eventos', 'Total de Mujeres en Eventos' ,'Total de LGBTIQ+ en Eventos' , 'Promedio de Edad de emprendedores', 'Categorias de Plan mas Frecuentes: <?php echo $Categorias; ?>'],
               datasets: [{
                 label: 'Cantidades',
-                data: [<?php echo $totalEmprendedores; ?>, <?php echo $cantidad_total_inscritos_cursos; ?>, <?php echo $cantidad_total_inscritos_eventos; ?>, <?php echo $EdadpromedioTotal; ?> , <?php echo $CantidadEmprendedoresCategorias; ?>],
+                data: [<?php echo $totalEmprendedores; ?>, <?php echo $cantidad_total_inscritos_cursos; ?> , <?php echo $cantidad_total_hombres_inscritos_cursos ?>,<?php echo $cantidad_total_mujeres_inscritos_cursos ?> , <?php echo $cantidad_total_otros_inscritos_cursos ?> , <?php echo $cantidad_total_inscritos_eventos; ?>,<?php echo $cantidad_total_hombres_inscritos_Eventos ?>, <?php echo $cantidad_total_mujeres_inscritos_eventos ?>,<?php echo $cantidad_total_otros_inscritos_eventos ?> , <?php echo $EdadpromedioTotal; ?> , <?php echo $CantidadEmprendedoresCategorias; ?>],
                 borderWidth: 1
               }]
             },
