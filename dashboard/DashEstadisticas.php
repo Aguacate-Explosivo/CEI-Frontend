@@ -47,7 +47,13 @@
                         <tr>
                             <th>Total de Emprendedores</th>
                             <th>Total de Inscritos a Cursos</th>
-                            <th>Total de Inscritos a Eventos</th>     
+                            <th>Total de Hombres inscritos en Cursos</th>
+                            <th>Total de Mujeres inscritas en Cursos</th>
+                            <th>Total de Personas LGBTIQ+ inscritas en Cursos</th>
+                            <th>Total de Inscritos a Eventos</th>    
+                            <th>Total de Hombres inscritos en Eventos</th>
+                            <th>Total de Mujeres inscritas en Eventos</th>
+                            <th>Total de Personas LGBTIQ+ inscritas en Eventos</th> 
                             <th>Promedio de Edad de emprendedores</th>                        
                             <th>Categorias de Planes de Negocios mas Frecuentes</th>
                             <th>Cantidad de negocios en la categoria</th>
@@ -184,7 +190,13 @@
                         <tr>
                             <td><?php echo $totalEmprendedores; ?></td>
                             <td><?php echo $cantidad_total_inscritos_cursos; ?></td>
+                            <td><?php echo $cantidad_total_hombres_inscritos_cursos ?></td>
+                            <td><?php echo $cantidad_total_mujeres_inscritos_cursos ?> </td>
+                            <td><?php echo $cantidad_total_otros_inscritos_cursos ?> </td>
                             <td><?php echo $cantidad_total_inscritos_eventos; ?></td>
+                            <td> <?php echo $cantidad_total_hombres_inscritos_Eventos ?></td>  
+                            <td><?php echo $cantidad_total_mujeres_inscritos_eventos ?></td>
+                            <td><?php echo $cantidad_total_otros_inscritos_eventos ?></td>  
                             <td><?php echo $EdadpromedioTotal; ?></td>
                             <td><?php echo $Categorias; ?></td>
                             <td><?php echo $CantidadEmprendedoresCategorias; ?></td>
@@ -216,6 +228,24 @@
               datasets: [{
                 label: 'Cantidades',
                 data: [<?php echo $totalEmprendedores; ?>, <?php echo $cantidad_total_inscritos_cursos; ?> , <?php echo $cantidad_total_hombres_inscritos_cursos ?>,<?php echo $cantidad_total_mujeres_inscritos_cursos ?> , <?php echo $cantidad_total_otros_inscritos_cursos ?> , <?php echo $cantidad_total_inscritos_eventos; ?>,<?php echo $cantidad_total_hombres_inscritos_Eventos ?>, <?php echo $cantidad_total_mujeres_inscritos_eventos ?>,<?php echo $cantidad_total_otros_inscritos_eventos ?> , <?php echo $EdadpromedioTotal; ?> , <?php echo $CantidadEmprendedoresCategorias; ?>],
+                backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 205, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(201, 203, 207, 0.2)'
+              ],
+              borderColor: [
+                'rgb(255, 99, 132)',
+                'rgb(255, 159, 64)',
+                'rgb(255, 205, 86)',
+                'rgb(75, 192, 192)',
+                'rgb(54, 162, 235)',
+                'rgb(153, 102, 255)',
+                'rgb(201, 203, 207)'
+              ],
                 borderWidth: 1
               }]
             },
