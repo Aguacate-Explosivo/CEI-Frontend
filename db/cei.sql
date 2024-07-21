@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-08-2023 a las 22:39:03
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 21-07-2024 a las 21:22:26
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,6 +34,28 @@ CREATE TABLE `categoriasemprendimiento` (
   `ingresos` int(11) NOT NULL,
   `timestamp` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `categorias_citas`
+--
+
+CREATE TABLE `categorias_citas` (
+  `id` int(11) NOT NULL,
+  `descripcion` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `categorias_citas`
+--
+
+INSERT INTO `categorias_citas` (`id`, `descripcion`) VALUES
+(11, 'Estudiante'),
+(12, 'Docente'),
+(13, 'Administrativo'),
+(14, 'Comunidad General'),
+(15, 'Otros');
 
 -- --------------------------------------------------------
 
@@ -245,6 +267,16 @@ CREATE TABLE `logs` (
   `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `logs`
+--
+
+INSERT INTO `logs` (`id`, `action`, `description`, `timestamp`) VALUES
+(143, 'Inicio de sesión', 'El usuario \'admin\' inició sesión Correctamente.', '2024-07-21 16:07:14'),
+(144, 'Cerrado de Sesion', 'el usuario ha cerrado la sesión de forma manual', '2024-07-21 16:11:04'),
+(145, 'Inicio de sesión', 'El usuario \'admin\' inició sesión Correctamente.', '2024-07-21 19:03:14'),
+(146, 'Cerrado de Sesion', 'el usuario ha cerrado la sesión de forma manual', '2024-07-21 19:20:32');
+
 -- --------------------------------------------------------
 
 --
@@ -275,6 +307,52 @@ CREATE TABLE `simulaciones` (
   `timestamp` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tema_citas`
+--
+
+CREATE TABLE `tema_citas` (
+  `id` int(11) NOT NULL,
+  `descripcion` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `tema_citas`
+--
+
+INSERT INTO `tema_citas` (`id`, `descripcion`) VALUES
+(1, 'Capacitaciones'),
+(2, 'Asesorías'),
+(3, 'Orientaciones'),
+(4, 'Consultorías'),
+(5, 'Acompañamiento a Emprendedores y Empresarios'),
+(6, 'Orientacion y Acompañamiento en las participaciones de las convocatorias públicas y privadas locales, regionales, nacionales e internacionales');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tipo_documento_citas`
+--
+
+CREATE TABLE `tipo_documento_citas` (
+  `id` int(11) NOT NULL,
+  `descripcion` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `tipo_documento_citas`
+--
+
+INSERT INTO `tipo_documento_citas` (`id`, `descripcion`) VALUES
+(1, 'Cedula de ciudadanía'),
+(2, 'Tarjeta de identidad'),
+(3, 'Contraseña'),
+(4, 'Documento extranjero'),
+(5, 'Pasaporte'),
+(6, 'Otros');
+
 --
 -- Índices para tablas volcadas
 --
@@ -283,6 +361,12 @@ CREATE TABLE `simulaciones` (
 -- Indices de la tabla `categoriasemprendimiento`
 --
 ALTER TABLE `categoriasemprendimiento`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `categorias_citas`
+--
+ALTER TABLE `categorias_citas`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -364,6 +448,18 @@ ALTER TABLE `simulaciones`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `tema_citas`
+--
+ALTER TABLE `tema_citas`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `tipo_documento_citas`
+--
+ALTER TABLE `tipo_documento_citas`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -372,6 +468,12 @@ ALTER TABLE `simulaciones`
 --
 ALTER TABLE `categoriasemprendimiento`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de la tabla `categorias_citas`
+--
+ALTER TABLE `categorias_citas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `citas`
@@ -437,7 +539,7 @@ ALTER TABLE `inscritos_eventos`
 -- AUTO_INCREMENT de la tabla `logs`
 --
 ALTER TABLE `logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=143;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
 
 --
 -- AUTO_INCREMENT de la tabla `marketing`
@@ -450,6 +552,18 @@ ALTER TABLE `marketing`
 --
 ALTER TABLE `simulaciones`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT de la tabla `tema_citas`
+--
+ALTER TABLE `tema_citas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT de la tabla `tipo_documento_citas`
+--
+ALTER TABLE `tipo_documento_citas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
