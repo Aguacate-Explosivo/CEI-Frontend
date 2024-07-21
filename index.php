@@ -333,7 +333,52 @@
     </div>
 </div>
 <!-- Project End -->
-
+ <!-- Testimonial Start -->
+ <div class="container-xxl pt-5">
+        <div class="container">
+            <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
+                >
+                <p class="fs-5 fw-medium text-success">Talento Humano</p>
+                <h1 class="display-6 mb-4">Conoce a Equipo del centro de emprendimiento</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                    <img class="mb-4" src="img/dorian_perea_palacios.webp" alt="Profesor Dorian">
+                    <p class="mb-4">Es economista de profesión, tiene un Msc. en ciencias
+                         económicas, Magister en desarrollo emprendedor e innovación,
+                          Especialista desarrollo rural y Especialista en formación y
+                           capacitación en emprendimiento.</p>
+                    <h5>Dorian Perea Palacios</h5>
+                    <span class="text-success">Coordinador Centro de Emprendimiento e Innovación.</span>
+                </div>
+                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                    <img class="mb-4" src="img/jesus_cuesta_copete.webp" alt="Profesor Jesus">
+                    <p class="mb-4">Es administrador de empresas, Magister en desarrollo 
+                        empresarial e innovación, Especialista en formación y capacitación 
+                        en emprendimiento y Especialista en control organizacional ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+                    <h5>Jesús Antonio Cuesta Copete</h5>
+                    <span class="text-success">Docente Asesor.</span>
+                </div>
+                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                    <img class="mb-4" src="img/sebastian_murillo_barahona.webp" alt="Profesor Sebastian">
+                    <p class="mb-4">Es administrador de empresas, Especialista en gerencia 
+                        estratégica de mercados Magister en administración de negocios 
+                        y estudiante de Doctorado en proyecto.ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+                    <h5>Sebastián Murillo Barahona</h5>
+                    <span class="text-success">Asesor interno.</span>
+                </div>
+                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                    <img class="mb-4" src="img/fadilio_fines_conto_garcia.webp" alt="Profesor Fadilio">
+                    <p class="mb-4">Es economista especializado en finanzas públicas. 
+                        Actualmente brinda capacitaciones de proyectos productivos 
+                         en el CEI. ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+                    <h5>Fadilo Fines Conto García</h5>
+                    <span class="text-success">Docente.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
 
     <!-- Team Start -->
     <div class="container-xxl py-5">
@@ -399,52 +444,7 @@
         </div>
     </div>
     <!-- Team End -->
- <!-- Testimonial Start -->
- <div class="container-xxl pt-5">
-        <div class="container">
-            <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
-                >
-                <p class="fs-5 fw-medium text-success">Talento Humano</p>
-                <h1 class="display-6 mb-4">Conoce a algunos integrantes del CEI</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/dorian_perea_palacios.webp" alt="Profesor Dorian">
-                    <p class="mb-4">Es economista de profesión, tiene un Msc. en ciencias
-                         económicas, Magister en desarrollo emprendedor e innovación,
-                          Especialista desarrollo rural y Especialista en formación y
-                           capacitación en emprendimiento.</p>
-                    <h5>Dorian Perea Palacios</h5>
-                    <span class="text-success">Coordinador Centro de Emprendimiento e Innovación.</span>
-                </div>
-                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/jesus_cuesta_copete.webp" alt="Profesor Jesus">
-                    <p class="mb-4">Es administrador de empresas, Magister en desarrollo 
-                        empresarial e innovación, Especialista en formación y capacitación 
-                        en emprendimiento y Especialista en control organizacional ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
-                    <h5>Jesús Antonio Cuesta Copete</h5>
-                    <span class="text-success">Docente Asesor.</span>
-                </div>
-                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/sebastian_murillo_barahona.webp" alt="Profesor Sebastian">
-                    <p class="mb-4">Es administrador de empresas, Especialista en gerencia 
-                        estratégica de mercados Magister en administración de negocios 
-                        y estudiante de Doctorado en proyecto.ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
-                    <h5>Sebastián Murillo Barahona</h5>
-                    <span class="text-success">Asesor interno.</span>
-                </div>
-                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/fadilio_fines_conto_garcia.webp" alt="Profesor Fadilio">
-                    <p class="mb-4">Es economista especializado en finanzas públicas. 
-                        Actualmente brinda capacitaciones de proyectos productivos 
-                         en el CEI. ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
-                    <h5>Fadilo Fines Conto García</h5>
-                    <span class="text-success">Docente.</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
+
 <div>
     </div>
     </div>

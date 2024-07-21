@@ -194,6 +194,37 @@
               Logs
             </a>
           </li>
+
+          <!-- Botón que desplega las opciones -->
+          <li class="nav-item menu-open">
+              <a href="#" class="waves-effect">
+                <i class="nav-icon fas fa-chart-pie"></i>
+                Utilidades
+                <i class="right fas fa-angle-left"></i>
+              </a>
+                  <!-- Listado de opciones que se desplegan -->
+                  <ul class="nav nav-treeview">
+                    <!-- Items -->
+                    <li class="nav-item menu-open">
+                        <a href="#" class="nav-link">
+                          <i class="nav-icon far fa-circle"></i>
+                            Item 1
+                        </a>
+                    </li>
+                    <li class="nav-item menu-open">
+                        <a href="#" class="nav-link">
+                          <i class="nav-icon far fa-circle"></i>
+                            Item 2
+                        </a>
+                    </li>
+                    <li class="nav-item menu-open">
+                        <a href="#" class="nav-link">
+                          <i class="nav-icon far fa-circle"></i>
+                            Item 3
+                        </a>
+                    </li>
+              </li>
+
         </ul>
         <div class="center p-20">
           <span class="hide-menu">

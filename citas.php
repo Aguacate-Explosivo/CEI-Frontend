@@ -1,3 +1,16 @@
+<?php 
+    require_once("conexion.php");
+    $conexion = conectar();
+    $consulta = "SELECT * FROM tema_citas";
+    $resultado = mysqli_query($conexion, $consulta);
+
+    $consulta_categorias = "SELECT * FROM categorias_citas";
+    $resultado_categorias = mysqli_query($conexion, $consulta_categorias);
+
+    $consulta_tipo_documento = "SELECT * FROM tipo_documento_citas";
+    $resultadoTipo = mysqli_query($conexion, $consulta_tipo_documento);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -31,12 +44,12 @@
                         <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating">
-                            <select  class="form-control" name="tipodocumento" id="tipodocumento">
-                                <option value="Cedula de ciudadania">Cedula de ciudadania</option>
-                                <option value="Targeta de identidad">Tarjeta de identidad </option>
-                                <option value="Contraseña">Contraseña</option>
-                                <option value="Documento extranjero">Documento extranjero</option>
-                                <option value="Pasaporte">Pasaporte </option>
+                            <select  class="form-select" name="tipodocumento" id="tipodocumento">
+                            <?php
+                                foreach ($resultadoTipo as $documento) {
+                                    echo '<option style="width: 5rem;" value="'.$documento["descripcion"].'">'.$documento["descripcion"].'</option>';  
+                                }
+                            ?>
                                 </select>
                                 <label  for="tipodocumento" class="form__label">Tipo de Documento:</label>
 
@@ -50,12 +63,12 @@
                             </div>
                             <div class="col-md-6">
                             <div class="form-floating">
-                            <select  class="form-control" name="categoria"  id="categoria">
-                                <option value="Estudiante">Estudiante</option>
-                                <option value="Docente">Docente</option>
-                                <option value="Administrativo">Administrativo</option>
-                                <option value="Comunidad general">Comunidad general</option>
-                                <option value="Otro">Otro</option>
+                            <select  class="form-select" name="categoria"  id="categoria">
+                                <?php
+                                    foreach ($resultado_categorias as $categoria) {
+                                        echo '<option style="width: 5rem;" value="'.$categoria["descripcion"].'">'.$categoria["descripcion"].'</option>';  
+                                    }
+                                ?>
                                 </select>
                                 <label  for="categoria" class="form__label">Categoria:</label>
 
@@ -100,12 +113,12 @@
                             </div>
                             <div class="col-md-6">
                             <div class="form-floating">
-                            <select  class="form-control" name="tema"  id="tema">
-                                <option value="Estudiante">Estudiante</option>
-                                <option value="Docente">Docente</option>
-                                <option value="Administrativo">Administrativo</option>
-                                <option value="Comunidad general">Comunidad general</option>
-                                <option value="Otro">Otro</option>
+                            <select  class="form-select" name="tema"  id="tema">
+                                <?php
+                                    foreach ($resultado as $row) {
+                                        echo '<option style="width: 5rem;" value="'.$row["descripcion"].'">'.$row["descripcion"].'</option>';  
+                                    }
+                                ?>
                                 </select>
                                 <label  for="tema" class="form__label">Tema de Cita:</label>
 
