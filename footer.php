@@ -25,9 +25,9 @@
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-white mb-4">Horario De Atención</h4>
                 <p class="mb-1">Lunes - Viernes</p>
-                <h6 class="text-light">09:00 am - 05:00 pm</h6>
+                <h6 class="text-light">08:00 am - 06:00 pm</h6>
                 <p class="mb-1">Sábados</p>
-                <h6 class="text-light">09:00 am - 12:00 pm</h6>
+                <h6 class="text-light">08:00 am - 06:00 pm</h6>
                 <p class="mb-1">Domingo</p>
                 <h6 class="text-light">Cerrado</h6>
             </div>
@@ -50,7 +50,7 @@
                 &copy; <a class="fw-medium text-light" href="#">Universidad Tecnologia del Chocó </a>- Todos Los Derechos Reservados.
             </div>
             <div class="col-md-6 text-center text-md-end">
-                Diseñado y Desarrollado por <a class="fw-medium text-light" href="">FACNET</a>
+                Diseñado y Desarrollado por <a class="fw-medium text-light" href="facnet.space">FACNET</a>
                 <span> - Version 0.9</span>
             </div>
         </div>

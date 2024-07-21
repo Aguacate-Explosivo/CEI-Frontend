@@ -340,7 +340,7 @@
         <div class="container">
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" >
                 <p class="fs-5 fw-medium text-success">Estudiantes Destacados</p>
-                <h1 class="display-6 mb-4">Aqui elogiamos a nuestros mejores Estudiantes</h1>
+                <h1 class="display-6 mb-4">Aqui elogiamos a nuestros emprendedores Utchinos</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
