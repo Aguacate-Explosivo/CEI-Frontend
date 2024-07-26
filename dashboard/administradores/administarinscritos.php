@@ -105,6 +105,7 @@
                                 <th style="text-align: center; vertical-align: middle;">Direccion</th>
                                 <th style="text-align: center; vertical-align: middle;">Edad</th>
                                 <th style="text-align: center; vertical-align: middle;">Curso inscrito</th>
+                                <th style="text-align: center; vertical-align: middle;">Fecha</th>
                                 <th style="text-align: center; vertical-align: middle;">Acciones</th>
 
                                 
@@ -133,6 +134,8 @@
                                 <td><?php echo $elemento["direccion"]; ?></td>
                                 <td><?php echo $elemento["edad"]; ?></td>
                                 <td><?php echo $elemento["curso_inscrito"]; ?></td>
+                                <td><?php echo $elemento["timestamp"]; ?></td>
+                                
                                 <td>
                                    <a style="margin: 2px; border-radius: 5px;"  href="eliminarinscrito.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" > <i class="fas fa-trash-alt fa-flip-horizontal"></i></a>
                                 </td>

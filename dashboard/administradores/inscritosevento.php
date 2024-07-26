@@ -74,6 +74,7 @@
                                 <th style="text-align: center; vertical-align: middle;">Direccion</th> 
                                 <th style="text-align: center; vertical-align: middle;">Edad</th> 
                                 <th style="text-align: center; vertical-align: middle;">Evento Inscrito</th> 
+                                <th style="text-align: center; vertical-align: middle;">Fecha</th> 
                                 <th style="text-align: center; vertical-align: middle;">Acciones</th>                           
                                
                             </tr>
@@ -103,6 +104,7 @@
                                 <td><?php echo $elemento["direccion"]; ?></td>
                                 <td><?php echo $elemento["edad"]; ?></td>
                                 <td><?php echo $elemento["evento_inscrito"]; ?></td>
+                                <td><?php echo $elemento["timestamp"]; ?></td>
                                 <td>
                                 <a style="margin: 2px; border-radius: 5px;"  type="submit" href="eliminareventos.php?id=<?php echo $elemento["id"]?>" class="btn btn-danger" id="eliminar" name="eliminar" > <i class="fas fa-trash-alt fa-flip-horizontal"></i></a>
                                 </td>

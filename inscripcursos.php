@@ -151,13 +151,8 @@
                         <br>
                         <div class="col-md-6">
                             <div class="form-floating">
-                            <select  class="form-control" name="programa" id="programa">
-                                <option value="Administracion de empresas">Administracion de empresas </option>
-                                <option value="Contaduria publica">Contaduria publica</option>
-                                <option value="opcion3">Opción 3</option>
-                                <option value="opcion4">Opción 4</option>
-                                <option value="Otro">Otro</option>
-                                </select>
+                            <input type="text" id="programa" name="programa" class="form-control" placeholder="ff"
+                                    required pattern="[a-zA-ZÁÉÍÓÚáéíóúñ 0-9-#.]+" >
                                 <label  for="programa" class="form__label">Programa al que pertenece:</label>
 
                             </div>
