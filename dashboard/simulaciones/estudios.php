@@ -268,8 +268,15 @@ if($resultado_Total_simulados>0){
  
   <h2>Tu simulacion debes descargarla</h2>
   <h2>y luego debes guardarla</h2>
-  <a href="paso_final.php">CLICK AQUI PARA DESCARGAR</a><br>
-  <a href="guardar_simulaciones.php">CLICK AQUI PARA GUARDAR</a>
+  <div style="float:left;  width: 180px;">
+
+<a style="color: white;  border-radius:10px; " target="_blank" class="btn btn-danger btn-block btn-rounded waves-effect waves-light" href="paso_final.php"> DESCARGAR</a><br>
+</div>
+
+<div style=" float:left; width: 180px;">
+
+<a style="color: white;    border-radius:10px;"  class="btn btn-success btn-block btn-rounded waves-effect waves-light" href="guardar_simulaciones.php">GUARDAR</a>
+</div>
   
 
 

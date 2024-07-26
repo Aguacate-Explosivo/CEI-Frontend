@@ -320,7 +320,7 @@
         <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
 
             <?php
-            include("conexion.php");
+             require_once("conexion.php");
             $conexion = conectar();
 
             $consulta = "SELECT * FROM `cursos`;";

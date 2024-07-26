@@ -147,7 +147,7 @@ ob_start();
                                                             <label for="nombre_negocio_plan" class="form__label"></label>
                                                             <input type="text" id="industria_plan" name="industria_plan" value="<?php echo $industria_plan; ?>">
                                                             <label for="industria_plan" class="form__label"></label>
-                                                            <input type="text" id="negocio_nuevo" name="negocio_nuevo" value="<?php echo $negocio_nuevo ?> - <?php echo $negocio_existente ?>">
+                                                            <input type="text" id="negocio_nuevo" name="negocio_nuevo" value="<?php echo $industria_plan ?> ">
                                                             <label for="negocio_nuevo" class="form__label"></label>
                                                             <input type="text" id="zona_geografica_plan" name="zona_geografica_plan" value="<?php  echo $zona_geografica_plan; ?>">
                                                             <label for="zona_geografica_plan" class="form__label"></label>

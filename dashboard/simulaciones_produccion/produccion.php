@@ -371,7 +371,7 @@ $ganancias_neta = number_format($ganancia_neta, 2 ,',', '.');
    <!-- Inputs para transferir informacion -->
    <div>
                                                             <!-- Form 1 -->
-                                                            <input type="text" id="doc_autor_plan" name="doc_autor_plan" value="<?php  echo $documento; ?>">
+                                                            <input type="hidden" id="doc_autor_plan" name="doc_autor_plan" value="<?php  echo $documento; ?>">
                                                             <label for="doc_autor_plan" class="form__label"></label>
                                                             <input type="hidden" id="autor_plan" name="autor_plan" value="<?php echo $nombre; ?>">
                                                             <label for="autor_plan" class="form__label"></label>
