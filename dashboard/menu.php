@@ -223,6 +223,12 @@
                            Subir Imagenes Vistas
                         </a>
                     </li>
+                    <li class="nav-item menu-open">
+                        <a href="Dashactividades.php" class="nav-link">
+                          <i class="nav-icon far "></i>
+                          Actividades
+                        </a>
+                    </li>
               </li>
 
         </ul>

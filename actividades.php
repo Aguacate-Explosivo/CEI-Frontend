@@ -34,66 +34,88 @@
     <!-- Navbar End -->
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-2 text-white mb-4 animated slideInDown">Actividades Realizadas</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                </ol>
-            </nav>
+    <?php
+        require_once("conexion.php");
+        $conexion = conectar();
+
+        $consulta = "SELECT * FROM imagenes";
+        $resultado = mysqli_query($conexion, $consulta);
+        ?>
+            <?php foreach ($resultado as $row): ?>
+                <?php
+                $imagen = $row["imagen"];
+                $imagen1 = $row["imagen1"];
+                $imagen2 = $row["imagen2"];
+                $imagen3 = $row["imagen3"];
+                ?>
+                   <?php endforeach; ?>
+                   <div class="container-xxl py-5" style="position: relative;">
+        <div class="row justify-content-start">
+            <img src="data:image.webp;base64,<?php echo base64_encode($imagen); ?>" class="card-img-top img-fluid" alt="" style="height: 300px; width:1500px;" />
+            <h1 class="display-2 text-white mb-4 animated slideInDown" style="position: absolute; text-align: center; ">Actividades Realizadas</h1>
+    </div>
+</div>
+
+                
+<section class="section section-lg bg-default">
+    <div class="container">
+        <?php
+        require_once("conexion.php");
+        $conexion = conectar();
+
+        $consulta = "SELECT * FROM actividades";
+        $resultado = mysqli_query($conexion, $consulta);
+        ?>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <?php foreach ($resultado as $row): ?>
+                <?php
+                $id = $row["id"];
+                $nombre = $row["nombre"];
+                $imagen = $row["imagen"];
+                $descripcion = $row["descripcion"];
+                $fecha =  $row["fecha"];
+                ?>
+<div class="col-md-6 mb-4">
+    <div class="card h-100">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="data:image.webp;base64,<?php echo base64_encode($imagen); ?>" class="card-img-top img-fluid" alt="" style="height: 100%; object-fit: cover;" />
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo htmlspecialchars($nombre); ?></h5>
+                    <p >
+                        <?php
+                        $descripcion_words = explode(' ', $descripcion);
+                        $primeras_10_palabras = array_slice($descripcion_words, 0, 30);
+                        $descripcion_cortada = implode(' ', $primeras_10_palabras);
+                        echo htmlspecialchars($descripcion_cortada);
+                        if (str_word_count($descripcion) > 10) {
+                            echo '...';
+                        }
+                        ?>
+                    </p>
+                    <p class="card-text text-gray-600"><?php echo htmlspecialchars($fecha); ?></p>
+                   
+
+                    <a 
+                    href="galeria.php?id=<?php echo htmlspecialchars($row["id"]); ?>"
+                    class=""> <br> <i class="far fa-eye"></i> Ver Mas</a>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+
+
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+       
     <!-- Page Header End -->
     
-    <!-- info Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <h1 class="display-6 mb-4 text-center">Jornada de Sensibilización Estudiantes</h1>
-            <div class="row g-0 feature-row">
-                <div class="col-md-12 col-lg-12 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="feature-item border h-100 p-5">
-                        <p class="mb-0">Es una estrategia de acercamiento inicial a estudiantes y docentes de la universidad tecnológica del chocó a través de la cual se les da a conocer las políticas y acuerdos que sustentan el quehacer entorno al emprendimiento adoptado por la universidad y liderado por el centro, así como los servicios y ofertas de cursos cortos, horarios de atención y disponibilidad del personal docente para acompañamiento y asesoría.<br>1. Acercamiento a los salones previamente identificados para dar a conocer lo siguiente y procesos de sensibilización:</p>
-                        <ul>
-                            <li>Quienes somos: El CEIUTCH, es una unidad administrativa de servicios, adscrita a la Rectoría  de la UTCH</li>
-                            <li>
-                            Que hacemos: El CEIUTCH, se encarga de ofrecer a todos los estudiantes, egresados, docentes, administrativos y comunidad en general. Programas de:
-                                <ol>
-                                    <li>Formación y Capacitación Empresarial</li>
-                                    <li>Asesoramiento y acompañamiento en proyectos empresariales</li>
-                                    <li>Asesoramiento en presentación a convocatorias para capital semilla</li>
-                                    <li>Gestión y desarrollo empresarial.</li>
-                                    <li>Investigación (semillero)</li>
-                                    <li>Búsqueda de Financiación para proyectos.</li>
-                                    <li>Espacio de interacción y sinergia entre emprendedores de la región (Club de emprendedores, red de emprendimiento) </li>
-                                </ol>
-                            </li>
-                            <li>Donde estamos: El CEIUTCH, está ubicada en la ciudadela Universitaria, bloque 8, piso 3, oficinas 316 y 318</li>
-                            <li>Que buscamos:  El CEIUTCH, busca; Generar conocimiento sobre emprendimiento e Incentivar el emprendimiento como un estilo de vida  Apoyar a los emprendedores en el desarrollo de sus iniciativas y proyectos empresariales</li>
-                            <li>Fomentar la sostenibilidad de nuevas empresas</li>
-                            <li>Equipo de trabajo: Contamos con un equipo multidisciplinario, integrado por 12 profesionales en distintas especialidades, para el asesoramiento integral en todas las áreas funcionales de la empresa y en todas las etapas de un proyecto.</li>
-                            <li>Horario de atención: lunes a viernes de 8:00 am. A 12:00 m. y de 2:00 pm. A 6:00 pm.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- info End -->
-
-    <!-- Programa Radical -->
-        <div class="container-xxl py-5">
-        <div class="container">
-            <h1 class="display-6 mb-4 text-center">Programa radial</h1>
-            <div class="row g-0 feature-row">
-                <div class="col-md-12 col-lg-12 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="feature-item border h-100 p-5">
-                        <p class="mb-0">La hora del emprendimiento es un programa radial que esta al aire todos los jueves de 10:00–11:00 am por la emisora radio universidad del Choco 97.3 FM, y nace por iniciativa del centro de emprendimiento e innovación de la Universidad Tecnológica del Choco “Diego Luis Córdoba” con el propósito de promover e incentivar la cultura de emprendimiento en la comunidad en general y destacar actividades y eventos promovidos por emprendedores de la región.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Programa Radical Fin -->
+  
 
 
     <?php require("footer.php"); ?>

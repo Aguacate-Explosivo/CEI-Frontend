@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                <img src="data:image.webp;base64,<?php echo base64_encode($imagen); ?>" class="card-img-top img-fluid" alt="" style="height: 100%; object-fit: cover;" />
+                <img src="data:image.webp;base64,<?php echo base64_encode($imagen1); ?>" class="card-img-top img-fluid" alt="" style="height: 100%; object-fit: cover;" />
                 <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-end">
