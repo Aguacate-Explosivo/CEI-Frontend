@@ -148,7 +148,7 @@
                   
                      <!-- <label style=" width: 420px; margin-left: 150px; margin-top: 60px;"  for="imagen1" class="form-label">Cargar Imagen</label> -->
                      <input class="form-control" type="file" id="imagen1" name ="imagen1"
-                       accept="image/*" required=" ">
+                       accept="image/*" >
                     </div>
                     </div>
                     <div class="col-md-12">
@@ -157,7 +157,7 @@
                   
                      <!-- <label style=" width: 420px; margin-left: 400px; margin-top: 60px;"  for="imagen2" class="form-label">Cargar Imagen</label> -->
                      <input class="form-control" type="file" id="imagen2" name ="imagen2"
-                       accept="image/*" required=" ">
+                       accept="image/*" >
                     </div>
                     </div>
                     <div class="col-md-12">
@@ -166,7 +166,7 @@
                   
                      <!-- <label style=" width: 420px; margin-left: 150px; margin-top: 60px;"  for="imagen3" class="form-label">Cargar Imagen</label> -->
                      <input class="form-control" type="file" id="imagen3" name ="imagen3"
-                       accept="image/*" required=" ">
+                       accept="image/*" >
                     </div>
                     </div>
                     <div class="col-md-12">
@@ -175,7 +175,7 @@
                   
                      <!-- <label style=" width: 420px; margin-left: 400px; margin-top: 60px;"  for="imagen4" class="form-label">Cargar Imagen</label> -->
                      <input class="form-control" type="file" id="imagen4" name ="imagen4"
-                       accept="image/*" required=" ">
+                       accept="image/*" >
                     </div>
                     </div>
                     <div class="col-md-12">
@@ -184,7 +184,7 @@
                   
                      <!-- <label style=" width: 420px; margin-left: 150px; margin-top: 60px;"  for="imagen5" class="form-label">Cargar Imagen</label> -->
                      <input class="form-control" type="file" id="imagen5" name ="imagen5"
-                       accept="image/*" required=" ">
+                       accept="image/*" >
                     </div>
                     </div>
                     <div class="col-md-12">
@@ -193,7 +193,7 @@
                   
                      <!-- <label style=" width: 420px; margin-left: 400px; margin-top: 60px;"  for="imagen6" class="form-label">Cargar Imagen</label> -->
                      <input class="form-control" type="file" id="imagen6" name ="imagen6"
-                       accept="image/*" required=" ">
+                       accept="image/*" >
                     </div>
                     </div>
                     <button type="submit" class="btn btn-success btn-large">Registrar un Nuevo Evento</button>

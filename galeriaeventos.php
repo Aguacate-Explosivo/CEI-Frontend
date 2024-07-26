@@ -102,7 +102,7 @@
 <br>
 <div class="row">
   <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
- 
+  <?php if (!empty($row["imagen1"])) { ?>
        <div class="project-item mb-5">
     <div class="position-relative">
     <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen1"]); ?>" class="card-img-top img-fluid course-image">               
@@ -114,6 +114,8 @@
     
     </div>              
 </div>
+<?php } ?>
+<?php if (!empty($row["imagen2"])) { ?>
 
     <div class="project-item mb-5">
     <div class="position-relative">
@@ -123,12 +125,14 @@
             data-lightbox="project"><i class="fa fa-eye"></i></a>
             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="eventos.php"><i class="fa fa-link"></i></a>
         </div>
-    </div>
-                   
+    </div>                  
 </div>
+<?php } ?>
+
   </div>
 
   <div class="col-lg-4 mb-4 mb-lg-0">
+  <?php if (!empty($row["imagen3"])) { ?>
    <div class="project-item mb-5">
     <div class="position-relative">
     <img src="data:image/jpg;base64,<?php echo base64_encode($row["imagen3"]); ?>" class="card-img-top img-fluid course-image">               
@@ -140,6 +144,8 @@
     </div>
                    
 </div>
+<?php } ?>
+<?php if (!empty($row["imagen4"])) { ?>
 
    <div class="project-item mb-5">
     <div class="position-relative">
@@ -152,9 +158,12 @@
     </div>
                    
 </div>
+<?php } ?>
+
   </div>
 
   <div class="col-lg-4 mb-4 mb-lg-0">
+  <?php if (!empty($row["imagen5"])) { ?>
 
    <div class="project-item mb-5">
     <div class="position-relative">
@@ -167,6 +176,8 @@
     </div>
                    
 </div>
+<?php } ?>
+<?php if (!empty($row["imagen3"])) { ?>
 
    <div class="project-item mb-5">
     <div class="position-relative">
@@ -179,6 +190,7 @@
     </div>
                    
 </div>
+<?php } ?>
 
 
 

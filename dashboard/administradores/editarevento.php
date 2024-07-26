@@ -21,14 +21,14 @@
     $descrip=$_POST['evento'];
     $fecha=$_POST['fecha'];
     $hora=$_POST['hora'];
-    $imagen= addslashes(file_get_contents($_FILES['imagen']['tmp_name']));          
+    $imagen= addslashes(file_get_contents($_FILES['imagen']['tmp_name']));           
     $estado=$_POST['estado'];
-    $imagen1= addslashes(file_get_contents($_FILES['imagen1']['tmp_name']));          
-    $imagen2= addslashes(file_get_contents($_FILES['imagen2']['tmp_name']));          
-    $imagen3= addslashes(file_get_contents($_FILES['imagen3']['tmp_name']));          
-    $imagen4= addslashes(file_get_contents($_FILES['imagen4']['tmp_name']));          
-    $imagen5= addslashes(file_get_contents($_FILES['imagen5']['tmp_name']));          
-    $imagen6= addslashes(file_get_contents($_FILES['imagen6']['tmp_name']));          
+    $imagen1 = !empty($_FILES['imagen1']['tmp_name']) ? addslashes(file_get_contents($_FILES['imagen1']['tmp_name'])) : null;
+    $imagen2 = !empty($_FILES['imagen2']['tmp_name']) ? addslashes(file_get_contents($_FILES['imagen2']['tmp_name'])) : null;
+    $imagen3 = !empty($_FILES['imagen3']['tmp_name']) ? addslashes(file_get_contents($_FILES['imagen3']['tmp_name'])) : null;
+    $imagen4 = !empty($_FILES['imagen4']['tmp_name']) ? addslashes(file_get_contents($_FILES['imagen4']['tmp_name'])) : null;
+    $imagen5 = !empty($_FILES['imagen5']['tmp_name']) ? addslashes(file_get_contents($_FILES['imagen5']['tmp_name'])) : null;        
+    $imagen6 = !empty($_FILES['imagen6']['tmp_name']) ? addslashes(file_get_contents($_FILES['imagen6']['tmp_name'])) : null;        
     $fecha_inicio = $_POST["fecha_inicio"];
     $fecha_final = $_POST["fecha_final"];
     
