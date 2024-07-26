@@ -26,8 +26,23 @@
     <div class="container-fluid px-0 mb-5">
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
+            <?php
+        require_once("conexion.php");
+        $conexion = conectar();
+
+        $consulta = "SELECT * FROM imagenes";
+        $resultado = mysqli_query($conexion, $consulta);
+        ?>
+            <?php foreach ($resultado as $row): ?>
+                <?php
+                $imagen = $row["imagen"];
+                $imagen1 = $row["imagen1"];
+                $imagen2 = $row["imagen2"];
+                $imagen3 = $row["imagen3"];
+                ?>
+                   <?php endforeach; ?>
                 <div class="carousel-item active">
-                    <img class="w-100" src="img/2.webp" alt="Image">
+                <img src="data:image.webp;base64,<?php echo base64_encode($imagen); ?>" class="card-img-top img-fluid" alt="" style="height: 100%; object-fit: cover;" />
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-start">
@@ -44,8 +59,8 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="img/0.webp" alt="Image">
-                    <div class="carousel-caption">
+                <img src="data:image.webp;base64,<?php echo base64_encode($imagen); ?>" class="card-img-top img-fluid" alt="" style="height: 100%; object-fit: cover;" />
+                <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-end">
                                 <div class="col-lg-7 text-end">

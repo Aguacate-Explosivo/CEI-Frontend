@@ -218,9 +218,9 @@
                         </a>
                     </li>
                     <li class="nav-item menu-open">
-                        <a href="#" class="nav-link">
+                        <a href="Dashimagenes.php" class="nav-link">
                           <i class="nav-icon far "></i>
-                            Item 3
+                           Subir Imagenes Vistas
                         </a>
                     </li>
               </li>

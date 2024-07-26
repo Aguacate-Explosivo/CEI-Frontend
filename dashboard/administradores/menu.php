@@ -194,6 +194,34 @@
               Logs
             </a>
           </li>
+          <li class="nav-item menu-open">
+              <a href="#" class="waves-effect">
+                <i class="nav-icon fas fa-chart-pie"></i>
+                Utilidades
+                <i class="right fas fa-angle-left"></i>
+              </a>
+                  <!-- Listado de opciones que se desplegan -->
+                  <ul class="nav nav-treeview">
+                    <!-- Items -->
+                    <li class="nav-item menu-open">
+                        <a href="../Dashtalento.php" class="nav-link">
+                          <i class="nav-icon "></i>
+                           Crear Talento Humano
+                        </a>
+                    </li>
+                    <li class="nav-item menu-open">
+                        <a href="../Dashestudiante.php" class="nav-link">
+                          <i class="nav-icon "></i>
+                          Crear Estudiante Destacado
+                        </a>
+                    </li>
+                    <li class="nav-item menu-open">
+                        <a href="../Dashimagenes.php" class="nav-link">
+                          <i class="nav-icon far "></i>
+                           Subir Imagenes Vistas
+                        </a>
+                    </li>
+              </li>
         </ul>
         <div class="center p-20">
           <span class="hide-menu">
