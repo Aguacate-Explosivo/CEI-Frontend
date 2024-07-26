@@ -342,40 +342,31 @@
                 <h1 class="display-6 mb-4">Conoce a Equipo del centro de emprendimiento</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/dorian_perea_palacios.webp" alt="Profesor Dorian">
-                    <p class="mb-4">Es economista de profesión, tiene un Msc. en ciencias
-                         económicas, Magister en desarrollo emprendedor e innovación,
-                          Especialista desarrollo rural y Especialista en formación y
-                           capacitación en emprendimiento.</p>
-                    <h5>Dorian Perea Palacios</h5>
-                    <span class="text-success">Coordinador Centro de Emprendimiento e Innovación.</span>
+            <?php
+        require_once("conexion.php");
+        $conexion = conectar();
+
+        $consulta = "SELECT * FROM talento";
+        $resultado = mysqli_query($conexion, $consulta);
+        ?>
+            <?php foreach ($resultado as $row): ?>
+                <?php
+                $nombre = $row["nombre"];
+                $imagen = $row["imagen"];
+                $descripcion = $row["descripcion"];
+                $cargo =  $row["cargo"];
+                ?>
+                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">  
+                <img src="data:image.webp;base64,<?php echo base64_encode($imagen); ?>" class="card-img-top img-fluid" alt="" style="height: 100%; object-fit: cover;" />
+                    <p class="mb-4"><?php echo htmlspecialchars($descripcion); ?></p>
+                    <h5><?php echo htmlspecialchars($nombre); ?></h5>
+                    <span class="text-success"><?php echo htmlspecialchars($cargo); ?></span>
                 </div>
-                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/jesus_cuesta_copete.webp" alt="Profesor Jesus">
-                    <p class="mb-4">Es administrador de empresas, Magister en desarrollo 
-                        empresarial e innovación, Especialista en formación y capacitación 
-                        en emprendimiento y Especialista en control organizacional ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
-                    <h5>Jesús Antonio Cuesta Copete</h5>
-                    <span class="text-success">Docente Asesor.</span>
-                </div>
-                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/sebastian_murillo_barahona.webp" alt="Profesor Sebastian">
-                    <p class="mb-4">Es administrador de empresas, Especialista en gerencia 
-                        estratégica de mercados Magister en administración de negocios 
-                        y estudiante de Doctorado en proyecto.ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
-                    <h5>Sebastián Murillo Barahona</h5>
-                    <span class="text-success">Asesor interno.</span>
-                </div>
-                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/fadilio_fines_conto_garcia.webp" alt="Profesor Fadilio">
-                    <p class="mb-4">Es economista especializado en finanzas públicas. 
-                        Actualmente brinda capacitaciones de proyectos productivos 
-                         en el CEI. ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</p>
-                    <h5>Fadilo Fines Conto García</h5>
-                    <span class="text-success">Docente.</span>
-                </div>
+                
+             
+                <?php endforeach; ?> 
             </div>
+            
         </div>
     </div>
     <!-- Testimonial End -->
@@ -387,59 +378,33 @@
                 <p class="fs-5 fw-medium text-success">Estudiantes Destacados</p>
                 <h1 class="display-6 mb-4">Aqui elogiamos a nuestros emprendedores Utchinos</h1>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4 " src="img/team-1.webp" alt="">
-                        <h5>Alex Robin</h5>
-                        <span class="text-success">Estudiante ING. Agroforestal</span>
-                        <ul class="team-social">
-                            <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+
+            <?php
+        require_once("conexion.php");
+        $conexion = conectar();
+
+        $consulta = "SELECT * FROM estudiante";
+        $resultado = mysqli_query($conexion, $consulta);
+        ?>
+            <?php foreach ($resultado as $row): ?>
+                <?php
+                $nombre = $row["nombre"];
+                $imagen = $row["imagen"];
+                $cargo =  $row["cargo"];
+                ?>
+                <div class="team-item rounded overflow-hidden pb-4">
+                <img src="data:image.webp;base64,<?php echo base64_encode($imagen); ?>" class="card-img-top img-fluid" alt="" style="height: 100%; object-fit: cover;" />
+                <h5><?php echo htmlspecialchars($nombre); ?></h5>
+                        <span class="text-success"><?php echo htmlspecialchars($cargo); ?></span>
+                        
+                        
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-2.webp" alt="">
-                        <h5>Adam Crew</h5>
-                        <span class="text-success">Estudiante Administracion </span>
-                        <ul class="team-social">
-                            <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fa fa-envelope me-3"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-3.webp" alt="">
-                        <h5>Boris Johnson</h5>
-                        <span class="text-success">Estudiante ING. Agroforestal</span>
-                        <ul class="team-social">
-                            <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-4.webp" alt="equipo">
-                        <h5>Robert Jordan</h5>
-                        <span class="text-success">Estudiante ING. Agroforestal</span>
-                        <ul class="team-social">
-                            <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
+                    <?php endforeach; ?> 
+                    
+                
+                  
+                
             </div>
         </div>
     </div>

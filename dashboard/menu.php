@@ -206,20 +206,20 @@
                   <ul class="nav nav-treeview">
                     <!-- Items -->
                     <li class="nav-item menu-open">
-                        <a href="#" class="nav-link">
-                          <i class="nav-icon far fa-circle"></i>
-                            Item 1
+                        <a href="Dashtalento.php" class="nav-link">
+                          <i class="nav-icon "></i>
+                           Crear Talento Humano
+                        </a>
+                    </li>
+                    <li class="nav-item menu-open">
+                        <a href="Dashestudiante.php" class="nav-link">
+                          <i class="nav-icon "></i>
+                          Crear Estudiante Destacado
                         </a>
                     </li>
                     <li class="nav-item menu-open">
                         <a href="#" class="nav-link">
-                          <i class="nav-icon far fa-circle"></i>
-                            Item 2
-                        </a>
-                    </li>
-                    <li class="nav-item menu-open">
-                        <a href="#" class="nav-link">
-                          <i class="nav-icon far fa-circle"></i>
+                          <i class="nav-icon far "></i>
                             Item 3
                         </a>
                     </li>
