@@ -49,12 +49,13 @@
                 $imagen3 = $row["imagen3"];
                 ?>
                    <?php endforeach; ?>
-                   <div class="container-xxl py-5" style="position: relative;">
+        <div class="container-xxl py-5" style="position: relative;">
         <div class="row justify-content-start">
-            <img src="data:image.webp;base64,<?php echo base64_encode($imagen); ?>" class="card-img-top img-fluid" alt="" style="height: 300px; width:1500px;" />
-            <h1 class="display-2 text-white mb-4 animated slideInDown" style="position: absolute; text-align: center; ">Actividades Realizadas</h1>
-    </div>
-</div>
+        <img src="data:image.webp;base64,<?php echo base64_encode($imagen); ?>" class="card-img-top img-fluid" alt="" style="height: 300px; width:1500px;" />
+        <h1 class="display-2 text-white mb-4 animated slideInDown" style="position: absolute; text-align: center; top: 4cm;">Actividades Realizadas</h1>
+       </div>
+       </div>
+
 
                 
 <section class="section section-lg bg-default">

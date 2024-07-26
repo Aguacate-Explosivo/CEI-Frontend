@@ -19,13 +19,27 @@
     <!-- Navbar End -->
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-2 text-white mb-4 animated slideInDown">Eventos</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-            </nav>
-        </div>
-    </div>
+    <?php
+        require_once("conexion.php");
+        $conexion = conectar();
+
+        $consulta = "SELECT * FROM imagenes";
+        $resultado = mysqli_query($conexion, $consulta);
+        ?>
+            <?php foreach ($resultado as $row): ?>
+                <?php
+                $imagen = $row["imagen"];
+                $imagen1 = $row["imagen1"];
+                $imagen2 = $row["imagen2"];
+                $imagen3 = $row["imagen3"];
+                ?>
+                   <?php endforeach; ?>
+        <div class="container-xxl py-5" style="position: relative;">
+        <div class="row justify-content-start">
+        <img src="data:image.webp;base64,<?php echo base64_encode($imagen); ?>" class="card-img-top img-fluid" alt="" style="height: 300px; width:1500px;" />
+        <h1 class="display-2 text-white mb-4 animated slideInDown" style="position: absolute; text-align: center; top: 4cm;">Eventos</h1>
+       </div>
+       </div>
     <!-- Page Header End -->
 
     <div>

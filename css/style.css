@@ -213,7 +213,6 @@ element.style {
     max-width: 1200px;
     max-height: 1400px;
     min-height: 100px;
-    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../img/2.webp) left center no-repeat;
     background-size: cover;
 }
 

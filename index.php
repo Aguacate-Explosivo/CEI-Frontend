@@ -141,44 +141,55 @@
     </div>
     <!-- Features End -->
     <!-- About Start -->
-    <div class="container-xxl about py-5">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-lg-6">
-                    <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 300px;">
-                        <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="" data-bs-target="#videoModal">
-                            <span></span>
-                        </button>
+    <div class="container-xxl  py-5">
+    <?php
+        require_once("conexion.php");
+        $conexion = conectar();
+
+        $consulta = "SELECT * FROM imagenes";
+        $resultado = mysqli_query($conexion, $consulta);
+        ?>
+            <?php foreach ($resultado as $row): ?>
+                <?php
+                $imagen = $row["imagen"];
+                $imagen1 = $row["imagen1"];
+                $imagen2 = $row["imagen2"];
+                $imagen3 = $row["imagen3"];
+                ?>
+                   <?php endforeach; ?>
+
+                   <div class="container" style="position: relative; background: url('data:image.webp;base64,<?php echo base64_encode($imagen1); ?>') no-repeat center center; background-size: cover;">
+    <div class="row g-0" >
+        <div class="col-lg-6">
+            <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 300px;">
+                <button type="button" class="btn-play" data-bs-toggle="modal" data-src="" data-bs-target="#videoModal">
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="col-lg-6 pt-lg-5 wow fadeIn" data-wow-delay="0.5s">
+            <div class="bg-white rounded-top p-5 mt-lg-5">
+                <p class="fs-5 fw-medium text-success">Sobre Nosotros</p>
+                <h1 class="display-6 mb-4">Centro De Emprendimiento e Innovacion</h1>
+                <p class="mb-4">Fomentar en los estudiantes proceso de formación por competencias en emprendimiento, creatividad e innovación, con enfoque hacia la generación de ideas emprendedoras sostenibles, con alto grado tecnológico e impacto social.</p>
+                <div class="row g-5 pt-2 mb-5">
+                    <div class="col-sm-6">
+                        <img class="img-fluid mb-4" src="img/icon/11.webp" alt="">
+                        <h5 class="mb-3">Mision</h5>
+                        <span>Clita erat ipsum et lorem et sit sed stet lorem</span>
+                    </div>
+                    <div class="col-sm-6">
+                        <img class="img-fluid mb-4" src="img/icon/13.webp" alt="">
+                        <h5 class="mb-3">Vision</h5>
+                        <span>Clita erat ipsum et lorem et sit sed stet lorem</span>
                     </div>
                 </div>
-                <div class="col-lg-6 pt-lg-5 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="bg-white rounded-top p-5 mt-lg-5">
-                        <p class="fs-5 fw-medium text-success">Sobre Nosotros</p>
-                        <h1 class="display-6 mb-4">Centro De Emprendimiento e Innovacion</h1>
-                        <p class="mb-4">Fomentar en los estudiantes proceso de formación por
-                             competencias en emprendimiento, creatividad e innovación, con
-                              enfoque hacia la generación de ideas 
-                              emprendedoras sostenibles, con alto grado 
-                              tecnológico e impacto social.</p>
-                        <div class="row g-5 pt-2 mb-5">
-                            <div class="col-sm-6">
-                                <img class="img-fluid mb-4"  src="img/icon/11.webp" alt="">
-                                <h5 class="mb-3">Mision</h5>
-                                <span>Clita erat ipsum et lorem et sit sed stet lorem</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <img class="img-fluid mb-4" src="img/icon/13.webp" alt="">
-                                <h5 class="mb-3">Vision</h5>
-                                <span>Clita erat ipsum et lorem et sit sed stet lorem</span>
-                            </div>
-                        </div>
-                        <a class="btn btn-primary" href="nosotros.php">Conoce Mas</a>
-                    </div>
-                </div>
+                <a class="btn btn-primary" href="nosotros.php">Conoce Mas</a>
             </div>
         </div>
     </div>
+</div>
+
     <!-- About End -->
  <!-- Video Modal Start -->
 <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
